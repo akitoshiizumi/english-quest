@@ -1,0 +1,14 @@
+{
+  "SPEECH_STYLES": {
+    "natural": {"label": "自然", "note": "自然な標準アメリカ英語", "instructions": "Use natural contemporary American English with lifelike rhythm and linked speech. Keep reductions subtle and intelligible."},
+    "clear": {"label": "クリア", "note": "明瞭で学習しやすいアメリカ英語", "instructions": "Use clear contemporary American English at a measured pace with distinct consonants and clean word boundaries. Keep reductions light."},
+    "expressive": {"label": "感情豊か", "note": "抑揚を大きくしたアメリカ英語", "instructions": "Use expressive contemporary American English. Make the emotional contour clearly audible: vary pitch, stress important words, and use intentional rises and falls. Do not deliver this neutrally."},
+    "joy": {"label": "喜び", "note": "明るく嬉しそうなアメリカ英語", "instructions": "Use joyful contemporary American English. Sound genuinely happy, bright, smiling, and enthusiastic with buoyant pitch and upbeat emphasis."},
+    "sadness": {"label": "悲しみ", "note": "静かで感傷的なアメリカ英語", "instructions": "Use sad contemporary American English. Sound genuinely subdued and reflective with slower pacing, softer volume, falling pitch, and longer pauses. Avoid melodrama."},
+    "anger": {"label": "怒り", "note": "強く断固としたアメリカ英語", "instructions": "Use angry contemporary American English. Sound firm, tense, and controlled with sharp stress, decisive pacing, and stronger volume. Do not shout or add insults."},
+    "reduced": {"label": "崩し", "note": "自然な連結・弱形を使うアメリカ英語", "instructions": "Use noticeably casual contemporary American connected speech with natural reductions, weak forms, linking, contractions, and occasional dropped sounds. Keep every word recoverable; do not mumble or invent words."},
+    "reduced_big": {"label": "崩し大", "note": "強い連結・短縮の上級アメリカ英語", "instructions": "Use strongly reduced, fast contemporary American connected speech. Apply frequent weak forms, linking, contractions, flapping, schwa reduction, and natural sound elisions. Make it clearly different from careful speech, but keep the exact words recoverable and never mumble or invent words."},
+    "reduced_extreme": {"label": "崩し特大", "note": "非常に速く大きく崩した超上級アメリカ英語", "instructions": "Use extremely reduced, highly casual contemporary American connected speech at a fast conversational pace. Apply very frequent weak forms, aggressive linking, contractions, flapping, schwa reduction, sound elisions, and compressed rhythm. Make it intentionally difficult and strongly different from clear speech, but preserve every original word in the audio; do not mumble, replace words, or invent words."}
+  },
+  "DEFAULT_TEXT": "I thought we were ready, but the plan changed at the last minute. Honestly, I wasn't expecting it to work this well, and now I'm wondering what we should try next. If you can give me a little more time, I'll walk you through it."
+}

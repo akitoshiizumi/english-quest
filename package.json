@@ -1,0 +1,26 @@
+{
+  "name": "english-overlap-studio-tests",
+  "private": true,
+  "scripts": {
+    "dev": "vite --config frontend/vite.config.mts",
+    "build": "tsc -p frontend/tsconfig.json && vite build --config frontend/vite.config.mts",
+    "test": "npm run build && npm run test:python && npm run test:keyboard && npm run test:statistics-distribution && npm run test:audio-clip && npm run test:e2e",
+    "test:python": "py -m unittest discover -v",
+    "test:keyboard": "node --test tests/test_shortcuts.cjs",
+    "test:statistics-distribution": "node --test tests/test_statistics_distribution.cjs",
+    "test:audio-clip": "node --test tests/test_audio_clip.cjs",
+    "test:e2e": "node --test --test-concurrency=1 tests/e2e_learning.cjs"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "playwright": "1.64.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.5"
+  },
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  }
+}

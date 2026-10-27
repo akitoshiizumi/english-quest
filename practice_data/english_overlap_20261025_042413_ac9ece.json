@@ -1,0 +1,5599 @@
+{
+  "version": 2,
+  "created_at": "2026-10-25T04:24:13+00:00",
+  "text": "A Forward Deployed Engineer, commonly known as an FDE, is a technical professional who works closely with customers to identify business problems, design solutions, and implement software directly in real-world environments. Unlike traditional software engineers, who primarily develop products based on predefined requirements, FDEs actively participate in discovering what customers actually need. They combine technical expertise, business understanding, and communication skills to deliver measurable business outcomes.\n\nThe concept was pioneered by Palantir Technologies, a company specializing in data analytics and enterprise software. Palantir developed an approach in which engineers work directly alongside customers to solve complex operational challenges. Rather than simply receiving requirements from sales teams and developing software remotely, these engineers immerse themselves in customer environments, understand operational constraints, and adapt technology to specific business needs. An FDE is therefore neither simply a consultant nor a conventional software developer. The role combines aspects of both, with a strong emphasis on implementation and accountability for results.\n\nTraditionally, enterprise transformation projects have involved multiple specialized teams. Consultants analyze business problems and develop strategies, business analysts translate those strategies into requirements, and engineers build the necessary systems. Although this division of responsibilities allows specialists to focus on their expertise, it can create communication barriers, delays, and misunderstandings. For example, a consultant might recommend automating a company's procurement process using artificial intelligence. However, the engineering team may later discover that the existing infrastructure cannot support the proposed solution or that essential data is inaccessible.\n\nFDEs aim to bridge the gap between business strategy and technical execution. Instead of delivering recommendations and leaving implementation to others, they remain involved throughout the development lifecycle. Their responsibilities extend from understanding the initial problem to ensuring that the solution operates successfully in production. This approach is particularly valuable in artificial intelligence projects, where technological capabilities and business requirements evolve rapidly.\n\nConsider a manufacturing company seeking to improve its supply chain operations using AI. A traditional consulting engagement might begin with several months of interviews, workshops, and presentations. The final deliverable could be a transformation roadmap outlining potential use cases and expected financial benefits. An FDE would approach the challenge differently. First, the engineer would interview employees, examine existing workflows, and identify operational bottlenecks. Rather than treating every reported problem as equally important, the FDE would prioritize opportunities with significant business impact.\n\nNext, the engineer might develop a small prototype using existing data and AI models. For example, the system could identify potential inventory shortages or recommend alternative suppliers. The prototype would then be tested with actual users. Based on their feedback, the engineer would refine the solution, address technical limitations, and integrate it with enterprise systems. Finally, the engineer would help deploy the solution into production, establish performance measurements, and support its adoption. The ultimate objective is not merely to demonstrate that AI works, but to ensure that it consistently improves business operations.\n\nLeading AI companies, including OpenAI and Anthropic, have recognized the importance of forward-deployed engineering. Providing powerful AI models alone is not sufficient for successful enterprise adoption. Customers also need assistance with workflow redesign, system integration, data security, performance evaluation, and organizational change. FDEs help bridge these gaps while providing valuable feedback to product and research teams. By observing how AI performs in real business environments, they can identify technical limitations, recurring customer requirements, and opportunities for product improvements.\n\nSuccessful FDEs require a combination of technical capabilities and business-oriented skills. Technical expertise remains fundamental. They must understand software architecture, APIs, databases, cloud infrastructure, and modern development practices. In AI-related projects, knowledge of large language models, retrieval-augmented generation, AI agents, and model evaluation is particularly valuable. However, technical knowledge alone is insufficient. FDEs must also communicate with stakeholders, identify underlying business problems, prioritize competing requirements, and make decisions under uncertainty.\n\nAn especially important ability is translating ambiguous business objectives into concrete technical solutions. When an executive requests an AI-powered transformation, an FDE must determine which business processes should change, which systems require integration, and how success should be measured. This requires both analytical thinking and practical judgment. Importantly, FDEs do not necessarily perform every task individually. They frequently collaborate with other engineers, product specialists, and domain experts to deliver reliable solutions.\n\nThe growing popularity of FDEs also raises questions about the future of management consulting. As AI becomes capable of generating reports, analyzing data, and writing software, the value of producing recommendations alone may decline. Consulting firms may consequently face increasing pressure to demonstrate tangible business results rather than simply deliver presentations. However, FDEs are unlikely to replace all traditional consultants. Complex organizational transformations still require expertise in corporate strategy, financial analysis, governance, change management, and stakeholder alignment.\n\nFurthermore, simply renaming traditional consultants as FDEs will not automatically improve their capabilities. Without sufficient engineering expertise, access to appropriate technologies, and the authority to implement changes, the FDE concept risks becoming another fashionable business term. The real competitive advantage comes from combining strategic thinking with the ability to deliver reliable, production-ready solutions.\n\nUltimately, forward-deployed engineering represents a broader shift in enterprise technology from recommending solutions to taking responsibility for implementing them. AI-assisted development may accelerate prototyping, but successful production deployment still requires robust architecture, security controls, testing, monitoring, and operational expertise. The most valuable professionals will be those who understand both technological possibilities and organizational realities. Their success should be measured not by the number of presentations produced or prototypes demonstrated, but by the lasting business improvements achieved.",
+  "spoken_text": "A Forward Deployed Engineer, commonly known as an FDE, is a technical professional who works closely with customers to identify business problems, design solutions, and implement software directly in real-world environments. Unlike traditional software engineers, who primarily develop products based on predefined requirements, FDEs actively participate in discovering what customers actually need. They combine technical expertise, business understanding, and communication skills to deliver measurable business outcomes.\n\nThe concept was pioneered by Palantir Technologies, a company specializing in data analytics and enterprise software. Palantir developed an approach in which engineers work directly alongside customers to solve complex operational challenges. Rather than simply receiving requirements from sales teams and developing software remotely, these engineers immerse themselves in customer environments, understand operational constraints, and adapt technology to specific business needs. An FDE is therefore neither simply a consultant nor a conventional software developer. The role combines aspects of both, with a strong emphasis on implementation and accountability for results.\n\nTraditionally, enterprise transformation projects have involved multiple specialized teams. Consultants analyze business problems and develop strategies, business analysts translate those strategies into requirements, and engineers build the necessary systems. Although this division of responsibilities allows specialists to focus on their expertise, it can create communication barriers, delays, and misunderstandings. For example, a consultant might recommend automating a company's procurement process using artificial intelligence. However, the engineering team may later discover that the existing infrastructure cannot support the proposed solution or that essential data is inaccessible.\n\nFDEs aim to bridge the gap between business strategy and technical execution. Instead of delivering recommendations and leaving implementation to others, they remain involved throughout the development lifecycle. Their responsibilities extend from understanding the initial problem to ensuring that the solution operates successfully in production. This approach is particularly valuable in artificial intelligence projects, where technological capabilities and business requirements evolve rapidly.\n\nConsider a manufacturing company seeking to improve its supply chain operations using AI. A traditional consulting engagement might begin with several months of interviews, workshops, and presentations. The final deliverable could be a transformation roadmap outlining potential use cases and expected financial benefits. An FDE would approach the challenge differently. First, the engineer would interview employees, examine existing workflows, and identify operational bottlenecks. Rather than treating every reported problem as equally important, the FDE would prioritize opportunities with significant business impact.\n\nNext, the engineer might develop a small prototype using existing data and AI models. For example, the system could identify potential inventory shortages or recommend alternative suppliers. The prototype would then be tested with actual users. Based on their feedback, the engineer would refine the solution, address technical limitations, and integrate it with enterprise systems. Finally, the engineer would help deploy the solution into production, establish performance measurements, and support its adoption. The ultimate objective is not merely to demonstrate that AI works, but to ensure that it consistently improves business operations.\n\nLeading AI companies, including OpenAI and Anthropic, have recognized the importance of forward-deployed engineering. Providing powerful AI models alone is not sufficient for successful enterprise adoption. Customers also need assistance with workflow redesign, system integration, data security, performance evaluation, and organizational change. FDEs help bridge these gaps while providing valuable feedback to product and research teams. By observing how AI performs in real business environments, they can identify technical limitations, recurring customer requirements, and opportunities for product improvements.\n\nSuccessful FDEs require a combination of technical capabilities and business-oriented skills. Technical expertise remains fundamental. They must understand software architecture, APIs, databases, cloud infrastructure, and modern development practices. In AI-related projects, knowledge of large language models, retrieval-augmented generation, AI agents, and model evaluation is particularly valuable. However, technical knowledge alone is insufficient. FDEs must also communicate with stakeholders, identify underlying business problems, prioritize competing requirements, and make decisions under uncertainty.\n\nAn especially important ability is translating ambiguous business objectives into concrete technical solutions. When an executive requests an AI-powered transformation, an FDE must determine which business processes should change, which systems require integration, and how success should be measured. This requires both analytical thinking and practical judgment. Importantly, FDEs do not necessarily perform every task individually. They frequently collaborate with other engineers, product specialists, and domain experts to deliver reliable solutions.\n\nThe growing popularity of FDEs also raises questions about the future of management consulting. As AI becomes capable of generating reports, analyzing data, and writing software, the value of producing recommendations alone may decline. Consulting firms may consequently face increasing pressure to demonstrate tangible business results rather than simply deliver presentations. However, FDEs are unlikely to replace all traditional consultants. Complex organizational transformations still require expertise in corporate strategy, financial analysis, governance, change management, and stakeholder alignment.\n\nFurthermore, simply renaming traditional consultants as FDEs will not automatically improve their capabilities. Without sufficient engineering expertise, access to appropriate technologies, and the authority to implement changes, the FDE concept risks becoming another fashionable business term. The real competitive advantage comes from combining strategic thinking with the ability to deliver reliable, production-ready solutions.\n\nUltimately, forward-deployed engineering represents a broader shift in enterprise technology from recommending solutions to taking responsibility for implementing them. AI-assisted development may accelerate prototyping, but successful production deployment still requires robust architecture, security controls, testing, monitoring, and operational expertise. The most valuable professionals will be those who understand both technological possibilities and organizational realities. Their success should be measured not by the number of presentations produced or prototypes demonstrated, but by the lasting business improvements achieved.",
+  "blocks": [
+    {
+      "english": "A Forward Deployed Engineer, commonly known as an FDE, is a technical professional who works closely with customers to identify business problems, design solutions, and implement software directly in real-world environments.",
+      "japanese": "一般に前線配置型技術者と呼ばれるこの職種は、顧客と緊密に連携して事業上の課題を特定し、解決策を設計し、現場で直接ソフトウェアを導入する技術専門職です。",
+      "vocabulary": [
+        {
+          "word": "Forward Deployed Engineer",
+          "meaning": "前線配置型技術者"
+        },
+        {
+          "word": "identify",
+          "meaning": "特定する"
+        },
+        {
+          "word": "implement",
+          "meaning": "導入する"
+        }
+      ]
+    },
+    {
+      "english": "Unlike traditional software engineers, who primarily develop products based on predefined requirements, FDEs actively participate in discovering what customers actually need.",
+      "japanese": "あらかじめ定められた要件に基づいて主に製品を開発する従来のソフトウェア技術者とは異なり、前線配置型技術者は顧客が実際に何を必要としているのかを探る作業に積極的に加わります。",
+      "vocabulary": [
+        {
+          "word": "Unlike",
+          "meaning": "とは異なり"
+        },
+        {
+          "word": "predefined requirements",
+          "meaning": "あらかじめ定められた要件"
+        },
+        {
+          "word": "actively participate",
+          "meaning": "積極的に参加する"
+        }
+      ]
+    },
+    {
+      "english": "They combine technical expertise, business understanding, and communication skills to deliver measurable business outcomes.",
+      "japanese": "技術的な専門知識、事業への理解、意思疎通の能力を組み合わせ、測定可能な事業成果を実現します。",
+      "vocabulary": [
+        {
+          "word": "technical expertise",
+          "meaning": "技術的な専門知識"
+        },
+        {
+          "word": "communication skills",
+          "meaning": "意思疎通の能力"
+        },
+        {
+          "word": "measurable",
+          "meaning": "測定可能な"
+        }
+      ]
+    },
+    {
+      "english": "The concept was pioneered by Palantir Technologies, a company specializing in data analytics and enterprise software.",
+      "japanese": "この考え方を先駆けて導入したのは、データ分析と企業向けソフトウェアを専門とする企業です。",
+      "vocabulary": [
+        {
+          "word": "concept",
+          "meaning": "考え方"
+        },
+        {
+          "word": "pioneered",
+          "meaning": "先駆けて導入した"
+        },
+        {
+          "word": "specializing in",
+          "meaning": "を専門とする"
+        }
+      ]
+    },
+    {
+      "english": "Palantir developed an approach in which engineers work directly alongside customers to solve complex operational challenges.",
+      "japanese": "その企業は、複雑な業務上の課題を解決するために、技術者が顧客のすぐそばで直接働く方法を開発しました。",
+      "vocabulary": [
+        {
+          "word": "approach",
+          "meaning": "方法"
+        },
+        {
+          "word": "alongside",
+          "meaning": "のそばで"
+        },
+        {
+          "word": "operational challenges",
+          "meaning": "業務上の課題"
+        }
+      ]
+    },
+    {
+      "english": "Rather than simply receiving requirements from sales teams and developing software remotely, these engineers immerse themselves in customer environments, understand operational constraints, and adapt technology to specific business needs.",
+      "japanese": "営業チームから要件を受け取って遠隔でソフトウェアを開発するだけでなく、こうした技術者は顧客の現場に深く入り込み、業務上の制約を把握し、個の事業ニーズに合わせて技術を調整します。",
+      "vocabulary": [
+        {
+          "word": "Rather than",
+          "meaning": "するのではなく"
+        },
+        {
+          "word": "immerse themselves",
+          "meaning": "深く入り込む"
+        },
+        {
+          "word": "constraints",
+          "meaning": "制約"
+        }
+      ]
+    },
+    {
+      "english": "An FDE is therefore neither simply a consultant nor a conventional software developer.",
+      "japanese": "したがって、前線配置型技術者は単なるコンサルタントでも、従来型のソフトウェア開発者でもありません。",
+      "vocabulary": [
+        {
+          "word": "therefore",
+          "meaning": "したがって"
+        },
+        {
+          "word": "consultant",
+          "meaning": "コンサルタント"
+        },
+        {
+          "word": "conventional",
+          "meaning": "従来型の"
+        }
+      ]
+    },
+    {
+      "english": "The role combines aspects of both, with a strong emphasis on implementation and accountability for results.",
+      "japanese": "この役割は両方の要素を組み合わせながら、導入と成果への責任を特に重視します。",
+      "vocabulary": [
+        {
+          "word": "combines",
+          "meaning": "組み合わせる"
+        },
+        {
+          "word": "emphasis",
+          "meaning": "重視"
+        },
+        {
+          "word": "accountability",
+          "meaning": "責任"
+        }
+      ]
+    },
+    {
+      "english": "Traditionally, enterprise transformation projects have involved multiple specialized teams.",
+      "japanese": "従来、企業の変革事業には複数の専門チームが関わってきました。",
+      "vocabulary": [
+        {
+          "word": "Traditionally",
+          "meaning": "従来"
+        },
+        {
+          "word": "transformation",
+          "meaning": "変革"
+        },
+        {
+          "word": "specialized",
+          "meaning": "専門の"
+        }
+      ]
+    },
+    {
+      "english": "Consultants analyze business problems and develop strategies, business analysts translate those strategies into requirements, and engineers build the necessary systems.",
+      "japanese": "コンサルタントが事業上の課題を分析して戦略を立て、事業分析担当者がその戦略を要件に落とし込み、技術者が必要なシステムを構築します。",
+      "vocabulary": [
+        {
+          "word": "analyze",
+          "meaning": "分析する"
+        },
+        {
+          "word": "translate",
+          "meaning": "置き換える"
+        },
+        {
+          "word": "necessary",
+          "meaning": "必要な"
+        }
+      ]
+    },
+    {
+      "english": "Although this division of responsibilities allows specialists to focus on their expertise, it can create communication barriers, delays, and misunderstandings.",
+      "japanese": "このように責任を分ければ専門家はそれぞれの得意分野に集中できますが、意思疎通の壁や遅れ、誤解が生じることもあります。",
+      "vocabulary": [
+        {
+          "word": "division of responsibilities",
+          "meaning": "責任分担"
+        },
+        {
+          "word": "communication barriers",
+          "meaning": "意思疎通の壁"
+        },
+        {
+          "word": "misunderstandings",
+          "meaning": "誤解"
+        }
+      ]
+    },
+    {
+      "english": "For example, a consultant might recommend automating a company's procurement process using artificial intelligence.",
+      "japanese": "たとえば、コンサルタントが人工知能を使って企業の調達業務を自動化することを勧める場合があります。",
+      "vocabulary": [
+        {
+          "word": "recommend",
+          "meaning": "勧める"
+        },
+        {
+          "word": "automating",
+          "meaning": "自動化すること"
+        },
+        {
+          "word": "procurement",
+          "meaning": "調達"
+        }
+      ]
+    },
+    {
+      "english": "However, the engineering team may later discover that the existing infrastructure cannot support the proposed solution or that essential data is inaccessible.",
+      "japanese": "しかし後になって、技術チームが既存の基盤では提案された解決策を支えられない、あるいは不可欠なデータにアクセスできないと気づくことがあります。",
+      "vocabulary": [
+        {
+          "word": "infrastructure",
+          "meaning": "基盤"
+        },
+        {
+          "word": "proposed",
+          "meaning": "提案された"
+        },
+        {
+          "word": "inaccessible",
+          "meaning": "利用できない"
+        }
+      ]
+    },
+    {
+      "english": "FDEs aim to bridge the gap between business strategy and technical execution.",
+      "japanese": "前線配置型技術者は、事業戦略と技術的な実行の間にある隔たりを埋めることを目指します。",
+      "vocabulary": [
+        {
+          "word": "bridge the gap",
+          "meaning": "隔たりを埋める"
+        },
+        {
+          "word": "business strategy",
+          "meaning": "事業戦略"
+        },
+        {
+          "word": "execution",
+          "meaning": "実行"
+        }
+      ]
+    },
+    {
+      "english": "Instead of delivering recommendations and leaving implementation to others, they remain involved throughout the development lifecycle.",
+      "japanese": "提案を示して実施を他者に任せるのではなく、開発の全過程を通じて関与し続けます。",
+      "vocabulary": [
+        {
+          "word": "recommendations",
+          "meaning": "提案"
+        },
+        {
+          "word": "implementation",
+          "meaning": "実施"
+        },
+        {
+          "word": "lifecycle",
+          "meaning": "全過程"
+        }
+      ]
+    },
+    {
+      "english": "Their responsibilities extend from understanding the initial problem to ensuring that the solution operates successfully in production.",
+      "japanese": "最初の課題を理解するところから、解決策が本番環境で正常に動くようにするところまで、その責任は及びます。",
+      "vocabulary": [
+        {
+          "word": "responsibilities",
+          "meaning": "責任"
+        },
+        {
+          "word": "ensuring",
+          "meaning": "確実にすること"
+        },
+        {
+          "word": "production",
+          "meaning": "本番環境"
+        }
+      ]
+    },
+    {
+      "english": "This approach is particularly valuable in artificial intelligence projects, where technological capabilities and business requirements evolve rapidly.",
+      "japanese": "技術の能力と事業上の要件が急速に変化する人工知能の事業では、この方法が特に有効です。",
+      "vocabulary": [
+        {
+          "word": "particularly valuable",
+          "meaning": "特に有効な"
+        },
+        {
+          "word": "capabilities",
+          "meaning": "能力"
+        },
+        {
+          "word": "evolve rapidly",
+          "meaning": "急速に変化する"
+        }
+      ]
+    },
+    {
+      "english": "Consider a manufacturing company seeking to improve its supply chain operations using AI.",
+      "japanese": "人工知能を使って供給網の業務を改善しようとしている製造会社を考えてみましょう。",
+      "vocabulary": [
+        {
+          "word": "manufacturing company",
+          "meaning": "製造会社"
+        },
+        {
+          "word": "supply chain",
+          "meaning": "供給網"
+        },
+        {
+          "word": "improve",
+          "meaning": "改善する"
+        }
+      ]
+    },
+    {
+      "english": "A traditional consulting engagement might begin with several months of interviews, workshops, and presentations.",
+      "japanese": "従来型のコンサルティングでは、数か月にわたる聞き取りや作業会、発表から始まることがあります。",
+      "vocabulary": [
+        {
+          "word": "engagement",
+          "meaning": "業務"
+        },
+        {
+          "word": "interviews",
+          "meaning": "聞き取り"
+        },
+        {
+          "word": "workshops",
+          "meaning": "作業会"
+        }
+      ]
+    },
+    {
+      "english": "The final deliverable could be a transformation roadmap outlining potential use cases and expected financial benefits.",
+      "japanese": "最終成果物は、想定される活用例と期待される金銭的な効果をまとめた変革計画になるかもしれません。",
+      "vocabulary": [
+        {
+          "word": "deliverable",
+          "meaning": "成果物"
+        },
+        {
+          "word": "outlining",
+          "meaning": "まとめた"
+        },
+        {
+          "word": "financial benefits",
+          "meaning": "金銭的な効果"
+        }
+      ]
+    },
+    {
+      "english": "An FDE would approach the challenge differently.",
+      "japanese": "前線配置型技術者なら、この課題に異なる方法で取り組みます。",
+      "vocabulary": [
+        {
+          "word": "approach",
+          "meaning": "取り組む"
+        },
+        {
+          "word": "challenge",
+          "meaning": "課題"
+        },
+        {
+          "word": "differently",
+          "meaning": "異なる方法で"
+        }
+      ]
+    },
+    {
+      "english": "First, the engineer would interview employees, examine existing workflows, and identify operational bottlenecks.",
+      "japanese": "まず技術者は従業員に聞き取りを行い、既存の業務の流れを調べ、業務上の障害となっている点を特定します。",
+      "vocabulary": [
+        {
+          "word": "interview",
+          "meaning": "聞き取りを行う"
+        },
+        {
+          "word": "workflows",
+          "meaning": "業務の流れ"
+        },
+        {
+          "word": "bottlenecks",
+          "meaning": "障害となる点"
+        }
+      ]
+    },
+    {
+      "english": "Rather than treating every reported problem as equally important, the FDE would prioritize opportunities with significant business impact.",
+      "japanese": "報告された問題をすべて同じように重要視するのではなく、事業に大きな効果をもたらす機会を優先します。",
+      "vocabulary": [
+        {
+          "word": "reported",
+          "meaning": "報告された"
+        },
+        {
+          "word": "prioritize",
+          "meaning": "優先する"
+        },
+        {
+          "word": "significant",
+          "meaning": "大きな"
+        }
+      ]
+    },
+    {
+      "english": "Next, the engineer might develop a small prototype using existing data and AI models.",
+      "japanese": "次に技術者は、既存のデータと人工知能のモデルを使って、小規模な試作品を開発することがあります。",
+      "vocabulary": [
+        {
+          "word": "prototype",
+          "meaning": "試作品"
+        },
+        {
+          "word": "existing",
+          "meaning": "既存の"
+        },
+        {
+          "word": "models",
+          "meaning": "モデル"
+        }
+      ]
+    },
+    {
+      "english": "For example, the system could identify potential inventory shortages or recommend alternative suppliers.",
+      "japanese": "たとえば、そのシステムは在庫不足の可能性を特定したり、代わりの供給業者を提案したりできます。",
+      "vocabulary": [
+        {
+          "word": "potential",
+          "meaning": "可能性のある"
+        },
+        {
+          "word": "inventory shortages",
+          "meaning": "在庫不足"
+        },
+        {
+          "word": "alternative suppliers",
+          "meaning": "代わりの供給業者"
+        }
+      ]
+    },
+    {
+      "english": "The prototype would then be tested with actual users.",
+      "japanese": "その後、試作品を実際の利用者に試してもらいます。",
+      "vocabulary": [
+        {
+          "word": "prototype",
+          "meaning": "試作品"
+        },
+        {
+          "word": "tested",
+          "meaning": "試される"
+        },
+        {
+          "word": "actual users",
+          "meaning": "実際の利用者"
+        }
+      ]
+    },
+    {
+      "english": "Based on their feedback, the engineer would refine the solution, address technical limitations, and integrate it with enterprise systems.",
+      "japanese": "利用者の意見をもとに、技術者は解決策を改良し、技術上の限界に対処して、企業のシステムと連携させます。",
+      "vocabulary": [
+        {
+          "word": "feedback",
+          "meaning": "意見"
+        },
+        {
+          "word": "refine",
+          "meaning": "改良する"
+        },
+        {
+          "word": "integrate",
+          "meaning": "連携させる"
+        }
+      ]
+    },
+    {
+      "english": "Finally, the engineer would help deploy the solution into production, establish performance measurements, and support its adoption.",
+      "japanese": "最後に技術者は、その解決策を本番環境に導入し、性能の測定方法を整え、利用が定着するよう支援します。",
+      "vocabulary": [
+        {
+          "word": "deploy",
+          "meaning": "導入する"
+        },
+        {
+          "word": "performance measurements",
+          "meaning": "性能の測定方法"
+        },
+        {
+          "word": "adoption",
+          "meaning": "利用の定着"
+        }
+      ]
+    },
+    {
+      "english": "The ultimate objective is not merely to demonstrate that AI works, but to ensure that it consistently improves business operations.",
+      "japanese": "最終的な目標は、人工知能が機能することを示すだけではなく、事業運営を継続的に改善できるようにすることです。",
+      "vocabulary": [
+        {
+          "word": "ultimate objective",
+          "meaning": "最終的な目標"
+        },
+        {
+          "word": "demonstrate",
+          "meaning": "示す"
+        },
+        {
+          "word": "consistently",
+          "meaning": "継続的に"
+        }
+      ]
+    },
+    {
+      "english": "Leading AI companies, including OpenAI and Anthropic, have recognized the importance of forward-deployed engineering.",
+      "japanese": "有力な人工知能企業も、前線配置型技術者の重要性を認識しています。",
+      "vocabulary": [
+        {
+          "word": "Leading",
+          "meaning": "有力な"
+        },
+        {
+          "word": "recognized",
+          "meaning": "認識した"
+        },
+        {
+          "word": "importance",
+          "meaning": "重要性"
+        }
+      ]
+    },
+    {
+      "english": "Providing powerful AI models alone is not sufficient for successful enterprise adoption.",
+      "japanese": "高性能な人工知能モデルを提供するだけでは、企業での導入を成功させるには不十分です。",
+      "vocabulary": [
+        {
+          "word": "powerful",
+          "meaning": "高性能な"
+        },
+        {
+          "word": "sufficient",
+          "meaning": "十分な"
+        },
+        {
+          "word": "enterprise adoption",
+          "meaning": "企業での導入"
+        }
+      ]
+    },
+    {
+      "english": "Customers also need assistance with workflow redesign, system integration, data security, performance evaluation, and organizational change.",
+      "japanese": "顧客には、業務の流れの再設計、システム連携、データ保護、性能評価、組織変革に関する支援も必要です。",
+      "vocabulary": [
+        {
+          "word": "workflow redesign",
+          "meaning": "業務の流れの再設計"
+        },
+        {
+          "word": "data security",
+          "meaning": "データ保護"
+        },
+        {
+          "word": "organizational change",
+          "meaning": "組織変革"
+        }
+      ]
+    },
+    {
+      "english": "FDEs help bridge these gaps while providing valuable feedback to product and research teams.",
+      "japanese": "前線配置型技術者は、こうした隔たりを埋めるとともに、製品開発や研究のチームに有益な意見を提供します。",
+      "vocabulary": [
+        {
+          "word": "bridge",
+          "meaning": "埋める"
+        },
+        {
+          "word": "valuable feedback",
+          "meaning": "有益な意見"
+        },
+        {
+          "word": "research teams",
+          "meaning": "研究チーム"
+        }
+      ]
+    },
+    {
+      "english": "By observing how AI performs in real business environments, they can identify technical limitations, recurring customer requirements, and opportunities for product improvements.",
+      "japanese": "人工知能が実際の事業環境でどのように機能するかを観察することで、技術上の限界、繰り返し寄せられる顧客の要望、製品改善の機会を特定できます。",
+      "vocabulary": [
+        {
+          "word": "observing",
+          "meaning": "観察すること"
+        },
+        {
+          "word": "recurring",
+          "meaning": "繰り返し起こる"
+        },
+        {
+          "word": "improvements",
+          "meaning": "改善"
+        }
+      ]
+    },
+    {
+      "english": "Successful FDEs require a combination of technical capabilities and business-oriented skills.",
+      "japanese": "優れた前線配置型技術者には、技術的な能力と事業を重視する技能の両方が求められます。",
+      "vocabulary": [
+        {
+          "word": "Successful",
+          "meaning": "優れた"
+        },
+        {
+          "word": "combination",
+          "meaning": "組み合わせ"
+        },
+        {
+          "word": "business-oriented",
+          "meaning": "事業を重視する"
+        }
+      ]
+    },
+    {
+      "english": "Technical expertise remains fundamental.",
+      "japanese": "技術的な専門知識は、引き続き基本となります。",
+      "vocabulary": [
+        {
+          "word": "expertise",
+          "meaning": "専門知識"
+        },
+        {
+          "word": "fundamental",
+          "meaning": "基本となる"
+        }
+      ]
+    },
+    {
+      "english": "They must understand software architecture, APIs, databases, cloud infrastructure, and modern development practices.",
+      "japanese": "ソフトウェアの構造、連携用の仕組み、データベース、遠隔計算基盤、現代的な開発手法を理解していなければなりません。",
+      "vocabulary": [
+        {
+          "word": "architecture",
+          "meaning": "構造"
+        },
+        {
+          "word": "cloud infrastructure",
+          "meaning": "遠隔計算基盤"
+        },
+        {
+          "word": "development practices",
+          "meaning": "開発手法"
+        }
+      ]
+    },
+    {
+      "english": "In AI-related projects, knowledge of large language models, retrieval-augmented generation, AI agents, and model evaluation is particularly valuable.",
+      "japanese": "人工知能関連の事業では、大規模言語モデル、検索拡張生成、人工知能エージェント、モデル評価の知識が特に役立ちます。",
+      "vocabulary": [
+        {
+          "word": "large language models",
+          "meaning": "大規模言語モデル"
+        },
+        {
+          "word": "retrieval-augmented generation",
+          "meaning": "検索拡張生成"
+        },
+        {
+          "word": "model evaluation",
+          "meaning": "モデル評価"
+        }
+      ]
+    },
+    {
+      "english": "However, technical knowledge alone is insufficient.",
+      "japanese": "しかし、技術知識だけでは不十分です。",
+      "vocabulary": [
+        {
+          "word": "However",
+          "meaning": "しかし"
+        },
+        {
+          "word": "technical knowledge",
+          "meaning": "技術知識"
+        },
+        {
+          "word": "insufficient",
+          "meaning": "不十分な"
+        }
+      ]
+    },
+    {
+      "english": "FDEs must also communicate with stakeholders, identify underlying business problems, prioritize competing requirements, and make decisions under uncertainty.",
+      "japanese": "前線配置型技術者は関係者と意思疎通を図り、根本的な事業課題を特定し、競合する要件に優先順位を付け、不確実な状況で判断を下す必要もあります。",
+      "vocabulary": [
+        {
+          "word": "stakeholders",
+          "meaning": "関係者"
+        },
+        {
+          "word": "underlying",
+          "meaning": "根本的な"
+        },
+        {
+          "word": "uncertainty",
+          "meaning": "不確実性"
+        }
+      ]
+    },
+    {
+      "english": "An especially important ability is translating ambiguous business objectives into concrete technical solutions.",
+      "japanese": "特に重要な能力は、曖昧な事業目標を具体的な技術的解決策に置き換えることです。",
+      "vocabulary": [
+        {
+          "word": "ambiguous",
+          "meaning": "曖昧な"
+        },
+        {
+          "word": "objectives",
+          "meaning": "目標"
+        },
+        {
+          "word": "concrete",
+          "meaning": "具体的な"
+        }
+      ]
+    },
+    {
+      "english": "When an executive requests an AI-powered transformation, an FDE must determine which business processes should change, which systems require integration, and how success should be measured.",
+      "japanese": "経営幹部が人工知能を活用した変革を求めたとき、前線配置型技術者は、どの事業工程を変えるべきか、どのシステムを連携させる必要があるか、成功をどう測るかを判断しなければなりません。",
+      "vocabulary": [
+        {
+          "word": "executive",
+          "meaning": "経営幹部"
+        },
+        {
+          "word": "integration",
+          "meaning": "連携"
+        },
+        {
+          "word": "measured",
+          "meaning": "測定される"
+        }
+      ]
+    },
+    {
+      "english": "This requires both analytical thinking and practical judgment.",
+      "japanese": "そのためには、分析的思考と実践的な判断力の両方が必要です。",
+      "vocabulary": [
+        {
+          "word": "analytical thinking",
+          "meaning": "分析的思考"
+        },
+        {
+          "word": "practical judgment",
+          "meaning": "実践的な判断力"
+        }
+      ]
+    },
+    {
+      "english": "Importantly, FDEs do not necessarily perform every task individually.",
+      "japanese": "重要なのは、前線配置型技術者がすべての作業を必ず一人で行うわけではないという点です。",
+      "vocabulary": [
+        {
+          "word": "Importantly",
+          "meaning": "重要なのは"
+        },
+        {
+          "word": "necessarily",
+          "meaning": "必ずしも"
+        },
+        {
+          "word": "individually",
+          "meaning": "一人で"
+        }
+      ]
+    },
+    {
+      "english": "They frequently collaborate with other engineers, product specialists, and domain experts to deliver reliable solutions.",
+      "japanese": "前線配置型技術者は、信頼できる解決策を提供するため、他の技術者、製品の専門家、分野の専門家と頻繁に協力します。",
+      "vocabulary": [
+        {
+          "word": "frequently",
+          "meaning": "頻繁に"
+        },
+        {
+          "word": "collaborate",
+          "meaning": "協力する"
+        },
+        {
+          "word": "reliable",
+          "meaning": "信頼できる"
+        }
+      ]
+    },
+    {
+      "english": "The growing popularity of FDEs also raises questions about the future of management consulting.",
+      "japanese": "前線配置型技術者の人気が高まるにつれ、経営コンサルティングの将来についても疑問が生じています。",
+      "vocabulary": [
+        {
+          "word": "growing popularity",
+          "meaning": "高まる人気"
+        },
+        {
+          "word": "raises questions",
+          "meaning": "疑問を生じさせる"
+        },
+        {
+          "word": "future",
+          "meaning": "将来"
+        }
+      ]
+    },
+    {
+      "english": "As AI becomes capable of generating reports, analyzing data, and writing software, the value of producing recommendations alone may decline.",
+      "japanese": "人工知能が報告書の作成、データ分析、ソフトウェアの記述を担えるようになるにつれて、提案を作るだけの価値は下がるかもしれません。",
+      "vocabulary": [
+        {
+          "word": "capable of",
+          "meaning": "できる"
+        },
+        {
+          "word": "generating",
+          "meaning": "作成すること"
+        },
+        {
+          "word": "decline",
+          "meaning": "低下する"
+        }
+      ]
+    },
+    {
+      "english": "Consulting firms may consequently face increasing pressure to demonstrate tangible business results rather than simply deliver presentations.",
+      "japanese": "その結果、コンサルティング会社は、発表資料を提供するだけでなく、目に見える事業成果を示すよう、ますます強く求められる可能性があります。",
+      "vocabulary": [
+        {
+          "word": "consequently",
+          "meaning": "その結果"
+        },
+        {
+          "word": "pressure",
+          "meaning": "圧力"
+        },
+        {
+          "word": "tangible",
+          "meaning": "目に見える"
+        }
+      ]
+    },
+    {
+      "english": "However, FDEs are unlikely to replace all traditional consultants.",
+      "japanese": "しかし、前線配置型技術者が従来のコンサルタントすべてに取って代わる可能性は低いでしょう。",
+      "vocabulary": [
+        {
+          "word": "unlikely",
+          "meaning": "可能性が低い"
+        },
+        {
+          "word": "replace",
+          "meaning": "取って代わる"
+        },
+        {
+          "word": "traditional",
+          "meaning": "従来の"
+        }
+      ]
+    },
+    {
+      "english": "Complex organizational transformations still require expertise in corporate strategy, financial analysis, governance, change management, and stakeholder alignment.",
+      "japanese": "複雑な組織変革には、企業戦略、財務分析、統治、変革管理、関係者間の合意形成に関する専門知識が今後も必要です。",
+      "vocabulary": [
+        {
+          "word": "organizational transformations",
+          "meaning": "組織変革"
+        },
+        {
+          "word": "governance",
+          "meaning": "統治"
+        },
+        {
+          "word": "stakeholder alignment",
+          "meaning": "関係者間の合意形成"
+        }
+      ]
+    },
+    {
+      "english": "Furthermore, simply renaming traditional consultants as FDEs will not automatically improve their capabilities.",
+      "japanese": "さらに、従来のコンサルタントを前線配置型技術者と呼び替えるだけで、その能力が自動的に向上するわけではありません。",
+      "vocabulary": [
+        {
+          "word": "renaming",
+          "meaning": "呼び替えること"
+        },
+        {
+          "word": "automatically",
+          "meaning": "自動的に"
+        },
+        {
+          "word": "capabilities",
+          "meaning": "能力"
+        }
+      ]
+    },
+    {
+      "english": "Without sufficient engineering expertise, access to appropriate technologies, and the authority to implement changes, the FDE concept risks becoming another fashionable business term.",
+      "japanese": "十分な技術専門知識や適切な技術を利用する機会、変革を実行する権限がなければ、この考え方は一時的な流行語になってしまうおそれがあります。",
+      "vocabulary": [
+        {
+          "word": "sufficient",
+          "meaning": "十分な"
+        },
+        {
+          "word": "authority",
+          "meaning": "権限"
+        },
+        {
+          "word": "fashionable",
+          "meaning": "流行の"
+        }
+      ]
+    },
+    {
+      "english": "The real competitive advantage comes from combining strategic thinking with the ability to deliver reliable, production-ready solutions.",
+      "japanese": "真の競争優位性は、戦略的思考と、信頼性が高く本番環境で使える解決策を提供する能力を組み合わせることで生まれます。",
+      "vocabulary": [
+        {
+          "word": "competitive advantage",
+          "meaning": "競争優位性"
+        },
+        {
+          "word": "reliable",
+          "meaning": "信頼性が高い"
+        },
+        {
+          "word": "production-ready",
+          "meaning": "本番環境で使える"
+        }
+      ]
+    },
+    {
+      "english": "Ultimately, forward-deployed engineering represents a broader shift in enterprise technology from recommending solutions to taking responsibility for implementing them.",
+      "japanese": "最終的に、前線配置型の技術業務は、解決策を提案するだけでなく、その導入に責任を持つという、企業技術のより大きな変化を表しています。",
+      "vocabulary": [
+        {
+          "word": "Ultimately",
+          "meaning": "最終的に"
+        },
+        {
+          "word": "broader shift",
+          "meaning": "より大きな変化"
+        },
+        {
+          "word": "taking responsibility",
+          "meaning": "責任を持つこと"
+        }
+      ]
+    },
+    {
+      "english": "AI-assisted development may accelerate prototyping, but successful production deployment still requires robust architecture, security controls, testing, monitoring, and operational expertise.",
+      "japanese": "人工知能を活用した開発によって試作品作りは速くなるかもしれませんが、本番環境への導入を成功させるには、堅牢な設計、セキュリティ対策、試験、監視、運用の専門知識が引き続き必要です。",
+      "vocabulary": [
+        {
+          "word": "accelerate",
+          "meaning": "速める"
+        },
+        {
+          "word": "robust",
+          "meaning": "堅牢な"
+        },
+        {
+          "word": "monitoring",
+          "meaning": "監視"
+        }
+      ]
+    },
+    {
+      "english": "The most valuable professionals will be those who understand both technological possibilities and organizational realities.",
+      "japanese": "最も価値ある専門職は、技術の可能性と組織の現実の両方を理解する人たちです。",
+      "vocabulary": [
+        {
+          "word": "valuable",
+          "meaning": "価値ある"
+        },
+        {
+          "word": "possibilities",
+          "meaning": "可能性"
+        },
+        {
+          "word": "organizational realities",
+          "meaning": "組織の現実"
+        }
+      ]
+    },
+    {
+      "english": "Their success should be measured not by the number of presentations produced or prototypes demonstrated, but by the lasting business improvements achieved.",
+      "japanese": "その人たちの成功は、作成した発表資料や披露した試作品の数ではなく、長く続く事業改善によって測られるべきです。",
+      "vocabulary": [
+        {
+          "word": "measured",
+          "meaning": "測られる"
+        },
+        {
+          "word": "prototypes",
+          "meaning": "試作品"
+        },
+        {
+          "word": "lasting",
+          "meaning": "長く続く"
+        }
+      ]
+    }
+  ],
+  "transcript": "A Forward Deployed Engineer, commonly known as an FDE, is a technical professional who works closely with customers to identify business problems, design solutions, and implement software directly in real-world environments. Unlike traditional software engineers, who primarily develop products based on predefined requirements, FDEs actively participate in discovering what customers actually need. They combine technical expertise, business understanding, and communication skills to deliver measurable business outcomes.\n\nThe concept was pioneered by Palantir Technologies, a company specializing in data analytics and enterprise software. Palantir developed an approach in which engineers work directly alongside customers to solve complex operational challenges. Rather than simply receiving requirements from sales teams and developing software remotely, these engineers immerse themselves in customer environments, understand operational constraints, and adapt technology to specific business needs. An FDE is therefore neither simply a consultant nor a conventional software developer. The role combines aspects of both, with a strong emphasis on implementation and accountability for results.\n\nTraditionally, enterprise transformation projects have involved multiple specialized teams. Consultants analyze business problems and develop strategies, business analysts translate those strategies into requirements, and engineers build the necessary systems. Although this division of responsibilities allows specialists to focus on their expertise, it can create communication barriers, delays, and misunderstandings. For example, a consultant might recommend automating a company's procurement process using artificial intelligence. However, the engineering team may later discover that the existing infrastructure cannot support the proposed solution or that essential data is inaccessible.\n\nFDEs aim to bridge the gap between business strategy and technical execution. Instead of delivering recommendations and leaving implementation to others, they remain involved throughout the development lifecycle. Their responsibilities extend from understanding the initial problem to ensuring that the solution operates successfully in production. This approach is particularly valuable in artificial intelligence projects, where technological capabilities and business requirements evolve rapidly.\n\nConsider a manufacturing company seeking to improve its supply chain operations using AI. A traditional consulting engagement might begin with several months of interviews, workshops, and presentations. The final deliverable could be a transformation roadmap outlining potential use cases and expected financial benefits. An FDE would approach the challenge differently. First, the engineer would interview employees, examine existing workflows, and identify operational bottlenecks. Rather than treating every reported problem as equally important, the FDE would prioritize opportunities with significant business impact.\n\nNext, the engineer might develop a small prototype using existing data and AI models. For example, the system could identify potential inventory shortages or recommend alternative suppliers. The prototype would then be tested with actual users. Based on their feedback, the engineer would refine the solution, address technical limitations, and integrate it with enterprise systems. Finally, the engineer would help deploy the solution into production, establish performance measurements, and support its adoption. The ultimate objective is not merely to demonstrate that AI works, but to ensure that it consistently improves business operations.\n\nLeading AI companies, including OpenAI and Anthropic, have recognized the importance of forward-deployed engineering. Providing powerful AI models alone is not sufficient for successful enterprise adoption. Customers also need assistance with workflow redesign, system integration, data security, performance evaluation, and organizational change. FDEs help bridge these gaps while providing valuable feedback to product and research teams. By observing how AI performs in real business environments, they can identify technical limitations, recurring customer requirements, and opportunities for product improvements.\n\nSuccessful FDEs require a combination of technical capabilities and business-oriented skills. Technical expertise remains fundamental. They must understand software architecture, APIs, databases, cloud infrastructure, and modern development practices. In AI-related projects, knowledge of large language models, retrieval-augmented generation, AI agents, and model evaluation is particularly valuable. However, technical knowledge alone is insufficient. FDEs must also communicate with stakeholders, identify underlying business problems, prioritize competing requirements, and make decisions under uncertainty.\n\nAn especially important ability is translating ambiguous business objectives into concrete technical solutions. When an executive requests an AI-powered transformation, an FDE must determine which business processes should change, which systems require integration, and how success should be measured. This requires both analytical thinking and practical judgment. Importantly, FDEs do not necessarily perform every task individually. They frequently collaborate with other engineers, product specialists, and domain experts to deliver reliable solutions.\n\nThe growing popularity of FDEs also raises questions about the future of management consulting. As AI becomes capable of generating reports, analyzing data, and writing software, the value of producing recommendations alone may decline. Consulting firms may consequently face increasing pressure to demonstrate tangible business results rather than simply deliver presentations. However, FDEs are unlikely to replace all traditional consultants. Complex organizational transformations still require expertise in corporate strategy, financial analysis, governance, change management, and stakeholder alignment.\n\nFurthermore, simply renaming traditional consultants as FDEs will not automatically improve their capabilities. Without sufficient engineering expertise, access to appropriate technologies, and the authority to implement changes, the FDE concept risks becoming another fashionable business term. The real competitive advantage comes from combining strategic thinking with the ability to deliver reliable, production-ready solutions.\n\nUltimately, forward-deployed engineering represents a broader shift in enterprise technology from recommending solutions to taking responsibility for implementing them. AI-assisted development may accelerate prototyping, but successful production deployment still requires robust architecture, security controls, testing, monitoring, and operational expertise. The most valuable professionals will be those who understand both technological possibilities and organizational realities. Their success should be measured not by the number of presentations produced or prototypes demonstrated, but by the lasting business improvements achieved.",
+  "words": [
+    {
+      "word": "A",
+      "start": 0,
+      "end": 0.32
+    },
+    {
+      "word": "Forward",
+      "start": 0.32,
+      "end": 0.7
+    },
+    {
+      "word": "Deployed",
+      "start": 0.7,
+      "end": 1.66
+    },
+    {
+      "word": "Engineer",
+      "start": 1.66,
+      "end": 1.66
+    },
+    {
+      "word": "commonly",
+      "start": 2.14,
+      "end": 2.3
+    },
+    {
+      "word": "known",
+      "start": 2.3,
+      "end": 2.56
+    },
+    {
+      "word": "as",
+      "start": 2.56,
+      "end": 2.74
+    },
+    {
+      "word": "an",
+      "start": 2.74,
+      "end": 3.0
+    },
+    {
+      "word": "FDE",
+      "start": 3.0,
+      "end": 3.28
+    },
+    {
+      "word": "is",
+      "start": 3.72,
+      "end": 4.08
+    },
+    {
+      "word": "a",
+      "start": 4.08,
+      "end": 4.32
+    },
+    {
+      "word": "technical",
+      "start": 4.32,
+      "end": 4.64
+    },
+    {
+      "word": "professional",
+      "start": 4.64,
+      "end": 5.08
+    },
+    {
+      "word": "who",
+      "start": 5.08,
+      "end": 5.38
+    },
+    {
+      "word": "works",
+      "start": 5.38,
+      "end": 5.6
+    },
+    {
+      "word": "closely",
+      "start": 5.6,
+      "end": 6.04
+    },
+    {
+      "word": "with",
+      "start": 6.04,
+      "end": 6.68
+    },
+    {
+      "word": "customers",
+      "start": 6.68,
+      "end": 6.68
+    },
+    {
+      "word": "to",
+      "start": 6.68,
+      "end": 7.04
+    },
+    {
+      "word": "identify",
+      "start": 7.04,
+      "end": 7.4
+    },
+    {
+      "word": "business",
+      "start": 7.4,
+      "end": 7.82
+    },
+    {
+      "word": "problems",
+      "start": 7.82,
+      "end": 8.2
+    },
+    {
+      "word": "design",
+      "start": 8.86,
+      "end": 8.94
+    },
+    {
+      "word": "solutions",
+      "start": 8.94,
+      "end": 9.42
+    },
+    {
+      "word": "and",
+      "start": 9.58,
+      "end": 10.22
+    },
+    {
+      "word": "implement",
+      "start": 10.22,
+      "end": 10.5
+    },
+    {
+      "word": "software",
+      "start": 10.5,
+      "end": 10.98
+    },
+    {
+      "word": "directly",
+      "start": 10.98,
+      "end": 11.46
+    },
+    {
+      "word": "in",
+      "start": 11.46,
+      "end": 11.82
+    },
+    {
+      "word": "real-world",
+      "start": 11.88,
+      "end": 12.3
+    },
+    {
+      "word": "environments",
+      "start": 12.3,
+      "end": 12.86
+    },
+    {
+      "word": "Unlike",
+      "start": 13.74,
+      "end": 13.9
+    },
+    {
+      "word": "traditional",
+      "start": 13.9,
+      "end": 14.42
+    },
+    {
+      "word": "software",
+      "start": 14.42,
+      "end": 14.84
+    },
+    {
+      "word": "engineers",
+      "start": 14.84,
+      "end": 15.22
+    },
+    {
+      "word": "who",
+      "start": 15.22,
+      "end": 15.82
+    },
+    {
+      "word": "primarily",
+      "start": 15.82,
+      "end": 16.36
+    },
+    {
+      "word": "develop",
+      "start": 16.36,
+      "end": 16.74
+    },
+    {
+      "word": "products",
+      "start": 16.74,
+      "end": 17.18
+    },
+    {
+      "word": "based",
+      "start": 17.18,
+      "end": 17.66
+    },
+    {
+      "word": "on",
+      "start": 17.66,
+      "end": 17.98
+    },
+    {
+      "word": "predefined",
+      "start": 17.98,
+      "end": 18.32
+    },
+    {
+      "word": "requirements",
+      "start": 18.32,
+      "end": 18.96
+    },
+    {
+      "word": "FDEs",
+      "start": 19.62,
+      "end": 20.0
+    },
+    {
+      "word": "actively",
+      "start": 20.0,
+      "end": 20.58
+    },
+    {
+      "word": "participate",
+      "start": 20.58,
+      "end": 21.0
+    },
+    {
+      "word": "in",
+      "start": 21.0,
+      "end": 21.7
+    },
+    {
+      "word": "discovering",
+      "start": 21.7,
+      "end": 21.7
+    },
+    {
+      "word": "what",
+      "start": 21.7,
+      "end": 22.1
+    },
+    {
+      "word": "customers",
+      "start": 22.1,
+      "end": 22.42
+    },
+    {
+      "word": "actually",
+      "start": 22.42,
+      "end": 22.92
+    },
+    {
+      "word": "need",
+      "start": 22.92,
+      "end": 23.1
+    },
+    {
+      "word": "They",
+      "start": 23.68,
+      "end": 23.84
+    },
+    {
+      "word": "combine",
+      "start": 23.84,
+      "end": 24.18
+    },
+    {
+      "word": "technical",
+      "start": 24.18,
+      "end": 24.7
+    },
+    {
+      "word": "expertise",
+      "start": 24.7,
+      "end": 25.3
+    },
+    {
+      "word": "business",
+      "start": 26.08,
+      "end": 26.16
+    },
+    {
+      "word": "understanding",
+      "start": 26.16,
+      "end": 26.72
+    },
+    {
+      "word": "and",
+      "start": 26.98,
+      "end": 27.46
+    },
+    {
+      "word": "communication",
+      "start": 27.46,
+      "end": 27.9
+    },
+    {
+      "word": "skills",
+      "start": 27.9,
+      "end": 28.22
+    },
+    {
+      "word": "to",
+      "start": 28.22,
+      "end": 28.44
+    },
+    {
+      "word": "deliver",
+      "start": 28.44,
+      "end": 28.76
+    },
+    {
+      "word": "measurable",
+      "start": 28.76,
+      "end": 29.38
+    },
+    {
+      "word": "business",
+      "start": 29.38,
+      "end": 29.72
+    },
+    {
+      "word": "outcomes",
+      "start": 29.72,
+      "end": 29.98
+    },
+    {
+      "word": "The",
+      "start": 31.5,
+      "end": 31.66
+    },
+    {
+      "word": "concept",
+      "start": 31.66,
+      "end": 32.1
+    },
+    {
+      "word": "was",
+      "start": 32.1,
+      "end": 32.36
+    },
+    {
+      "word": "pioneered",
+      "start": 32.36,
+      "end": 32.7
+    },
+    {
+      "word": "by",
+      "start": 32.7,
+      "end": 33.06
+    },
+    {
+      "word": "Palantir",
+      "start": 33.06,
+      "end": 33.38
+    },
+    {
+      "word": "Technologies",
+      "start": 33.38,
+      "end": 34.14
+    },
+    {
+      "word": "a",
+      "start": 34.72,
+      "end": 34.72
+    },
+    {
+      "word": "company",
+      "start": 34.72,
+      "end": 35.0
+    },
+    {
+      "word": "specializing",
+      "start": 35.0,
+      "end": 35.64
+    },
+    {
+      "word": "in",
+      "start": 35.64,
+      "end": 35.92
+    },
+    {
+      "word": "data",
+      "start": 35.92,
+      "end": 36.12
+    },
+    {
+      "word": "analytics",
+      "start": 36.12,
+      "end": 36.58
+    },
+    {
+      "word": "and",
+      "start": 36.58,
+      "end": 36.84
+    },
+    {
+      "word": "enterprise",
+      "start": 36.84,
+      "end": 37.2
+    },
+    {
+      "word": "software",
+      "start": 37.2,
+      "end": 37.62
+    },
+    {
+      "word": "Palantir",
+      "start": 38.7,
+      "end": 38.82
+    },
+    {
+      "word": "developed",
+      "start": 38.82,
+      "end": 39.18
+    },
+    {
+      "word": "an",
+      "start": 39.18,
+      "end": 39.4
+    },
+    {
+      "word": "approach",
+      "start": 39.4,
+      "end": 39.7
+    },
+    {
+      "word": "in",
+      "start": 39.7,
+      "end": 40.08
+    },
+    {
+      "word": "which",
+      "start": 40.08,
+      "end": 40.36
+    },
+    {
+      "word": "engineers",
+      "start": 40.36,
+      "end": 40.74
+    },
+    {
+      "word": "work",
+      "start": 40.74,
+      "end": 41.1
+    },
+    {
+      "word": "directly",
+      "start": 41.1,
+      "end": 41.62
+    },
+    {
+      "word": "alongside",
+      "start": 41.62,
+      "end": 42.08
+    },
+    {
+      "word": "customers",
+      "start": 42.08,
+      "end": 42.5
+    },
+    {
+      "word": "to",
+      "start": 42.5,
+      "end": 43.02
+    },
+    {
+      "word": "solve",
+      "start": 43.02,
+      "end": 43.08
+    },
+    {
+      "word": "complex",
+      "start": 43.08,
+      "end": 43.7
+    },
+    {
+      "word": "operational",
+      "start": 43.7,
+      "end": 44.3
+    },
+    {
+      "word": "challenges",
+      "start": 44.3,
+      "end": 44.82
+    },
+    {
+      "word": "Rather",
+      "start": 45.78,
+      "end": 45.78
+    },
+    {
+      "word": "than",
+      "start": 45.78,
+      "end": 46.08
+    },
+    {
+      "word": "simply",
+      "start": 46.08,
+      "end": 46.38
+    },
+    {
+      "word": "receiving",
+      "start": 46.38,
+      "end": 46.76
+    },
+    {
+      "word": "requirements",
+      "start": 46.76,
+      "end": 47.28
+    },
+    {
+      "word": "from",
+      "start": 47.28,
+      "end": 47.66
+    },
+    {
+      "word": "sales",
+      "start": 47.66,
+      "end": 47.96
+    },
+    {
+      "word": "teams",
+      "start": 47.96,
+      "end": 48.28
+    },
+    {
+      "word": "and",
+      "start": 48.28,
+      "end": 48.58
+    },
+    {
+      "word": "developing",
+      "start": 48.58,
+      "end": 48.88
+    },
+    {
+      "word": "software",
+      "start": 48.88,
+      "end": 49.3
+    },
+    {
+      "word": "remotely",
+      "start": 49.3,
+      "end": 49.76
+    },
+    {
+      "word": "these",
+      "start": 50.34,
+      "end": 50.52
+    },
+    {
+      "word": "engineers",
+      "start": 50.52,
+      "end": 50.9
+    },
+    {
+      "word": "immerse",
+      "start": 50.9,
+      "end": 51.42
+    },
+    {
+      "word": "themselves",
+      "start": 51.42,
+      "end": 51.86
+    },
+    {
+      "word": "in",
+      "start": 51.86,
+      "end": 52.16
+    },
+    {
+      "word": "customer",
+      "start": 52.16,
+      "end": 52.48
+    },
+    {
+      "word": "environments",
+      "start": 52.48,
+      "end": 52.98
+    },
+    {
+      "word": "understand",
+      "start": 54.0,
+      "end": 54.02
+    },
+    {
+      "word": "operational",
+      "start": 54.02,
+      "end": 54.58
+    },
+    {
+      "word": "constraints",
+      "start": 54.58,
+      "end": 55.12
+    },
+    {
+      "word": "and",
+      "start": 55.54,
+      "end": 55.72
+    },
+    {
+      "word": "adapt",
+      "start": 55.72,
+      "end": 55.94
+    },
+    {
+      "word": "technology",
+      "start": 55.94,
+      "end": 56.42
+    },
+    {
+      "word": "to",
+      "start": 56.42,
+      "end": 56.68
+    },
+    {
+      "word": "specific",
+      "start": 56.68,
+      "end": 57.04
+    },
+    {
+      "word": "business",
+      "start": 57.04,
+      "end": 57.4
+    },
+    {
+      "word": "needs",
+      "start": 57.4,
+      "end": 57.66
+    },
+    {
+      "word": "An",
+      "start": 57.66,
+      "end": 58.48
+    },
+    {
+      "word": "FDE",
+      "start": 58.48,
+      "end": 59.02
+    },
+    {
+      "word": "is",
+      "start": 59.02,
+      "end": 59.32
+    },
+    {
+      "word": "therefore",
+      "start": 59.32,
+      "end": 59.66
+    },
+    {
+      "word": "neither",
+      "start": 59.66,
+      "end": 59.98
+    },
+    {
+      "word": "simply",
+      "start": 60.0,
+      "end": 60.3
+    },
+    {
+      "word": "a",
+      "start": 60.3,
+      "end": 60.52
+    },
+    {
+      "word": "consultant",
+      "start": 60.52,
+      "end": 60.98
+    },
+    {
+      "word": "nor",
+      "start": 60.98,
+      "end": 61.32
+    },
+    {
+      "word": "a",
+      "start": 61.32,
+      "end": 61.92
+    },
+    {
+      "word": "conventional",
+      "start": 61.92,
+      "end": 61.92
+    },
+    {
+      "word": "software",
+      "start": 61.92,
+      "end": 62.38
+    },
+    {
+      "word": "developer",
+      "start": 62.38,
+      "end": 62.72
+    },
+    {
+      "word": "The",
+      "start": 63.44,
+      "end": 63.46
+    },
+    {
+      "word": "role",
+      "start": 63.46,
+      "end": 63.72
+    },
+    {
+      "word": "combines",
+      "start": 63.72,
+      "end": 64.12
+    },
+    {
+      "word": "aspects",
+      "start": 64.12,
+      "end": 64.58
+    },
+    {
+      "word": "of",
+      "start": 64.58,
+      "end": 64.86
+    },
+    {
+      "word": "both",
+      "start": 64.86,
+      "end": 65.08
+    },
+    {
+      "word": "with",
+      "start": 65.08,
+      "end": 65.54
+    },
+    {
+      "word": "a",
+      "start": 65.54,
+      "end": 65.82
+    },
+    {
+      "word": "strong",
+      "start": 65.82,
+      "end": 66.04
+    },
+    {
+      "word": "emphasis",
+      "start": 66.04,
+      "end": 66.34
+    },
+    {
+      "word": "on",
+      "start": 66.34,
+      "end": 66.74
+    },
+    {
+      "word": "implementation",
+      "start": 66.74,
+      "end": 67.28
+    },
+    {
+      "word": "and",
+      "start": 67.28,
+      "end": 67.7
+    },
+    {
+      "word": "accountability",
+      "start": 67.7,
+      "end": 68.08
+    },
+    {
+      "word": "for",
+      "start": 68.08,
+      "end": 68.46
+    },
+    {
+      "word": "results",
+      "start": 68.46,
+      "end": 68.92
+    },
+    {
+      "word": "Traditionally",
+      "start": 70.1,
+      "end": 70.1
+    },
+    {
+      "word": "enterprise",
+      "start": 70.28,
+      "end": 70.74
+    },
+    {
+      "word": "transformation",
+      "start": 70.74,
+      "end": 71.34
+    },
+    {
+      "word": "projects",
+      "start": 71.34,
+      "end": 71.84
+    },
+    {
+      "word": "have",
+      "start": 71.84,
+      "end": 72.12
+    },
+    {
+      "word": "involved",
+      "start": 72.12,
+      "end": 72.38
+    },
+    {
+      "word": "multiple",
+      "start": 72.38,
+      "end": 72.84
+    },
+    {
+      "word": "specialized",
+      "start": 72.84,
+      "end": 73.36
+    },
+    {
+      "word": "teams",
+      "start": 73.36,
+      "end": 73.8
+    },
+    {
+      "word": "Consultants",
+      "start": 74.62,
+      "end": 74.78
+    },
+    {
+      "word": "analyze",
+      "start": 74.78,
+      "end": 75.24
+    },
+    {
+      "word": "business",
+      "start": 75.24,
+      "end": 75.6
+    },
+    {
+      "word": "problems",
+      "start": 75.6,
+      "end": 75.96
+    },
+    {
+      "word": "and",
+      "start": 75.96,
+      "end": 76.2
+    },
+    {
+      "word": "develop",
+      "start": 76.2,
+      "end": 76.5
+    },
+    {
+      "word": "strategies",
+      "start": 76.5,
+      "end": 77.02
+    },
+    {
+      "word": "business",
+      "start": 77.64,
+      "end": 77.86
+    },
+    {
+      "word": "analysts",
+      "start": 77.86,
+      "end": 78.22
+    },
+    {
+      "word": "translate",
+      "start": 78.22,
+      "end": 78.66
+    },
+    {
+      "word": "those",
+      "start": 78.66,
+      "end": 79.04
+    },
+    {
+      "word": "strategies",
+      "start": 79.04,
+      "end": 79.28
+    },
+    {
+      "word": "into",
+      "start": 79.28,
+      "end": 79.54
+    },
+    {
+      "word": "requirements",
+      "start": 79.54,
+      "end": 80.1
+    },
+    {
+      "word": "and",
+      "start": 80.58,
+      "end": 80.86
+    },
+    {
+      "word": "engineers",
+      "start": 80.86,
+      "end": 81.14
+    },
+    {
+      "word": "build",
+      "start": 81.14,
+      "end": 81.5
+    },
+    {
+      "word": "the",
+      "start": 81.5,
+      "end": 81.7
+    },
+    {
+      "word": "necessary",
+      "start": 81.7,
+      "end": 82.06
+    },
+    {
+      "word": "systems",
+      "start": 82.06,
+      "end": 82.56
+    },
+    {
+      "word": "Although",
+      "start": 83.3,
+      "end": 83.42
+    },
+    {
+      "word": "this",
+      "start": 83.42,
+      "end": 83.7
+    },
+    {
+      "word": "division",
+      "start": 83.7,
+      "end": 84.0
+    },
+    {
+      "word": "of",
+      "start": 84.0,
+      "end": 84.3
+    },
+    {
+      "word": "responsibilities",
+      "start": 84.3,
+      "end": 84.8
+    },
+    {
+      "word": "allows",
+      "start": 84.8,
+      "end": 85.3
+    },
+    {
+      "word": "specialists",
+      "start": 85.3,
+      "end": 85.74
+    },
+    {
+      "word": "to",
+      "start": 85.74,
+      "end": 86.18
+    },
+    {
+      "word": "focus",
+      "start": 86.18,
+      "end": 86.24
+    },
+    {
+      "word": "on",
+      "start": 86.24,
+      "end": 86.42
+    },
+    {
+      "word": "their",
+      "start": 86.42,
+      "end": 86.68
+    },
+    {
+      "word": "expertise",
+      "start": 86.68,
+      "end": 86.98
+    },
+    {
+      "word": "it",
+      "start": 87.5,
+      "end": 87.66
+    },
+    {
+      "word": "can",
+      "start": 87.66,
+      "end": 87.88
+    },
+    {
+      "word": "create",
+      "start": 87.88,
+      "end": 88.14
+    },
+    {
+      "word": "communication",
+      "start": 88.14,
+      "end": 88.76
+    },
+    {
+      "word": "barriers",
+      "start": 88.76,
+      "end": 89.18
+    },
+    {
+      "word": "delays",
+      "start": 89.18,
+      "end": 89.36
+    },
+    {
+      "word": "and",
+      "start": 90.0,
+      "end": 90.26
+    },
+    {
+      "word": "misunderstandings",
+      "start": 90.26,
+      "end": 91.14
+    },
+    {
+      "word": "For",
+      "start": 91.74,
+      "end": 91.9
+    },
+    {
+      "word": "example",
+      "start": 91.9,
+      "end": 92.26
+    },
+    {
+      "word": "a",
+      "start": 92.7,
+      "end": 92.88
+    },
+    {
+      "word": "consultant",
+      "start": 92.88,
+      "end": 93.14
+    },
+    {
+      "word": "might",
+      "start": 93.14,
+      "end": 93.44
+    },
+    {
+      "word": "recommend",
+      "start": 93.44,
+      "end": 93.78
+    },
+    {
+      "word": "automating",
+      "start": 93.78,
+      "end": 94.24
+    },
+    {
+      "word": "a",
+      "start": 94.24,
+      "end": 94.52
+    },
+    {
+      "word": "company's",
+      "start": 94.52,
+      "end": 94.94
+    },
+    {
+      "word": "procurement",
+      "start": 94.94,
+      "end": 95.2
+    },
+    {
+      "word": "process",
+      "start": 95.2,
+      "end": 95.74
+    },
+    {
+      "word": "using",
+      "start": 95.74,
+      "end": 96.02
+    },
+    {
+      "word": "artificial",
+      "start": 96.02,
+      "end": 96.52
+    },
+    {
+      "word": "intelligence",
+      "start": 96.52,
+      "end": 97.08
+    },
+    {
+      "word": "However",
+      "start": 97.68,
+      "end": 97.92
+    },
+    {
+      "word": "the",
+      "start": 98.04,
+      "end": 98.18
+    },
+    {
+      "word": "engineering",
+      "start": 98.18,
+      "end": 98.5
+    },
+    {
+      "word": "team",
+      "start": 98.5,
+      "end": 98.86
+    },
+    {
+      "word": "may",
+      "start": 98.86,
+      "end": 99.06
+    },
+    {
+      "word": "later",
+      "start": 99.06,
+      "end": 99.42
+    },
+    {
+      "word": "discover",
+      "start": 99.42,
+      "end": 99.66
+    },
+    {
+      "word": "that",
+      "start": 99.66,
+      "end": 99.92
+    },
+    {
+      "word": "the",
+      "start": 99.92,
+      "end": 100.1
+    },
+    {
+      "word": "existing",
+      "start": 100.1,
+      "end": 100.48
+    },
+    {
+      "word": "infrastructure",
+      "start": 100.48,
+      "end": 101.02
+    },
+    {
+      "word": "cannot",
+      "start": 101.02,
+      "end": 101.5
+    },
+    {
+      "word": "support",
+      "start": 101.5,
+      "end": 101.88
+    },
+    {
+      "word": "the",
+      "start": 101.88,
+      "end": 102.1
+    },
+    {
+      "word": "proposed",
+      "start": 102.1,
+      "end": 102.38
+    },
+    {
+      "word": "solution",
+      "start": 102.38,
+      "end": 102.78
+    },
+    {
+      "word": "or",
+      "start": 102.78,
+      "end": 103.34
+    },
+    {
+      "word": "that",
+      "start": 103.34,
+      "end": 103.58
+    },
+    {
+      "word": "essential",
+      "start": 103.58,
+      "end": 103.9
+    },
+    {
+      "word": "data",
+      "start": 103.9,
+      "end": 104.16
+    },
+    {
+      "word": "is",
+      "start": 104.16,
+      "end": 104.42
+    },
+    {
+      "word": "inaccessible",
+      "start": 104.26,
+      "end": 104.98
+    },
+    {
+      "word": "FDEs",
+      "start": 105.78,
+      "end": 106.24
+    },
+    {
+      "word": "aim",
+      "start": 106.24,
+      "end": 106.48
+    },
+    {
+      "word": "to",
+      "start": 106.48,
+      "end": 106.8
+    },
+    {
+      "word": "bridge",
+      "start": 106.8,
+      "end": 106.8
+    },
+    {
+      "word": "the",
+      "start": 106.8,
+      "end": 107.16
+    },
+    {
+      "word": "gap",
+      "start": 107.16,
+      "end": 107.16
+    },
+    {
+      "word": "between",
+      "start": 107.16,
+      "end": 107.46
+    },
+    {
+      "word": "business",
+      "start": 107.46,
+      "end": 107.82
+    },
+    {
+      "word": "strategy",
+      "start": 107.82,
+      "end": 108.22
+    },
+    {
+      "word": "and",
+      "start": 108.22,
+      "end": 108.54
+    },
+    {
+      "word": "technical",
+      "start": 108.54,
+      "end": 108.88
+    },
+    {
+      "word": "execution",
+      "start": 108.88,
+      "end": 109.36
+    },
+    {
+      "word": "Instead",
+      "start": 110.26,
+      "end": 110.26
+    },
+    {
+      "word": "of",
+      "start": 110.26,
+      "end": 110.82
+    },
+    {
+      "word": "delivering",
+      "start": 110.82,
+      "end": 110.82
+    },
+    {
+      "word": "recommendations",
+      "start": 110.82,
+      "end": 111.4
+    },
+    {
+      "word": "and",
+      "start": 111.4,
+      "end": 111.8
+    },
+    {
+      "word": "leaving",
+      "start": 111.8,
+      "end": 112.04
+    },
+    {
+      "word": "implementation",
+      "start": 112.04,
+      "end": 112.42
+    },
+    {
+      "word": "to",
+      "start": 112.42,
+      "end": 113.18
+    },
+    {
+      "word": "others",
+      "start": 113.18,
+      "end": 113.18
+    },
+    {
+      "word": "they",
+      "start": 113.56,
+      "end": 113.7
+    },
+    {
+      "word": "remain",
+      "start": 113.7,
+      "end": 114.04
+    },
+    {
+      "word": "involved",
+      "start": 114.04,
+      "end": 114.46
+    },
+    {
+      "word": "throughout",
+      "start": 114.46,
+      "end": 114.82
+    },
+    {
+      "word": "the",
+      "start": 114.82,
+      "end": 115.06
+    },
+    {
+      "word": "development",
+      "start": 115.06,
+      "end": 115.36
+    },
+    {
+      "word": "lifecycle",
+      "start": 115.36,
+      "end": 115.9
+    },
+    {
+      "word": "Their",
+      "start": 116.56,
+      "end": 116.78
+    },
+    {
+      "word": "responsibilities",
+      "start": 116.78,
+      "end": 117.5
+    },
+    {
+      "word": "extend",
+      "start": 117.5,
+      "end": 117.94
+    },
+    {
+      "word": "from",
+      "start": 117.94,
+      "end": 118.24
+    },
+    {
+      "word": "understanding",
+      "start": 118.24,
+      "end": 118.74
+    },
+    {
+      "word": "the",
+      "start": 118.74,
+      "end": 118.96
+    },
+    {
+      "word": "initial",
+      "start": 118.96,
+      "end": 119.18
+    },
+    {
+      "word": "problem",
+      "start": 119.18,
+      "end": 119.58
+    },
+    {
+      "word": "to",
+      "start": 119.58,
+      "end": 119.98
+    },
+    {
+      "word": "ensuring",
+      "start": 120.16,
+      "end": 120.5
+    },
+    {
+      "word": "that",
+      "start": 120.5,
+      "end": 120.8
+    },
+    {
+      "word": "the",
+      "start": 120.8,
+      "end": 120.86
+    },
+    {
+      "word": "solution",
+      "start": 120.86,
+      "end": 121.22
+    },
+    {
+      "word": "operates",
+      "start": 121.22,
+      "end": 121.66
+    },
+    {
+      "word": "successfully",
+      "start": 121.66,
+      "end": 122.22
+    },
+    {
+      "word": "in",
+      "start": 122.22,
+      "end": 122.52
+    },
+    {
+      "word": "production",
+      "start": 122.52,
+      "end": 122.84
+    },
+    {
+      "word": "This",
+      "start": 123.56,
+      "end": 123.64
+    },
+    {
+      "word": "approach",
+      "start": 123.64,
+      "end": 123.92
+    },
+    {
+      "word": "is",
+      "start": 123.92,
+      "end": 124.14
+    },
+    {
+      "word": "particularly",
+      "start": 124.14,
+      "end": 124.72
+    },
+    {
+      "word": "valuable",
+      "start": 124.72,
+      "end": 125.12
+    },
+    {
+      "word": "in",
+      "start": 125.12,
+      "end": 125.48
+    },
+    {
+      "word": "artificial",
+      "start": 125.48,
+      "end": 125.88
+    },
+    {
+      "word": "intelligence",
+      "start": 125.88,
+      "end": 126.36
+    },
+    {
+      "word": "projects",
+      "start": 126.36,
+      "end": 126.86
+    },
+    {
+      "word": "where",
+      "start": 127.3,
+      "end": 127.48
+    },
+    {
+      "word": "technological",
+      "start": 127.48,
+      "end": 128.1
+    },
+    {
+      "word": "capabilities",
+      "start": 128.1,
+      "end": 128.68
+    },
+    {
+      "word": "and",
+      "start": 128.68,
+      "end": 129.0
+    },
+    {
+      "word": "business",
+      "start": 129.0,
+      "end": 129.3
+    },
+    {
+      "word": "requirements",
+      "start": 129.3,
+      "end": 129.8
+    },
+    {
+      "word": "evolve",
+      "start": 129.8,
+      "end": 130.22
+    },
+    {
+      "word": "rapidly",
+      "start": 130.22,
+      "end": 130.66
+    },
+    {
+      "word": "Consider",
+      "start": 131.66,
+      "end": 131.76
+    },
+    {
+      "word": "a",
+      "start": 131.76,
+      "end": 132.04
+    },
+    {
+      "word": "manufacturing",
+      "start": 132.04,
+      "end": 132.52
+    },
+    {
+      "word": "company",
+      "start": 132.52,
+      "end": 132.98
+    },
+    {
+      "word": "seeking",
+      "start": 132.98,
+      "end": 133.32
+    },
+    {
+      "word": "to",
+      "start": 133.32,
+      "end": 133.86
+    },
+    {
+      "word": "improve",
+      "start": 133.86,
+      "end": 133.86
+    },
+    {
+      "word": "its",
+      "start": 133.86,
+      "end": 134.1
+    },
+    {
+      "word": "supply",
+      "start": 134.1,
+      "end": 134.38
+    },
+    {
+      "word": "chain",
+      "start": 134.38,
+      "end": 134.56
+    },
+    {
+      "word": "operations",
+      "start": 134.56,
+      "end": 135.08
+    },
+    {
+      "word": "using",
+      "start": 135.08,
+      "end": 135.38
+    },
+    {
+      "word": "AI",
+      "start": 135.38,
+      "end": 135.68
+    },
+    {
+      "word": "A",
+      "start": 136.32,
+      "end": 136.46
+    },
+    {
+      "word": "traditional",
+      "start": 136.46,
+      "end": 136.86
+    },
+    {
+      "word": "consulting",
+      "start": 136.86,
+      "end": 137.3
+    },
+    {
+      "word": "engagement",
+      "start": 137.3,
+      "end": 137.72
+    },
+    {
+      "word": "might",
+      "start": 137.72,
+      "end": 138.04
+    },
+    {
+      "word": "begin",
+      "start": 138.04,
+      "end": 138.3
+    },
+    {
+      "word": "with",
+      "start": 138.3,
+      "end": 138.54
+    },
+    {
+      "word": "several",
+      "start": 138.54,
+      "end": 138.78
+    },
+    {
+      "word": "months",
+      "start": 138.78,
+      "end": 138.96
+    },
+    {
+      "word": "of",
+      "start": 138.96,
+      "end": 139.62
+    },
+    {
+      "word": "interviews",
+      "start": 139.62,
+      "end": 139.62
+    },
+    {
+      "word": "workshops",
+      "start": 140.2,
+      "end": 140.2
+    },
+    {
+      "word": "and",
+      "start": 140.3,
+      "end": 141.0
+    },
+    {
+      "word": "presentations",
+      "start": 141.0,
+      "end": 141.0
+    },
+    {
+      "word": "The",
+      "start": 141.5,
+      "end": 141.82
+    },
+    {
+      "word": "final",
+      "start": 141.82,
+      "end": 142.06
+    },
+    {
+      "word": "deliverable",
+      "start": 142.06,
+      "end": 142.56
+    },
+    {
+      "word": "could",
+      "start": 142.56,
+      "end": 142.78
+    },
+    {
+      "word": "be",
+      "start": 142.78,
+      "end": 142.9
+    },
+    {
+      "word": "a",
+      "start": 142.9,
+      "end": 143.22
+    },
+    {
+      "word": "transformation",
+      "start": 143.22,
+      "end": 143.64
+    },
+    {
+      "word": "roadmap",
+      "start": 143.64,
+      "end": 144.08
+    },
+    {
+      "word": "outlining",
+      "start": 144.08,
+      "end": 144.52
+    },
+    {
+      "word": "potential",
+      "start": 144.52,
+      "end": 145.02
+    },
+    {
+      "word": "use",
+      "start": 145.02,
+      "end": 145.34
+    },
+    {
+      "word": "cases",
+      "start": 145.34,
+      "end": 145.66
+    },
+    {
+      "word": "and",
+      "start": 145.66,
+      "end": 146.24
+    },
+    {
+      "word": "expected",
+      "start": 146.24,
+      "end": 146.64
+    },
+    {
+      "word": "financial",
+      "start": 146.64,
+      "end": 147.12
+    },
+    {
+      "word": "benefits",
+      "start": 147.12,
+      "end": 147.5
+    },
+    {
+      "word": "An",
+      "start": 147.5,
+      "end": 148.24
+    },
+    {
+      "word": "FDE",
+      "start": 148.24,
+      "end": 148.72
+    },
+    {
+      "word": "would",
+      "start": 148.72,
+      "end": 148.96
+    },
+    {
+      "word": "approach",
+      "start": 148.96,
+      "end": 149.24
+    },
+    {
+      "word": "the",
+      "start": 149.24,
+      "end": 149.44
+    },
+    {
+      "word": "challenge",
+      "start": 149.44,
+      "end": 149.7
+    },
+    {
+      "word": "differently",
+      "start": 149.7,
+      "end": 149.98
+    },
+    {
+      "word": "First",
+      "start": 150.0,
+      "end": 150.98
+    },
+    {
+      "word": "the",
+      "start": 151.42,
+      "end": 151.52
+    },
+    {
+      "word": "engineer",
+      "start": 151.52,
+      "end": 151.74
+    },
+    {
+      "word": "would",
+      "start": 151.74,
+      "end": 152.0
+    },
+    {
+      "word": "interview",
+      "start": 152.0,
+      "end": 152.28
+    },
+    {
+      "word": "employees",
+      "start": 152.28,
+      "end": 152.84
+    },
+    {
+      "word": "examine",
+      "start": 153.4,
+      "end": 153.4
+    },
+    {
+      "word": "existing",
+      "start": 153.4,
+      "end": 153.84
+    },
+    {
+      "word": "workflows",
+      "start": 153.84,
+      "end": 154.3
+    },
+    {
+      "word": "and",
+      "start": 154.76,
+      "end": 154.88
+    },
+    {
+      "word": "identify",
+      "start": 154.88,
+      "end": 155.26
+    },
+    {
+      "word": "operational",
+      "start": 155.26,
+      "end": 155.86
+    },
+    {
+      "word": "bottlenecks",
+      "start": 155.86,
+      "end": 156.4
+    },
+    {
+      "word": "Rather",
+      "start": 157.04,
+      "end": 157.06
+    },
+    {
+      "word": "than",
+      "start": 157.06,
+      "end": 157.34
+    },
+    {
+      "word": "treating",
+      "start": 157.34,
+      "end": 157.56
+    },
+    {
+      "word": "every",
+      "start": 157.56,
+      "end": 157.92
+    },
+    {
+      "word": "reported",
+      "start": 157.92,
+      "end": 158.34
+    },
+    {
+      "word": "problem",
+      "start": 158.34,
+      "end": 158.62
+    },
+    {
+      "word": "as",
+      "start": 158.62,
+      "end": 158.88
+    },
+    {
+      "word": "equally",
+      "start": 158.88,
+      "end": 159.16
+    },
+    {
+      "word": "important",
+      "start": 159.16,
+      "end": 159.62
+    },
+    {
+      "word": "the",
+      "start": 160.08,
+      "end": 160.18
+    },
+    {
+      "word": "FDE",
+      "start": 160.18,
+      "end": 160.52
+    },
+    {
+      "word": "would",
+      "start": 160.52,
+      "end": 160.8
+    },
+    {
+      "word": "prioritize",
+      "start": 160.8,
+      "end": 161.32
+    },
+    {
+      "word": "opportunities",
+      "start": 161.32,
+      "end": 161.88
+    },
+    {
+      "word": "with",
+      "start": 161.88,
+      "end": 162.26
+    },
+    {
+      "word": "significant",
+      "start": 162.26,
+      "end": 162.7
+    },
+    {
+      "word": "business",
+      "start": 162.7,
+      "end": 163.1
+    },
+    {
+      "word": "impact",
+      "start": 163.1,
+      "end": 163.48
+    },
+    {
+      "word": "Next",
+      "start": 164.16,
+      "end": 164.5
+    },
+    {
+      "word": "the",
+      "start": 164.82,
+      "end": 165.22
+    },
+    {
+      "word": "engineer",
+      "start": 165.22,
+      "end": 165.22
+    },
+    {
+      "word": "might",
+      "start": 165.22,
+      "end": 165.54
+    },
+    {
+      "word": "develop",
+      "start": 165.54,
+      "end": 165.78
+    },
+    {
+      "word": "a",
+      "start": 165.78,
+      "end": 165.98
+    },
+    {
+      "word": "small",
+      "start": 165.98,
+      "end": 166.26
+    },
+    {
+      "word": "prototype",
+      "start": 166.26,
+      "end": 166.68
+    },
+    {
+      "word": "using",
+      "start": 166.68,
+      "end": 167.0
+    },
+    {
+      "word": "existing",
+      "start": 167.0,
+      "end": 167.46
+    },
+    {
+      "word": "data",
+      "start": 167.46,
+      "end": 167.78
+    },
+    {
+      "word": "and",
+      "start": 167.78,
+      "end": 167.98
+    },
+    {
+      "word": "AI",
+      "start": 167.98,
+      "end": 168.24
+    },
+    {
+      "word": "models",
+      "start": 168.24,
+      "end": 168.58
+    },
+    {
+      "word": "For",
+      "start": 169.1,
+      "end": 169.38
+    },
+    {
+      "word": "example",
+      "start": 169.38,
+      "end": 169.66
+    },
+    {
+      "word": "the",
+      "start": 169.8,
+      "end": 169.96
+    },
+    {
+      "word": "system",
+      "start": 169.96,
+      "end": 170.16
+    },
+    {
+      "word": "could",
+      "start": 170.16,
+      "end": 170.46
+    },
+    {
+      "word": "identify",
+      "start": 170.46,
+      "end": 170.86
+    },
+    {
+      "word": "potential",
+      "start": 170.86,
+      "end": 171.36
+    },
+    {
+      "word": "inventory",
+      "start": 171.36,
+      "end": 171.8
+    },
+    {
+      "word": "shortages",
+      "start": 171.8,
+      "end": 172.22
+    },
+    {
+      "word": "or",
+      "start": 172.22,
+      "end": 172.92
+    },
+    {
+      "word": "recommend",
+      "start": 172.92,
+      "end": 173.24
+    },
+    {
+      "word": "alternative",
+      "start": 173.24,
+      "end": 173.7
+    },
+    {
+      "word": "suppliers",
+      "start": 173.7,
+      "end": 174.18
+    },
+    {
+      "word": "The",
+      "start": 174.44,
+      "end": 174.92
+    },
+    {
+      "word": "prototype",
+      "start": 174.92,
+      "end": 175.32
+    },
+    {
+      "word": "would",
+      "start": 175.32,
+      "end": 175.52
+    },
+    {
+      "word": "then",
+      "start": 175.52,
+      "end": 175.72
+    },
+    {
+      "word": "be",
+      "start": 175.72,
+      "end": 176.12
+    },
+    {
+      "word": "tested",
+      "start": 176.12,
+      "end": 176.12
+    },
+    {
+      "word": "with",
+      "start": 176.12,
+      "end": 176.36
+    },
+    {
+      "word": "actual",
+      "start": 176.36,
+      "end": 176.72
+    },
+    {
+      "word": "users",
+      "start": 176.72,
+      "end": 177.1
+    },
+    {
+      "word": "Based",
+      "start": 177.1,
+      "end": 177.74
+    },
+    {
+      "word": "on",
+      "start": 177.74,
+      "end": 177.92
+    },
+    {
+      "word": "their",
+      "start": 177.92,
+      "end": 178.06
+    },
+    {
+      "word": "feedback",
+      "start": 178.06,
+      "end": 178.44
+    },
+    {
+      "word": "the",
+      "start": 178.54,
+      "end": 178.74
+    },
+    {
+      "word": "engineer",
+      "start": 178.74,
+      "end": 179.0
+    },
+    {
+      "word": "would",
+      "start": 179.0,
+      "end": 179.22
+    },
+    {
+      "word": "refine",
+      "start": 179.22,
+      "end": 179.52
+    },
+    {
+      "word": "the",
+      "start": 179.52,
+      "end": 179.72
+    },
+    {
+      "word": "solution",
+      "start": 179.72,
+      "end": 179.98
+    },
+    {
+      "word": "address",
+      "start": 180.0,
+      "end": 180.74
+    },
+    {
+      "word": "technical",
+      "start": 180.74,
+      "end": 181.22
+    },
+    {
+      "word": "limitations",
+      "start": 181.22,
+      "end": 181.78
+    },
+    {
+      "word": "and",
+      "start": 182.32,
+      "end": 182.32
+    },
+    {
+      "word": "integrate",
+      "start": 182.32,
+      "end": 182.66
+    },
+    {
+      "word": "it",
+      "start": 182.66,
+      "end": 182.78
+    },
+    {
+      "word": "with",
+      "start": 182.78,
+      "end": 182.92
+    },
+    {
+      "word": "enterprise",
+      "start": 182.92,
+      "end": 183.32
+    },
+    {
+      "word": "systems",
+      "start": 183.32,
+      "end": 183.76
+    },
+    {
+      "word": "Finally",
+      "start": 184.44,
+      "end": 184.54
+    },
+    {
+      "word": "the",
+      "start": 184.76,
+      "end": 184.88
+    },
+    {
+      "word": "engineer",
+      "start": 184.88,
+      "end": 185.12
+    },
+    {
+      "word": "would",
+      "start": 185.12,
+      "end": 185.38
+    },
+    {
+      "word": "help",
+      "start": 185.38,
+      "end": 185.66
+    },
+    {
+      "word": "deploy",
+      "start": 185.66,
+      "end": 185.9
+    },
+    {
+      "word": "the",
+      "start": 185.9,
+      "end": 186.12
+    },
+    {
+      "word": "solution",
+      "start": 186.12,
+      "end": 186.44
+    },
+    {
+      "word": "into",
+      "start": 186.44,
+      "end": 186.78
+    },
+    {
+      "word": "production",
+      "start": 186.78,
+      "end": 187.18
+    },
+    {
+      "word": "establish",
+      "start": 188.1,
+      "end": 188.1
+    },
+    {
+      "word": "performance",
+      "start": 188.1,
+      "end": 188.62
+    },
+    {
+      "word": "measurements",
+      "start": 188.62,
+      "end": 189.04
+    },
+    {
+      "word": "and",
+      "start": 189.5,
+      "end": 189.66
+    },
+    {
+      "word": "support",
+      "start": 189.66,
+      "end": 189.9
+    },
+    {
+      "word": "its",
+      "start": 189.9,
+      "end": 190.1
+    },
+    {
+      "word": "adoption",
+      "start": 190.1,
+      "end": 190.48
+    },
+    {
+      "word": "The",
+      "start": 191.0,
+      "end": 191.22
+    },
+    {
+      "word": "ultimate",
+      "start": 191.22,
+      "end": 191.56
+    },
+    {
+      "word": "objective",
+      "start": 191.56,
+      "end": 191.94
+    },
+    {
+      "word": "is",
+      "start": 191.94,
+      "end": 192.2
+    },
+    {
+      "word": "not",
+      "start": 192.2,
+      "end": 192.46
+    },
+    {
+      "word": "merely",
+      "start": 192.46,
+      "end": 192.7
+    },
+    {
+      "word": "to",
+      "start": 192.7,
+      "end": 193.34
+    },
+    {
+      "word": "demonstrate",
+      "start": 193.34,
+      "end": 193.34
+    },
+    {
+      "word": "that",
+      "start": 193.34,
+      "end": 193.82
+    },
+    {
+      "word": "AI",
+      "start": 193.82,
+      "end": 193.82
+    },
+    {
+      "word": "works",
+      "start": 193.82,
+      "end": 194.16
+    },
+    {
+      "word": "but",
+      "start": 194.6,
+      "end": 194.68
+    },
+    {
+      "word": "to",
+      "start": 194.68,
+      "end": 194.9
+    },
+    {
+      "word": "ensure",
+      "start": 194.9,
+      "end": 195.1
+    },
+    {
+      "word": "that",
+      "start": 195.1,
+      "end": 195.36
+    },
+    {
+      "word": "it",
+      "start": 195.36,
+      "end": 195.46
+    },
+    {
+      "word": "consistently",
+      "start": 195.46,
+      "end": 196.12
+    },
+    {
+      "word": "improves",
+      "start": 196.12,
+      "end": 196.56
+    },
+    {
+      "word": "business",
+      "start": 196.56,
+      "end": 196.92
+    },
+    {
+      "word": "operations",
+      "start": 196.92,
+      "end": 197.58
+    },
+    {
+      "word": "Leading",
+      "start": 198.44,
+      "end": 198.54
+    },
+    {
+      "word": "AI",
+      "start": 198.54,
+      "end": 198.96
+    },
+    {
+      "word": "companies",
+      "start": 198.96,
+      "end": 199.36
+    },
+    {
+      "word": "including",
+      "start": 199.62,
+      "end": 199.9
+    },
+    {
+      "word": "OpenAI",
+      "start": 199.9,
+      "end": 200.44
+    },
+    {
+      "word": "and",
+      "start": 200.44,
+      "end": 200.62
+    },
+    {
+      "word": "Anthropic",
+      "start": 200.62,
+      "end": 201.08
+    },
+    {
+      "word": "have",
+      "start": 201.54,
+      "end": 201.68
+    },
+    {
+      "word": "recognized",
+      "start": 201.68,
+      "end": 202.14
+    },
+    {
+      "word": "the",
+      "start": 202.14,
+      "end": 202.42
+    },
+    {
+      "word": "importance",
+      "start": 202.42,
+      "end": 202.76
+    },
+    {
+      "word": "of",
+      "start": 202.76,
+      "end": 203.04
+    },
+    {
+      "word": "forward-deployed",
+      "start": 203.5,
+      "end": 204.24
+    },
+    {
+      "word": "engineering",
+      "start": 204.24,
+      "end": 204.24
+    },
+    {
+      "word": "Providing",
+      "start": 205.16,
+      "end": 205.2
+    },
+    {
+      "word": "powerful",
+      "start": 205.2,
+      "end": 205.64
+    },
+    {
+      "word": "AI",
+      "start": 205.64,
+      "end": 205.96
+    },
+    {
+      "word": "models",
+      "start": 205.96,
+      "end": 206.18
+    },
+    {
+      "word": "alone",
+      "start": 206.18,
+      "end": 206.52
+    },
+    {
+      "word": "is",
+      "start": 206.52,
+      "end": 206.7
+    },
+    {
+      "word": "not",
+      "start": 206.7,
+      "end": 206.96
+    },
+    {
+      "word": "sufficient",
+      "start": 206.96,
+      "end": 207.24
+    },
+    {
+      "word": "for",
+      "start": 207.24,
+      "end": 207.54
+    },
+    {
+      "word": "successful",
+      "start": 207.54,
+      "end": 207.98
+    },
+    {
+      "word": "enterprise",
+      "start": 207.98,
+      "end": 208.38
+    },
+    {
+      "word": "adoption",
+      "start": 208.38,
+      "end": 208.74
+    },
+    {
+      "word": "Customers",
+      "start": 208.74,
+      "end": 209.86
+    },
+    {
+      "word": "also",
+      "start": 210.0,
+      "end": 210.14
+    },
+    {
+      "word": "need",
+      "start": 210.14,
+      "end": 210.38
+    },
+    {
+      "word": "assistance",
+      "start": 210.38,
+      "end": 210.82
+    },
+    {
+      "word": "with",
+      "start": 210.82,
+      "end": 211.08
+    },
+    {
+      "word": "workflow",
+      "start": 211.08,
+      "end": 211.38
+    },
+    {
+      "word": "redesign",
+      "start": 211.38,
+      "end": 211.9
+    },
+    {
+      "word": "system",
+      "start": 212.4,
+      "end": 212.42
+    },
+    {
+      "word": "integration",
+      "start": 212.42,
+      "end": 212.84
+    },
+    {
+      "word": "data",
+      "start": 213.44,
+      "end": 213.62
+    },
+    {
+      "word": "security",
+      "start": 213.62,
+      "end": 214.02
+    },
+    {
+      "word": "performance",
+      "start": 214.38,
+      "end": 214.66
+    },
+    {
+      "word": "evaluation",
+      "start": 214.66,
+      "end": 215.2
+    },
+    {
+      "word": "and",
+      "start": 215.62,
+      "end": 215.8
+    },
+    {
+      "word": "organizational",
+      "start": 215.8,
+      "end": 216.24
+    },
+    {
+      "word": "change",
+      "start": 216.24,
+      "end": 216.82
+    },
+    {
+      "word": "FDEs",
+      "start": 217.48,
+      "end": 217.78
+    },
+    {
+      "word": "help",
+      "start": 217.78,
+      "end": 218.08
+    },
+    {
+      "word": "bridge",
+      "start": 218.08,
+      "end": 218.26
+    },
+    {
+      "word": "these",
+      "start": 218.26,
+      "end": 218.76
+    },
+    {
+      "word": "gaps",
+      "start": 218.76,
+      "end": 218.76
+    },
+    {
+      "word": "while",
+      "start": 218.76,
+      "end": 219.0
+    },
+    {
+      "word": "providing",
+      "start": 219.0,
+      "end": 219.34
+    },
+    {
+      "word": "valuable",
+      "start": 219.34,
+      "end": 219.84
+    },
+    {
+      "word": "feedback",
+      "start": 219.84,
+      "end": 220.24
+    },
+    {
+      "word": "to",
+      "start": 220.24,
+      "end": 220.54
+    },
+    {
+      "word": "product",
+      "start": 220.54,
+      "end": 220.84
+    },
+    {
+      "word": "and",
+      "start": 220.84,
+      "end": 221.38
+    },
+    {
+      "word": "research",
+      "start": 221.38,
+      "end": 221.38
+    },
+    {
+      "word": "teams",
+      "start": 221.38,
+      "end": 221.7
+    },
+    {
+      "word": "By",
+      "start": 222.32,
+      "end": 222.4
+    },
+    {
+      "word": "observing",
+      "start": 222.4,
+      "end": 222.72
+    },
+    {
+      "word": "how",
+      "start": 222.72,
+      "end": 223.02
+    },
+    {
+      "word": "AI",
+      "start": 222.99,
+      "end": 223.26
+    },
+    {
+      "word": "performs",
+      "start": 223.26,
+      "end": 223.66
+    },
+    {
+      "word": "in",
+      "start": 223.66,
+      "end": 223.88
+    },
+    {
+      "word": "real",
+      "start": 223.88,
+      "end": 224.14
+    },
+    {
+      "word": "business",
+      "start": 224.14,
+      "end": 224.48
+    },
+    {
+      "word": "environments",
+      "start": 224.48,
+      "end": 224.92
+    },
+    {
+      "word": "they",
+      "start": 225.36,
+      "end": 225.48
+    },
+    {
+      "word": "can",
+      "start": 225.48,
+      "end": 225.68
+    },
+    {
+      "word": "identify",
+      "start": 225.68,
+      "end": 226.08
+    },
+    {
+      "word": "technical",
+      "start": 226.08,
+      "end": 226.56
+    },
+    {
+      "word": "limitations",
+      "start": 226.56,
+      "end": 227.14
+    },
+    {
+      "word": "recurring",
+      "start": 227.72,
+      "end": 228.0
+    },
+    {
+      "word": "customer",
+      "start": 228.0,
+      "end": 228.36
+    },
+    {
+      "word": "requirements",
+      "start": 228.36,
+      "end": 228.92
+    },
+    {
+      "word": "and",
+      "start": 229.1,
+      "end": 229.52
+    },
+    {
+      "word": "opportunities",
+      "start": 229.52,
+      "end": 229.96
+    },
+    {
+      "word": "for",
+      "start": 229.96,
+      "end": 230.5
+    },
+    {
+      "word": "product",
+      "start": 230.5,
+      "end": 230.54
+    },
+    {
+      "word": "improvements",
+      "start": 230.54,
+      "end": 231.1
+    },
+    {
+      "word": "Successful",
+      "start": 231.9,
+      "end": 232.36
+    },
+    {
+      "word": "FDEs",
+      "start": 232.36,
+      "end": 232.84
+    },
+    {
+      "word": "require",
+      "start": 232.84,
+      "end": 233.26
+    },
+    {
+      "word": "a",
+      "start": 233.26,
+      "end": 233.54
+    },
+    {
+      "word": "combination",
+      "start": 233.54,
+      "end": 233.82
+    },
+    {
+      "word": "of",
+      "start": 233.82,
+      "end": 234.12
+    },
+    {
+      "word": "technical",
+      "start": 234.12,
+      "end": 234.42
+    },
+    {
+      "word": "capabilities",
+      "start": 234.42,
+      "end": 234.92
+    },
+    {
+      "word": "and",
+      "start": 234.92,
+      "end": 235.26
+    },
+    {
+      "word": "business-oriented",
+      "start": 235.45,
+      "end": 235.98
+    },
+    {
+      "word": "skills",
+      "start": 235.98,
+      "end": 236.42
+    },
+    {
+      "word": "Technical",
+      "start": 237.3,
+      "end": 237.42
+    },
+    {
+      "word": "expertise",
+      "start": 237.42,
+      "end": 237.94
+    },
+    {
+      "word": "remains",
+      "start": 237.94,
+      "end": 238.4
+    },
+    {
+      "word": "fundamental",
+      "start": 238.4,
+      "end": 238.86
+    },
+    {
+      "word": "They",
+      "start": 239.26,
+      "end": 239.62
+    },
+    {
+      "word": "must",
+      "start": 239.62,
+      "end": 239.8
+    },
+    {
+      "word": "understand",
+      "start": 240.0,
+      "end": 240.3
+    },
+    {
+      "word": "software",
+      "start": 240.3,
+      "end": 240.68
+    },
+    {
+      "word": "architecture",
+      "start": 240.68,
+      "end": 241.26
+    },
+    {
+      "word": "APIs",
+      "start": 242.14,
+      "end": 242.14
+    },
+    {
+      "word": "databases",
+      "start": 242.9,
+      "end": 242.9
+    },
+    {
+      "word": "cloud",
+      "start": 243.22,
+      "end": 243.36
+    },
+    {
+      "word": "infrastructure",
+      "start": 243.36,
+      "end": 243.88
+    },
+    {
+      "word": "and",
+      "start": 244.38,
+      "end": 244.5
+    },
+    {
+      "word": "modern",
+      "start": 244.5,
+      "end": 244.76
+    },
+    {
+      "word": "development",
+      "start": 244.76,
+      "end": 245.18
+    },
+    {
+      "word": "practices",
+      "start": 245.18,
+      "end": 245.72
+    },
+    {
+      "word": "In",
+      "start": 246.4,
+      "end": 246.46
+    },
+    {
+      "word": "AI-related",
+      "start": 246.74,
+      "end": 247.08
+    },
+    {
+      "word": "projects",
+      "start": 247.08,
+      "end": 247.56
+    },
+    {
+      "word": "knowledge",
+      "start": 247.94,
+      "end": 247.94
+    },
+    {
+      "word": "of",
+      "start": 247.94,
+      "end": 248.14
+    },
+    {
+      "word": "large",
+      "start": 248.14,
+      "end": 248.38
+    },
+    {
+      "word": "language",
+      "start": 248.38,
+      "end": 248.72
+    },
+    {
+      "word": "models",
+      "start": 248.72,
+      "end": 249.08
+    },
+    {
+      "word": "retrieval-augmented",
+      "start": 249.47,
+      "end": 250.22
+    },
+    {
+      "word": "generation",
+      "start": 250.22,
+      "end": 250.86
+    },
+    {
+      "word": "AI",
+      "start": 251.3,
+      "end": 251.54
+    },
+    {
+      "word": "agents",
+      "start": 251.54,
+      "end": 251.92
+    },
+    {
+      "word": "and",
+      "start": 252.08,
+      "end": 252.32
+    },
+    {
+      "word": "model",
+      "start": 252.32,
+      "end": 252.36
+    },
+    {
+      "word": "evaluation",
+      "start": 252.36,
+      "end": 252.88
+    },
+    {
+      "word": "is",
+      "start": 252.88,
+      "end": 253.26
+    },
+    {
+      "word": "particularly",
+      "start": 253.26,
+      "end": 253.88
+    },
+    {
+      "word": "valuable",
+      "start": 253.88,
+      "end": 254.24
+    },
+    {
+      "word": "However",
+      "start": 254.9,
+      "end": 255.24
+    },
+    {
+      "word": "technical",
+      "start": 255.48,
+      "end": 255.78
+    },
+    {
+      "word": "knowledge",
+      "start": 255.78,
+      "end": 256.08
+    },
+    {
+      "word": "alone",
+      "start": 256.08,
+      "end": 256.42
+    },
+    {
+      "word": "is",
+      "start": 256.42,
+      "end": 256.6
+    },
+    {
+      "word": "insufficient",
+      "start": 256.6,
+      "end": 257.14
+    },
+    {
+      "word": "FDEs",
+      "start": 257.76,
+      "end": 258.08
+    },
+    {
+      "word": "must",
+      "start": 258.08,
+      "end": 258.28
+    },
+    {
+      "word": "also",
+      "start": 258.28,
+      "end": 258.76
+    },
+    {
+      "word": "communicate",
+      "start": 258.76,
+      "end": 259.0
+    },
+    {
+      "word": "with",
+      "start": 259.0,
+      "end": 259.28
+    },
+    {
+      "word": "stakeholders",
+      "start": 259.28,
+      "end": 259.7
+    },
+    {
+      "word": "identify",
+      "start": 260.68,
+      "end": 260.68
+    },
+    {
+      "word": "underlying",
+      "start": 260.68,
+      "end": 261.12
+    },
+    {
+      "word": "business",
+      "start": 261.12,
+      "end": 261.5
+    },
+    {
+      "word": "problems",
+      "start": 261.5,
+      "end": 261.9
+    },
+    {
+      "word": "prioritize",
+      "start": 262.82,
+      "end": 262.82
+    },
+    {
+      "word": "competing",
+      "start": 262.82,
+      "end": 263.22
+    },
+    {
+      "word": "requirements",
+      "start": 263.22,
+      "end": 263.76
+    },
+    {
+      "word": "and",
+      "start": 263.94,
+      "end": 264.28
+    },
+    {
+      "word": "make",
+      "start": 264.28,
+      "end": 264.44
+    },
+    {
+      "word": "decisions",
+      "start": 264.44,
+      "end": 264.82
+    },
+    {
+      "word": "under",
+      "start": 264.82,
+      "end": 265.08
+    },
+    {
+      "word": "uncertainty",
+      "start": 265.08,
+      "end": 265.54
+    },
+    {
+      "word": "An",
+      "start": 265.54,
+      "end": 266.4
+    },
+    {
+      "word": "especially",
+      "start": 266.4,
+      "end": 266.94
+    },
+    {
+      "word": "important",
+      "start": 266.94,
+      "end": 267.24
+    },
+    {
+      "word": "ability",
+      "start": 267.24,
+      "end": 267.64
+    },
+    {
+      "word": "is",
+      "start": 267.64,
+      "end": 267.9
+    },
+    {
+      "word": "translating",
+      "start": 267.9,
+      "end": 268.42
+    },
+    {
+      "word": "ambiguous",
+      "start": 268.42,
+      "end": 268.98
+    },
+    {
+      "word": "business",
+      "start": 268.98,
+      "end": 269.36
+    },
+    {
+      "word": "objectives",
+      "start": 269.36,
+      "end": 269.86
+    },
+    {
+      "word": "into",
+      "start": 270.0,
+      "end": 270.5
+    },
+    {
+      "word": "concrete",
+      "start": 270.5,
+      "end": 270.98
+    },
+    {
+      "word": "technical",
+      "start": 270.98,
+      "end": 271.42
+    },
+    {
+      "word": "solutions",
+      "start": 271.42,
+      "end": 271.96
+    },
+    {
+      "word": "When",
+      "start": 272.66,
+      "end": 272.66
+    },
+    {
+      "word": "an",
+      "start": 272.66,
+      "end": 273.24
+    },
+    {
+      "word": "executive",
+      "start": 273.24,
+      "end": 273.24
+    },
+    {
+      "word": "requests",
+      "start": 273.24,
+      "end": 273.68
+    },
+    {
+      "word": "an",
+      "start": 273.68,
+      "end": 273.92
+    },
+    {
+      "word": "AI-powered",
+      "start": 274.04,
+      "end": 274.4
+    },
+    {
+      "word": "transformation",
+      "start": 274.4,
+      "end": 275.08
+    },
+    {
+      "word": "an",
+      "start": 275.7,
+      "end": 275.7
+    },
+    {
+      "word": "FDE",
+      "start": 275.7,
+      "end": 276.04
+    },
+    {
+      "word": "must",
+      "start": 276.04,
+      "end": 276.38
+    },
+    {
+      "word": "determine",
+      "start": 276.38,
+      "end": 276.76
+    },
+    {
+      "word": "which",
+      "start": 276.76,
+      "end": 277.02
+    },
+    {
+      "word": "business",
+      "start": 277.02,
+      "end": 277.4
+    },
+    {
+      "word": "processes",
+      "start": 277.4,
+      "end": 277.82
+    },
+    {
+      "word": "should",
+      "start": 277.82,
+      "end": 278.12
+    },
+    {
+      "word": "change",
+      "start": 278.12,
+      "end": 278.5
+    },
+    {
+      "word": "which",
+      "start": 278.92,
+      "end": 279.08
+    },
+    {
+      "word": "systems",
+      "start": 279.08,
+      "end": 279.4
+    },
+    {
+      "word": "require",
+      "start": 279.4,
+      "end": 279.82
+    },
+    {
+      "word": "integration",
+      "start": 279.82,
+      "end": 280.26
+    },
+    {
+      "word": "and",
+      "start": 280.74,
+      "end": 280.86
+    },
+    {
+      "word": "how",
+      "start": 280.86,
+      "end": 281.08
+    },
+    {
+      "word": "success",
+      "start": 281.08,
+      "end": 281.34
+    },
+    {
+      "word": "should",
+      "start": 281.34,
+      "end": 281.54
+    },
+    {
+      "word": "be",
+      "start": 281.54,
+      "end": 281.92
+    },
+    {
+      "word": "measured",
+      "start": 281.92,
+      "end": 281.92
+    },
+    {
+      "word": "This",
+      "start": 282.52,
+      "end": 282.64
+    },
+    {
+      "word": "requires",
+      "start": 282.64,
+      "end": 283.0
+    },
+    {
+      "word": "both",
+      "start": 283.0,
+      "end": 283.38
+    },
+    {
+      "word": "analytical",
+      "start": 283.38,
+      "end": 283.74
+    },
+    {
+      "word": "thinking",
+      "start": 283.74,
+      "end": 284.12
+    },
+    {
+      "word": "and",
+      "start": 284.12,
+      "end": 284.36
+    },
+    {
+      "word": "practical",
+      "start": 284.36,
+      "end": 284.68
+    },
+    {
+      "word": "judgment",
+      "start": 284.68,
+      "end": 285.1
+    },
+    {
+      "word": "Importantly",
+      "start": 285.7,
+      "end": 286.14
+    },
+    {
+      "word": "FDEs",
+      "start": 286.4,
+      "end": 286.76
+    },
+    {
+      "word": "do",
+      "start": 286.76,
+      "end": 287.0
+    },
+    {
+      "word": "not",
+      "start": 287.0,
+      "end": 287.22
+    },
+    {
+      "word": "necessarily",
+      "start": 287.22,
+      "end": 287.8
+    },
+    {
+      "word": "perform",
+      "start": 287.8,
+      "end": 288.12
+    },
+    {
+      "word": "every",
+      "start": 288.12,
+      "end": 288.46
+    },
+    {
+      "word": "task",
+      "start": 288.46,
+      "end": 288.74
+    },
+    {
+      "word": "individually",
+      "start": 288.74,
+      "end": 289.2
+    },
+    {
+      "word": "They",
+      "start": 289.8,
+      "end": 289.94
+    },
+    {
+      "word": "frequently",
+      "start": 289.94,
+      "end": 290.34
+    },
+    {
+      "word": "collaborate",
+      "start": 290.34,
+      "end": 290.72
+    },
+    {
+      "word": "with",
+      "start": 290.72,
+      "end": 290.92
+    },
+    {
+      "word": "other",
+      "start": 290.92,
+      "end": 291.18
+    },
+    {
+      "word": "engineers",
+      "start": 291.18,
+      "end": 291.54
+    },
+    {
+      "word": "product",
+      "start": 292.02,
+      "end": 292.06
+    },
+    {
+      "word": "specialists",
+      "start": 292.06,
+      "end": 292.6
+    },
+    {
+      "word": "and",
+      "start": 292.74,
+      "end": 293.14
+    },
+    {
+      "word": "domain",
+      "start": 293.14,
+      "end": 293.14
+    },
+    {
+      "word": "experts",
+      "start": 293.14,
+      "end": 293.52
+    },
+    {
+      "word": "to",
+      "start": 293.52,
+      "end": 293.8
+    },
+    {
+      "word": "deliver",
+      "start": 293.8,
+      "end": 294.04
+    },
+    {
+      "word": "reliable",
+      "start": 294.04,
+      "end": 294.56
+    },
+    {
+      "word": "solutions",
+      "start": 294.56,
+      "end": 295.08
+    },
+    {
+      "word": "The",
+      "start": 295.68,
+      "end": 295.96
+    },
+    {
+      "word": "growing",
+      "start": 295.96,
+      "end": 296.26
+    },
+    {
+      "word": "popularity",
+      "start": 296.26,
+      "end": 296.76
+    },
+    {
+      "word": "of",
+      "start": 296.76,
+      "end": 297.14
+    },
+    {
+      "word": "FDEs",
+      "start": 297.14,
+      "end": 297.52
+    },
+    {
+      "word": "also",
+      "start": 297.52,
+      "end": 297.98
+    },
+    {
+      "word": "raises",
+      "start": 297.98,
+      "end": 298.2
+    },
+    {
+      "word": "questions",
+      "start": 298.2,
+      "end": 298.7
+    },
+    {
+      "word": "about",
+      "start": 298.7,
+      "end": 298.98
+    },
+    {
+      "word": "the",
+      "start": 298.98,
+      "end": 299.08
+    },
+    {
+      "word": "future",
+      "start": 299.08,
+      "end": 299.42
+    },
+    {
+      "word": "of",
+      "start": 299.42,
+      "end": 299.56
+    },
+    {
+      "word": "management",
+      "start": 299.56,
+      "end": 299.84
+    },
+    {
+      "word": "consulting",
+      "start": 300.0,
+      "end": 300.38
+    },
+    {
+      "word": "As",
+      "start": 300.6,
+      "end": 301.14
+    },
+    {
+      "word": "AI",
+      "start": 301.14,
+      "end": 301.42
+    },
+    {
+      "word": "becomes",
+      "start": 301.42,
+      "end": 301.72
+    },
+    {
+      "word": "capable",
+      "start": 301.72,
+      "end": 302.1
+    },
+    {
+      "word": "of",
+      "start": 302.1,
+      "end": 302.34
+    },
+    {
+      "word": "generating",
+      "start": 302.34,
+      "end": 302.62
+    },
+    {
+      "word": "reports",
+      "start": 302.62,
+      "end": 303.14
+    },
+    {
+      "word": "analyzing",
+      "start": 303.7,
+      "end": 303.7
+    },
+    {
+      "word": "data",
+      "start": 303.7,
+      "end": 304.08
+    },
+    {
+      "word": "and",
+      "start": 304.16,
+      "end": 304.32
+    },
+    {
+      "word": "writing",
+      "start": 304.32,
+      "end": 304.5
+    },
+    {
+      "word": "software",
+      "start": 304.5,
+      "end": 304.92
+    },
+    {
+      "word": "the",
+      "start": 305.34,
+      "end": 305.42
+    },
+    {
+      "word": "value",
+      "start": 305.42,
+      "end": 305.66
+    },
+    {
+      "word": "of",
+      "start": 305.66,
+      "end": 305.9
+    },
+    {
+      "word": "producing",
+      "start": 305.9,
+      "end": 306.2
+    },
+    {
+      "word": "recommendations",
+      "start": 306.2,
+      "end": 306.72
+    },
+    {
+      "word": "alone",
+      "start": 306.72,
+      "end": 307.18
+    },
+    {
+      "word": "may",
+      "start": 307.18,
+      "end": 307.34
+    },
+    {
+      "word": "decline",
+      "start": 307.34,
+      "end": 307.72
+    },
+    {
+      "word": "Consulting",
+      "start": 308.46,
+      "end": 308.84
+    },
+    {
+      "word": "firms",
+      "start": 308.84,
+      "end": 309.04
+    },
+    {
+      "word": "may",
+      "start": 309.04,
+      "end": 309.3
+    },
+    {
+      "word": "consequently",
+      "start": 309.3,
+      "end": 309.84
+    },
+    {
+      "word": "face",
+      "start": 309.84,
+      "end": 310.18
+    },
+    {
+      "word": "increasing",
+      "start": 310.18,
+      "end": 310.7
+    },
+    {
+      "word": "pressure",
+      "start": 310.7,
+      "end": 311.02
+    },
+    {
+      "word": "to",
+      "start": 311.02,
+      "end": 311.34
+    },
+    {
+      "word": "demonstrate",
+      "start": 311.34,
+      "end": 311.72
+    },
+    {
+      "word": "tangible",
+      "start": 311.72,
+      "end": 312.14
+    },
+    {
+      "word": "business",
+      "start": 312.14,
+      "end": 312.56
+    },
+    {
+      "word": "results",
+      "start": 312.56,
+      "end": 312.92
+    },
+    {
+      "word": "rather",
+      "start": 312.92,
+      "end": 313.54
+    },
+    {
+      "word": "than",
+      "start": 313.54,
+      "end": 313.8
+    },
+    {
+      "word": "simply",
+      "start": 313.8,
+      "end": 314.12
+    },
+    {
+      "word": "deliver",
+      "start": 314.12,
+      "end": 314.36
+    },
+    {
+      "word": "presentations",
+      "start": 314.36,
+      "end": 314.94
+    },
+    {
+      "word": "However",
+      "start": 315.74,
+      "end": 316.08
+    },
+    {
+      "word": "FDEs",
+      "start": 316.24,
+      "end": 316.6
+    },
+    {
+      "word": "are",
+      "start": 316.6,
+      "end": 316.92
+    },
+    {
+      "word": "unlikely",
+      "start": 316.92,
+      "end": 317.24
+    },
+    {
+      "word": "to",
+      "start": 317.24,
+      "end": 317.76
+    },
+    {
+      "word": "replace",
+      "start": 317.76,
+      "end": 317.76
+    },
+    {
+      "word": "all",
+      "start": 317.76,
+      "end": 318.14
+    },
+    {
+      "word": "traditional",
+      "start": 318.14,
+      "end": 318.5
+    },
+    {
+      "word": "consultants",
+      "start": 318.5,
+      "end": 319.04
+    },
+    {
+      "word": "Complex",
+      "start": 319.8,
+      "end": 320.06
+    },
+    {
+      "word": "organizational",
+      "start": 320.06,
+      "end": 320.68
+    },
+    {
+      "word": "transformations",
+      "start": 320.68,
+      "end": 321.32
+    },
+    {
+      "word": "still",
+      "start": 321.32,
+      "end": 321.84
+    },
+    {
+      "word": "require",
+      "start": 321.84,
+      "end": 322.16
+    },
+    {
+      "word": "expertise",
+      "start": 322.16,
+      "end": 322.68
+    },
+    {
+      "word": "in",
+      "start": 322.68,
+      "end": 322.98
+    },
+    {
+      "word": "corporate",
+      "start": 322.98,
+      "end": 323.24
+    },
+    {
+      "word": "strategy",
+      "start": 323.24,
+      "end": 323.72
+    },
+    {
+      "word": "financial",
+      "start": 324.46,
+      "end": 324.56
+    },
+    {
+      "word": "analysis",
+      "start": 324.56,
+      "end": 324.98
+    },
+    {
+      "word": "governance",
+      "start": 325.36,
+      "end": 325.66
+    },
+    {
+      "word": "change",
+      "start": 325.86,
+      "end": 326.18
+    },
+    {
+      "word": "management",
+      "start": 326.18,
+      "end": 326.58
+    },
+    {
+      "word": "and",
+      "start": 326.72,
+      "end": 327.2
+    },
+    {
+      "word": "stakeholder",
+      "start": 327.2,
+      "end": 327.54
+    },
+    {
+      "word": "alignment",
+      "start": 327.54,
+      "end": 327.98
+    },
+    {
+      "word": "Furthermore",
+      "start": 327.98,
+      "end": 329.02
+    },
+    {
+      "word": "simply",
+      "start": 329.34,
+      "end": 329.68
+    },
+    {
+      "word": "renaming",
+      "start": 329.68,
+      "end": 329.98
+    },
+    {
+      "word": "traditional",
+      "start": 330.0,
+      "end": 330.44
+    },
+    {
+      "word": "consultants",
+      "start": 330.44,
+      "end": 331.08
+    },
+    {
+      "word": "as",
+      "start": 331.08,
+      "end": 331.34
+    },
+    {
+      "word": "FDEs",
+      "start": 331.34,
+      "end": 331.86
+    },
+    {
+      "word": "will",
+      "start": 331.86,
+      "end": 332.28
+    },
+    {
+      "word": "not",
+      "start": 332.28,
+      "end": 332.56
+    },
+    {
+      "word": "automatically",
+      "start": 332.56,
+      "end": 333.1
+    },
+    {
+      "word": "improve",
+      "start": 333.1,
+      "end": 333.44
+    },
+    {
+      "word": "their",
+      "start": 333.44,
+      "end": 333.64
+    },
+    {
+      "word": "capabilities",
+      "start": 333.64,
+      "end": 334.18
+    },
+    {
+      "word": "Without",
+      "start": 334.94,
+      "end": 334.94
+    },
+    {
+      "word": "sufficient",
+      "start": 334.94,
+      "end": 335.4
+    },
+    {
+      "word": "engineering",
+      "start": 335.4,
+      "end": 335.82
+    },
+    {
+      "word": "expertise",
+      "start": 335.82,
+      "end": 336.38
+    },
+    {
+      "word": "access",
+      "start": 336.94,
+      "end": 336.94
+    },
+    {
+      "word": "to",
+      "start": 336.94,
+      "end": 337.2
+    },
+    {
+      "word": "appropriate",
+      "start": 337.2,
+      "end": 337.54
+    },
+    {
+      "word": "technologies",
+      "start": 337.54,
+      "end": 338.14
+    },
+    {
+      "word": "and",
+      "start": 338.32,
+      "end": 338.68
+    },
+    {
+      "word": "the",
+      "start": 338.68,
+      "end": 339.1
+    },
+    {
+      "word": "authority",
+      "start": 339.1,
+      "end": 339.1
+    },
+    {
+      "word": "to",
+      "start": 339.1,
+      "end": 339.58
+    },
+    {
+      "word": "implement",
+      "start": 339.58,
+      "end": 339.58
+    },
+    {
+      "word": "changes",
+      "start": 339.58,
+      "end": 340.08
+    },
+    {
+      "word": "the",
+      "start": 340.48,
+      "end": 340.66
+    },
+    {
+      "word": "FDE",
+      "start": 340.66,
+      "end": 341.0
+    },
+    {
+      "word": "concept",
+      "start": 341.0,
+      "end": 341.54
+    },
+    {
+      "word": "risks",
+      "start": 341.54,
+      "end": 341.86
+    },
+    {
+      "word": "becoming",
+      "start": 341.86,
+      "end": 342.22
+    },
+    {
+      "word": "another",
+      "start": 342.22,
+      "end": 342.58
+    },
+    {
+      "word": "fashionable",
+      "start": 342.58,
+      "end": 342.98
+    },
+    {
+      "word": "business",
+      "start": 342.98,
+      "end": 343.42
+    },
+    {
+      "word": "term",
+      "start": 343.42,
+      "end": 343.68
+    },
+    {
+      "word": "The",
+      "start": 344.26,
+      "end": 344.36
+    },
+    {
+      "word": "real",
+      "start": 344.36,
+      "end": 344.66
+    },
+    {
+      "word": "competitive",
+      "start": 344.66,
+      "end": 345.02
+    },
+    {
+      "word": "advantage",
+      "start": 345.02,
+      "end": 345.44
+    },
+    {
+      "word": "comes",
+      "start": 345.44,
+      "end": 345.74
+    },
+    {
+      "word": "from",
+      "start": 345.74,
+      "end": 346.0
+    },
+    {
+      "word": "combining",
+      "start": 346.0,
+      "end": 346.3
+    },
+    {
+      "word": "strategic",
+      "start": 346.3,
+      "end": 346.86
+    },
+    {
+      "word": "thinking",
+      "start": 346.86,
+      "end": 347.16
+    },
+    {
+      "word": "with",
+      "start": 347.16,
+      "end": 347.38
+    },
+    {
+      "word": "the",
+      "start": 347.38,
+      "end": 347.62
+    },
+    {
+      "word": "ability",
+      "start": 347.62,
+      "end": 347.8
+    },
+    {
+      "word": "to",
+      "start": 347.8,
+      "end": 348.28
+    },
+    {
+      "word": "deliver",
+      "start": 348.28,
+      "end": 348.28
+    },
+    {
+      "word": "reliable",
+      "start": 348.28,
+      "end": 348.82
+    },
+    {
+      "word": "production-ready",
+      "start": 348.96,
+      "end": 349.64
+    },
+    {
+      "word": "solutions",
+      "start": 349.64,
+      "end": 350.18
+    },
+    {
+      "word": "Ultimately",
+      "start": 350.96,
+      "end": 351.36
+    },
+    {
+      "word": "forward-deployed",
+      "start": 351.67,
+      "end": 352.38
+    },
+    {
+      "word": "engineering",
+      "start": 352.38,
+      "end": 352.74
+    },
+    {
+      "word": "represents",
+      "start": 352.74,
+      "end": 353.22
+    },
+    {
+      "word": "a",
+      "start": 353.22,
+      "end": 353.46
+    },
+    {
+      "word": "broader",
+      "start": 353.46,
+      "end": 353.68
+    },
+    {
+      "word": "shift",
+      "start": 353.68,
+      "end": 353.98
+    },
+    {
+      "word": "in",
+      "start": 353.98,
+      "end": 354.16
+    },
+    {
+      "word": "enterprise",
+      "start": 354.16,
+      "end": 354.54
+    },
+    {
+      "word": "technology",
+      "start": 354.54,
+      "end": 355.06
+    },
+    {
+      "word": "from",
+      "start": 355.06,
+      "end": 355.68
+    },
+    {
+      "word": "recommending",
+      "start": 355.68,
+      "end": 356.1
+    },
+    {
+      "word": "solutions",
+      "start": 356.1,
+      "end": 356.56
+    },
+    {
+      "word": "to",
+      "start": 356.56,
+      "end": 356.88
+    },
+    {
+      "word": "taking",
+      "start": 356.88,
+      "end": 357.12
+    },
+    {
+      "word": "responsibility",
+      "start": 357.12,
+      "end": 357.76
+    },
+    {
+      "word": "for",
+      "start": 357.76,
+      "end": 358.16
+    },
+    {
+      "word": "implementing",
+      "start": 358.16,
+      "end": 358.42
+    },
+    {
+      "word": "them",
+      "start": 358.42,
+      "end": 358.64
+    },
+    {
+      "word": "AI-assisted",
+      "start": 358.947,
+      "end": 359.473
+    },
+    {
+      "word": "development",
+      "start": 359.473,
+      "end": 360.0
+    },
+    {
+      "word": "may",
+      "start": 360.0,
+      "end": 360.52
+    },
+    {
+      "word": "accelerate",
+      "start": 360.52,
+      "end": 361.0
+    },
+    {
+      "word": "prototyping",
+      "start": 361.0,
+      "end": 361.62
+    },
+    {
+      "word": "but",
+      "start": 362.06,
+      "end": 362.64
+    },
+    {
+      "word": "successful",
+      "start": 362.64,
+      "end": 362.64
+    },
+    {
+      "word": "production",
+      "start": 362.64,
+      "end": 363.04
+    },
+    {
+      "word": "deployment",
+      "start": 363.04,
+      "end": 363.48
+    },
+    {
+      "word": "still",
+      "start": 363.48,
+      "end": 363.92
+    },
+    {
+      "word": "requires",
+      "start": 363.92,
+      "end": 364.24
+    },
+    {
+      "word": "robust",
+      "start": 364.24,
+      "end": 364.66
+    },
+    {
+      "word": "architecture",
+      "start": 364.66,
+      "end": 365.22
+    },
+    {
+      "word": "security",
+      "start": 365.96,
+      "end": 366.08
+    },
+    {
+      "word": "controls",
+      "start": 366.08,
+      "end": 366.52
+    },
+    {
+      "word": "testing",
+      "start": 367.32,
+      "end": 367.32
+    },
+    {
+      "word": "monitoring",
+      "start": 367.92,
+      "end": 367.92
+    },
+    {
+      "word": "and",
+      "start": 367.98,
+      "end": 368.28
+    },
+    {
+      "word": "operational",
+      "start": 368.28,
+      "end": 368.72
+    },
+    {
+      "word": "expertise",
+      "start": 368.72,
+      "end": 369.3
+    },
+    {
+      "word": "The",
+      "start": 369.46,
+      "end": 370.12
+    },
+    {
+      "word": "most",
+      "start": 370.12,
+      "end": 370.44
+    },
+    {
+      "word": "valuable",
+      "start": 370.44,
+      "end": 370.72
+    },
+    {
+      "word": "professionals",
+      "start": 370.72,
+      "end": 371.2
+    },
+    {
+      "word": "will",
+      "start": 371.2,
+      "end": 371.5
+    },
+    {
+      "word": "be",
+      "start": 371.5,
+      "end": 371.64
+    },
+    {
+      "word": "those",
+      "start": 371.64,
+      "end": 371.84
+    },
+    {
+      "word": "who",
+      "start": 371.84,
+      "end": 372.06
+    },
+    {
+      "word": "understand",
+      "start": 372.06,
+      "end": 372.42
+    },
+    {
+      "word": "both",
+      "start": 372.42,
+      "end": 372.8
+    },
+    {
+      "word": "technological",
+      "start": 372.8,
+      "end": 373.3
+    },
+    {
+      "word": "possibilities",
+      "start": 373.3,
+      "end": 373.86
+    },
+    {
+      "word": "and",
+      "start": 373.86,
+      "end": 374.32
+    },
+    {
+      "word": "organizational",
+      "start": 374.32,
+      "end": 374.82
+    },
+    {
+      "word": "realities",
+      "start": 374.82,
+      "end": 375.4
+    },
+    {
+      "word": "Their",
+      "start": 375.96,
+      "end": 376.26
+    },
+    {
+      "word": "success",
+      "start": 376.26,
+      "end": 376.56
+    },
+    {
+      "word": "should",
+      "start": 376.56,
+      "end": 376.76
+    },
+    {
+      "word": "be",
+      "start": 376.76,
+      "end": 377.16
+    },
+    {
+      "word": "measured",
+      "start": 377.16,
+      "end": 377.16
+    },
+    {
+      "word": "not",
+      "start": 377.16,
+      "end": 377.48
+    },
+    {
+      "word": "by",
+      "start": 377.48,
+      "end": 377.64
+    },
+    {
+      "word": "the",
+      "start": 377.64,
+      "end": 377.92
+    },
+    {
+      "word": "number",
+      "start": 377.92,
+      "end": 378.0
+    },
+    {
+      "word": "of",
+      "start": 378.0,
+      "end": 378.42
+    },
+    {
+      "word": "presentations",
+      "start": 378.74,
+      "end": 378.74
+    },
+    {
+      "word": "produced",
+      "start": 378.74,
+      "end": 379.14
+    },
+    {
+      "word": "or",
+      "start": 379.14,
+      "end": 379.44
+    },
+    {
+      "word": "prototypes",
+      "start": 379.44,
+      "end": 379.86
+    },
+    {
+      "word": "demonstrated",
+      "start": 379.86,
+      "end": 380.38
+    },
+    {
+      "word": "but",
+      "start": 380.64,
+      "end": 381.0
+    },
+    {
+      "word": "by",
+      "start": 381.0,
+      "end": 381.14
+    },
+    {
+      "word": "the",
+      "start": 381.14,
+      "end": 381.56
+    },
+    {
+      "word": "lasting",
+      "start": 381.56,
+      "end": 381.68
+    },
+    {
+      "word": "business",
+      "start": 381.68,
+      "end": 382.14
+    },
+    {
+      "word": "improvements",
+      "start": 382.14,
+      "end": 382.56
+    },
+    {
+      "word": "achieved",
+      "start": 382.56,
+      "end": 382.98
+    }
+  ],
+  "voice": "marin",
+  "style": "natural",
+  "model": "gpt-realtime-2.1-mini",
+  "audio_file": "english_overlap_20261025_042413_ac9ece.mp3",
+  "subtitle_file": "english_overlap_20261025_042413_ac9ece.json",
+  "summary": "フォワード・デプロイド・エンジニア（FDE）は、顧客の業務課題を特定し、技術的な解決策を設計・実装して、本番環境での成果まで担う職種である。本文は、従来のコンサルティングと異なる役割や必要なスキル、特にAI導入において戦略と実装を結びつける重要性を説明している。",
+  "word_count": 901,
+  "character_count": 7148,
+  "audio_seconds": 384.75,
+  "cost": {
+    "realtime_usd": 0.1582374,
+    "transcription_usd": 0.03847509,
+    "total_usd": 0.20240579,
+    "currency": "USD",
+    "rates_per_1m_tokens": {
+      "input_audio": 10.0,
+      "input_text": 0.6,
+      "cached_input": 0.3,
+      "output_audio": 20.0,
+      "output_text": 2.4
+    },
+    "transcription_model": "whisper-1",
+    "transcription_rate_usd_per_minute": 0.006,
+    "usage": {
+      "total_tokens": 10370,
+      "input_tokens": 1157,
+      "output_tokens": 9213,
+      "input_token_details": {
+        "text_tokens": 1157,
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "cached_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        }
+      },
+      "output_token_details": {
+        "text_tokens": 1518,
+        "audio_tokens": 7695,
+        "reasoning_tokens": 60
+      }
+    },
+    "text_generation": {
+      "model": "gpt-6-luna",
+      "input_tokens": 3323,
+      "output_tokens": 10722,
+      "usd": 0.0056933,
+      "rate_version": "2026-10-24-v1",
+      "rates_per_1m_tokens": {
+        "input": 0.1,
+        "output": 0.5
+      },
+      "usage": {
+        "input_tokens": 3323,
+        "output_tokens": 10722
+      }
+    },
+    "text_generation_usd": 0.0056933
+  },
+  "title": "Forward-Deployed Engineering: From Business Problems to Production Solutions",
+  "summary_model": "gpt-6-luna",
+  "summary_prompt_version": "material-summary-v2-json-source-title",
+  "summary_generated_at_utc": "2026-10-25T10:19:26+00:00"
+}

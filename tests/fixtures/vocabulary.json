@@ -1,0 +1,26 @@
+{
+  "fixture_version": 1,
+  "categories": ["WorkAndCareer", "DailyLife"],
+  "vocabulary": [
+    {"vocab_id":"fixture-phrase-1","english":"take part","meanings":[{"meaning":"参加する","pos":"verb"}],"category":"WorkAndCareer","cefr":"B1"},
+    {"vocab_id":"fixture-word-2","english":"comprehensive","meanings":[{"meaning":"包括的","pos":"adjective"}],"category":"WorkAndCareer","cefr":null},
+    {"vocab_id":"fixture-word-3","english":"guide","meanings":[{"meaning":"手引き","pos":"noun"},{"meaning":"案内する","pos":"verb"}],"category":"DailyLife","cefr":"A2"},
+    {"vocab_id":"fixture-phrase-4","english":"take part in","meanings":[{"meaning":"参加する","pos":"phrase"}],"category":"WorkAndCareer","cefr":"B2"}
+  ],
+  "directional_history": [
+    {"vocab_id":"fixture-phrase-1","direction":"en_to_ja","rating":"again","occurred_at_utc":"2026-10-20T14:00:00+00:00"},
+    {"vocab_id":"fixture-phrase-1","direction":"ja_to_en","rating":"known","occurred_at_utc":"2026-10-20T14:01:00+00:00"}
+  ],
+  "legacy_history": [{"vocab_id":"fixture-word-2","result":"NG","created_at":"2026-10-20 14:02:00","direction":null}],
+  "similarity_cases": [
+    {"left":[1,0],"right":[1,0],"score":1.0,"threshold":0.8,"expected":"similar"},
+    {"left":[1,0],"right":[0.799,0.601],"score":0.799,"threshold":0.8,"expected":"distinct"},
+    {"left":[0,0],"right":[1,0],"score":0,"threshold":0.8,"expected":"distinct"}
+  ],
+  "materials": [
+    {"material_id":"fixture-empty","uses":[]},
+    {"material_id":"fixture-partial","uses":["fixture-phrase-1"]},
+    {"material_id":"fixture-covered","uses":["fixture-phrase-1","fixture-word-2"]}
+  ],
+  "api_responses": {"success":{"output_text":"fixture"},"empty":{"output_text":""},"malformed":{"output_text":"not json"},"timeout":"TimeoutError","rate_limited":429}
+}

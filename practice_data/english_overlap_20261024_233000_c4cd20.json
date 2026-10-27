@@ -1,0 +1,6710 @@
+{
+  "version": 2,
+  "created_at": "2026-10-24T23:30:00+00:00",
+  "text": "Modern internet security is entering a period in which conventional assumptions about trust boundaries, software integrity, and cryptographic protection are becoming increasingly difficult to defend. Recent security incidents and academic research suggest that attackers are shifting their attention from isolated software vulnerabilities toward the mechanisms that connect development pipelines, cloud identities, distributed workloads, and automated decision making. For security engineers, the central challenge is no longer simply identifying vulnerable components. It is understanding how legitimate capabilities can be combined into unauthorized attack paths across multiple layers of infrastructure.\n\nConsider the evolution of software supply chain attacks. In March 2026, attackers compromised the widely used Axios JavaScript package distribution process and introduced a malicious dependency designed to deploy a backdoor. According to Google Threat Intelligence, the compromised package versions were removed within approximately three hours, yet the potential exposure was substantial because Axios receives more than one hundred million downloads weekly. This incident illustrates an important distinction between source code integrity and artifact integrity. A trustworthy repository does not necessarily guarantee that every published package originates from an uncompromised build and release process.\n\nAn even more interesting example emerged from the Red Hat cloud services package compromise investigated by Microsoft in June 2026. Attackers manipulated an upstream continuous integration pipeline and distributed malicious packages through a legitimate publishing workflow. The resulting artifacts carried authentic provenance signatures. This raises a difficult engineering question. What exactly does a valid provenance signature prove when the authorized build environment itself has been compromised? Cryptographic verification can establish the relationship between an artifact and a recorded build process, but it cannot independently guarantee that the process executed trustworthy instructions.\n\nThis distinction has significant consequences for continuous integration security. OpenID Connect federation can eliminate long lived publishing credentials, but a compromised workflow may still obtain short lived tokens within its authorized trust context. Defenders must therefore scrutinize workflow permissions, event triggers, artifact promotion policies, and the isolation of untrusted pull requests. In July 2026, GitHub described additional protections for npm publishing and GitHub Actions, including changes intended to prevent untrusted pull request code from executing in privileged workflow contexts. The broader architectural lesson is that identity federation reduces credential exposure without eliminating the need to secure the execution environment.\n\nCloud native infrastructure presents similar trust boundary problems. Kubernetes provides namespace isolation, role based access control, network policies, and workload identity mechanisms. However, these controls operate at different layers and do not automatically establish comprehensive isolation. A service account with excessive permissions can create privilege escalation opportunities even when network segmentation is correctly configured. Conversely, restrictive authorization policies may provide limited protection when an attacker compromises a privileged container with extensive host access.\n\nResearch published in September 2026 examined runtime attack detection using eBPF network telemetry in Kubernetes environments. The researchers analyzed more than three million labeled network flows, including a relatively small number associated with attack scenarios. The study highlights a fundamental challenge in intrusion detection. Security relevant events are frequently rare compared with normal operational traffic. Consequently, a classifier that achieves impressive overall accuracy may still produce unacceptable false positive rates or fail to detect the events that matter most.\n\nThis problem becomes particularly serious in high volume production clusters. Suppose a detection model processes millions of events daily while actual malicious activity represents only a tiny fraction of the traffic. Even a seemingly small false positive rate can generate thousands of alerts requiring investigation. Precision, recall, alert correlation, and detection latency therefore provide more meaningful operational measurements than accuracy alone. Security engineering must evaluate whether a detection mechanism improves incident response rather than merely producing favorable experimental results.\n\nA systematic literature review published in August 2026 examined fifty four studies involving eBPF based cybersecurity mechanisms. The authors reported promising detection performance and relatively low computational overhead across several application domains. However, they also identified limited production validation, kernel compatibility challenges, and insufficient investigation of vulnerabilities within eBPF infrastructure itself. This creates an interesting paradox. A security mechanism operating close to the operating system kernel may provide excellent observability while simultaneously expanding the trusted computing base that defenders must maintain.\n\nAnother emerging concern is the integration of autonomous artificial intelligence agents into enterprise infrastructure. Unlike conventional applications, AI agents may dynamically select tools, interpret external information, and execute sequences of operations. A 2026 research paper on AI agent security emphasizes how these architectures challenge established assumptions about the separation between data and executable instructions. An attacker may embed malicious instructions inside a document or retrieved web page, causing an agent to misuse legitimate permissions.\n\nThe resulting vulnerability resembles the confused deputy problem in classical computer security. An agent may possess authorization to access confidential files and send external messages, while an attacker controls only a lower trust data source. If the agent treats untrusted content as authoritative instructions, the attacker can indirectly exploit the agent's privileges. Prompt filtering alone cannot reliably resolve this architectural weakness. Stronger designs require deterministic authorization checks, restricted tool capabilities, sandboxed execution, and explicit approval boundaries for sensitive operations.\n\nCryptographic infrastructure is undergoing another major transition. The standardization of post quantum cryptographic algorithms has created practical migration requirements for internet protocols and enterprise systems. NIST has finalized standards including ML KEM for key establishment and ML DSA for digital signatures. These algorithms address threats posed by future cryptographically relevant quantum computers, but deploying them introduces engineering challenges involving interoperability, implementation security, certificate handling, and protocol performance.\n\nIn July 2026, research assisted by artificial intelligence identified a weakness in HAWK, a candidate post quantum signature algorithm, leading to its withdrawal from standardization consideration. The finding did not invalidate the finalized NIST standards. Nevertheless, it demonstrated why algorithm selection requires sustained public cryptanalysis rather than confidence based solely on mathematical novelty. Engineers must also distinguish between theoretical algorithm security and vulnerabilities arising from implementations, side channels, protocol integration, and operational key management.\n\nFinally, vulnerability prioritization is moving toward evidence driven risk assessment. In 2026, CISA emphasized rapid remediation of actively exploited vulnerabilities affecting publicly exposed systems, particularly when exploitation could provide complete control. This approach challenges the assumption that severity scores alone should determine patching order. Exploitability, reachability, privilege requirements, asset importance, and evidence of compromise must be considered together.\n\nThe deeper conclusion is that modern cybersecurity is fundamentally about preserving trustworthy boundaries across interconnected systems. Cryptography, identity management, runtime isolation, provenance verification, and artificial intelligence safeguards all contribute to that objective, but none can independently guarantee security. The most resilient architectures assume that individual controls may fail and are designed to prevent one compromised component from becoming a system wide compromise.",
+  "spoken_text": "Modern internet security is entering a period in which conventional assumptions about trust boundaries, software integrity, and cryptographic protection are becoming increasingly difficult to defend. Recent security incidents and academic research suggest that attackers are shifting their attention from isolated software vulnerabilities toward the mechanisms that connect development pipelines, cloud identities, distributed workloads, and automated decision making. For security engineers, the central challenge is no longer simply identifying vulnerable components. It is understanding how legitimate capabilities can be combined into unauthorized attack paths across multiple layers of infrastructure.\n\nConsider the evolution of software supply chain attacks. In March 2026, attackers compromised the widely used Axios JavaScript package distribution process and introduced a malicious dependency designed to deploy a backdoor. According to Google Threat Intelligence, the compromised package versions were removed within approximately three hours, yet the potential exposure was substantial because Axios receives more than one hundred million downloads weekly. This incident illustrates an important distinction between source code integrity and artifact integrity. A trustworthy repository does not necessarily guarantee that every published package originates from an uncompromised build and release process.\n\nAn even more interesting example emerged from the Red Hat cloud services package compromise investigated by Microsoft in June 2026. Attackers manipulated an upstream continuous integration pipeline and distributed malicious packages through a legitimate publishing workflow. The resulting artifacts carried authentic provenance signatures. This raises a difficult engineering question. What exactly does a valid provenance signature prove when the authorized build environment itself has been compromised? Cryptographic verification can establish the relationship between an artifact and a recorded build process, but it cannot independently guarantee that the process executed trustworthy instructions.\n\nThis distinction has significant consequences for continuous integration security. OpenID Connect federation can eliminate long lived publishing credentials, but a compromised workflow may still obtain short lived tokens within its authorized trust context. Defenders must therefore scrutinize workflow permissions, event triggers, artifact promotion policies, and the isolation of untrusted pull requests. In July 2026, GitHub described additional protections for npm publishing and GitHub Actions, including changes intended to prevent untrusted pull request code from executing in privileged workflow contexts. The broader architectural lesson is that identity federation reduces credential exposure without eliminating the need to secure the execution environment.\n\nCloud native infrastructure presents similar trust boundary problems. Kubernetes provides namespace isolation, role based access control, network policies, and workload identity mechanisms. However, these controls operate at different layers and do not automatically establish comprehensive isolation. A service account with excessive permissions can create privilege escalation opportunities even when network segmentation is correctly configured. Conversely, restrictive authorization policies may provide limited protection when an attacker compromises a privileged container with extensive host access.\n\nResearch published in September 2026 examined runtime attack detection using eBPF network telemetry in Kubernetes environments. The researchers analyzed more than three million labeled network flows, including a relatively small number associated with attack scenarios. The study highlights a fundamental challenge in intrusion detection. Security relevant events are frequently rare compared with normal operational traffic. Consequently, a classifier that achieves impressive overall accuracy may still produce unacceptable false positive rates or fail to detect the events that matter most.\n\nThis problem becomes particularly serious in high volume production clusters. Suppose a detection model processes millions of events daily while actual malicious activity represents only a tiny fraction of the traffic. Even a seemingly small false positive rate can generate thousands of alerts requiring investigation. Precision, recall, alert correlation, and detection latency therefore provide more meaningful operational measurements than accuracy alone. Security engineering must evaluate whether a detection mechanism improves incident response rather than merely producing favorable experimental results.\n\nA systematic literature review published in August 2026 examined fifty four studies involving eBPF based cybersecurity mechanisms. The authors reported promising detection performance and relatively low computational overhead across several application domains. However, they also identified limited production validation, kernel compatibility challenges, and insufficient investigation of vulnerabilities within eBPF infrastructure itself. This creates an interesting paradox. A security mechanism operating close to the operating system kernel may provide excellent observability while simultaneously expanding the trusted computing base that defenders must maintain.\n\nAnother emerging concern is the integration of autonomous artificial intelligence agents into enterprise infrastructure. Unlike conventional applications, AI agents may dynamically select tools, interpret external information, and execute sequences of operations. A 2026 research paper on AI agent security emphasizes how these architectures challenge established assumptions about the separation between data and executable instructions. An attacker may embed malicious instructions inside a document or retrieved web page, causing an agent to misuse legitimate permissions.\n\nThe resulting vulnerability resembles the confused deputy problem in classical computer security. An agent may possess authorization to access confidential files and send external messages, while an attacker controls only a lower trust data source. If the agent treats untrusted content as authoritative instructions, the attacker can indirectly exploit the agent's privileges. Prompt filtering alone cannot reliably resolve this architectural weakness. Stronger designs require deterministic authorization checks, restricted tool capabilities, sandboxed execution, and explicit approval boundaries for sensitive operations.\n\nCryptographic infrastructure is undergoing another major transition. The standardization of post quantum cryptographic algorithms has created practical migration requirements for internet protocols and enterprise systems. NIST has finalized standards including ML KEM for key establishment and ML DSA for digital signatures. These algorithms address threats posed by future cryptographically relevant quantum computers, but deploying them introduces engineering challenges involving interoperability, implementation security, certificate handling, and protocol performance.\n\nIn July 2026, research assisted by artificial intelligence identified a weakness in HAWK, a candidate post quantum signature algorithm, leading to its withdrawal from standardization consideration. The finding did not invalidate the finalized NIST standards. Nevertheless, it demonstrated why algorithm selection requires sustained public cryptanalysis rather than confidence based solely on mathematical novelty. Engineers must also distinguish between theoretical algorithm security and vulnerabilities arising from implementations, side channels, protocol integration, and operational key management.\n\nFinally, vulnerability prioritization is moving toward evidence driven risk assessment. In 2026, CISA emphasized rapid remediation of actively exploited vulnerabilities affecting publicly exposed systems, particularly when exploitation could provide complete control. This approach challenges the assumption that severity scores alone should determine patching order. Exploitability, reachability, privilege requirements, asset importance, and evidence of compromise must be considered together.\n\nThe deeper conclusion is that modern cybersecurity is fundamentally about preserving trustworthy boundaries across interconnected systems. Cryptography, identity management, runtime isolation, provenance verification, and artificial intelligence safeguards all contribute to that objective, but none can independently guarantee security. The most resilient architectures assume that individual controls may fail and are designed to prevent one compromised component from becoming a system wide compromise.",
+  "blocks": [
+    {
+      "english": "Modern internet security is entering a period in which conventional assumptions about trust boundaries, software integrity, and cryptographic protection are becoming increasingly difficult to defend.",
+      "japanese": "現代のインターネットセキュリティは、信頼境界、ソフトウェアの完全性、暗号による保護に関する従来の前提を維持することがますます難しくなる時代に入りつつある。",
+      "vocabulary": [
+        {
+          "word": "conventional",
+          "meaning": "従来の"
+        },
+        {
+          "word": "assumptions",
+          "meaning": "前提"
+        },
+        {
+          "word": "cryptographic protection",
+          "meaning": "暗号による保護"
+        }
+      ]
+    },
+    {
+      "english": "Recent security incidents and academic research suggest that attackers are shifting their attention from isolated software vulnerabilities toward the mechanisms that connect development pipelines, cloud identities, distributed workloads, and automated decision making.",
+      "japanese": "近年のセキュリティ事故や学術研究から、攻撃者は個のソフトウェアの脆弱性から、開発工程、クラウド上の身元情報、分散処理環境、自動化された意思決定を結び付ける仕組みへと、関心を移しつつあることがうかがえる。",
+      "vocabulary": [
+        {
+          "word": "incidents",
+          "meaning": "事故"
+        },
+        {
+          "word": "isolated",
+          "meaning": "個別の"
+        },
+        {
+          "word": "mechanisms",
+          "meaning": "仕組み"
+        }
+      ]
+    },
+    {
+      "english": "For security engineers, the central challenge is no longer simply identifying vulnerable components.",
+      "japanese": "セキュリティ技術者にとって、中心的な課題はもはや脆弱な構成要素を見つけることだけではない。",
+      "vocabulary": [
+        {
+          "word": "central challenge",
+          "meaning": "中心的な課題"
+        },
+        {
+          "word": "vulnerable",
+          "meaning": "脆弱な"
+        },
+        {
+          "word": "components",
+          "meaning": "構成要素"
+        }
+      ]
+    },
+    {
+      "english": "It is understanding how legitimate capabilities can be combined into unauthorized attack paths across multiple layers of infrastructure.",
+      "japanese": "正当な機能が、インフラの複数の層にまたがる不正な攻撃経路として、どのように組み合わされるのかを理解することである。",
+      "vocabulary": [
+        {
+          "word": "legitimate",
+          "meaning": "正当な"
+        },
+        {
+          "word": "unauthorized",
+          "meaning": "不正な"
+        },
+        {
+          "word": "infrastructure",
+          "meaning": "インフラ"
+        }
+      ]
+    },
+    {
+      "english": "Consider the evolution of software supply chain attacks.",
+      "japanese": "ソフトウェアのサプライチェーン攻撃がどのように進化してきたかを考えてみよう。",
+      "vocabulary": [
+        {
+          "word": "evolution",
+          "meaning": "進化"
+        },
+        {
+          "word": "supply chain attacks",
+          "meaning": "サプライチェーン攻撃"
+        }
+      ]
+    },
+    {
+      "english": "In March 2026, attackers compromised the widely used Axios JavaScript package distribution process and introduced a malicious dependency designed to deploy a backdoor.",
+      "japanese": "二〇二六年三月、攻撃者は広く使われている通信処理用ソフトウェア部品の配布工程を侵害し、バックドアを設置するよう設計された悪意ある依存部品を混入させた。",
+      "vocabulary": [
+        {
+          "word": "compromised",
+          "meaning": "侵害した"
+        },
+        {
+          "word": "distribution process",
+          "meaning": "配布工程"
+        },
+        {
+          "word": "malicious",
+          "meaning": "悪意ある"
+        }
+      ]
+    },
+    {
+      "english": "According to Google Threat Intelligence, the compromised package versions were removed within approximately three hours, yet the potential exposure was substantial because Axios receives more than one hundred million downloads weekly.",
+      "japanese": "大手検索企業の脅威情報部門によると、侵害された版は約三時間以内に削除されたが、このソフトウェア部品は週に一億回を超えるダウンロードがあるため、潜在的な影響範囲は大きかった。",
+      "vocabulary": [
+        {
+          "word": "approximately",
+          "meaning": "およそ"
+        },
+        {
+          "word": "potential exposure",
+          "meaning": "潜在的な影響範囲"
+        },
+        {
+          "word": "weekly",
+          "meaning": "毎週"
+        }
+      ]
+    },
+    {
+      "english": "This incident illustrates an important distinction between source code integrity and artifact integrity.",
+      "japanese": "この事故は、ソースコードの完全性と、配布されるソフトウェア成果物の完全性との重要な違いを示している。",
+      "vocabulary": [
+        {
+          "word": "illustrates",
+          "meaning": "示している"
+        },
+        {
+          "word": "distinction",
+          "meaning": "違い"
+        },
+        {
+          "word": "artifact integrity",
+          "meaning": "成果物の完全性"
+        }
+      ]
+    },
+    {
+      "english": "A trustworthy repository does not necessarily guarantee that every published package originates from an uncompromised build and release process.",
+      "japanese": "信頼できる保管庫があっても、公開されるすべてのパッケージが侵害されていないビルドおよびリリース工程から生まれたことが保証されるわけではない。",
+      "vocabulary": [
+        {
+          "word": "repository",
+          "meaning": "保管庫"
+        },
+        {
+          "word": "guarantee",
+          "meaning": "保証する"
+        },
+        {
+          "word": "uncompromised",
+          "meaning": "侵害されていない"
+        }
+      ]
+    },
+    {
+      "english": "An even more interesting example emerged from the Red Hat cloud services package compromise investigated by Microsoft in June 2026.",
+      "japanese": "さらに興味深い例として、二〇二六年六月に大手ソフトウェア企業が調査した、企業向けクラウドサービスのパッケージ侵害がある。",
+      "vocabulary": [
+        {
+          "word": "emerged",
+          "meaning": "現れた"
+        },
+        {
+          "word": "package compromise",
+          "meaning": "パッケージの侵害"
+        },
+        {
+          "word": "investigated",
+          "meaning": "調査した"
+        }
+      ]
+    },
+    {
+      "english": "Attackers manipulated an upstream continuous integration pipeline and distributed malicious packages through a legitimate publishing workflow.",
+      "japanese": "攻撃者は上流の継続的インテグレーション工程を改ざんし、正規の公開手順を通じて悪意あるパッケージを配布した。",
+      "vocabulary": [
+        {
+          "word": "manipulated",
+          "meaning": "改ざんした"
+        },
+        {
+          "word": "upstream",
+          "meaning": "上流の"
+        },
+        {
+          "word": "legitimate",
+          "meaning": "正規の"
+        }
+      ]
+    },
+    {
+      "english": "The resulting artifacts carried authentic provenance signatures.",
+      "japanese": "その結果作られた成果物には、真正な来歴署名が付いていた。",
+      "vocabulary": [
+        {
+          "word": "resulting",
+          "meaning": "その結果生じた"
+        },
+        {
+          "word": "artifacts",
+          "meaning": "成果物"
+        },
+        {
+          "word": "provenance signatures",
+          "meaning": "来歴署名"
+        }
+      ]
+    },
+    {
+      "english": "This raises a difficult engineering question.",
+      "japanese": "これは、技術者にとって難しい問いを提起する。",
+      "vocabulary": [
+        {
+          "word": "raises",
+          "meaning": "提起する"
+        },
+        {
+          "word": "engineering question",
+          "meaning": "技術上の問い"
+        }
+      ]
+    },
+    {
+      "english": "What exactly does a valid provenance signature prove when the authorized build environment itself has been compromised?",
+      "japanese": "認可されたビルド環境そのものが侵害されたとき、有効な来歴署名は具体的に何を証明するのだろうか。",
+      "vocabulary": [
+        {
+          "word": "valid",
+          "meaning": "有効な"
+        },
+        {
+          "word": "authorized",
+          "meaning": "認可された"
+        },
+        {
+          "word": "build environment",
+          "meaning": "ビルド環境"
+        }
+      ]
+    },
+    {
+      "english": "Cryptographic verification can establish the relationship between an artifact and a recorded build process, but it cannot independently guarantee that the process executed trustworthy instructions.",
+      "japanese": "暗号による検証は、成果物と記録されたビルド工程との関係を確認できるが、その工程が信頼できる命令を実行したことまでは独立して保証できない。",
+      "vocabulary": [
+        {
+          "word": "verification",
+          "meaning": "検証"
+        },
+        {
+          "word": "relationship",
+          "meaning": "関係"
+        },
+        {
+          "word": "independently",
+          "meaning": "独立して"
+        }
+      ]
+    },
+    {
+      "english": "This distinction has significant consequences for continuous integration security.",
+      "japanese": "この違いは、継続的インテグレーションのセキュリティに大きな影響を及ぼす。",
+      "vocabulary": [
+        {
+          "word": "distinction",
+          "meaning": "違い"
+        },
+        {
+          "word": "significant",
+          "meaning": "大きな"
+        },
+        {
+          "word": "consequences",
+          "meaning": "影響"
+        }
+      ]
+    },
+    {
+      "english": "OpenID Connect federation can eliminate long lived publishing credentials, but a compromised workflow may still obtain short lived tokens within its authorized trust context.",
+      "japanese": "識別情報の連携は、長期間有効な公開用認証情報をなくせるが、侵害された作業工程は、認可された信頼範囲内で短期間有効なトークンを依然として取得できる。",
+      "vocabulary": [
+        {
+          "word": "federation",
+          "meaning": "連携"
+        },
+        {
+          "word": "credentials",
+          "meaning": "認証情報"
+        },
+        {
+          "word": "short lived",
+          "meaning": "短期間有効な"
+        }
+      ]
+    },
+    {
+      "english": "Defenders must therefore scrutinize workflow permissions, event triggers, artifact promotion policies, and the isolation of untrusted pull requests.",
+      "japanese": "そのため防御側は、作業工程の権限、実行を開始する事象、成果物の昇格方針、信頼できない変更要求の隔離を詳しく調べなければならない。",
+      "vocabulary": [
+        {
+          "word": "scrutinize",
+          "meaning": "詳しく調べる"
+        },
+        {
+          "word": "permissions",
+          "meaning": "権限"
+        },
+        {
+          "word": "isolation",
+          "meaning": "隔離"
+        }
+      ]
+    },
+    {
+      "english": "In July 2026, GitHub described additional protections for npm publishing and GitHub Actions, including changes intended to prevent untrusted pull request code from executing in privileged workflow contexts.",
+      "japanese": "二〇二六年七月、ソフトウェア共有基盤の運営企業は、信頼できない変更要求のコードが特権を持つ作業環境で実行されないようにする変更など、パッケージ公開と自動実行機能に関する追加の保護策を説明した。",
+      "vocabulary": [
+        {
+          "word": "additional protections",
+          "meaning": "追加の保護策"
+        },
+        {
+          "word": "untrusted",
+          "meaning": "信頼できない"
+        },
+        {
+          "word": "privileged",
+          "meaning": "特権を持つ"
+        }
+      ]
+    },
+    {
+      "english": "The broader architectural lesson is that identity federation reduces credential exposure without eliminating the need to secure the execution environment.",
+      "japanese": "より広い設計上の教訓は、識別情報の連携によって認証情報の露出は減るものの、実行環境を保護する必要性はなくならないということだ。",
+      "vocabulary": [
+        {
+          "word": "architectural lesson",
+          "meaning": "設計上の教訓"
+        },
+        {
+          "word": "reduces",
+          "meaning": "減らす"
+        },
+        {
+          "word": "execution environment",
+          "meaning": "実行環境"
+        }
+      ]
+    },
+    {
+      "english": "Cloud native infrastructure presents similar trust boundary problems.",
+      "japanese": "クラウドを基盤とするインフラにも、同様の信頼境界の問題がある。",
+      "vocabulary": [
+        {
+          "word": "cloud native",
+          "meaning": "クラウドを基盤とする"
+        },
+        {
+          "word": "similar",
+          "meaning": "同様の"
+        },
+        {
+          "word": "trust boundary",
+          "meaning": "信頼境界"
+        }
+      ]
+    },
+    {
+      "english": "Kubernetes provides namespace isolation, role based access control, network policies, and workload identity mechanisms.",
+      "japanese": "コンテナ管理基盤は、名前空間による分離、役割に基づくアクセス制御、ネットワーク方針、処理単位の識別情報の仕組みを備えている。",
+      "vocabulary": [
+        {
+          "word": "namespace isolation",
+          "meaning": "名前空間による分離"
+        },
+        {
+          "word": "role based access control",
+          "meaning": "役割に基づくアクセス制御"
+        },
+        {
+          "word": "workload identity",
+          "meaning": "処理単位の識別情報"
+        }
+      ]
+    },
+    {
+      "english": "However, these controls operate at different layers and do not automatically establish comprehensive isolation.",
+      "japanese": "しかし、これらの制御は異なる層で働き、包括的な分離を自動的に実現するわけではない。",
+      "vocabulary": [
+        {
+          "word": "controls",
+          "meaning": "制御"
+        },
+        {
+          "word": "layers",
+          "meaning": "層"
+        },
+        {
+          "word": "comprehensive",
+          "meaning": "包括的な"
+        }
+      ]
+    },
+    {
+      "english": "A service account with excessive permissions can create privilege escalation opportunities even when network segmentation is correctly configured.",
+      "japanese": "ネットワークの区分が正しく設定されていても、過剰な権限を持つサービス用アカウントは、権限昇格の機会を生み出し得る。",
+      "vocabulary": [
+        {
+          "word": "excessive",
+          "meaning": "過剰な"
+        },
+        {
+          "word": "privilege escalation",
+          "meaning": "権限昇格"
+        },
+        {
+          "word": "correctly configured",
+          "meaning": "正しく設定された"
+        }
+      ]
+    },
+    {
+      "english": "Conversely, restrictive authorization policies may provide limited protection when an attacker compromises a privileged container with extensive host access.",
+      "japanese": "反対に、攻撃者が広範なホストアクセス権を持つ特権コンテナを侵害した場合、制限の厳しい認可方針でも十分に保護できないことがある。",
+      "vocabulary": [
+        {
+          "word": "Conversely",
+          "meaning": "反対に"
+        },
+        {
+          "word": "restrictive",
+          "meaning": "制限の厳しい"
+        },
+        {
+          "word": "host access",
+          "meaning": "ホストへのアクセス"
+        }
+      ]
+    },
+    {
+      "english": "Research published in September 2026 examined runtime attack detection using eBPF network telemetry in Kubernetes environments.",
+      "japanese": "二〇二六年九月に発表された研究では、コンテナ管理環境における拡張型パケットフィルターのネットワーク通信記録を使った、実行時攻撃検知が検討された。",
+      "vocabulary": [
+        {
+          "word": "published",
+          "meaning": "発表された"
+        },
+        {
+          "word": "runtime",
+          "meaning": "実行時"
+        },
+        {
+          "word": "telemetry",
+          "meaning": "通信記録"
+        }
+      ]
+    },
+    {
+      "english": "The researchers analyzed more than three million labeled network flows, including a relatively small number associated with attack scenarios.",
+      "japanese": "研究者たちは、攻撃の状況に関連する比較的少数の通信を含む、ラベル付きの三百万件を超えるネットワーク通信を分析した。",
+      "vocabulary": [
+        {
+          "word": "analyzed",
+          "meaning": "分析した"
+        },
+        {
+          "word": "labeled",
+          "meaning": "ラベル付きの"
+        },
+        {
+          "word": "relatively small",
+          "meaning": "比較的少数の"
+        }
+      ]
+    },
+    {
+      "english": "The study highlights a fundamental challenge in intrusion detection.",
+      "japanese": "この研究は、侵入検知における根本的な課題を浮き彫りにしている。",
+      "vocabulary": [
+        {
+          "word": "highlights",
+          "meaning": "浮き彫りにする"
+        },
+        {
+          "word": "fundamental",
+          "meaning": "根本的な"
+        },
+        {
+          "word": "intrusion detection",
+          "meaning": "侵入検知"
+        }
+      ]
+    },
+    {
+      "english": "Security relevant events are frequently rare compared with normal operational traffic.",
+      "japanese": "セキュリティ上重要な事象は、通常の運用通信と比べて、発生頻度が低いことが多い。",
+      "vocabulary": [
+        {
+          "word": "security relevant",
+          "meaning": "セキュリティ上重要な"
+        },
+        {
+          "word": "frequently",
+          "meaning": "しばしば"
+        },
+        {
+          "word": "operational traffic",
+          "meaning": "運用通信"
+        }
+      ]
+    },
+    {
+      "english": "Consequently, a classifier that achieves impressive overall accuracy may still produce unacceptable false positive rates or fail to detect the events that matter most.",
+      "japanese": "そのため、全体の正解率が際立って高い分類器であっても、許容できない誤検知率を生んだり、最も重要な事象を検知できなかったりする可能性がある。",
+      "vocabulary": [
+        {
+          "word": "classifier",
+          "meaning": "分類器"
+        },
+        {
+          "word": "false positive rates",
+          "meaning": "誤検知率"
+        },
+        {
+          "word": "detect",
+          "meaning": "検知する"
+        }
+      ]
+    },
+    {
+      "english": "This problem becomes particularly serious in high volume production clusters.",
+      "japanese": "この問題は、大量の通信が発生する本番環境のクラスターで、特に深刻になる。",
+      "vocabulary": [
+        {
+          "word": "particularly",
+          "meaning": "特に"
+        },
+        {
+          "word": "high volume",
+          "meaning": "大量の"
+        },
+        {
+          "word": "production clusters",
+          "meaning": "本番環境のクラスター"
+        }
+      ]
+    },
+    {
+      "english": "Suppose a detection model processes millions of events daily while actual malicious activity represents only a tiny fraction of the traffic.",
+      "japanese": "検知モデルが毎日数百万件の事象を処理し、実際の悪意ある活動が通信のごく一部にすぎない状況を考えてみよう。",
+      "vocabulary": [
+        {
+          "word": "processes",
+          "meaning": "処理する"
+        },
+        {
+          "word": "actual",
+          "meaning": "実際の"
+        },
+        {
+          "word": "tiny fraction",
+          "meaning": "ごく一部"
+        }
+      ]
+    },
+    {
+      "english": "Even a seemingly small false positive rate can generate thousands of alerts requiring investigation.",
+      "japanese": "一見わずかに思える誤検知率でも、調査が必要な警告を何千件も生み出すことがある。",
+      "vocabulary": [
+        {
+          "word": "seemingly",
+          "meaning": "一見"
+        },
+        {
+          "word": "generate",
+          "meaning": "生み出す"
+        },
+        {
+          "word": "requiring investigation",
+          "meaning": "調査を要する"
+        }
+      ]
+    },
+    {
+      "english": "Precision, recall, alert correlation, and detection latency therefore provide more meaningful operational measurements than accuracy alone.",
+      "japanese": "したがって、適合率、再現率、警告の相関分析、検知の遅延は、正解率だけよりも運用上の実態をよく表す指標となる。",
+      "vocabulary": [
+        {
+          "word": "Precision",
+          "meaning": "適合率"
+        },
+        {
+          "word": "recall",
+          "meaning": "再現率"
+        },
+        {
+          "word": "latency",
+          "meaning": "遅延"
+        }
+      ]
+    },
+    {
+      "english": "Security engineering must evaluate whether a detection mechanism improves incident response rather than merely producing favorable experimental results.",
+      "japanese": "セキュリティ技術者は、検知の仕組みが単に実験で好ましい結果を出すだけでなく、インシデント対応を改善するかどうかを評価しなければならない。",
+      "vocabulary": [
+        {
+          "word": "evaluate",
+          "meaning": "評価する"
+        },
+        {
+          "word": "mechanism",
+          "meaning": "仕組み"
+        },
+        {
+          "word": "incident response",
+          "meaning": "インシデント対応"
+        }
+      ]
+    },
+    {
+      "english": "A systematic literature review published in August 2026 examined fifty four studies involving eBPF based cybersecurity mechanisms.",
+      "japanese": "二〇二六年八月に発表された体系的な文献調査では、拡張型パケットフィルターに基づくサイバーセキュリティの仕組みを扱った五十四件の研究が検討された。",
+      "vocabulary": [
+        {
+          "word": "systematic",
+          "meaning": "体系的な"
+        },
+        {
+          "word": "literature review",
+          "meaning": "文献調査"
+        },
+        {
+          "word": "involving",
+          "meaning": "扱う"
+        }
+      ]
+    },
+    {
+      "english": "The authors reported promising detection performance and relatively low computational overhead across several application domains.",
+      "japanese": "著者らは、複数の応用分野において、有望な検知性能と比較的低い計算負荷が報告されていると述べた。",
+      "vocabulary": [
+        {
+          "word": "promising",
+          "meaning": "有望な"
+        },
+        {
+          "word": "computational overhead",
+          "meaning": "計算負荷"
+        },
+        {
+          "word": "application domains",
+          "meaning": "応用分野"
+        }
+      ]
+    },
+    {
+      "english": "However, they also identified limited production validation, kernel compatibility challenges, and insufficient investigation of vulnerabilities within eBPF infrastructure itself.",
+      "japanese": "しかし著者らは、本番環境での検証が限られていること、カーネルとの互換性の課題、拡張型パケットフィルター自体の脆弱性に関する調査不足も指摘した。",
+      "vocabulary": [
+        {
+          "word": "production validation",
+          "meaning": "本番環境での検証"
+        },
+        {
+          "word": "compatibility",
+          "meaning": "互換性"
+        },
+        {
+          "word": "insufficient",
+          "meaning": "不十分な"
+        }
+      ]
+    },
+    {
+      "english": "This creates an interesting paradox.",
+      "japanese": "ここには興味深い逆説がある。",
+      "vocabulary": [
+        {
+          "word": "creates",
+          "meaning": "生み出す"
+        },
+        {
+          "word": "interesting",
+          "meaning": "興味深い"
+        },
+        {
+          "word": "paradox",
+          "meaning": "逆説"
+        }
+      ]
+    },
+    {
+      "english": "A security mechanism operating close to the operating system kernel may provide excellent observability while simultaneously expanding the trusted computing base that defenders must maintain.",
+      "japanese": "オペレーティングシステムのカーネルに近い場所で動くセキュリティ機構は、優れた可視性をもたらす一方で、防御側が維持しなければならない信頼された計算基盤を同時に拡大する可能性がある。",
+      "vocabulary": [
+        {
+          "word": "operating system kernel",
+          "meaning": "オペレーティングシステムのカーネル"
+        },
+        {
+          "word": "observability",
+          "meaning": "可視性"
+        },
+        {
+          "word": "trusted computing base",
+          "meaning": "信頼された計算基盤"
+        }
+      ]
+    },
+    {
+      "english": "Another emerging concern is the integration of autonomous artificial intelligence agents into enterprise infrastructure.",
+      "japanese": "新たに浮上している別の懸念は、自律型の人工知能エージェントを企業インフラに組み込むことである。",
+      "vocabulary": [
+        {
+          "word": "emerging",
+          "meaning": "新たに浮上している"
+        },
+        {
+          "word": "autonomous",
+          "meaning": "自律型の"
+        },
+        {
+          "word": "integration",
+          "meaning": "組み込み"
+        }
+      ]
+    },
+    {
+      "english": "Unlike conventional applications, AI agents may dynamically select tools, interpret external information, and execute sequences of operations.",
+      "japanese": "従来型のアプリケーションとは異なり、人工知能エージェントは使う道具を動的に選び、外部情報を解釈し、一連の操作を実行することがある。",
+      "vocabulary": [
+        {
+          "word": "conventional",
+          "meaning": "従来型の"
+        },
+        {
+          "word": "dynamically",
+          "meaning": "動的に"
+        },
+        {
+          "word": "sequences",
+          "meaning": "一連の"
+        }
+      ]
+    },
+    {
+      "english": "A 2026 research paper on AI agent security emphasizes how these architectures challenge established assumptions about the separation between data and executable instructions.",
+      "japanese": "人工知能エージェントの安全性に関する二〇二六年の研究論文は、こうした構造が、データと実行可能な命令を分離するという確立された前提にどのような課題を突き付けるかを強調している。",
+      "vocabulary": [
+        {
+          "word": "emphasizes",
+          "meaning": "強調する"
+        },
+        {
+          "word": "architectures",
+          "meaning": "構造"
+        },
+        {
+          "word": "separation",
+          "meaning": "分離"
+        }
+      ]
+    },
+    {
+      "english": "An attacker may embed malicious instructions inside a document or retrieved web page, causing an agent to misuse legitimate permissions.",
+      "japanese": "攻撃者は文書や取得したウェブページに悪意ある命令を埋め込み、エージェントに正当な権限を悪用させることができる。",
+      "vocabulary": [
+        {
+          "word": "embed",
+          "meaning": "埋め込む"
+        },
+        {
+          "word": "retrieved",
+          "meaning": "取得した"
+        },
+        {
+          "word": "misuse",
+          "meaning": "悪用する"
+        }
+      ]
+    },
+    {
+      "english": "The resulting vulnerability resembles the confused deputy problem in classical computer security.",
+      "japanese": "その結果生じる脆弱性は、古典的なコンピューターセキュリティにおける混乱した代理人の問題に似ている。",
+      "vocabulary": [
+        {
+          "word": "resulting",
+          "meaning": "その結果生じる"
+        },
+        {
+          "word": "resembles",
+          "meaning": "似ている"
+        },
+        {
+          "word": "confused deputy problem",
+          "meaning": "混乱した代理人の問題"
+        }
+      ]
+    },
+    {
+      "english": "An agent may possess authorization to access confidential files and send external messages, while an attacker controls only a lower trust data source.",
+      "japanese": "エージェントには機密ファイルへのアクセスや外部へのメッセージ送信が認められている一方、攻撃者が支配しているのは信頼度の低い情報源だけかもしれない。",
+      "vocabulary": [
+        {
+          "word": "authorization",
+          "meaning": "認可"
+        },
+        {
+          "word": "confidential",
+          "meaning": "機密の"
+        },
+        {
+          "word": "lower trust",
+          "meaning": "信頼度の低い"
+        }
+      ]
+    },
+    {
+      "english": "If the agent treats untrusted content as authoritative instructions, the attacker can indirectly exploit the agent's privileges.",
+      "japanese": "エージェントが信頼できない内容を権威ある命令として扱うと、攻撃者はエージェントの権限を間接的に悪用できる。",
+      "vocabulary": [
+        {
+          "word": "untrusted",
+          "meaning": "信頼できない"
+        },
+        {
+          "word": "authoritative",
+          "meaning": "権威ある"
+        },
+        {
+          "word": "indirectly",
+          "meaning": "間接的に"
+        }
+      ]
+    },
+    {
+      "english": "Prompt filtering alone cannot reliably resolve this architectural weakness.",
+      "japanese": "指示文を絞り込むだけでは、この設計上の弱点を確実に解決できない。",
+      "vocabulary": [
+        {
+          "word": "filtering",
+          "meaning": "絞り込み"
+        },
+        {
+          "word": "reliably",
+          "meaning": "確実に"
+        },
+        {
+          "word": "architectural weakness",
+          "meaning": "設計上の弱点"
+        }
+      ]
+    },
+    {
+      "english": "Stronger designs require deterministic authorization checks, restricted tool capabilities, sandboxed execution, and explicit approval boundaries for sensitive operations.",
+      "japanese": "より強固な設計には、決定論的な認可確認、制限された道具の機能、隔離された実行環境、機密操作に対する明確な承認境界が必要である。",
+      "vocabulary": [
+        {
+          "word": "deterministic",
+          "meaning": "決定論的な"
+        },
+        {
+          "word": "sandboxed",
+          "meaning": "隔離された"
+        },
+        {
+          "word": "approval boundaries",
+          "meaning": "承認境界"
+        }
+      ]
+    },
+    {
+      "english": "Cryptographic infrastructure is undergoing another major transition.",
+      "japanese": "暗号基盤は、もう一つの大きな転換期を迎えている。",
+      "vocabulary": [
+        {
+          "word": "cryptographic infrastructure",
+          "meaning": "暗号基盤"
+        },
+        {
+          "word": "undergoing",
+          "meaning": "迎えている"
+        },
+        {
+          "word": "transition",
+          "meaning": "転換期"
+        }
+      ]
+    },
+    {
+      "english": "The standardization of post quantum cryptographic algorithms has created practical migration requirements for internet protocols and enterprise systems.",
+      "japanese": "耐量子暗号アルゴリズムの標準化により、インターネットの通信規約や企業システムには、現実的な移行要件が生じている。",
+      "vocabulary": [
+        {
+          "word": "standardization",
+          "meaning": "標準化"
+        },
+        {
+          "word": "practical",
+          "meaning": "現実的な"
+        },
+        {
+          "word": "migration requirements",
+          "meaning": "移行要件"
+        }
+      ]
+    },
+    {
+      "english": "NIST has finalized standards including ML KEM for key establishment and ML DSA for digital signatures.",
+      "japanese": "米国の標準化機関は、鍵の確立に用いる方式や電子署名に用いる方式を含む標準を最終決定した。",
+      "vocabulary": [
+        {
+          "word": "finalized",
+          "meaning": "最終決定した"
+        },
+        {
+          "word": "key establishment",
+          "meaning": "鍵の確立"
+        },
+        {
+          "word": "digital signatures",
+          "meaning": "電子署名"
+        }
+      ]
+    },
+    {
+      "english": "These algorithms address threats posed by future cryptographically relevant quantum computers, but deploying them introduces engineering challenges involving interoperability, implementation security, certificate handling, and protocol performance.",
+      "japanese": "これらの方式は、将来の暗号解読能力を持つ量子計算機がもたらす脅威に対処するが、導入には相互運用性、実装の安全性、証明書の取り扱い、通信規約の性能に関する技術的課題が伴う。",
+      "vocabulary": [
+        {
+          "word": "address",
+          "meaning": "対処する"
+        },
+        {
+          "word": "interoperability",
+          "meaning": "相互運用性"
+        },
+        {
+          "word": "implementation security",
+          "meaning": "実装の安全性"
+        }
+      ]
+    },
+    {
+      "english": "In July 2026, research assisted by artificial intelligence identified a weakness in HAWK, a candidate post quantum signature algorithm, leading to its withdrawal from standardization consideration.",
+      "japanese": "二〇二六年七月、人工知能の支援を受けた研究によって、耐量子署名方式の候補である方式の弱点が見つかり、標準化の検討対象から取り下げられた。",
+      "vocabulary": [
+        {
+          "word": "assisted",
+          "meaning": "支援を受けた"
+        },
+        {
+          "word": "identified",
+          "meaning": "見つけた"
+        },
+        {
+          "word": "withdrawal",
+          "meaning": "取り下げ"
+        }
+      ]
+    },
+    {
+      "english": "The finding did not invalidate the finalized NIST standards.",
+      "japanese": "この発見によって、すでに最終決定された標準が無効になったわけではない。",
+      "vocabulary": [
+        {
+          "word": "finding",
+          "meaning": "発見"
+        },
+        {
+          "word": "invalidate",
+          "meaning": "無効にする"
+        },
+        {
+          "word": "finalized",
+          "meaning": "最終決定された"
+        }
+      ]
+    },
+    {
+      "english": "Nevertheless, it demonstrated why algorithm selection requires sustained public cryptanalysis rather than confidence based solely on mathematical novelty.",
+      "japanese": "それでも、アルゴリズムの選定では、数学的な新しさだけを根拠に信頼するのではなく、公開の場で継続的に暗号解読の検証を行う必要があることが示された。",
+      "vocabulary": [
+        {
+          "word": "demonstrated",
+          "meaning": "示した"
+        },
+        {
+          "word": "sustained",
+          "meaning": "継続的な"
+        },
+        {
+          "word": "novelty",
+          "meaning": "新しさ"
+        }
+      ]
+    },
+    {
+      "english": "Engineers must also distinguish between theoretical algorithm security and vulnerabilities arising from implementations, side channels, protocol integration, and operational key management.",
+      "japanese": "技術者は、理論上のアルゴリズムの安全性と、実装、サイドチャネル、通信規約への統合、運用上の鍵管理から生じる脆弱性も区別しなければならない。",
+      "vocabulary": [
+        {
+          "word": "theoretical",
+          "meaning": "理論上の"
+        },
+        {
+          "word": "side channels",
+          "meaning": "サイドチャネル"
+        },
+        {
+          "word": "operational",
+          "meaning": "運用上の"
+        }
+      ]
+    },
+    {
+      "english": "Finally, vulnerability prioritization is moving toward evidence driven risk assessment.",
+      "japanese": "最後に、脆弱性の優先順位付けは、証拠に基づくリスク評価へと移行しつつある。",
+      "vocabulary": [
+        {
+          "word": "prioritization",
+          "meaning": "優先順位付け"
+        },
+        {
+          "word": "evidence driven",
+          "meaning": "証拠に基づく"
+        },
+        {
+          "word": "risk assessment",
+          "meaning": "リスク評価"
+        }
+      ]
+    },
+    {
+      "english": "In 2026, CISA emphasized rapid remediation of actively exploited vulnerabilities affecting publicly exposed systems, particularly when exploitation could provide complete control.",
+      "japanese": "二〇二六年、米国のサイバー防衛機関は、一般に公開されたシステムに影響する、実際に悪用されている脆弱性の迅速な修正を重視した。特に、悪用によって完全な制御が可能になる場合が対象となった。",
+      "vocabulary": [
+        {
+          "word": "emphasized",
+          "meaning": "重視した"
+        },
+        {
+          "word": "actively exploited",
+          "meaning": "実際に悪用されている"
+        },
+        {
+          "word": "remediation",
+          "meaning": "修正"
+        }
+      ]
+    },
+    {
+      "english": "This approach challenges the assumption that severity scores alone should determine patching order.",
+      "japanese": "この方針は、深刻度の点数だけで修正の順番を決めるべきだという前提に疑問を投げかける。",
+      "vocabulary": [
+        {
+          "word": "challenges",
+          "meaning": "疑問を投げかける"
+        },
+        {
+          "word": "severity scores",
+          "meaning": "深刻度の点数"
+        },
+        {
+          "word": "patching order",
+          "meaning": "修正の順番"
+        }
+      ]
+    },
+    {
+      "english": "Exploitability, reachability, privilege requirements, asset importance, and evidence of compromise must be considered together.",
+      "japanese": "悪用の容易さ、到達可能性、必要な権限、資産の重要度、侵害の証拠を、まとめて考慮しなければならない。",
+      "vocabulary": [
+        {
+          "word": "exploitability",
+          "meaning": "悪用の容易さ"
+        },
+        {
+          "word": "reachability",
+          "meaning": "到達可能性"
+        },
+        {
+          "word": "evidence of compromise",
+          "meaning": "侵害の証拠"
+        }
+      ]
+    },
+    {
+      "english": "The deeper conclusion is that modern cybersecurity is fundamentally about preserving trustworthy boundaries across interconnected systems.",
+      "japanese": "より深い結論として、現代のサイバーセキュリティの本質は、相互接続されたシステム全体で信頼できる境界を維持することにある。",
+      "vocabulary": [
+        {
+          "word": "deeper conclusion",
+          "meaning": "より深い結論"
+        },
+        {
+          "word": "fundamentally",
+          "meaning": "本質的に"
+        },
+        {
+          "word": "interconnected",
+          "meaning": "相互接続された"
+        }
+      ]
+    },
+    {
+      "english": "Cryptography, identity management, runtime isolation, provenance verification, and artificial intelligence safeguards all contribute to that objective, but none can independently guarantee security.",
+      "japanese": "暗号、識別情報の管理、実行時の分離、来歴の検証、人工知能への安全対策は、すべてその目標に貢献するが、どれ一つとして単独で安全を保証することはできない。",
+      "vocabulary": [
+        {
+          "word": "identity management",
+          "meaning": "識別情報の管理"
+        },
+        {
+          "word": "provenance verification",
+          "meaning": "来歴の検証"
+        },
+        {
+          "word": "independently",
+          "meaning": "単独で"
+        }
+      ]
+    },
+    {
+      "english": "The most resilient architectures assume that individual controls may fail and are designed to prevent one compromised component from becoming a system wide compromise.",
+      "japanese": "最も強靭なシステム設計は、個の制御が失敗する可能性を前提とし、侵害された一つの構成要素がシステム全体の侵害に発展しないように作られている。",
+      "vocabulary": [
+        {
+          "word": "resilient",
+          "meaning": "強靭な"
+        },
+        {
+          "word": "assume",
+          "meaning": "前提とする"
+        },
+        {
+          "word": "system wide",
+          "meaning": "システム全体の"
+        }
+      ]
+    }
+  ],
+  "transcript": "Modern internet security is entering a period in which conventional assumptions about trust boundaries, software integrity, and cryptographic protection are becoming increasingly difficult to defend. Recent security incidents and academic research suggest that attackers are shifting their attention from isolated software vulnerabilities toward the mechanisms that connect development pipelines, cloud identities, distributed workloads, and automated decision making. For security engineers, the central challenge is no longer simply identifying vulnerable components. It is understanding how legitimate capabilities can be combined into unauthorized attack paths across multiple layers of infrastructure.\n\nConsider the evolution of software supply chain attacks. In March 2026, attackers compromised the widely used Axios JavaScript package distribution process and introduced a malicious dependency designed to deploy a backdoor. According to Google Threat Intelligence, the compromised package versions were removed within approximately three hours, yet the potential exposure was substantial because Axios receives more than one hundred million downloads weekly. This incident illustrates an important distinction between source code integrity and artifact integrity. A trustworthy repository does not necessarily guarantee that every published package originates from an uncompromised build and release process.\n\nAn even more interesting example emerged from the Red Hat cloud services package compromise investigated by Microsoft in June 2026. Attackers manipulated an upstream continuous integration pipeline and distributed malicious packages through a legitimate publishing workflow. The resulting artifacts carried authentic provenance signatures. This raises a difficult engineering question. What exactly does a valid provenance signature prove when the authorized build environment itself has been compromised? Cryptographic verification can establish the relationship between an artifact and a recorded build process, but it cannot independently guarantee that the process executed trustworthy instructions.\n\nThis distinction has significant consequences for continuous integration security. OpenID Connect federation can eliminate long lived publishing credentials, but a compromised workflow may still obtain short lived tokens within its authorized trust context. Defenders must therefore scrutinize workflow permissions, event triggers, artifact promotion policies, and the isolation of untrusted pull requests. In July 2026, GitHub described additional protections for npm publishing and GitHub Actions, including changes intended to prevent untrusted pull request code from executing in privileged workflow contexts. The broader architectural lesson is that identity federation reduces credential exposure without eliminating the need to secure the execution environment.\n\nCloud native infrastructure presents similar trust boundary problems. Kubernetes provides namespace isolation, role based access control, network policies, and workload identity mechanisms. However, these controls operate at different layers and do not automatically establish comprehensive isolation. A service account with excessive permissions can create privilege escalation opportunities even when network segmentation is correctly configured. Conversely, restrictive authorization policies may provide limited protection when an attacker compromises a privileged container with extensive host access.\n\nResearch published in September 2026 examined runtime attack detection using eBPF network telemetry in Kubernetes environments. The researchers analyzed more than three million labeled network flows, including a relatively small number associated with attack scenarios. The study highlights a fundamental challenge in intrusion detection. Security relevant events are frequently rare compared with normal operational traffic. Consequently, a classifier that achieves impressive overall accuracy may still produce unacceptable false positive rates or fail to detect the events that matter most.\n\nThis problem becomes particularly serious in high volume production clusters. Suppose a detection model processes millions of events daily while actual malicious activity represents only a tiny fraction of the traffic. Even a seemingly small false positive rate can generate thousands of alerts requiring investigation. Precision, recall, alert correlation, and detection latency therefore provide more meaningful operational measurements than accuracy alone. Security engineering must evaluate whether a detection mechanism improves incident response rather than merely producing favorable experimental results.\n\nA systematic literature review published in August 2026 examined fifty four studies involving eBPF based cybersecurity mechanisms. The authors reported promising detection performance and relatively low computational overhead across several application domains. However, they also identified limited production validation, kernel compatibility challenges, and insufficient investigation of vulnerabilities within eBPF infrastructure itself. This creates an interesting paradox. A security mechanism operating close to the operating system kernel may provide excellent observability while simultaneously expanding the trusted computing base that defenders must maintain.\n\nAnother emerging concern is the integration of autonomous artificial intelligence agents into enterprise infrastructure. Unlike conventional applications, AI agents may dynamically select tools, interpret external information, and execute sequences of operations. A 2026 research paper on AI agent security emphasizes how these architectures challenge established assumptions about the separation between data and executable instructions. An attacker may embed malicious instructions inside a document or retrieved web page, causing an agent to misuse legitimate permissions.\n\nThe resulting vulnerability resembles the confused deputy problem in classical computer security. An agent may possess authorization to access confidential files and send external messages, while an attacker controls only a lower trust data source. If the agent treats untrusted content as authoritative instructions, the attacker can indirectly exploit the agent's privileges. Prompt filtering alone cannot reliably resolve this architectural weakness. Stronger designs require deterministic authorization checks, restricted tool capabilities, sandboxed execution, and explicit approval boundaries for sensitive operations.\n\nCryptographic infrastructure is undergoing another major transition. The standardization of post quantum cryptographic algorithms has created practical migration requirements for internet protocols and enterprise systems. NIST has finalized standards including ML KEM for key establishment and ML DSA for digital signatures. These algorithms address threats posed by future cryptographically relevant quantum computers, but deploying them introduces engineering challenges involving interoperability, implementation security, certificate handling, and protocol performance.\n\nIn July 2026, research assisted by artificial intelligence identified a weakness in HAWK, a candidate post quantum signature algorithm, leading to its withdrawal from standardization consideration. The finding did not invalidate the finalized NIST standards. Nevertheless, it demonstrated why algorithm selection requires sustained public cryptanalysis rather than confidence based solely on mathematical novelty. Engineers must also distinguish between theoretical algorithm security and vulnerabilities arising from implementations, side channels, protocol integration, and operational key management.\n\nFinally, vulnerability prioritization is moving toward evidence driven risk assessment. In 2026, CISA emphasized rapid remediation of actively exploited vulnerabilities affecting publicly exposed systems, particularly when exploitation could provide complete control. This approach challenges the assumption that severity scores alone should determine patching order. Exploitability, reachability, privilege requirements, asset importance, and evidence of compromise must be considered together.\n\nThe deeper conclusion is that modern cybersecurity is fundamentally about preserving trustworthy boundaries across interconnected systems. Cryptography, identity management, runtime isolation, provenance verification, and artificial intelligence safeguards all contribute to that objective, but none can independently guarantee security. The most resilient architectures assume that individual controls may fail and are designed to prevent one compromised component from becoming a system wide compromise.",
+  "words": [
+    {
+      "word": "Modern",
+      "start": 0,
+      "end": 0.44
+    },
+    {
+      "word": "internet",
+      "start": 0.44,
+      "end": 0.84
+    },
+    {
+      "word": "security",
+      "start": 0.84,
+      "end": 1.22
+    },
+    {
+      "word": "is",
+      "start": 1.22,
+      "end": 1.56
+    },
+    {
+      "word": "entering",
+      "start": 1.56,
+      "end": 1.86
+    },
+    {
+      "word": "a",
+      "start": 1.86,
+      "end": 2.12
+    },
+    {
+      "word": "period",
+      "start": 2.12,
+      "end": 2.34
+    },
+    {
+      "word": "in",
+      "start": 2.34,
+      "end": 2.6
+    },
+    {
+      "word": "which",
+      "start": 2.6,
+      "end": 2.76
+    },
+    {
+      "word": "conventional",
+      "start": 2.76,
+      "end": 3.3
+    },
+    {
+      "word": "assumptions",
+      "start": 3.3,
+      "end": 3.82
+    },
+    {
+      "word": "about",
+      "start": 3.82,
+      "end": 4.26
+    },
+    {
+      "word": "trust",
+      "start": 4.26,
+      "end": 4.66
+    },
+    {
+      "word": "boundaries",
+      "start": 4.66,
+      "end": 5.1
+    },
+    {
+      "word": "software",
+      "start": 5.82,
+      "end": 5.86
+    },
+    {
+      "word": "integrity",
+      "start": 5.86,
+      "end": 6.28
+    },
+    {
+      "word": "and",
+      "start": 6.78,
+      "end": 7.06
+    },
+    {
+      "word": "cryptographic",
+      "start": 7.06,
+      "end": 7.48
+    },
+    {
+      "word": "protection",
+      "start": 7.48,
+      "end": 7.96
+    },
+    {
+      "word": "are",
+      "start": 7.96,
+      "end": 8.3
+    },
+    {
+      "word": "becoming",
+      "start": 8.3,
+      "end": 8.64
+    },
+    {
+      "word": "increasingly",
+      "start": 8.64,
+      "end": 9.46
+    },
+    {
+      "word": "difficult",
+      "start": 9.46,
+      "end": 9.82
+    },
+    {
+      "word": "to",
+      "start": 9.82,
+      "end": 10.4
+    },
+    {
+      "word": "defend",
+      "start": 10.4,
+      "end": 10.4
+    },
+    {
+      "word": "Recent",
+      "start": 11.22,
+      "end": 11.34
+    },
+    {
+      "word": "security",
+      "start": 11.34,
+      "end": 11.78
+    },
+    {
+      "word": "incidents",
+      "start": 11.78,
+      "end": 12.22
+    },
+    {
+      "word": "and",
+      "start": 12.22,
+      "end": 12.52
+    },
+    {
+      "word": "academic",
+      "start": 12.52,
+      "end": 12.86
+    },
+    {
+      "word": "research",
+      "start": 12.86,
+      "end": 13.36
+    },
+    {
+      "word": "suggest",
+      "start": 13.36,
+      "end": 13.92
+    },
+    {
+      "word": "that",
+      "start": 13.92,
+      "end": 14.18
+    },
+    {
+      "word": "attackers",
+      "start": 14.18,
+      "end": 14.5
+    },
+    {
+      "word": "are",
+      "start": 14.5,
+      "end": 14.94
+    },
+    {
+      "word": "shifting",
+      "start": 14.94,
+      "end": 15.16
+    },
+    {
+      "word": "their",
+      "start": 15.16,
+      "end": 15.46
+    },
+    {
+      "word": "attention",
+      "start": 15.46,
+      "end": 15.76
+    },
+    {
+      "word": "from",
+      "start": 15.76,
+      "end": 16.16
+    },
+    {
+      "word": "isolated",
+      "start": 16.16,
+      "end": 16.68
+    },
+    {
+      "word": "software",
+      "start": 16.68,
+      "end": 17.14
+    },
+    {
+      "word": "vulnerabilities",
+      "start": 17.14,
+      "end": 17.7
+    },
+    {
+      "word": "toward",
+      "start": 18.14,
+      "end": 18.52
+    },
+    {
+      "word": "the",
+      "start": 18.52,
+      "end": 18.84
+    },
+    {
+      "word": "mechanisms",
+      "start": 18.84,
+      "end": 19.1
+    },
+    {
+      "word": "that",
+      "start": 19.1,
+      "end": 19.46
+    },
+    {
+      "word": "connect",
+      "start": 19.46,
+      "end": 19.66
+    },
+    {
+      "word": "development",
+      "start": 19.66,
+      "end": 20.02
+    },
+    {
+      "word": "pipelines",
+      "start": 20.02,
+      "end": 20.68
+    },
+    {
+      "word": "cloud",
+      "start": 21.32,
+      "end": 21.4
+    },
+    {
+      "word": "identities",
+      "start": 21.4,
+      "end": 21.88
+    },
+    {
+      "word": "distributed",
+      "start": 22.8,
+      "end": 22.8
+    },
+    {
+      "word": "workloads",
+      "start": 22.8,
+      "end": 23.3
+    },
+    {
+      "word": "and",
+      "start": 23.46,
+      "end": 23.76
+    },
+    {
+      "word": "automated",
+      "start": 23.76,
+      "end": 24.0
+    },
+    {
+      "word": "decision",
+      "start": 24.0,
+      "end": 24.44
+    },
+    {
+      "word": "making",
+      "start": 24.44,
+      "end": 24.74
+    },
+    {
+      "word": "For",
+      "start": 24.84,
+      "end": 25.56
+    },
+    {
+      "word": "security",
+      "start": 25.56,
+      "end": 25.96
+    },
+    {
+      "word": "engineers",
+      "start": 25.96,
+      "end": 26.34
+    },
+    {
+      "word": "the",
+      "start": 26.56,
+      "end": 26.82
+    },
+    {
+      "word": "central",
+      "start": 26.82,
+      "end": 27.12
+    },
+    {
+      "word": "challenge",
+      "start": 27.12,
+      "end": 27.52
+    },
+    {
+      "word": "is",
+      "start": 27.52,
+      "end": 27.7
+    },
+    {
+      "word": "no",
+      "start": 27.7,
+      "end": 27.92
+    },
+    {
+      "word": "longer",
+      "start": 27.92,
+      "end": 28.32
+    },
+    {
+      "word": "simply",
+      "start": 28.32,
+      "end": 28.62
+    },
+    {
+      "word": "identifying",
+      "start": 28.62,
+      "end": 29.22
+    },
+    {
+      "word": "vulnerable",
+      "start": 29.22,
+      "end": 29.68
+    },
+    {
+      "word": "components",
+      "start": 30.0,
+      "end": 30.26
+    },
+    {
+      "word": "It",
+      "start": 30.88,
+      "end": 31.02
+    },
+    {
+      "word": "is",
+      "start": 31.02,
+      "end": 31.3
+    },
+    {
+      "word": "understanding",
+      "start": 31.3,
+      "end": 31.82
+    },
+    {
+      "word": "how",
+      "start": 31.82,
+      "end": 32.14
+    },
+    {
+      "word": "legitimate",
+      "start": 32.14,
+      "end": 32.56
+    },
+    {
+      "word": "capabilities",
+      "start": 32.56,
+      "end": 33.16
+    },
+    {
+      "word": "can",
+      "start": 33.16,
+      "end": 33.52
+    },
+    {
+      "word": "be",
+      "start": 33.52,
+      "end": 33.74
+    },
+    {
+      "word": "combined",
+      "start": 33.74,
+      "end": 34.02
+    },
+    {
+      "word": "into",
+      "start": 34.02,
+      "end": 34.34
+    },
+    {
+      "word": "unauthorized",
+      "start": 34.34,
+      "end": 35.06
+    },
+    {
+      "word": "attack",
+      "start": 35.06,
+      "end": 35.52
+    },
+    {
+      "word": "paths",
+      "start": 35.52,
+      "end": 35.86
+    },
+    {
+      "word": "across",
+      "start": 35.86,
+      "end": 36.56
+    },
+    {
+      "word": "multiple",
+      "start": 36.56,
+      "end": 37.04
+    },
+    {
+      "word": "layers",
+      "start": 37.04,
+      "end": 37.34
+    },
+    {
+      "word": "of",
+      "start": 37.34,
+      "end": 38.1
+    },
+    {
+      "word": "infrastructure",
+      "start": 38.1,
+      "end": 38.1
+    },
+    {
+      "word": "Consider",
+      "start": 39.04,
+      "end": 39.04
+    },
+    {
+      "word": "the",
+      "start": 39.04,
+      "end": 39.26
+    },
+    {
+      "word": "evolution",
+      "start": 39.26,
+      "end": 39.64
+    },
+    {
+      "word": "of",
+      "start": 39.64,
+      "end": 39.9
+    },
+    {
+      "word": "software",
+      "start": 39.9,
+      "end": 40.22
+    },
+    {
+      "word": "supply",
+      "start": 40.22,
+      "end": 40.62
+    },
+    {
+      "word": "chain",
+      "start": 40.62,
+      "end": 40.82
+    },
+    {
+      "word": "attacks",
+      "start": 40.82,
+      "end": 41.18
+    },
+    {
+      "word": "In",
+      "start": 41.94,
+      "end": 41.94
+    },
+    {
+      "word": "March",
+      "start": 41.94,
+      "end": 42.16
+    },
+    {
+      "word": "2026",
+      "start": 42.16,
+      "end": 43.08
+    },
+    {
+      "word": "attackers",
+      "start": 43.64,
+      "end": 43.84
+    },
+    {
+      "word": "compromised",
+      "start": 43.84,
+      "end": 44.48
+    },
+    {
+      "word": "the",
+      "start": 44.48,
+      "end": 44.74
+    },
+    {
+      "word": "widely",
+      "start": 44.74,
+      "end": 45.1
+    },
+    {
+      "word": "used",
+      "start": 45.1,
+      "end": 45.42
+    },
+    {
+      "word": "Axios",
+      "start": 45.42,
+      "end": 45.84
+    },
+    {
+      "word": "JavaScript",
+      "start": 45.84,
+      "end": 46.4
+    },
+    {
+      "word": "package",
+      "start": 46.4,
+      "end": 46.82
+    },
+    {
+      "word": "distribution",
+      "start": 46.82,
+      "end": 47.34
+    },
+    {
+      "word": "process",
+      "start": 47.34,
+      "end": 47.92
+    },
+    {
+      "word": "and",
+      "start": 47.92,
+      "end": 48.46
+    },
+    {
+      "word": "introduced",
+      "start": 48.46,
+      "end": 48.86
+    },
+    {
+      "word": "a",
+      "start": 48.86,
+      "end": 49.36
+    },
+    {
+      "word": "malicious",
+      "start": 49.36,
+      "end": 49.36
+    },
+    {
+      "word": "dependency",
+      "start": 49.36,
+      "end": 49.84
+    },
+    {
+      "word": "designed",
+      "start": 49.84,
+      "end": 50.28
+    },
+    {
+      "word": "to",
+      "start": 50.28,
+      "end": 50.7
+    },
+    {
+      "word": "deploy",
+      "start": 50.7,
+      "end": 50.7
+    },
+    {
+      "word": "a",
+      "start": 50.7,
+      "end": 50.9
+    },
+    {
+      "word": "backdoor",
+      "start": 50.9,
+      "end": 51.3
+    },
+    {
+      "word": "According",
+      "start": 51.96,
+      "end": 52.26
+    },
+    {
+      "word": "to",
+      "start": 52.26,
+      "end": 52.52
+    },
+    {
+      "word": "Google",
+      "start": 52.52,
+      "end": 52.76
+    },
+    {
+      "word": "Threat",
+      "start": 52.76,
+      "end": 52.94
+    },
+    {
+      "word": "Intelligence",
+      "start": 52.94,
+      "end": 53.56
+    },
+    {
+      "word": "the",
+      "start": 53.9,
+      "end": 54.12
+    },
+    {
+      "word": "compromised",
+      "start": 54.12,
+      "end": 54.48
+    },
+    {
+      "word": "package",
+      "start": 54.48,
+      "end": 54.9
+    },
+    {
+      "word": "versions",
+      "start": 54.9,
+      "end": 55.24
+    },
+    {
+      "word": "were",
+      "start": 55.24,
+      "end": 55.52
+    },
+    {
+      "word": "removed",
+      "start": 55.52,
+      "end": 55.82
+    },
+    {
+      "word": "within",
+      "start": 55.82,
+      "end": 56.06
+    },
+    {
+      "word": "approximately",
+      "start": 56.06,
+      "end": 56.78
+    },
+    {
+      "word": "three",
+      "start": 56.78,
+      "end": 57.02
+    },
+    {
+      "word": "hours",
+      "start": 57.02,
+      "end": 57.44
+    },
+    {
+      "word": "yet",
+      "start": 57.96,
+      "end": 58.1
+    },
+    {
+      "word": "the",
+      "start": 58.1,
+      "end": 58.3
+    },
+    {
+      "word": "potential",
+      "start": 58.3,
+      "end": 58.64
+    },
+    {
+      "word": "exposure",
+      "start": 58.64,
+      "end": 59.06
+    },
+    {
+      "word": "was",
+      "start": 59.06,
+      "end": 59.34
+    },
+    {
+      "word": "substantial",
+      "start": 59.34,
+      "end": 59.86
+    },
+    {
+      "word": "because",
+      "start": 60.0,
+      "end": 60.28
+    },
+    {
+      "word": "Axios",
+      "start": 60.28,
+      "end": 60.8
+    },
+    {
+      "word": "receives",
+      "start": 60.8,
+      "end": 61.3
+    },
+    {
+      "word": "more",
+      "start": 61.3,
+      "end": 61.52
+    },
+    {
+      "word": "than",
+      "start": 61.52,
+      "end": 61.68
+    },
+    {
+      "word": "one",
+      "start": 61.753,
+      "end": 61.987
+    },
+    {
+      "word": "hundred",
+      "start": 61.987,
+      "end": 62.22
+    },
+    {
+      "word": "million",
+      "start": 62.22,
+      "end": 62.52
+    },
+    {
+      "word": "downloads",
+      "start": 62.52,
+      "end": 62.98
+    },
+    {
+      "word": "weekly",
+      "start": 62.98,
+      "end": 63.36
+    },
+    {
+      "word": "This",
+      "start": 64.1,
+      "end": 64.2
+    },
+    {
+      "word": "incident",
+      "start": 64.2,
+      "end": 64.56
+    },
+    {
+      "word": "illustrates",
+      "start": 64.56,
+      "end": 65.04
+    },
+    {
+      "word": "an",
+      "start": 65.04,
+      "end": 65.26
+    },
+    {
+      "word": "important",
+      "start": 65.26,
+      "end": 65.58
+    },
+    {
+      "word": "distinction",
+      "start": 65.58,
+      "end": 65.98
+    },
+    {
+      "word": "between",
+      "start": 65.98,
+      "end": 66.44
+    },
+    {
+      "word": "source",
+      "start": 66.44,
+      "end": 66.76
+    },
+    {
+      "word": "code",
+      "start": 66.76,
+      "end": 66.94
+    },
+    {
+      "word": "integrity",
+      "start": 66.94,
+      "end": 67.3
+    },
+    {
+      "word": "and",
+      "start": 67.3,
+      "end": 67.66
+    },
+    {
+      "word": "artifact",
+      "start": 67.66,
+      "end": 68.04
+    },
+    {
+      "word": "integrity",
+      "start": 68.04,
+      "end": 68.48
+    },
+    {
+      "word": "A",
+      "start": 69.18,
+      "end": 69.34
+    },
+    {
+      "word": "trustworthy",
+      "start": 69.34,
+      "end": 69.7
+    },
+    {
+      "word": "repository",
+      "start": 69.7,
+      "end": 70.3
+    },
+    {
+      "word": "does",
+      "start": 70.3,
+      "end": 70.6
+    },
+    {
+      "word": "not",
+      "start": 70.6,
+      "end": 70.84
+    },
+    {
+      "word": "necessarily",
+      "start": 70.84,
+      "end": 71.42
+    },
+    {
+      "word": "guarantee",
+      "start": 71.42,
+      "end": 71.74
+    },
+    {
+      "word": "that",
+      "start": 71.74,
+      "end": 72.14
+    },
+    {
+      "word": "every",
+      "start": 72.14,
+      "end": 72.48
+    },
+    {
+      "word": "published",
+      "start": 72.48,
+      "end": 72.82
+    },
+    {
+      "word": "package",
+      "start": 72.82,
+      "end": 73.24
+    },
+    {
+      "word": "originates",
+      "start": 73.24,
+      "end": 73.86
+    },
+    {
+      "word": "from",
+      "start": 73.86,
+      "end": 74.04
+    },
+    {
+      "word": "an",
+      "start": 74.04,
+      "end": 74.38
+    },
+    {
+      "word": "uncompromised",
+      "start": 74.38,
+      "end": 74.92
+    },
+    {
+      "word": "build",
+      "start": 74.92,
+      "end": 75.26
+    },
+    {
+      "word": "and",
+      "start": 75.26,
+      "end": 75.46
+    },
+    {
+      "word": "release",
+      "start": 75.46,
+      "end": 75.72
+    },
+    {
+      "word": "process",
+      "start": 75.72,
+      "end": 76.22
+    },
+    {
+      "word": "An",
+      "start": 76.78,
+      "end": 77.14
+    },
+    {
+      "word": "even",
+      "start": 77.14,
+      "end": 77.4
+    },
+    {
+      "word": "more",
+      "start": 77.4,
+      "end": 77.74
+    },
+    {
+      "word": "interesting",
+      "start": 77.74,
+      "end": 78.02
+    },
+    {
+      "word": "example",
+      "start": 78.02,
+      "end": 78.56
+    },
+    {
+      "word": "emerged",
+      "start": 78.56,
+      "end": 79.06
+    },
+    {
+      "word": "from",
+      "start": 79.06,
+      "end": 79.3
+    },
+    {
+      "word": "the",
+      "start": 79.3,
+      "end": 79.48
+    },
+    {
+      "word": "Red",
+      "start": 79.48,
+      "end": 79.84
+    },
+    {
+      "word": "Hat",
+      "start": 79.84,
+      "end": 79.84
+    },
+    {
+      "word": "cloud",
+      "start": 79.84,
+      "end": 80.32
+    },
+    {
+      "word": "services",
+      "start": 80.32,
+      "end": 80.68
+    },
+    {
+      "word": "package",
+      "start": 80.68,
+      "end": 81.16
+    },
+    {
+      "word": "compromise",
+      "start": 81.16,
+      "end": 81.84
+    },
+    {
+      "word": "investigated",
+      "start": 82.32,
+      "end": 82.7
+    },
+    {
+      "word": "by",
+      "start": 82.7,
+      "end": 83.0
+    },
+    {
+      "word": "Microsoft",
+      "start": 83.0,
+      "end": 83.42
+    },
+    {
+      "word": "in",
+      "start": 83.42,
+      "end": 83.8
+    },
+    {
+      "word": "June",
+      "start": 83.8,
+      "end": 83.96
+    },
+    {
+      "word": "2026",
+      "start": 83.96,
+      "end": 84.8
+    },
+    {
+      "word": "Attackers",
+      "start": 85.72,
+      "end": 85.94
+    },
+    {
+      "word": "manipulated",
+      "start": 85.94,
+      "end": 86.48
+    },
+    {
+      "word": "an",
+      "start": 86.48,
+      "end": 86.82
+    },
+    {
+      "word": "upstream",
+      "start": 86.82,
+      "end": 87.1
+    },
+    {
+      "word": "continuous",
+      "start": 87.1,
+      "end": 87.7
+    },
+    {
+      "word": "integration",
+      "start": 87.7,
+      "end": 88.2
+    },
+    {
+      "word": "pipeline",
+      "start": 88.2,
+      "end": 88.68
+    },
+    {
+      "word": "and",
+      "start": 88.68,
+      "end": 89.24
+    },
+    {
+      "word": "distributed",
+      "start": 89.24,
+      "end": 89.66
+    },
+    {
+      "word": "malicious",
+      "start": 89.66,
+      "end": 89.98
+    },
+    {
+      "word": "packages",
+      "start": 90.0,
+      "end": 90.46
+    },
+    {
+      "word": "through",
+      "start": 90.46,
+      "end": 90.86
+    },
+    {
+      "word": "a",
+      "start": 90.86,
+      "end": 91.12
+    },
+    {
+      "word": "legitimate",
+      "start": 91.12,
+      "end": 91.42
+    },
+    {
+      "word": "publishing",
+      "start": 91.42,
+      "end": 91.9
+    },
+    {
+      "word": "workflow",
+      "start": 91.9,
+      "end": 92.36
+    },
+    {
+      "word": "The",
+      "start": 93.02,
+      "end": 93.06
+    },
+    {
+      "word": "resulting",
+      "start": 93.06,
+      "end": 93.42
+    },
+    {
+      "word": "artifacts",
+      "start": 93.42,
+      "end": 93.9
+    },
+    {
+      "word": "carried",
+      "start": 93.9,
+      "end": 94.24
+    },
+    {
+      "word": "authentic",
+      "start": 94.24,
+      "end": 94.86
+    },
+    {
+      "word": "provenance",
+      "start": 94.86,
+      "end": 95.34
+    },
+    {
+      "word": "signatures",
+      "start": 95.34,
+      "end": 95.68
+    },
+    {
+      "word": "This",
+      "start": 96.52,
+      "end": 96.64
+    },
+    {
+      "word": "raises",
+      "start": 96.64,
+      "end": 96.88
+    },
+    {
+      "word": "a",
+      "start": 96.88,
+      "end": 97.12
+    },
+    {
+      "word": "difficult",
+      "start": 97.12,
+      "end": 97.56
+    },
+    {
+      "word": "engineering",
+      "start": 97.56,
+      "end": 98.0
+    },
+    {
+      "word": "question",
+      "start": 98.0,
+      "end": 98.36
+    },
+    {
+      "word": "What",
+      "start": 98.98,
+      "end": 99.02
+    },
+    {
+      "word": "exactly",
+      "start": 99.02,
+      "end": 99.54
+    },
+    {
+      "word": "does",
+      "start": 99.54,
+      "end": 99.68
+    },
+    {
+      "word": "a",
+      "start": 99.68,
+      "end": 100.06
+    },
+    {
+      "word": "valid",
+      "start": 100.06,
+      "end": 100.06
+    },
+    {
+      "word": "provenance",
+      "start": 100.06,
+      "end": 100.54
+    },
+    {
+      "word": "signature",
+      "start": 100.54,
+      "end": 100.86
+    },
+    {
+      "word": "prove",
+      "start": 100.86,
+      "end": 101.3
+    },
+    {
+      "word": "when",
+      "start": 101.3,
+      "end": 101.58
+    },
+    {
+      "word": "the",
+      "start": 101.58,
+      "end": 101.76
+    },
+    {
+      "word": "authorized",
+      "start": 101.76,
+      "end": 102.18
+    },
+    {
+      "word": "build",
+      "start": 102.18,
+      "end": 102.48
+    },
+    {
+      "word": "environment",
+      "start": 102.48,
+      "end": 102.82
+    },
+    {
+      "word": "itself",
+      "start": 102.82,
+      "end": 103.34
+    },
+    {
+      "word": "has",
+      "start": 103.34,
+      "end": 103.52
+    },
+    {
+      "word": "been",
+      "start": 103.52,
+      "end": 103.72
+    },
+    {
+      "word": "compromised",
+      "start": 103.72,
+      "end": 104.16
+    },
+    {
+      "word": "Cryptographic",
+      "start": 104.94,
+      "end": 105.44
+    },
+    {
+      "word": "verification",
+      "start": 105.44,
+      "end": 105.98
+    },
+    {
+      "word": "can",
+      "start": 105.98,
+      "end": 106.34
+    },
+    {
+      "word": "establish",
+      "start": 106.34,
+      "end": 106.72
+    },
+    {
+      "word": "the",
+      "start": 106.72,
+      "end": 107.0
+    },
+    {
+      "word": "relationship",
+      "start": 107.0,
+      "end": 107.44
+    },
+    {
+      "word": "between",
+      "start": 107.44,
+      "end": 107.82
+    },
+    {
+      "word": "an",
+      "start": 107.82,
+      "end": 108.14
+    },
+    {
+      "word": "artifact",
+      "start": 108.14,
+      "end": 108.28
+    },
+    {
+      "word": "and",
+      "start": 108.28,
+      "end": 108.66
+    },
+    {
+      "word": "a",
+      "start": 108.66,
+      "end": 108.82
+    },
+    {
+      "word": "recorded",
+      "start": 108.82,
+      "end": 109.1
+    },
+    {
+      "word": "build",
+      "start": 109.1,
+      "end": 109.42
+    },
+    {
+      "word": "process",
+      "start": 109.42,
+      "end": 109.88
+    },
+    {
+      "word": "but",
+      "start": 110.4,
+      "end": 110.56
+    },
+    {
+      "word": "it",
+      "start": 110.56,
+      "end": 110.72
+    },
+    {
+      "word": "cannot",
+      "start": 110.72,
+      "end": 110.98
+    },
+    {
+      "word": "independently",
+      "start": 110.98,
+      "end": 111.58
+    },
+    {
+      "word": "guarantee",
+      "start": 111.58,
+      "end": 111.9
+    },
+    {
+      "word": "that",
+      "start": 111.9,
+      "end": 112.28
+    },
+    {
+      "word": "the",
+      "start": 112.28,
+      "end": 112.44
+    },
+    {
+      "word": "process",
+      "start": 112.44,
+      "end": 112.78
+    },
+    {
+      "word": "executed",
+      "start": 112.78,
+      "end": 113.28
+    },
+    {
+      "word": "trustworthy",
+      "start": 113.28,
+      "end": 113.86
+    },
+    {
+      "word": "instructions",
+      "start": 113.7,
+      "end": 114.46
+    },
+    {
+      "word": "This",
+      "start": 114.7,
+      "end": 115.42
+    },
+    {
+      "word": "distinction",
+      "start": 115.42,
+      "end": 115.82
+    },
+    {
+      "word": "has",
+      "start": 115.82,
+      "end": 116.16
+    },
+    {
+      "word": "significant",
+      "start": 116.16,
+      "end": 116.68
+    },
+    {
+      "word": "consequences",
+      "start": 116.68,
+      "end": 117.22
+    },
+    {
+      "word": "for",
+      "start": 117.22,
+      "end": 117.6
+    },
+    {
+      "word": "continuous",
+      "start": 117.6,
+      "end": 118.1
+    },
+    {
+      "word": "integration",
+      "start": 118.1,
+      "end": 118.56
+    },
+    {
+      "word": "security",
+      "start": 118.56,
+      "end": 119.06
+    },
+    {
+      "word": "OpenID",
+      "start": 120.0,
+      "end": 120.32
+    },
+    {
+      "word": "Connect",
+      "start": 120.32,
+      "end": 120.62
+    },
+    {
+      "word": "federation",
+      "start": 120.62,
+      "end": 121.08
+    },
+    {
+      "word": "can",
+      "start": 121.08,
+      "end": 121.48
+    },
+    {
+      "word": "eliminate",
+      "start": 121.48,
+      "end": 121.9
+    },
+    {
+      "word": "long",
+      "start": 121.9,
+      "end": 122.38
+    },
+    {
+      "word": "lived",
+      "start": 122.38,
+      "end": 122.44
+    },
+    {
+      "word": "publishing",
+      "start": 122.44,
+      "end": 122.82
+    },
+    {
+      "word": "credentials",
+      "start": 122.82,
+      "end": 123.34
+    },
+    {
+      "word": "but",
+      "start": 123.86,
+      "end": 123.96
+    },
+    {
+      "word": "a",
+      "start": 123.96,
+      "end": 124.22
+    },
+    {
+      "word": "compromised",
+      "start": 124.22,
+      "end": 124.56
+    },
+    {
+      "word": "workflow",
+      "start": 124.56,
+      "end": 124.94
+    },
+    {
+      "word": "may",
+      "start": 124.94,
+      "end": 125.36
+    },
+    {
+      "word": "still",
+      "start": 125.36,
+      "end": 126.06
+    },
+    {
+      "word": "obtain",
+      "start": 126.06,
+      "end": 126.06
+    },
+    {
+      "word": "short",
+      "start": 126.06,
+      "end": 126.48
+    },
+    {
+      "word": "lived",
+      "start": 126.48,
+      "end": 126.54
+    },
+    {
+      "word": "tokens",
+      "start": 126.54,
+      "end": 126.9
+    },
+    {
+      "word": "within",
+      "start": 126.9,
+      "end": 127.2
+    },
+    {
+      "word": "its",
+      "start": 127.2,
+      "end": 127.42
+    },
+    {
+      "word": "authorized",
+      "start": 127.42,
+      "end": 127.9
+    },
+    {
+      "word": "trust",
+      "start": 127.9,
+      "end": 128.2
+    },
+    {
+      "word": "context",
+      "start": 128.2,
+      "end": 128.72
+    },
+    {
+      "word": "Defenders",
+      "start": 129.7,
+      "end": 129.7
+    },
+    {
+      "word": "must",
+      "start": 129.7,
+      "end": 129.96
+    },
+    {
+      "word": "therefore",
+      "start": 129.96,
+      "end": 130.48
+    },
+    {
+      "word": "scrutinize",
+      "start": 130.48,
+      "end": 130.96
+    },
+    {
+      "word": "workflow",
+      "start": 130.96,
+      "end": 131.3
+    },
+    {
+      "word": "permissions",
+      "start": 131.3,
+      "end": 131.8
+    },
+    {
+      "word": "event",
+      "start": 132.62,
+      "end": 132.62
+    },
+    {
+      "word": "triggers",
+      "start": 132.62,
+      "end": 132.98
+    },
+    {
+      "word": "artifact",
+      "start": 133.8,
+      "end": 133.8
+    },
+    {
+      "word": "promotion",
+      "start": 133.8,
+      "end": 134.26
+    },
+    {
+      "word": "policies",
+      "start": 134.26,
+      "end": 134.82
+    },
+    {
+      "word": "and",
+      "start": 134.98,
+      "end": 135.32
+    },
+    {
+      "word": "the",
+      "start": 135.32,
+      "end": 135.62
+    },
+    {
+      "word": "isolation",
+      "start": 135.62,
+      "end": 135.86
+    },
+    {
+      "word": "of",
+      "start": 135.86,
+      "end": 136.7
+    },
+    {
+      "word": "untrusted",
+      "start": 136.7,
+      "end": 136.7
+    },
+    {
+      "word": "pull",
+      "start": 136.7,
+      "end": 136.9
+    },
+    {
+      "word": "requests",
+      "start": 136.9,
+      "end": 137.36
+    },
+    {
+      "word": "In",
+      "start": 138.1,
+      "end": 138.26
+    },
+    {
+      "word": "July",
+      "start": 138.26,
+      "end": 138.46
+    },
+    {
+      "word": "2026",
+      "start": 138.46,
+      "end": 139.36
+    },
+    {
+      "word": "GitHub",
+      "start": 139.6,
+      "end": 139.84
+    },
+    {
+      "word": "described",
+      "start": 139.84,
+      "end": 140.28
+    },
+    {
+      "word": "additional",
+      "start": 140.28,
+      "end": 140.74
+    },
+    {
+      "word": "protections",
+      "start": 140.74,
+      "end": 141.22
+    },
+    {
+      "word": "for",
+      "start": 141.22,
+      "end": 141.54
+    },
+    {
+      "word": "npm",
+      "start": 141.54,
+      "end": 141.94
+    },
+    {
+      "word": "publishing",
+      "start": 141.94,
+      "end": 142.34
+    },
+    {
+      "word": "and",
+      "start": 142.34,
+      "end": 142.68
+    },
+    {
+      "word": "GitHub",
+      "start": 142.68,
+      "end": 142.96
+    },
+    {
+      "word": "Actions",
+      "start": 142.96,
+      "end": 143.38
+    },
+    {
+      "word": "including",
+      "start": 143.92,
+      "end": 144.18
+    },
+    {
+      "word": "changes",
+      "start": 144.18,
+      "end": 144.68
+    },
+    {
+      "word": "intended",
+      "start": 144.68,
+      "end": 145.04
+    },
+    {
+      "word": "to",
+      "start": 145.04,
+      "end": 145.56
+    },
+    {
+      "word": "prevent",
+      "start": 145.56,
+      "end": 145.56
+    },
+    {
+      "word": "untrusted",
+      "start": 145.56,
+      "end": 146.12
+    },
+    {
+      "word": "pull",
+      "start": 146.12,
+      "end": 146.38
+    },
+    {
+      "word": "request",
+      "start": 146.38,
+      "end": 146.72
+    },
+    {
+      "word": "code",
+      "start": 146.72,
+      "end": 146.98
+    },
+    {
+      "word": "from",
+      "start": 146.98,
+      "end": 147.28
+    },
+    {
+      "word": "executing",
+      "start": 147.28,
+      "end": 147.7
+    },
+    {
+      "word": "in",
+      "start": 147.7,
+      "end": 147.94
+    },
+    {
+      "word": "privileged",
+      "start": 147.94,
+      "end": 148.36
+    },
+    {
+      "word": "workflow",
+      "start": 148.36,
+      "end": 148.76
+    },
+    {
+      "word": "contexts",
+      "start": 148.76,
+      "end": 149.28
+    },
+    {
+      "word": "The",
+      "start": 150.0,
+      "end": 150.16
+    },
+    {
+      "word": "broader",
+      "start": 150.16,
+      "end": 150.44
+    },
+    {
+      "word": "architectural",
+      "start": 150.44,
+      "end": 151.0
+    },
+    {
+      "word": "lesson",
+      "start": 151.0,
+      "end": 151.36
+    },
+    {
+      "word": "is",
+      "start": 151.36,
+      "end": 151.58
+    },
+    {
+      "word": "that",
+      "start": 151.58,
+      "end": 151.9
+    },
+    {
+      "word": "identity",
+      "start": 151.9,
+      "end": 152.18
+    },
+    {
+      "word": "federation",
+      "start": 152.18,
+      "end": 152.58
+    },
+    {
+      "word": "reduces",
+      "start": 152.58,
+      "end": 153.1
+    },
+    {
+      "word": "credential",
+      "start": 153.1,
+      "end": 153.56
+    },
+    {
+      "word": "exposure",
+      "start": 153.56,
+      "end": 154.08
+    },
+    {
+      "word": "without",
+      "start": 154.08,
+      "end": 154.52
+    },
+    {
+      "word": "eliminating",
+      "start": 154.52,
+      "end": 154.96
+    },
+    {
+      "word": "the",
+      "start": 154.96,
+      "end": 155.26
+    },
+    {
+      "word": "need",
+      "start": 155.26,
+      "end": 155.4
+    },
+    {
+      "word": "to",
+      "start": 155.4,
+      "end": 155.6
+    },
+    {
+      "word": "secure",
+      "start": 155.6,
+      "end": 155.82
+    },
+    {
+      "word": "the",
+      "start": 155.82,
+      "end": 156.1
+    },
+    {
+      "word": "execution",
+      "start": 156.1,
+      "end": 156.46
+    },
+    {
+      "word": "environment",
+      "start": 156.46,
+      "end": 157.02
+    },
+    {
+      "word": "Cloud",
+      "start": 157.96,
+      "end": 158.34
+    },
+    {
+      "word": "native",
+      "start": 158.34,
+      "end": 158.64
+    },
+    {
+      "word": "infrastructure",
+      "start": 158.64,
+      "end": 159.2
+    },
+    {
+      "word": "presents",
+      "start": 159.2,
+      "end": 159.7
+    },
+    {
+      "word": "similar",
+      "start": 159.7,
+      "end": 160.16
+    },
+    {
+      "word": "trust",
+      "start": 160.16,
+      "end": 160.5
+    },
+    {
+      "word": "boundary",
+      "start": 160.5,
+      "end": 160.8
+    },
+    {
+      "word": "problems",
+      "start": 160.8,
+      "end": 161.32
+    },
+    {
+      "word": "Kubernetes",
+      "start": 162.02,
+      "end": 162.3
+    },
+    {
+      "word": "provides",
+      "start": 162.3,
+      "end": 162.78
+    },
+    {
+      "word": "namespace",
+      "start": 162.78,
+      "end": 163.32
+    },
+    {
+      "word": "isolation",
+      "start": 163.32,
+      "end": 163.76
+    },
+    {
+      "word": "role",
+      "start": 164.24,
+      "end": 164.32
+    },
+    {
+      "word": "based",
+      "start": 164.32,
+      "end": 164.48
+    },
+    {
+      "word": "access",
+      "start": 164.48,
+      "end": 164.92
+    },
+    {
+      "word": "control",
+      "start": 164.92,
+      "end": 165.28
+    },
+    {
+      "word": "network",
+      "start": 165.88,
+      "end": 165.96
+    },
+    {
+      "word": "policies",
+      "start": 165.96,
+      "end": 166.48
+    },
+    {
+      "word": "and",
+      "start": 166.66,
+      "end": 166.88
+    },
+    {
+      "word": "workload",
+      "start": 166.88,
+      "end": 167.12
+    },
+    {
+      "word": "identity",
+      "start": 167.12,
+      "end": 167.54
+    },
+    {
+      "word": "mechanisms",
+      "start": 167.54,
+      "end": 168.06
+    },
+    {
+      "word": "However",
+      "start": 168.62,
+      "end": 168.98
+    },
+    {
+      "word": "these",
+      "start": 169.18,
+      "end": 169.5
+    },
+    {
+      "word": "controls",
+      "start": 169.5,
+      "end": 169.8
+    },
+    {
+      "word": "operate",
+      "start": 169.8,
+      "end": 170.24
+    },
+    {
+      "word": "at",
+      "start": 170.24,
+      "end": 170.52
+    },
+    {
+      "word": "different",
+      "start": 170.52,
+      "end": 170.76
+    },
+    {
+      "word": "layers",
+      "start": 170.76,
+      "end": 171.04
+    },
+    {
+      "word": "and",
+      "start": 171.04,
+      "end": 171.28
+    },
+    {
+      "word": "do",
+      "start": 171.28,
+      "end": 171.46
+    },
+    {
+      "word": "not",
+      "start": 171.46,
+      "end": 171.66
+    },
+    {
+      "word": "automatically",
+      "start": 171.66,
+      "end": 172.18
+    },
+    {
+      "word": "establish",
+      "start": 172.18,
+      "end": 172.68
+    },
+    {
+      "word": "comprehensive",
+      "start": 172.68,
+      "end": 173.24
+    },
+    {
+      "word": "isolation",
+      "start": 173.24,
+      "end": 173.78
+    },
+    {
+      "word": "A",
+      "start": 174.22,
+      "end": 174.68
+    },
+    {
+      "word": "service",
+      "start": 174.68,
+      "end": 174.94
+    },
+    {
+      "word": "account",
+      "start": 174.94,
+      "end": 175.2
+    },
+    {
+      "word": "with",
+      "start": 175.2,
+      "end": 175.46
+    },
+    {
+      "word": "excessive",
+      "start": 175.46,
+      "end": 175.8
+    },
+    {
+      "word": "permissions",
+      "start": 175.8,
+      "end": 176.28
+    },
+    {
+      "word": "can",
+      "start": 176.28,
+      "end": 176.6
+    },
+    {
+      "word": "create",
+      "start": 176.6,
+      "end": 176.92
+    },
+    {
+      "word": "privilege",
+      "start": 176.92,
+      "end": 177.38
+    },
+    {
+      "word": "escalation",
+      "start": 177.38,
+      "end": 177.9
+    },
+    {
+      "word": "opportunities",
+      "start": 177.9,
+      "end": 178.5
+    },
+    {
+      "word": "even",
+      "start": 178.5,
+      "end": 178.88
+    },
+    {
+      "word": "when",
+      "start": 178.88,
+      "end": 179.12
+    },
+    {
+      "word": "network",
+      "start": 179.12,
+      "end": 179.44
+    },
+    {
+      "word": "segmentation",
+      "start": 179.44,
+      "end": 179.98
+    },
+    {
+      "word": "is",
+      "start": 180.0,
+      "end": 180.12
+    },
+    {
+      "word": "correctly",
+      "start": 180.12,
+      "end": 180.46
+    },
+    {
+      "word": "configured",
+      "start": 180.46,
+      "end": 180.98
+    },
+    {
+      "word": "Conversely",
+      "start": 181.74,
+      "end": 182.18
+    },
+    {
+      "word": "restrictive",
+      "start": 182.74,
+      "end": 182.76
+    },
+    {
+      "word": "authorization",
+      "start": 182.76,
+      "end": 183.36
+    },
+    {
+      "word": "policies",
+      "start": 183.36,
+      "end": 183.88
+    },
+    {
+      "word": "may",
+      "start": 183.88,
+      "end": 184.1
+    },
+    {
+      "word": "provide",
+      "start": 184.1,
+      "end": 184.44
+    },
+    {
+      "word": "limited",
+      "start": 184.44,
+      "end": 184.78
+    },
+    {
+      "word": "protection",
+      "start": 184.78,
+      "end": 185.3
+    },
+    {
+      "word": "when",
+      "start": 185.3,
+      "end": 185.54
+    },
+    {
+      "word": "an",
+      "start": 185.54,
+      "end": 186.06
+    },
+    {
+      "word": "attacker",
+      "start": 186.06,
+      "end": 186.06
+    },
+    {
+      "word": "compromises",
+      "start": 186.06,
+      "end": 186.6
+    },
+    {
+      "word": "a",
+      "start": 186.6,
+      "end": 187.28
+    },
+    {
+      "word": "privileged",
+      "start": 187.28,
+      "end": 187.28
+    },
+    {
+      "word": "container",
+      "start": 187.28,
+      "end": 187.7
+    },
+    {
+      "word": "with",
+      "start": 187.7,
+      "end": 188.0
+    },
+    {
+      "word": "extensive",
+      "start": 188.0,
+      "end": 188.42
+    },
+    {
+      "word": "host",
+      "start": 188.42,
+      "end": 188.74
+    },
+    {
+      "word": "access",
+      "start": 188.74,
+      "end": 189.22
+    },
+    {
+      "word": "Research",
+      "start": 189.96,
+      "end": 190.32
+    },
+    {
+      "word": "published",
+      "start": 190.32,
+      "end": 190.76
+    },
+    {
+      "word": "in",
+      "start": 190.76,
+      "end": 190.98
+    },
+    {
+      "word": "September",
+      "start": 190.98,
+      "end": 191.32
+    },
+    {
+      "word": "2026",
+      "start": 191.32,
+      "end": 192.2
+    },
+    {
+      "word": "examined",
+      "start": 192.2,
+      "end": 192.74
+    },
+    {
+      "word": "runtime",
+      "start": 192.74,
+      "end": 193.26
+    },
+    {
+      "word": "attack",
+      "start": 193.26,
+      "end": 193.58
+    },
+    {
+      "word": "detection",
+      "start": 193.58,
+      "end": 193.94
+    },
+    {
+      "word": "using",
+      "start": 193.94,
+      "end": 194.42
+    },
+    {
+      "word": "eBPF",
+      "start": 194.42,
+      "end": 195.12
+    },
+    {
+      "word": "network",
+      "start": 195.12,
+      "end": 195.42
+    },
+    {
+      "word": "telemetry",
+      "start": 195.42,
+      "end": 195.9
+    },
+    {
+      "word": "in",
+      "start": 195.9,
+      "end": 196.24
+    },
+    {
+      "word": "Kubernetes",
+      "start": 196.24,
+      "end": 196.58
+    },
+    {
+      "word": "environments",
+      "start": 196.58,
+      "end": 197.22
+    },
+    {
+      "word": "The",
+      "start": 197.78,
+      "end": 198.02
+    },
+    {
+      "word": "researchers",
+      "start": 198.02,
+      "end": 198.42
+    },
+    {
+      "word": "analyzed",
+      "start": 198.42,
+      "end": 198.9
+    },
+    {
+      "word": "more",
+      "start": 198.9,
+      "end": 199.16
+    },
+    {
+      "word": "than",
+      "start": 199.16,
+      "end": 199.34
+    },
+    {
+      "word": "three",
+      "start": 199.34,
+      "end": 199.66
+    },
+    {
+      "word": "million",
+      "start": 199.66,
+      "end": 199.92
+    },
+    {
+      "word": "labeled",
+      "start": 199.92,
+      "end": 200.22
+    },
+    {
+      "word": "network",
+      "start": 200.22,
+      "end": 200.64
+    },
+    {
+      "word": "flows",
+      "start": 200.64,
+      "end": 200.96
+    },
+    {
+      "word": "including",
+      "start": 201.46,
+      "end": 201.66
+    },
+    {
+      "word": "a",
+      "start": 201.66,
+      "end": 201.86
+    },
+    {
+      "word": "relatively",
+      "start": 201.86,
+      "end": 202.26
+    },
+    {
+      "word": "small",
+      "start": 202.26,
+      "end": 202.62
+    },
+    {
+      "word": "number",
+      "start": 202.62,
+      "end": 202.88
+    },
+    {
+      "word": "associated",
+      "start": 202.88,
+      "end": 203.4
+    },
+    {
+      "word": "with",
+      "start": 203.4,
+      "end": 203.66
+    },
+    {
+      "word": "attack",
+      "start": 203.66,
+      "end": 203.96
+    },
+    {
+      "word": "scenarios",
+      "start": 203.96,
+      "end": 204.44
+    },
+    {
+      "word": "The",
+      "start": 204.92,
+      "end": 205.28
+    },
+    {
+      "word": "study",
+      "start": 205.28,
+      "end": 205.52
+    },
+    {
+      "word": "highlights",
+      "start": 205.52,
+      "end": 205.9
+    },
+    {
+      "word": "a",
+      "start": 205.9,
+      "end": 206.18
+    },
+    {
+      "word": "fundamental",
+      "start": 206.18,
+      "end": 206.5
+    },
+    {
+      "word": "challenge",
+      "start": 206.5,
+      "end": 206.96
+    },
+    {
+      "word": "in",
+      "start": 206.96,
+      "end": 207.22
+    },
+    {
+      "word": "intrusion",
+      "start": 207.22,
+      "end": 207.52
+    },
+    {
+      "word": "detection",
+      "start": 207.52,
+      "end": 207.96
+    },
+    {
+      "word": "Security",
+      "start": 208.92,
+      "end": 209.04
+    },
+    {
+      "word": "relevant",
+      "start": 209.04,
+      "end": 209.38
+    },
+    {
+      "word": "events",
+      "start": 209.38,
+      "end": 209.7
+    },
+    {
+      "word": "are",
+      "start": 209.7,
+      "end": 209.92
+    },
+    {
+      "word": "frequently",
+      "start": 209.92,
+      "end": 209.98
+    },
+    {
+      "word": "rare",
+      "start": 210.38,
+      "end": 210.78
+    },
+    {
+      "word": "compared",
+      "start": 210.78,
+      "end": 211.16
+    },
+    {
+      "word": "with",
+      "start": 211.16,
+      "end": 211.42
+    },
+    {
+      "word": "normal",
+      "start": 211.42,
+      "end": 211.72
+    },
+    {
+      "word": "operational",
+      "start": 211.72,
+      "end": 212.28
+    },
+    {
+      "word": "traffic",
+      "start": 212.28,
+      "end": 212.72
+    },
+    {
+      "word": "Consequently",
+      "start": 213.62,
+      "end": 213.84
+    },
+    {
+      "word": "a",
+      "start": 214.1,
+      "end": 214.34
+    },
+    {
+      "word": "classifier",
+      "start": 214.34,
+      "end": 214.68
+    },
+    {
+      "word": "that",
+      "start": 214.68,
+      "end": 215.0
+    },
+    {
+      "word": "achieves",
+      "start": 215.0,
+      "end": 215.26
+    },
+    {
+      "word": "impressive",
+      "start": 215.26,
+      "end": 215.88
+    },
+    {
+      "word": "overall",
+      "start": 215.88,
+      "end": 216.36
+    },
+    {
+      "word": "accuracy",
+      "start": 216.36,
+      "end": 216.82
+    },
+    {
+      "word": "may",
+      "start": 216.82,
+      "end": 217.42
+    },
+    {
+      "word": "still",
+      "start": 217.42,
+      "end": 217.78
+    },
+    {
+      "word": "produce",
+      "start": 217.78,
+      "end": 218.02
+    },
+    {
+      "word": "unacceptable",
+      "start": 218.02,
+      "end": 218.64
+    },
+    {
+      "word": "false",
+      "start": 218.64,
+      "end": 218.98
+    },
+    {
+      "word": "positive",
+      "start": 218.98,
+      "end": 219.34
+    },
+    {
+      "word": "rates",
+      "start": 219.34,
+      "end": 219.64
+    },
+    {
+      "word": "or",
+      "start": 219.64,
+      "end": 220.18
+    },
+    {
+      "word": "fail",
+      "start": 220.18,
+      "end": 220.38
+    },
+    {
+      "word": "to",
+      "start": 220.38,
+      "end": 220.84
+    },
+    {
+      "word": "detect",
+      "start": 220.84,
+      "end": 220.84
+    },
+    {
+      "word": "the",
+      "start": 220.84,
+      "end": 221.3
+    },
+    {
+      "word": "events",
+      "start": 221.3,
+      "end": 221.3
+    },
+    {
+      "word": "that",
+      "start": 221.3,
+      "end": 221.62
+    },
+    {
+      "word": "matter",
+      "start": 221.62,
+      "end": 221.7
+    },
+    {
+      "word": "most",
+      "start": 221.7,
+      "end": 222.12
+    },
+    {
+      "word": "This",
+      "start": 222.6,
+      "end": 222.92
+    },
+    {
+      "word": "problem",
+      "start": 222.92,
+      "end": 223.22
+    },
+    {
+      "word": "becomes",
+      "start": 223.22,
+      "end": 223.56
+    },
+    {
+      "word": "particularly",
+      "start": 223.56,
+      "end": 224.26
+    },
+    {
+      "word": "serious",
+      "start": 224.26,
+      "end": 224.68
+    },
+    {
+      "word": "in",
+      "start": 224.68,
+      "end": 225.02
+    },
+    {
+      "word": "high",
+      "start": 225.02,
+      "end": 225.28
+    },
+    {
+      "word": "volume",
+      "start": 225.28,
+      "end": 225.54
+    },
+    {
+      "word": "production",
+      "start": 225.54,
+      "end": 226.02
+    },
+    {
+      "word": "clusters",
+      "start": 226.02,
+      "end": 226.4
+    },
+    {
+      "word": "Suppose",
+      "start": 227.42,
+      "end": 227.42
+    },
+    {
+      "word": "a",
+      "start": 227.42,
+      "end": 227.98
+    },
+    {
+      "word": "detection",
+      "start": 227.98,
+      "end": 227.98
+    },
+    {
+      "word": "model",
+      "start": 227.98,
+      "end": 228.3
+    },
+    {
+      "word": "processes",
+      "start": 228.3,
+      "end": 228.84
+    },
+    {
+      "word": "millions",
+      "start": 228.84,
+      "end": 229.24
+    },
+    {
+      "word": "of",
+      "start": 229.24,
+      "end": 229.78
+    },
+    {
+      "word": "events",
+      "start": 229.78,
+      "end": 229.78
+    },
+    {
+      "word": "daily",
+      "start": 229.78,
+      "end": 230.14
+    },
+    {
+      "word": "while",
+      "start": 230.34,
+      "end": 230.72
+    },
+    {
+      "word": "actual",
+      "start": 230.72,
+      "end": 231.1
+    },
+    {
+      "word": "malicious",
+      "start": 231.1,
+      "end": 231.42
+    },
+    {
+      "word": "activity",
+      "start": 231.42,
+      "end": 231.94
+    },
+    {
+      "word": "represents",
+      "start": 231.94,
+      "end": 232.4
+    },
+    {
+      "word": "only",
+      "start": 232.4,
+      "end": 232.68
+    },
+    {
+      "word": "a",
+      "start": 232.68,
+      "end": 232.88
+    },
+    {
+      "word": "tiny",
+      "start": 232.88,
+      "end": 233.16
+    },
+    {
+      "word": "fraction",
+      "start": 233.16,
+      "end": 233.44
+    },
+    {
+      "word": "of",
+      "start": 233.44,
+      "end": 233.66
+    },
+    {
+      "word": "the",
+      "start": 233.66,
+      "end": 234.08
+    },
+    {
+      "word": "traffic",
+      "start": 234.08,
+      "end": 234.08
+    },
+    {
+      "word": "Even",
+      "start": 234.66,
+      "end": 234.86
+    },
+    {
+      "word": "a",
+      "start": 234.86,
+      "end": 235.14
+    },
+    {
+      "word": "seemingly",
+      "start": 235.14,
+      "end": 235.36
+    },
+    {
+      "word": "small",
+      "start": 235.36,
+      "end": 235.84
+    },
+    {
+      "word": "false",
+      "start": 235.84,
+      "end": 236.06
+    },
+    {
+      "word": "positive",
+      "start": 236.06,
+      "end": 236.42
+    },
+    {
+      "word": "rate",
+      "start": 236.42,
+      "end": 236.72
+    },
+    {
+      "word": "can",
+      "start": 236.72,
+      "end": 236.88
+    },
+    {
+      "word": "generate",
+      "start": 236.88,
+      "end": 237.28
+    },
+    {
+      "word": "thousands",
+      "start": 237.28,
+      "end": 237.76
+    },
+    {
+      "word": "of",
+      "start": 237.76,
+      "end": 238.24
+    },
+    {
+      "word": "alerts",
+      "start": 238.24,
+      "end": 238.24
+    },
+    {
+      "word": "requiring",
+      "start": 238.24,
+      "end": 238.78
+    },
+    {
+      "word": "investigation",
+      "start": 238.78,
+      "end": 239.34
+    },
+    {
+      "word": "Precision",
+      "start": 240.0,
+      "end": 240.5
+    },
+    {
+      "word": "recall",
+      "start": 241.24,
+      "end": 241.24
+    },
+    {
+      "word": "alert",
+      "start": 241.62,
+      "end": 241.68
+    },
+    {
+      "word": "correlation",
+      "start": 241.68,
+      "end": 242.16
+    },
+    {
+      "word": "and",
+      "start": 242.38,
+      "end": 242.58
+    },
+    {
+      "word": "detection",
+      "start": 242.58,
+      "end": 242.9
+    },
+    {
+      "word": "latency",
+      "start": 242.9,
+      "end": 243.28
+    },
+    {
+      "word": "therefore",
+      "start": 243.28,
+      "end": 244.08
+    },
+    {
+      "word": "provide",
+      "start": 244.08,
+      "end": 244.44
+    },
+    {
+      "word": "more",
+      "start": 244.44,
+      "end": 244.7
+    },
+    {
+      "word": "meaningful",
+      "start": 244.7,
+      "end": 245.06
+    },
+    {
+      "word": "operational",
+      "start": 245.06,
+      "end": 245.66
+    },
+    {
+      "word": "measurements",
+      "start": 245.66,
+      "end": 246.02
+    },
+    {
+      "word": "than",
+      "start": 246.02,
+      "end": 246.28
+    },
+    {
+      "word": "accuracy",
+      "start": 246.28,
+      "end": 246.68
+    },
+    {
+      "word": "alone",
+      "start": 246.68,
+      "end": 247.1
+    },
+    {
+      "word": "Security",
+      "start": 248.06,
+      "end": 248.18
+    },
+    {
+      "word": "engineering",
+      "start": 248.18,
+      "end": 248.6
+    },
+    {
+      "word": "must",
+      "start": 248.6,
+      "end": 248.9
+    },
+    {
+      "word": "evaluate",
+      "start": 248.9,
+      "end": 249.42
+    },
+    {
+      "word": "whether",
+      "start": 249.42,
+      "end": 249.66
+    },
+    {
+      "word": "a",
+      "start": 249.66,
+      "end": 250.2
+    },
+    {
+      "word": "detection",
+      "start": 250.2,
+      "end": 250.2
+    },
+    {
+      "word": "mechanism",
+      "start": 250.2,
+      "end": 250.68
+    },
+    {
+      "word": "improves",
+      "start": 250.68,
+      "end": 251.2
+    },
+    {
+      "word": "incident",
+      "start": 251.2,
+      "end": 251.58
+    },
+    {
+      "word": "response",
+      "start": 251.58,
+      "end": 252.06
+    },
+    {
+      "word": "rather",
+      "start": 252.06,
+      "end": 252.66
+    },
+    {
+      "word": "than",
+      "start": 252.66,
+      "end": 252.96
+    },
+    {
+      "word": "merely",
+      "start": 252.96,
+      "end": 253.22
+    },
+    {
+      "word": "producing",
+      "start": 253.22,
+      "end": 253.64
+    },
+    {
+      "word": "favorable",
+      "start": 253.64,
+      "end": 254.14
+    },
+    {
+      "word": "experimental",
+      "start": 254.14,
+      "end": 254.74
+    },
+    {
+      "word": "results",
+      "start": 254.74,
+      "end": 255.2
+    },
+    {
+      "word": "A",
+      "start": 255.86,
+      "end": 256.0
+    },
+    {
+      "word": "systematic",
+      "start": 256.0,
+      "end": 256.46
+    },
+    {
+      "word": "literature",
+      "start": 256.46,
+      "end": 256.88
+    },
+    {
+      "word": "review",
+      "start": 256.88,
+      "end": 257.24
+    },
+    {
+      "word": "published",
+      "start": 257.24,
+      "end": 257.62
+    },
+    {
+      "word": "in",
+      "start": 257.62,
+      "end": 257.92
+    },
+    {
+      "word": "August",
+      "start": 257.92,
+      "end": 258.1
+    },
+    {
+      "word": "2026",
+      "start": 258.1,
+      "end": 259.0
+    },
+    {
+      "word": "examined",
+      "start": 259.0,
+      "end": 259.52
+    },
+    {
+      "word": "fifty",
+      "start": 259.36,
+      "end": 259.72
+    },
+    {
+      "word": "four",
+      "start": 259.72,
+      "end": 260.08
+    },
+    {
+      "word": "studies",
+      "start": 260.08,
+      "end": 260.52
+    },
+    {
+      "word": "involving",
+      "start": 260.52,
+      "end": 261.06
+    },
+    {
+      "word": "eBPF",
+      "start": 261.06,
+      "end": 261.74
+    },
+    {
+      "word": "based",
+      "start": 261.74,
+      "end": 262.04
+    },
+    {
+      "word": "cybersecurity",
+      "start": 262.04,
+      "end": 262.72
+    },
+    {
+      "word": "mechanisms",
+      "start": 262.72,
+      "end": 263.28
+    },
+    {
+      "word": "The",
+      "start": 263.84,
+      "end": 264.08
+    },
+    {
+      "word": "authors",
+      "start": 264.08,
+      "end": 264.36
+    },
+    {
+      "word": "reported",
+      "start": 264.36,
+      "end": 264.76
+    },
+    {
+      "word": "promising",
+      "start": 264.76,
+      "end": 265.28
+    },
+    {
+      "word": "detection",
+      "start": 265.28,
+      "end": 265.7
+    },
+    {
+      "word": "performance",
+      "start": 265.7,
+      "end": 266.22
+    },
+    {
+      "word": "and",
+      "start": 266.22,
+      "end": 266.56
+    },
+    {
+      "word": "relatively",
+      "start": 266.56,
+      "end": 266.98
+    },
+    {
+      "word": "low",
+      "start": 266.98,
+      "end": 267.3
+    },
+    {
+      "word": "computational",
+      "start": 267.3,
+      "end": 267.88
+    },
+    {
+      "word": "overhead",
+      "start": 267.88,
+      "end": 268.34
+    },
+    {
+      "word": "across",
+      "start": 268.34,
+      "end": 268.96
+    },
+    {
+      "word": "several",
+      "start": 268.96,
+      "end": 269.34
+    },
+    {
+      "word": "application",
+      "start": 269.34,
+      "end": 269.86
+    },
+    {
+      "word": "domains",
+      "start": 270.0,
+      "end": 270.36
+    },
+    {
+      "word": "However",
+      "start": 271.08,
+      "end": 271.4
+    },
+    {
+      "word": "they",
+      "start": 271.68,
+      "end": 271.74
+    },
+    {
+      "word": "also",
+      "start": 271.74,
+      "end": 272.26
+    },
+    {
+      "word": "identified",
+      "start": 272.26,
+      "end": 272.62
+    },
+    {
+      "word": "limited",
+      "start": 272.62,
+      "end": 273.0
+    },
+    {
+      "word": "production",
+      "start": 273.0,
+      "end": 273.48
+    },
+    {
+      "word": "validation",
+      "start": 273.48,
+      "end": 273.98
+    },
+    {
+      "word": "kernel",
+      "start": 274.76,
+      "end": 274.76
+    },
+    {
+      "word": "compatibility",
+      "start": 274.76,
+      "end": 275.36
+    },
+    {
+      "word": "challenges",
+      "start": 275.36,
+      "end": 275.86
+    },
+    {
+      "word": "and",
+      "start": 276.18,
+      "end": 276.38
+    },
+    {
+      "word": "insufficient",
+      "start": 276.38,
+      "end": 276.84
+    },
+    {
+      "word": "investigation",
+      "start": 276.84,
+      "end": 277.42
+    },
+    {
+      "word": "of",
+      "start": 277.42,
+      "end": 277.68
+    },
+    {
+      "word": "vulnerabilities",
+      "start": 277.68,
+      "end": 278.14
+    },
+    {
+      "word": "within",
+      "start": 278.14,
+      "end": 278.58
+    },
+    {
+      "word": "eBPF",
+      "start": 278.58,
+      "end": 279.24
+    },
+    {
+      "word": "infrastructure",
+      "start": 279.24,
+      "end": 279.72
+    },
+    {
+      "word": "itself",
+      "start": 279.72,
+      "end": 280.22
+    },
+    {
+      "word": "This",
+      "start": 280.84,
+      "end": 281.06
+    },
+    {
+      "word": "creates",
+      "start": 281.06,
+      "end": 281.36
+    },
+    {
+      "word": "an",
+      "start": 281.36,
+      "end": 281.58
+    },
+    {
+      "word": "interesting",
+      "start": 281.58,
+      "end": 281.94
+    },
+    {
+      "word": "paradox",
+      "start": 281.94,
+      "end": 282.42
+    },
+    {
+      "word": "A",
+      "start": 282.98,
+      "end": 283.06
+    },
+    {
+      "word": "security",
+      "start": 283.06,
+      "end": 283.4
+    },
+    {
+      "word": "mechanism",
+      "start": 283.4,
+      "end": 283.84
+    },
+    {
+      "word": "operating",
+      "start": 283.84,
+      "end": 284.28
+    },
+    {
+      "word": "close",
+      "start": 284.28,
+      "end": 284.66
+    },
+    {
+      "word": "to",
+      "start": 284.66,
+      "end": 284.8
+    },
+    {
+      "word": "the",
+      "start": 284.8,
+      "end": 284.92
+    },
+    {
+      "word": "operating",
+      "start": 284.92,
+      "end": 285.32
+    },
+    {
+      "word": "system",
+      "start": 285.32,
+      "end": 285.66
+    },
+    {
+      "word": "kernel",
+      "start": 285.66,
+      "end": 285.94
+    },
+    {
+      "word": "may",
+      "start": 285.94,
+      "end": 286.48
+    },
+    {
+      "word": "provide",
+      "start": 286.48,
+      "end": 286.84
+    },
+    {
+      "word": "excellent",
+      "start": 286.84,
+      "end": 287.3
+    },
+    {
+      "word": "observability",
+      "start": 287.3,
+      "end": 287.96
+    },
+    {
+      "word": "while",
+      "start": 287.96,
+      "end": 288.28
+    },
+    {
+      "word": "simultaneously",
+      "start": 288.28,
+      "end": 289.02
+    },
+    {
+      "word": "expanding",
+      "start": 289.02,
+      "end": 289.48
+    },
+    {
+      "word": "the",
+      "start": 289.48,
+      "end": 289.76
+    },
+    {
+      "word": "trusted",
+      "start": 289.76,
+      "end": 290.06
+    },
+    {
+      "word": "computing",
+      "start": 290.06,
+      "end": 290.42
+    },
+    {
+      "word": "base",
+      "start": 290.42,
+      "end": 290.74
+    },
+    {
+      "word": "that",
+      "start": 290.74,
+      "end": 291.3
+    },
+    {
+      "word": "defenders",
+      "start": 291.3,
+      "end": 291.3
+    },
+    {
+      "word": "must",
+      "start": 291.3,
+      "end": 291.64
+    },
+    {
+      "word": "maintain",
+      "start": 291.64,
+      "end": 292.0
+    },
+    {
+      "word": "Another",
+      "start": 292.72,
+      "end": 293.1
+    },
+    {
+      "word": "emerging",
+      "start": 293.1,
+      "end": 293.52
+    },
+    {
+      "word": "concern",
+      "start": 293.52,
+      "end": 293.94
+    },
+    {
+      "word": "is",
+      "start": 293.94,
+      "end": 294.16
+    },
+    {
+      "word": "the",
+      "start": 294.16,
+      "end": 294.34
+    },
+    {
+      "word": "integration",
+      "start": 294.34,
+      "end": 294.7
+    },
+    {
+      "word": "of",
+      "start": 294.7,
+      "end": 295.02
+    },
+    {
+      "word": "autonomous",
+      "start": 295.02,
+      "end": 295.44
+    },
+    {
+      "word": "artificial",
+      "start": 295.44,
+      "end": 295.96
+    },
+    {
+      "word": "intelligence",
+      "start": 295.96,
+      "end": 296.46
+    },
+    {
+      "word": "agents",
+      "start": 296.46,
+      "end": 296.86
+    },
+    {
+      "word": "into",
+      "start": 296.86,
+      "end": 297.12
+    },
+    {
+      "word": "enterprise",
+      "start": 297.12,
+      "end": 297.58
+    },
+    {
+      "word": "infrastructure",
+      "start": 297.58,
+      "end": 298.12
+    },
+    {
+      "word": "Unlike",
+      "start": 298.185,
+      "end": 298.79
+    },
+    {
+      "word": "conventional",
+      "start": 298.79,
+      "end": 299.395
+    },
+    {
+      "word": "applications",
+      "start": 299.395,
+      "end": 300.0
+    },
+    {
+      "word": "AI",
+      "start": 300.0,
+      "end": 300.6
+    },
+    {
+      "word": "agents",
+      "start": 300.6,
+      "end": 301.08
+    },
+    {
+      "word": "may",
+      "start": 301.08,
+      "end": 301.28
+    },
+    {
+      "word": "dynamically",
+      "start": 301.28,
+      "end": 301.76
+    },
+    {
+      "word": "select",
+      "start": 301.76,
+      "end": 302.2
+    },
+    {
+      "word": "tools",
+      "start": 302.2,
+      "end": 302.64
+    },
+    {
+      "word": "interpret",
+      "start": 303.4,
+      "end": 303.4
+    },
+    {
+      "word": "external",
+      "start": 303.4,
+      "end": 303.84
+    },
+    {
+      "word": "information",
+      "start": 303.84,
+      "end": 304.36
+    },
+    {
+      "word": "and",
+      "start": 304.64,
+      "end": 304.86
+    },
+    {
+      "word": "execute",
+      "start": 304.86,
+      "end": 305.18
+    },
+    {
+      "word": "sequences",
+      "start": 305.18,
+      "end": 305.6
+    },
+    {
+      "word": "of",
+      "start": 305.6,
+      "end": 305.88
+    },
+    {
+      "word": "operations",
+      "start": 305.88,
+      "end": 306.42
+    },
+    {
+      "word": "A",
+      "start": 306.8,
+      "end": 307.08
+    },
+    {
+      "word": "2026",
+      "start": 307.08,
+      "end": 307.76
+    },
+    {
+      "word": "research",
+      "start": 307.76,
+      "end": 308.16
+    },
+    {
+      "word": "paper",
+      "start": 308.16,
+      "end": 308.44
+    },
+    {
+      "word": "on",
+      "start": 308.44,
+      "end": 308.72
+    },
+    {
+      "word": "AI",
+      "start": 308.72,
+      "end": 309.0
+    },
+    {
+      "word": "agent",
+      "start": 309.0,
+      "end": 309.32
+    },
+    {
+      "word": "security",
+      "start": 309.32,
+      "end": 309.72
+    },
+    {
+      "word": "emphasizes",
+      "start": 309.72,
+      "end": 310.28
+    },
+    {
+      "word": "how",
+      "start": 310.28,
+      "end": 310.56
+    },
+    {
+      "word": "these",
+      "start": 310.56,
+      "end": 310.74
+    },
+    {
+      "word": "architectures",
+      "start": 310.74,
+      "end": 311.4
+    },
+    {
+      "word": "challenge",
+      "start": 311.4,
+      "end": 311.76
+    },
+    {
+      "word": "established",
+      "start": 311.76,
+      "end": 312.28
+    },
+    {
+      "word": "assumptions",
+      "start": 312.28,
+      "end": 312.76
+    },
+    {
+      "word": "about",
+      "start": 312.76,
+      "end": 313.08
+    },
+    {
+      "word": "the",
+      "start": 313.08,
+      "end": 313.32
+    },
+    {
+      "word": "separation",
+      "start": 313.32,
+      "end": 313.68
+    },
+    {
+      "word": "between",
+      "start": 313.68,
+      "end": 314.08
+    },
+    {
+      "word": "data",
+      "start": 314.08,
+      "end": 314.38
+    },
+    {
+      "word": "and",
+      "start": 314.38,
+      "end": 314.62
+    },
+    {
+      "word": "executable",
+      "start": 314.62,
+      "end": 315.16
+    },
+    {
+      "word": "instructions",
+      "start": 315.16,
+      "end": 315.78
+    },
+    {
+      "word": "An",
+      "start": 316.44,
+      "end": 316.6
+    },
+    {
+      "word": "attacker",
+      "start": 316.6,
+      "end": 316.82
+    },
+    {
+      "word": "may",
+      "start": 316.82,
+      "end": 317.14
+    },
+    {
+      "word": "embed",
+      "start": 317.14,
+      "end": 317.38
+    },
+    {
+      "word": "malicious",
+      "start": 317.38,
+      "end": 317.78
+    },
+    {
+      "word": "instructions",
+      "start": 317.78,
+      "end": 318.34
+    },
+    {
+      "word": "inside",
+      "start": 318.34,
+      "end": 318.7
+    },
+    {
+      "word": "a",
+      "start": 318.7,
+      "end": 318.92
+    },
+    {
+      "word": "document",
+      "start": 318.92,
+      "end": 319.28
+    },
+    {
+      "word": "or",
+      "start": 319.28,
+      "end": 319.5
+    },
+    {
+      "word": "retrieved",
+      "start": 319.5,
+      "end": 319.86
+    },
+    {
+      "word": "web",
+      "start": 319.86,
+      "end": 320.12
+    },
+    {
+      "word": "page",
+      "start": 320.12,
+      "end": 320.38
+    },
+    {
+      "word": "causing",
+      "start": 321.04,
+      "end": 321.06
+    },
+    {
+      "word": "an",
+      "start": 321.06,
+      "end": 321.34
+    },
+    {
+      "word": "agent",
+      "start": 321.34,
+      "end": 321.46
+    },
+    {
+      "word": "to",
+      "start": 321.46,
+      "end": 321.72
+    },
+    {
+      "word": "misuse",
+      "start": 321.72,
+      "end": 322.1
+    },
+    {
+      "word": "legitimate",
+      "start": 322.1,
+      "end": 322.52
+    },
+    {
+      "word": "permissions",
+      "start": 322.52,
+      "end": 323.08
+    },
+    {
+      "word": "The",
+      "start": 323.54,
+      "end": 323.84
+    },
+    {
+      "word": "resulting",
+      "start": 323.84,
+      "end": 324.22
+    },
+    {
+      "word": "vulnerability",
+      "start": 324.22,
+      "end": 324.8
+    },
+    {
+      "word": "resembles",
+      "start": 324.8,
+      "end": 325.3
+    },
+    {
+      "word": "the",
+      "start": 325.3,
+      "end": 325.52
+    },
+    {
+      "word": "confused",
+      "start": 325.52,
+      "end": 325.98
+    },
+    {
+      "word": "deputy",
+      "start": 325.98,
+      "end": 326.4
+    },
+    {
+      "word": "problem",
+      "start": 326.4,
+      "end": 326.78
+    },
+    {
+      "word": "in",
+      "start": 326.78,
+      "end": 327.02
+    },
+    {
+      "word": "classical",
+      "start": 327.02,
+      "end": 327.42
+    },
+    {
+      "word": "computer",
+      "start": 327.42,
+      "end": 327.86
+    },
+    {
+      "word": "security",
+      "start": 327.86,
+      "end": 328.24
+    },
+    {
+      "word": "An",
+      "start": 328.24,
+      "end": 328.98
+    },
+    {
+      "word": "agent",
+      "start": 328.98,
+      "end": 329.28
+    },
+    {
+      "word": "may",
+      "start": 329.28,
+      "end": 329.5
+    },
+    {
+      "word": "possess",
+      "start": 329.5,
+      "end": 329.8
+    },
+    {
+      "word": "authorization",
+      "start": 330.0,
+      "end": 330.3
+    },
+    {
+      "word": "to",
+      "start": 330.3,
+      "end": 330.58
+    },
+    {
+      "word": "access",
+      "start": 330.58,
+      "end": 331.02
+    },
+    {
+      "word": "confidential",
+      "start": 331.02,
+      "end": 331.62
+    },
+    {
+      "word": "files",
+      "start": 331.62,
+      "end": 332.02
+    },
+    {
+      "word": "and",
+      "start": 332.02,
+      "end": 332.3
+    },
+    {
+      "word": "send",
+      "start": 332.3,
+      "end": 332.48
+    },
+    {
+      "word": "external",
+      "start": 332.48,
+      "end": 332.88
+    },
+    {
+      "word": "messages",
+      "start": 332.88,
+      "end": 333.24
+    },
+    {
+      "word": "while",
+      "start": 333.88,
+      "end": 333.94
+    },
+    {
+      "word": "an",
+      "start": 333.94,
+      "end": 334.36
+    },
+    {
+      "word": "attacker",
+      "start": 334.36,
+      "end": 334.36
+    },
+    {
+      "word": "controls",
+      "start": 334.36,
+      "end": 334.84
+    },
+    {
+      "word": "only",
+      "start": 334.84,
+      "end": 335.1
+    },
+    {
+      "word": "a",
+      "start": 335.1,
+      "end": 335.34
+    },
+    {
+      "word": "lower",
+      "start": 335.34,
+      "end": 335.54
+    },
+    {
+      "word": "trust",
+      "start": 335.54,
+      "end": 335.74
+    },
+    {
+      "word": "data",
+      "start": 335.74,
+      "end": 336.1
+    },
+    {
+      "word": "source",
+      "start": 336.1,
+      "end": 336.38
+    },
+    {
+      "word": "If",
+      "start": 337.06,
+      "end": 337.08
+    },
+    {
+      "word": "the",
+      "start": 337.08,
+      "end": 337.26
+    },
+    {
+      "word": "agent",
+      "start": 337.26,
+      "end": 337.48
+    },
+    {
+      "word": "treats",
+      "start": 337.48,
+      "end": 337.76
+    },
+    {
+      "word": "untrusted",
+      "start": 337.76,
+      "end": 338.26
+    },
+    {
+      "word": "content",
+      "start": 338.26,
+      "end": 338.7
+    },
+    {
+      "word": "as",
+      "start": 338.7,
+      "end": 338.94
+    },
+    {
+      "word": "authoritative",
+      "start": 338.94,
+      "end": 339.42
+    },
+    {
+      "word": "instructions",
+      "start": 339.42,
+      "end": 339.96
+    },
+    {
+      "word": "the",
+      "start": 340.46,
+      "end": 340.82
+    },
+    {
+      "word": "attacker",
+      "start": 340.82,
+      "end": 340.82
+    },
+    {
+      "word": "can",
+      "start": 340.82,
+      "end": 341.12
+    },
+    {
+      "word": "indirectly",
+      "start": 341.12,
+      "end": 341.6
+    },
+    {
+      "word": "exploit",
+      "start": 341.6,
+      "end": 342.02
+    },
+    {
+      "word": "the",
+      "start": 342.02,
+      "end": 342.28
+    },
+    {
+      "word": "agent's",
+      "start": 342.28,
+      "end": 343.1
+    },
+    {
+      "word": "privileges",
+      "start": 343.1,
+      "end": 343.1
+    },
+    {
+      "word": "Prompt",
+      "start": 343.82,
+      "end": 343.92
+    },
+    {
+      "word": "filtering",
+      "start": 343.92,
+      "end": 344.2
+    },
+    {
+      "word": "alone",
+      "start": 344.2,
+      "end": 344.76
+    },
+    {
+      "word": "cannot",
+      "start": 344.76,
+      "end": 345.12
+    },
+    {
+      "word": "reliably",
+      "start": 345.12,
+      "end": 345.64
+    },
+    {
+      "word": "resolve",
+      "start": 345.64,
+      "end": 346.02
+    },
+    {
+      "word": "this",
+      "start": 346.02,
+      "end": 346.28
+    },
+    {
+      "word": "architectural",
+      "start": 346.28,
+      "end": 346.8
+    },
+    {
+      "word": "weakness",
+      "start": 346.8,
+      "end": 347.28
+    },
+    {
+      "word": "Stronger",
+      "start": 348.12,
+      "end": 348.64
+    },
+    {
+      "word": "designs",
+      "start": 348.64,
+      "end": 348.64
+    },
+    {
+      "word": "require",
+      "start": 348.64,
+      "end": 349.08
+    },
+    {
+      "word": "deterministic",
+      "start": 349.08,
+      "end": 349.76
+    },
+    {
+      "word": "authorization",
+      "start": 349.76,
+      "end": 350.34
+    },
+    {
+      "word": "checks",
+      "start": 350.34,
+      "end": 350.74
+    },
+    {
+      "word": "restricted",
+      "start": 351.28,
+      "end": 351.54
+    },
+    {
+      "word": "tool",
+      "start": 351.54,
+      "end": 351.86
+    },
+    {
+      "word": "capabilities",
+      "start": 351.86,
+      "end": 352.44
+    },
+    {
+      "word": "sandboxed",
+      "start": 353.14,
+      "end": 353.64
+    },
+    {
+      "word": "execution",
+      "start": 353.64,
+      "end": 353.96
+    },
+    {
+      "word": "and",
+      "start": 354.48,
+      "end": 354.72
+    },
+    {
+      "word": "explicit",
+      "start": 354.72,
+      "end": 355.02
+    },
+    {
+      "word": "approval",
+      "start": 355.02,
+      "end": 355.38
+    },
+    {
+      "word": "boundaries",
+      "start": 355.38,
+      "end": 355.74
+    },
+    {
+      "word": "for",
+      "start": 355.74,
+      "end": 356.1
+    },
+    {
+      "word": "sensitive",
+      "start": 356.1,
+      "end": 356.42
+    },
+    {
+      "word": "operations",
+      "start": 356.42,
+      "end": 357.1
+    },
+    {
+      "word": "Cryptographic",
+      "start": 357.1,
+      "end": 358.4
+    },
+    {
+      "word": "infrastructure",
+      "start": 358.4,
+      "end": 358.94
+    },
+    {
+      "word": "is",
+      "start": 358.94,
+      "end": 359.3
+    },
+    {
+      "word": "undergoing",
+      "start": 359.3,
+      "end": 359.56
+    },
+    {
+      "word": "another",
+      "start": 359.56,
+      "end": 359.98
+    },
+    {
+      "word": "major",
+      "start": 360.0,
+      "end": 360.24
+    },
+    {
+      "word": "transition",
+      "start": 360.24,
+      "end": 360.78
+    },
+    {
+      "word": "The",
+      "start": 360.83,
+      "end": 361.42
+    },
+    {
+      "word": "standardization",
+      "start": 361.42,
+      "end": 362.06
+    },
+    {
+      "word": "of",
+      "start": 362.06,
+      "end": 362.24
+    },
+    {
+      "word": "post",
+      "start": 362.24,
+      "end": 362.74
+    },
+    {
+      "word": "quantum",
+      "start": 362.74,
+      "end": 362.82
+    },
+    {
+      "word": "cryptographic",
+      "start": 362.82,
+      "end": 363.4
+    },
+    {
+      "word": "algorithms",
+      "start": 363.4,
+      "end": 363.9
+    },
+    {
+      "word": "has",
+      "start": 363.9,
+      "end": 364.22
+    },
+    {
+      "word": "created",
+      "start": 364.22,
+      "end": 364.52
+    },
+    {
+      "word": "practical",
+      "start": 364.52,
+      "end": 365.02
+    },
+    {
+      "word": "migration",
+      "start": 365.02,
+      "end": 365.5
+    },
+    {
+      "word": "requirements",
+      "start": 365.5,
+      "end": 365.98
+    },
+    {
+      "word": "for",
+      "start": 365.98,
+      "end": 366.34
+    },
+    {
+      "word": "internet",
+      "start": 366.34,
+      "end": 366.66
+    },
+    {
+      "word": "protocols",
+      "start": 366.66,
+      "end": 367.1
+    },
+    {
+      "word": "and",
+      "start": 367.1,
+      "end": 367.36
+    },
+    {
+      "word": "enterprise",
+      "start": 367.36,
+      "end": 367.78
+    },
+    {
+      "word": "systems",
+      "start": 367.78,
+      "end": 368.2
+    },
+    {
+      "word": "NIST",
+      "start": 369.0,
+      "end": 369.0
+    },
+    {
+      "word": "has",
+      "start": 369.0,
+      "end": 369.26
+    },
+    {
+      "word": "finalized",
+      "start": 369.26,
+      "end": 369.68
+    },
+    {
+      "word": "standards",
+      "start": 369.68,
+      "end": 370.1
+    },
+    {
+      "word": "including",
+      "start": 370.1,
+      "end": 370.52
+    },
+    {
+      "word": "ML",
+      "start": 370.48,
+      "end": 370.86
+    },
+    {
+      "word": "KEM",
+      "start": 370.86,
+      "end": 371.24
+    },
+    {
+      "word": "for",
+      "start": 371.24,
+      "end": 371.58
+    },
+    {
+      "word": "key",
+      "start": 371.58,
+      "end": 371.82
+    },
+    {
+      "word": "establishment",
+      "start": 371.82,
+      "end": 372.24
+    },
+    {
+      "word": "and",
+      "start": 372.24,
+      "end": 372.66
+    },
+    {
+      "word": "ML",
+      "start": 372.547,
+      "end": 372.853
+    },
+    {
+      "word": "DSA",
+      "start": 372.853,
+      "end": 373.16
+    },
+    {
+      "word": "for",
+      "start": 373.16,
+      "end": 373.5
+    },
+    {
+      "word": "digital",
+      "start": 373.5,
+      "end": 373.8
+    },
+    {
+      "word": "signatures",
+      "start": 373.8,
+      "end": 374.22
+    },
+    {
+      "word": "These",
+      "start": 375.02,
+      "end": 375.16
+    },
+    {
+      "word": "algorithms",
+      "start": 375.16,
+      "end": 375.58
+    },
+    {
+      "word": "address",
+      "start": 375.58,
+      "end": 376.02
+    },
+    {
+      "word": "threats",
+      "start": 376.02,
+      "end": 376.36
+    },
+    {
+      "word": "posed",
+      "start": 376.36,
+      "end": 376.6
+    },
+    {
+      "word": "by",
+      "start": 376.6,
+      "end": 376.86
+    },
+    {
+      "word": "future",
+      "start": 376.86,
+      "end": 377.2
+    },
+    {
+      "word": "cryptographically",
+      "start": 377.2,
+      "end": 377.9
+    },
+    {
+      "word": "relevant",
+      "start": 377.9,
+      "end": 378.22
+    },
+    {
+      "word": "quantum",
+      "start": 378.22,
+      "end": 378.62
+    },
+    {
+      "word": "computers",
+      "start": 378.62,
+      "end": 379.1
+    },
+    {
+      "word": "but",
+      "start": 379.24,
+      "end": 379.78
+    },
+    {
+      "word": "deploying",
+      "start": 379.78,
+      "end": 380.06
+    },
+    {
+      "word": "them",
+      "start": 380.06,
+      "end": 380.46
+    },
+    {
+      "word": "introduces",
+      "start": 380.46,
+      "end": 380.86
+    },
+    {
+      "word": "engineering",
+      "start": 380.86,
+      "end": 381.42
+    },
+    {
+      "word": "challenges",
+      "start": 381.42,
+      "end": 381.96
+    },
+    {
+      "word": "involving",
+      "start": 381.96,
+      "end": 382.42
+    },
+    {
+      "word": "interoperability",
+      "start": 382.46,
+      "end": 383.3
+    },
+    {
+      "word": "implementation",
+      "start": 384.08,
+      "end": 384.34
+    },
+    {
+      "word": "security",
+      "start": 384.34,
+      "end": 384.88
+    },
+    {
+      "word": "certificate",
+      "start": 385.62,
+      "end": 385.78
+    },
+    {
+      "word": "handling",
+      "start": 385.78,
+      "end": 386.18
+    },
+    {
+      "word": "and",
+      "start": 386.3,
+      "end": 386.6
+    },
+    {
+      "word": "protocol",
+      "start": 386.6,
+      "end": 386.86
+    },
+    {
+      "word": "performance",
+      "start": 386.86,
+      "end": 387.48
+    },
+    {
+      "word": "In",
+      "start": 387.74,
+      "end": 388.24
+    },
+    {
+      "word": "July",
+      "start": 388.24,
+      "end": 388.46
+    },
+    {
+      "word": "2026",
+      "start": 388.46,
+      "end": 389.34
+    },
+    {
+      "word": "research",
+      "start": 389.46,
+      "end": 389.98
+    },
+    {
+      "word": "assisted",
+      "start": 390.0,
+      "end": 390.28
+    },
+    {
+      "word": "by",
+      "start": 390.28,
+      "end": 390.5
+    },
+    {
+      "word": "artificial",
+      "start": 390.5,
+      "end": 390.98
+    },
+    {
+      "word": "intelligence",
+      "start": 390.98,
+      "end": 391.58
+    },
+    {
+      "word": "identified",
+      "start": 391.58,
+      "end": 392.12
+    },
+    {
+      "word": "a",
+      "start": 392.12,
+      "end": 392.32
+    },
+    {
+      "word": "weakness",
+      "start": 392.32,
+      "end": 392.64
+    },
+    {
+      "word": "in",
+      "start": 392.64,
+      "end": 393.12
+    },
+    {
+      "word": "HAWK",
+      "start": 393.1,
+      "end": 393.56
+    },
+    {
+      "word": "a",
+      "start": 393.56,
+      "end": 393.7
+    },
+    {
+      "word": "candidate",
+      "start": 393.7,
+      "end": 394.02
+    },
+    {
+      "word": "post",
+      "start": 394.02,
+      "end": 394.46
+    },
+    {
+      "word": "quantum",
+      "start": 394.46,
+      "end": 394.76
+    },
+    {
+      "word": "signature",
+      "start": 394.76,
+      "end": 395.2
+    },
+    {
+      "word": "algorithm",
+      "start": 395.2,
+      "end": 395.68
+    },
+    {
+      "word": "leading",
+      "start": 396.18,
+      "end": 396.3
+    },
+    {
+      "word": "to",
+      "start": 396.3,
+      "end": 396.5
+    },
+    {
+      "word": "its",
+      "start": 396.5,
+      "end": 396.7
+    },
+    {
+      "word": "withdrawal",
+      "start": 396.7,
+      "end": 397.04
+    },
+    {
+      "word": "from",
+      "start": 397.04,
+      "end": 397.3
+    },
+    {
+      "word": "standardization",
+      "start": 397.3,
+      "end": 398.0
+    },
+    {
+      "word": "consideration",
+      "start": 398.0,
+      "end": 398.64
+    },
+    {
+      "word": "The",
+      "start": 398.78,
+      "end": 399.56
+    },
+    {
+      "word": "finding",
+      "start": 399.56,
+      "end": 399.7
+    },
+    {
+      "word": "did",
+      "start": 399.7,
+      "end": 399.96
+    },
+    {
+      "word": "not",
+      "start": 399.96,
+      "end": 400.18
+    },
+    {
+      "word": "invalidate",
+      "start": 400.18,
+      "end": 400.68
+    },
+    {
+      "word": "the",
+      "start": 400.68,
+      "end": 400.86
+    },
+    {
+      "word": "finalized",
+      "start": 400.86,
+      "end": 401.52
+    },
+    {
+      "word": "NIST",
+      "start": 401.52,
+      "end": 401.52
+    },
+    {
+      "word": "standards",
+      "start": 401.52,
+      "end": 402.08
+    },
+    {
+      "word": "Nevertheless",
+      "start": 402.62,
+      "end": 402.94
+    },
+    {
+      "word": "it",
+      "start": 403.2,
+      "end": 403.38
+    },
+    {
+      "word": "demonstrated",
+      "start": 403.38,
+      "end": 403.8
+    },
+    {
+      "word": "why",
+      "start": 403.8,
+      "end": 404.18
+    },
+    {
+      "word": "algorithm",
+      "start": 404.18,
+      "end": 404.64
+    },
+    {
+      "word": "selection",
+      "start": 404.64,
+      "end": 405.1
+    },
+    {
+      "word": "requires",
+      "start": 405.1,
+      "end": 405.64
+    },
+    {
+      "word": "sustained",
+      "start": 405.64,
+      "end": 406.1
+    },
+    {
+      "word": "public",
+      "start": 406.1,
+      "end": 406.5
+    },
+    {
+      "word": "cryptanalysis",
+      "start": 406.5,
+      "end": 407.26
+    },
+    {
+      "word": "rather",
+      "start": 407.26,
+      "end": 407.84
+    },
+    {
+      "word": "than",
+      "start": 407.84,
+      "end": 408.14
+    },
+    {
+      "word": "confidence",
+      "start": 408.14,
+      "end": 408.54
+    },
+    {
+      "word": "based",
+      "start": 408.54,
+      "end": 408.84
+    },
+    {
+      "word": "solely",
+      "start": 408.84,
+      "end": 409.1
+    },
+    {
+      "word": "on",
+      "start": 409.1,
+      "end": 409.44
+    },
+    {
+      "word": "mathematical",
+      "start": 409.44,
+      "end": 409.8
+    },
+    {
+      "word": "novelty",
+      "start": 409.8,
+      "end": 410.26
+    },
+    {
+      "word": "Engineers",
+      "start": 411.1,
+      "end": 411.3
+    },
+    {
+      "word": "must",
+      "start": 411.3,
+      "end": 411.54
+    },
+    {
+      "word": "also",
+      "start": 411.54,
+      "end": 412.0
+    },
+    {
+      "word": "distinguish",
+      "start": 412.0,
+      "end": 412.28
+    },
+    {
+      "word": "between",
+      "start": 412.28,
+      "end": 412.72
+    },
+    {
+      "word": "theoretical",
+      "start": 412.72,
+      "end": 413.14
+    },
+    {
+      "word": "algorithm",
+      "start": 413.14,
+      "end": 413.62
+    },
+    {
+      "word": "security",
+      "start": 413.62,
+      "end": 414.1
+    },
+    {
+      "word": "and",
+      "start": 414.1,
+      "end": 414.44
+    },
+    {
+      "word": "vulnerabilities",
+      "start": 414.44,
+      "end": 414.9
+    },
+    {
+      "word": "arising",
+      "start": 414.9,
+      "end": 415.4
+    },
+    {
+      "word": "from",
+      "start": 415.4,
+      "end": 415.64
+    },
+    {
+      "word": "implementations",
+      "start": 415.64,
+      "end": 416.52
+    },
+    {
+      "word": "side",
+      "start": 416.82,
+      "end": 416.94
+    },
+    {
+      "word": "channels",
+      "start": 416.94,
+      "end": 417.36
+    },
+    {
+      "word": "protocol",
+      "start": 417.78,
+      "end": 418.06
+    },
+    {
+      "word": "integration",
+      "start": 418.06,
+      "end": 418.64
+    },
+    {
+      "word": "and",
+      "start": 419.08,
+      "end": 419.2
+    },
+    {
+      "word": "operational",
+      "start": 419.2,
+      "end": 419.6
+    },
+    {
+      "word": "key",
+      "start": 419.6,
+      "end": 419.86
+    },
+    {
+      "word": "management",
+      "start": 420.0,
+      "end": 420.32
+    },
+    {
+      "word": "Finally",
+      "start": 421.0,
+      "end": 421.46
+    },
+    {
+      "word": "vulnerability",
+      "start": 422.24,
+      "end": 422.24
+    },
+    {
+      "word": "prioritization",
+      "start": 422.24,
+      "end": 423.04
+    },
+    {
+      "word": "is",
+      "start": 423.04,
+      "end": 423.36
+    },
+    {
+      "word": "moving",
+      "start": 423.36,
+      "end": 423.6
+    },
+    {
+      "word": "toward",
+      "start": 423.6,
+      "end": 423.86
+    },
+    {
+      "word": "evidence",
+      "start": 423.86,
+      "end": 424.26
+    },
+    {
+      "word": "driven",
+      "start": 424.26,
+      "end": 424.56
+    },
+    {
+      "word": "risk",
+      "start": 424.56,
+      "end": 424.86
+    },
+    {
+      "word": "assessment",
+      "start": 424.86,
+      "end": 425.22
+    },
+    {
+      "word": "In",
+      "start": 426.0,
+      "end": 426.0
+    },
+    {
+      "word": "2026",
+      "start": 426.0,
+      "end": 426.82
+    },
+    {
+      "word": "CISA",
+      "start": 427.2,
+      "end": 427.28
+    },
+    {
+      "word": "emphasized",
+      "start": 427.28,
+      "end": 427.82
+    },
+    {
+      "word": "rapid",
+      "start": 427.82,
+      "end": 428.18
+    },
+    {
+      "word": "remediation",
+      "start": 428.18,
+      "end": 428.74
+    },
+    {
+      "word": "of",
+      "start": 428.74,
+      "end": 429.02
+    },
+    {
+      "word": "actively",
+      "start": 429.02,
+      "end": 429.38
+    },
+    {
+      "word": "exploited",
+      "start": 429.38,
+      "end": 429.8
+    },
+    {
+      "word": "vulnerabilities",
+      "start": 429.8,
+      "end": 430.46
+    },
+    {
+      "word": "affecting",
+      "start": 430.46,
+      "end": 430.96
+    },
+    {
+      "word": "publicly",
+      "start": 430.96,
+      "end": 431.44
+    },
+    {
+      "word": "exposed",
+      "start": 431.44,
+      "end": 431.8
+    },
+    {
+      "word": "systems",
+      "start": 431.8,
+      "end": 432.24
+    },
+    {
+      "word": "particularly",
+      "start": 432.8,
+      "end": 433.12
+    },
+    {
+      "word": "when",
+      "start": 433.12,
+      "end": 433.48
+    },
+    {
+      "word": "exploitation",
+      "start": 433.48,
+      "end": 433.98
+    },
+    {
+      "word": "could",
+      "start": 433.98,
+      "end": 434.34
+    },
+    {
+      "word": "provide",
+      "start": 434.34,
+      "end": 434.66
+    },
+    {
+      "word": "complete",
+      "start": 434.66,
+      "end": 435.1
+    },
+    {
+      "word": "control",
+      "start": 435.1,
+      "end": 435.48
+    },
+    {
+      "word": "This",
+      "start": 436.08,
+      "end": 436.22
+    },
+    {
+      "word": "approach",
+      "start": 436.22,
+      "end": 436.52
+    },
+    {
+      "word": "challenges",
+      "start": 436.52,
+      "end": 436.94
+    },
+    {
+      "word": "the",
+      "start": 436.94,
+      "end": 437.28
+    },
+    {
+      "word": "assumption",
+      "start": 437.28,
+      "end": 437.5
+    },
+    {
+      "word": "that",
+      "start": 437.5,
+      "end": 437.86
+    },
+    {
+      "word": "severity",
+      "start": 437.86,
+      "end": 438.18
+    },
+    {
+      "word": "scores",
+      "start": 438.18,
+      "end": 438.48
+    },
+    {
+      "word": "alone",
+      "start": 438.48,
+      "end": 438.88
+    },
+    {
+      "word": "should",
+      "start": 438.88,
+      "end": 439.12
+    },
+    {
+      "word": "determine",
+      "start": 439.12,
+      "end": 439.42
+    },
+    {
+      "word": "patching",
+      "start": 439.42,
+      "end": 439.9
+    },
+    {
+      "word": "order",
+      "start": 439.9,
+      "end": 440.08
+    },
+    {
+      "word": "Exploitability",
+      "start": 440.98,
+      "end": 441.4
+    },
+    {
+      "word": "reachability",
+      "start": 441.72,
+      "end": 442.2
+    },
+    {
+      "word": "privilege",
+      "start": 442.76,
+      "end": 442.78
+    },
+    {
+      "word": "requirements",
+      "start": 442.78,
+      "end": 443.3
+    },
+    {
+      "word": "asset",
+      "start": 443.84,
+      "end": 443.84
+    },
+    {
+      "word": "importance",
+      "start": 443.84,
+      "end": 444.32
+    },
+    {
+      "word": "and",
+      "start": 444.46,
+      "end": 444.72
+    },
+    {
+      "word": "evidence",
+      "start": 444.72,
+      "end": 444.92
+    },
+    {
+      "word": "of",
+      "start": 444.92,
+      "end": 445.6
+    },
+    {
+      "word": "compromise",
+      "start": 445.6,
+      "end": 445.6
+    },
+    {
+      "word": "must",
+      "start": 445.6,
+      "end": 445.82
+    },
+    {
+      "word": "be",
+      "start": 445.82,
+      "end": 446.08
+    },
+    {
+      "word": "considered",
+      "start": 446.08,
+      "end": 446.32
+    },
+    {
+      "word": "together",
+      "start": 446.32,
+      "end": 446.7
+    },
+    {
+      "word": "The",
+      "start": 446.7,
+      "end": 447.56
+    },
+    {
+      "word": "deeper",
+      "start": 447.56,
+      "end": 447.84
+    },
+    {
+      "word": "conclusion",
+      "start": 447.84,
+      "end": 448.28
+    },
+    {
+      "word": "is",
+      "start": 448.28,
+      "end": 448.58
+    },
+    {
+      "word": "that",
+      "start": 448.58,
+      "end": 448.9
+    },
+    {
+      "word": "modern",
+      "start": 448.9,
+      "end": 449.14
+    },
+    {
+      "word": "cybersecurity",
+      "start": 449.14,
+      "end": 449.76
+    },
+    {
+      "word": "is",
+      "start": 449.57,
+      "end": 450.0
+    },
+    {
+      "word": "fundamentally",
+      "start": 450.0,
+      "end": 450.68
+    },
+    {
+      "word": "about",
+      "start": 450.68,
+      "end": 451.04
+    },
+    {
+      "word": "preserving",
+      "start": 451.04,
+      "end": 451.38
+    },
+    {
+      "word": "trustworthy",
+      "start": 451.38,
+      "end": 452.08
+    },
+    {
+      "word": "boundaries",
+      "start": 452.08,
+      "end": 452.54
+    },
+    {
+      "word": "across",
+      "start": 452.54,
+      "end": 452.98
+    },
+    {
+      "word": "interconnected",
+      "start": 452.98,
+      "end": 453.58
+    },
+    {
+      "word": "systems",
+      "start": 453.58,
+      "end": 454.1
+    },
+    {
+      "word": "Cryptography",
+      "start": 454.84,
+      "end": 455.24
+    },
+    {
+      "word": "identity",
+      "start": 456.04,
+      "end": 456.04
+    },
+    {
+      "word": "management",
+      "start": 456.04,
+      "end": 456.48
+    },
+    {
+      "word": "runtime",
+      "start": 456.9,
+      "end": 457.14
+    },
+    {
+      "word": "isolation",
+      "start": 457.14,
+      "end": 457.62
+    },
+    {
+      "word": "provenance",
+      "start": 458.04,
+      "end": 458.32
+    },
+    {
+      "word": "verification",
+      "start": 458.32,
+      "end": 458.88
+    },
+    {
+      "word": "and",
+      "start": 459.14,
+      "end": 459.38
+    },
+    {
+      "word": "artificial",
+      "start": 459.38,
+      "end": 459.72
+    },
+    {
+      "word": "intelligence",
+      "start": 459.72,
+      "end": 460.24
+    },
+    {
+      "word": "safeguards",
+      "start": 460.24,
+      "end": 460.7
+    },
+    {
+      "word": "all",
+      "start": 460.7,
+      "end": 461.18
+    },
+    {
+      "word": "contribute",
+      "start": 461.18,
+      "end": 461.42
+    },
+    {
+      "word": "to",
+      "start": 461.42,
+      "end": 461.66
+    },
+    {
+      "word": "that",
+      "start": 461.66,
+      "end": 461.86
+    },
+    {
+      "word": "objective",
+      "start": 461.86,
+      "end": 462.22
+    },
+    {
+      "word": "but",
+      "start": 462.5,
+      "end": 462.94
+    },
+    {
+      "word": "none",
+      "start": 462.94,
+      "end": 463.14
+    },
+    {
+      "word": "can",
+      "start": 463.14,
+      "end": 463.4
+    },
+    {
+      "word": "independently",
+      "start": 463.4,
+      "end": 463.94
+    },
+    {
+      "word": "guarantee",
+      "start": 463.94,
+      "end": 464.36
+    },
+    {
+      "word": "security",
+      "start": 464.36,
+      "end": 464.86
+    },
+    {
+      "word": "The",
+      "start": 465.02,
+      "end": 465.68
+    },
+    {
+      "word": "most",
+      "start": 465.68,
+      "end": 465.94
+    },
+    {
+      "word": "resilient",
+      "start": 465.94,
+      "end": 466.26
+    },
+    {
+      "word": "architectures",
+      "start": 466.26,
+      "end": 467.0
+    },
+    {
+      "word": "assume",
+      "start": 467.0,
+      "end": 467.3
+    },
+    {
+      "word": "that",
+      "start": 467.3,
+      "end": 467.68
+    },
+    {
+      "word": "individual",
+      "start": 467.68,
+      "end": 468.02
+    },
+    {
+      "word": "controls",
+      "start": 468.02,
+      "end": 468.4
+    },
+    {
+      "word": "may",
+      "start": 468.4,
+      "end": 468.72
+    },
+    {
+      "word": "fail",
+      "start": 468.72,
+      "end": 468.92
+    },
+    {
+      "word": "and",
+      "start": 469.08,
+      "end": 469.44
+    },
+    {
+      "word": "are",
+      "start": 469.44,
+      "end": 469.62
+    },
+    {
+      "word": "designed",
+      "start": 469.62,
+      "end": 469.84
+    },
+    {
+      "word": "to",
+      "start": 469.84,
+      "end": 470.3
+    },
+    {
+      "word": "prevent",
+      "start": 470.3,
+      "end": 470.3
+    },
+    {
+      "word": "one",
+      "start": 470.3,
+      "end": 470.68
+    },
+    {
+      "word": "compromised",
+      "start": 470.68,
+      "end": 471.14
+    },
+    {
+      "word": "component",
+      "start": 471.14,
+      "end": 471.56
+    },
+    {
+      "word": "from",
+      "start": 471.56,
+      "end": 471.9
+    },
+    {
+      "word": "becoming",
+      "start": 471.9,
+      "end": 472.16
+    },
+    {
+      "word": "a",
+      "start": 472.16,
+      "end": 472.4
+    },
+    {
+      "word": "system",
+      "start": 472.4,
+      "end": 472.68
+    },
+    {
+      "word": "wide",
+      "start": 472.68,
+      "end": 472.94
+    },
+    {
+      "word": "compromise",
+      "start": 472.94,
+      "end": 473.3
+    }
+  ],
+  "voice": "marin",
+  "style": "expressive",
+  "model": "gpt-realtime-2.1-mini",
+  "audio_file": "english_overlap_20261024_233000_c4cd20.mp3",
+  "subtitle_file": "english_overlap_20261024_233000_c4cd20.json",
+  "summary": "ソフトウェア供給網、クラウドやKubernetes、eBPF監視、自律型AI、耐量子暗号をめぐる事例を通じ、現代のセキュリティでは複数の層にまたがる信頼境界の維持が課題だと論じている。個々の防御策だけに頼らず、侵害を前提に被害の連鎖を防ぐ設計と、実際のリスクに基づく評価が重要だと結論づけている。",
+  "word_count": 1098,
+  "character_count": 8767,
+  "audio_seconds": 474.2,
+  "cost": {
+    "realtime_usd": 0.1948316,
+    "transcription_usd": 0.04742009,
+    "total_usd": 0.24894529,
+    "currency": "USD",
+    "rates_per_1m_tokens": {
+      "input_audio": 10.0,
+      "input_text": 0.6,
+      "cached_input": 0.3,
+      "output_audio": 20.0,
+      "output_text": 2.4
+    },
+    "transcription_model": "whisper-1",
+    "transcription_rate_usd_per_minute": 0.006,
+    "usage": {
+      "total_tokens": 12649,
+      "input_tokens": 1358,
+      "output_tokens": 11291,
+      "input_token_details": {
+        "text_tokens": 1358,
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "cached_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        }
+      },
+      "output_token_details": {
+        "text_tokens": 1807,
+        "audio_tokens": 9484,
+        "reasoning_tokens": 79
+      }
+    },
+    "text_generation": {
+      "model": "gpt-6-luna",
+      "input_tokens": 3316,
+      "output_tokens": 12724,
+      "usd": 0.0066936,
+      "rate_version": "2026-10-24-v1",
+      "rates_per_1m_tokens": {
+        "input": 0.1,
+        "output": 0.5
+      },
+      "usage": {
+        "input_tokens": 3316,
+        "output_tokens": 12724
+      }
+    },
+    "text_generation_usd": 0.0066936
+  },
+  "title": "Trust Boundaries in Modern Cybersecurity",
+  "summary_model": "gpt-6-luna",
+  "summary_prompt_version": "material-summary-v2-json-source-title",
+  "summary_generated_at_utc": "2026-10-25T10:19:34+00:00"
+}
