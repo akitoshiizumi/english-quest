@@ -207,7 +207,7 @@ test('overlap repeats a selected sentence by button or R and explains missing ti
 
 test('overlap sentence navigation keys are configurable and controls stay beside scrolling text', async () => {
   await page.goto('http://127.0.0.1:18765/#overlap');
-  await page.waitForFunction(()=>[...document.querySelector('#savedList').options].some(option=>option.textContent.includes('Finally, we finish.')));
+  await page.waitForFunction(()=>document.querySelector('#savedList').options.length>1);
   await selectSavedMaterialByText(page,'Finally, we finish.');
   await page.waitForFunction(()=>document.querySelectorAll('.reader-sentence').length===3);
   const player=page.locator('#player');
@@ -307,7 +307,7 @@ test('A/U reveals answer, S/I records, mouse works and settings persist', async 
   await page.waitForFunction(() => document.querySelector('#againKeys').value === 'q,w');
   assert.equal(await page.locator('#againKeys').inputValue(), 'q,w');
   await openTab('オーバーラッピング');
-  await page.waitForFunction(() => document.querySelector('#storageLocation').textContent.includes('教材保存先'));
+  await page.waitForFunction(() => document.querySelector('#storageLocation').textContent.includes('音声ファイル保存先'));
   await page.waitForFunction(() => document.querySelector('#storageLocation').textContent.includes('テスト用'));
   assert.match(await page.locator('#storageLocation').textContent(),/overlap-e2e-.*materials/);
   await selectSavedMaterialByText(page,'A fixture sentence.');
