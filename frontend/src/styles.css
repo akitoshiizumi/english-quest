@@ -153,8 +153,8 @@ kbd { min-width: 25px; padding: 3px 6px; border: 1px solid #d6deeb; border-radiu
 .battle-center { display: grid; justify-items: center; gap: 8px; color: #b4c7e9; font-size: .74rem; }
 #battleChapter { white-space: pre-line; text-align: center; }
 .battle-versus { font-size: 1.45rem; font-weight: 900; font-style: italic; color: #f8d58b; }
-.quest-character { display: grid; place-items: center; width: min(100%,200px); height: 170px; }
-.character-sprite { display: none; width: 100%; height: 100%; min-height: 0; object-fit: contain; image-rendering: pixelated; }
+.quest-character { display: grid; place-items: center; width: 128px; height: 128px; flex: none; }
+.character-sprite { display: none; width: 128px; height: 128px; max-width: none; image-rendering: pixelated; }
 [data-stage="0"] .character-stage-0,[data-stage="1"] .character-stage-1,[data-stage="2"] .character-stage-2,[data-stage="3"] .character-stage-3 { display: block; }
 .battle-opponent { color: #79d5ab; }
 .battle-opponent[data-style="1"] { color: #75c3ef; }
@@ -173,10 +173,14 @@ kbd { min-width: 25px; padding: 3px 6px; border: 1px solid #d6deeb; border-radiu
   .quest-dock-visuals { justify-self: center; }
   .quest-dock a { font-size: .78rem; }
   .quest-dock p { font-size: .72rem; }
-  .battle-arena { gap: 5px; padding-inline: 4px; }
-  .battle-fighter svg,.quest-character { height: 130px; }
+  .battle-arena { grid-template-columns: repeat(2,minmax(128px,1fr)); gap: 8px; padding-inline: 0; }
+  .battle-fighter svg { height: 128px; }
   .battle-fighter strong { font-size: .8rem; }
-  .battle-center { max-width: 58px; text-align: center; }
+  .battle-center { grid-column: 1/-1; grid-row: 1; display: flex; justify-content: center; text-align: center; }
+}
+@media (max-width: 380px) {
+  .battle-arena { grid-template-columns: minmax(0,1fr); }
+  .battle-center { grid-column: auto; grid-row: auto; }
 }
 .stat-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(125px,1fr)); gap: 10px; margin: 14px 0; }
 .stat-card { display: flex; flex-direction: column; gap: 7px; padding: 14px; border: 1px solid var(--line); border-radius: 12px; background: #f8faff; }

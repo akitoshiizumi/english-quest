@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import type { KeyboardEvent, ReactNode } from 'react';
 import { setupOverlapControls } from './overlap';
-import apprenticeSprite from './assets/characters/apprentice-pixel-v1.png';
-import adventurerSprite from './assets/characters/adventurer-pixel-v1.png';
-import knightSprite from './assets/characters/knight-pixel-v1.png';
-import heroSprite from './assets/characters/hero-pixel-v1.png';
+import apprenticeSprite from './assets/characters/apprentice-pixel-128.png';
+import adventurerSprite from './assets/characters/adventurer-pixel-128.png';
+import knightSprite from './assets/characters/knight-pixel-128.png';
+import heroSprite from './assets/characters/hero-pixel-128.png';
 
 type TabId = 'overlap' | 'practice' | 'manage' | 'add' | 'database';
 type PageId = TabId | 'dashboard';
@@ -145,7 +145,7 @@ function QuestCharacter() {
   ];
   return <div className="quest-character">{stages.map((stage, index) =>
     <img key={stage.name} className={`character-sprite character-stage-${index}`} src={stage.src}
-      alt={`${stage.name}のドット絵`} width={1280} height={1280} loading="lazy" decoding="async" />
+      alt={`${stage.name}のドット絵`} width={128} height={128} loading="lazy" decoding="async" />
   )}</div>;
 }
 

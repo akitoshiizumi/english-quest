@@ -78,8 +78,9 @@ test('ten vocabulary answers defeat an enemy, award XP, and survive a reload', a
       await page.waitForFunction(expected => document.querySelector('#characterTitle').textContent === expected, character.title);
       const sprite = page.locator('#battleCharacter .character-sprite:visible');
       assert.equal(await sprite.count(), 1, 'exactly the current evolution should appear');
-      assert.match(await sprite.getAttribute('src'), new RegExp(`${character.file}-pixel-v1`));
-      assert.match(await page.locator('#questDockCharacter .character-sprite:visible').getAttribute('src'), new RegExp(`${character.file}-pixel-v1`));
+      assert.match(await sprite.getAttribute('src'), new RegExp(`${character.file}-pixel-128`));
+      const dockSprite = page.locator('#questDockCharacter .character-sprite:visible');
+      assert.match(await dockSprite.getAttribute('src'), new RegExp(`${character.file}-pixel-128`));
       await sprite.evaluate(async image => { await image.decode(); });
       const pixels = await sprite.evaluate(image => {
         const canvas = document.createElement('canvas');
@@ -89,6 +90,14 @@ test('ten vocabulary answers defeat an enemy, award XP, and survive a reload', a
         return {transparent:data[3]===0,hasArtwork:data.some((value,index) => index%4===3 && value>0)};
       });
       assert.deepEqual(pixels, {transparent:true,hasArtwork:true}, 'illustrations should contain artwork on a transparent background');
+      for (const image of [sprite,dockSprite]) {
+        await image.evaluate(async element => { await element.decode(); });
+        const dimensions = await image.evaluate(element => {
+          const bounds = element.getBoundingClientRect();
+          return [element.naturalWidth,element.naturalHeight,bounds.width,bounds.height];
+        });
+        assert.deepEqual(dimensions, [128,128,128,128], 'the actual PNG resolution and rendered size must match in both panels');
+      }
       assert.equal(await sprite.evaluate(image => getComputedStyle(image).imageRendering), 'pixelated');
       await page.locator('#battleArena').screenshot({path:`tests/e2e-artifacts/character-stage-${stage}.png`});
     }
@@ -112,6 +121,15 @@ test('ten vocabulary answers defeat an enemy, award XP, and survive a reload', a
       assert.equal(spriteBounds.width, 128, 'pixel characters must not shrink into unreadable thumbnails');
       assert.equal(spriteBounds.height, 128, 'pixel characters must keep a square frame');
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+      await page.locator('#questDockSummary').click();
+      const dashboardSprite = page.locator('#battleCharacter .character-sprite:visible');
+      const dimensions = await dashboardSprite.evaluate(element => {
+        const bounds = element.getBoundingClientRect();
+        return [element.naturalWidth,element.naturalHeight,bounds.width,bounds.height];
+      });
+      assert.deepEqual(dimensions, [128,128,128,128], 'dashboard sprites must also remain at native size on narrow screens');
+      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'native-size dashboard art must not overflow on mobile');
+      await page.getByRole('tab',{name:'語彙練習',exact:true}).click();
       if (width === 390) await page.locator('.quest-dock').screenshot({path:'tests/e2e-artifacts/adventure-dock-mobile.png'});
     }
     assert.deepEqual(errors, []);

@@ -1,15 +1,27 @@
 # English Quest pixel characters
 
 Production illustrations generated with the built-in image generation tool.
-All four PNGs have transparent backgrounds and are bundled locally by Vite.
+All four runtime PNGs have transparent backgrounds, are exactly 128 x 128 pixels,
+and are displayed at 128 x 128 CSS pixels in both the practice panel and dashboard.
+No responsive resizing, `object-fit` scaling, or percentage image dimensions are used.
+They are bundled locally by Vite.
 `battleCharacter[data-stage]` selects the illustration for the character's level.
 
 | Stage | Level | File |
 | --- | --- | --- |
-| Apprentice | 1 | `apprentice-pixel-v1.png` |
-| Adventurer | 3 | `adventurer-pixel-v1.png` |
-| Quest knight | 5 | `knight-pixel-v1.png` |
-| Word hero | 10 | `hero-pixel-v1.png` |
+| Apprentice | 1 | `apprentice-pixel-128.png` |
+| Adventurer | 3 | `adventurer-pixel-128.png` |
+| Quest knight | 5 | `knight-pixel-128.png` |
+| Word hero | 10 | `hero-pixel-128.png` |
+
+The original `*-pixel-v1.png` artwork is 1254 x 1254 pixels and is retained as
+the editable source. Generate the runtime assets with
+`node tools/prepare_character_sprites.cjs`. This applies high-quality Canvas
+downsampling once, preserving alpha; it does not use an API or network.
+The large originals are not imported into the runtime bundle.
+
+Here 1:1 means one PNG pixel per CSS pixel. Physical monitor pixels also depend
+on device pixel ratio and browser zoom; CSS cannot override those user settings.
 
 ## Final prompt set
 
