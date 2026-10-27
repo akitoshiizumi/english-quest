@@ -106,9 +106,14 @@ test('ten vocabulary answers defeat an enemy, award XP, and survive a reload', a
     const hpBounds = await page.locator('#questDockHp').boundingBox();
     assert.ok(dockBounds.width <= 860 && hpBounds.width <= 340, 'the character, text, and HP should stay grouped on a wide screen');
     await page.locator('.quest-dock').screenshot({path:'tests/e2e-artifacts/adventure-dock-desktop.png'});
-    await page.setViewportSize({width:390,height:844});
-    assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
-    await page.locator('.quest-dock').screenshot({path:'tests/e2e-artifacts/adventure-dock-mobile.png'});
+    for (const width of [1700,390,320]) {
+      await page.setViewportSize({width,height:900});
+      const spriteBounds = await page.locator('#questDockCharacter .character-sprite:visible').boundingBox();
+      assert.equal(spriteBounds.width, 128, 'pixel characters must not shrink into unreadable thumbnails');
+      assert.equal(spriteBounds.height, 128, 'pixel characters must keep a square frame');
+      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+      if (width === 390) await page.locator('.quest-dock').screenshot({path:'tests/e2e-artifacts/adventure-dock-mobile.png'});
+    }
     assert.deepEqual(errors, []);
   } finally {
     if (browser) await browser.close();
