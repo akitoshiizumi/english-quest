@@ -491,7 +491,7 @@
       $('battleEnemy').dataset.boss=String(battle.is_boss);
       $('battleEnemyName').textContent=(battle.is_boss?'BOSS · ':'')+battle.enemy_name;
       $('battleEnemyReward').textContent=`撃破で +${battle.next_reward_xp} XP`;
-      $('battleChapter').textContent=`第${battle.chapter}章 · ${battle.encounter}体目`;
+      $('battleChapter').textContent=`第${battle.chapter}章\n${battle.encounter}体目`;
       $('battleHpText').textContent=`${battle.hp} / ${battle.max_hp}`;
       for(const id of ['battleHp','questDockHp']){const bar=$(id);bar.max=battle.max_hp;bar.value=battle.hp;}
       $('battleDefeated').textContent=`撃破 ${battle.defeated}体（ボス ${battle.bosses_defeated}体）`;

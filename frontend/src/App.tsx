@@ -1,6 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import type { KeyboardEvent, ReactNode } from 'react';
 import { setupOverlapControls } from './overlap';
+import apprenticeSprite from './assets/characters/apprentice-pixel-v1.png';
+import adventurerSprite from './assets/characters/adventurer-pixel-v1.png';
+import knightSprite from './assets/characters/knight-pixel-v1.png';
+import heroSprite from './assets/characters/hero-pixel-v1.png';
 
 type TabId = 'overlap' | 'practice' | 'manage' | 'add' | 'database';
 type PageId = TabId | 'dashboard';
@@ -133,22 +137,16 @@ function PracticePage() {
 }
 
 function QuestCharacter() {
-  return <svg viewBox="0 0 160 180" className="quest-character" aria-hidden="true">
-    <ellipse cx="80" cy="166" rx="49" ry="8" fill="#0b182b" opacity=".3" />
-    <path className="hero-cape" d="M53 82 Q27 113 30 154 L80 140 130 154 Q130 113 107 82Z" />
-    <path d="M59 132 L57 159 74 159 80 137 86 159 103 159 101 132" fill="#24334e" />
-    <path className="hero-tunic" d="M53 84 Q80 74 107 84 L111 132 Q80 147 49 132Z" />
-    <path d="M51 121 L109 121 108 132 51 132Z" fill="#79513e" /><rect x="73" y="120" width="14" height="14" rx="3" fill="#f6ce75" />
-    <circle cx="80" cy="57" r="30" fill="#ffd4ac" />
-    <path d="M49 59 Q39 19 78 20 Q115 14 113 58 L100 42 91 47 79 37 66 47 55 43Z" fill="#533b43" />
-    <path d="M49 37 Q77 1 111 36 L115 46 Q80 29 45 46Z" className="hero-hat" />
-    <g className="hero-crown"><path d="M56 25 L53 7 70 16 80 2 91 16 108 7 104 25Z" fill="#ffd66d" /><circle cx="80" cy="18" r="4" fill="#68d8d1" /></g>
-    <circle cx="69" cy="59" r="3" fill="#3e3545" /><circle cx="92" cy="59" r="3" fill="#3e3545" />
-    <path d="M73 72 Q81 78 89 71" fill="none" stroke="#b37164" strokeWidth="3" strokeLinecap="round" />
-    <path d="M53 91 L36 112 M107 92 L123 108" fill="none" stroke="#ffd4ac" strokeWidth="15" strokeLinecap="round" />
-    <g transform="rotate(16 125 90)"><path d="M121 96 L121 45 128 31 135 45 135 96Z" fill="#d6ecff" /><path d="M128 42 L128 94" stroke="#8ab7dc" strokeWidth="3" /><path d="M115 98 L141 98 M128 100 L128 117" stroke="#e7b45d" strokeWidth="7" strokeLinecap="round" /></g>
-    <g className="hero-shield"><path d="M18 102 L39 96 59 103 55 130 39 141 22 130Z" fill="#6cc6c7" stroke="#f7d184" strokeWidth="4" /><path d="M39 105 L39 131 M29 117 L49 117" stroke="#e9ffff" strokeWidth="4" /></g>
-  </svg>;
+  const stages = [
+    {src: apprenticeSprite, name: '見習い冒険者'},
+    {src: adventurerSprite, name: '冒険者'},
+    {src: knightSprite, name: 'クエストナイト'},
+    {src: heroSprite, name: 'ことばの勇者'},
+  ];
+  return <div className="quest-character">{stages.map((stage, index) =>
+    <img key={stage.name} className={`character-sprite character-stage-${index}`} src={stage.src}
+      alt={`${stage.name}のドット絵`} width={1280} height={1280} loading="lazy" decoding="async" />
+  )}</div>;
 }
 
 function QuestEnemy() {

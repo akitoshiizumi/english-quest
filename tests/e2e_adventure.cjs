@@ -57,6 +57,36 @@ test('ten vocabulary answers defeat an enemy, award XP, and survive a reload', a
     await page.setViewportSize({width:390,height:844});
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'mobile page must not overflow horizontally');
     await page.screenshot({path:'tests/e2e-artifacts/adventure-mobile.png',fullPage:true});
+    // Verify all shipped illustrations through real static URLs and the UI's API update path.
+    const stages = [
+      {level:1,title:'見習い冒険者',file:'apprentice'},
+      {level:3,title:'冒険者',file:'adventurer'},
+      {level:5,title:'クエストナイト',file:'knight'},
+      {level:10,title:'ことばの勇者',file:'hero'},
+    ];
+    let illustrationData = data;
+    await page.route('**/api/adventure', route => route.fulfill({json:illustrationData}));
+    for (const [stage, character] of stages.entries()) {
+      const next = stages[stage+1];
+      illustrationData = {...data,level:character.level,character:{stage,title:character.title,
+        next_evolution_level:next?.level??null,next_evolution_title:next?.title??null}};
+      await page.evaluate(() => window.dispatchEvent(new CustomEvent('english-overlap-activity-saved')));
+      await page.waitForFunction(expected => document.querySelector('#characterTitle').textContent === expected, character.title);
+      const sprite = page.locator('#battleCharacter .character-sprite:visible');
+      assert.equal(await sprite.count(), 1, 'exactly the current evolution should appear');
+      assert.match(await sprite.getAttribute('src'), new RegExp(`${character.file}-pixel-v1`));
+      await sprite.evaluate(async image => { await image.decode(); });
+      const pixels = await sprite.evaluate(image => {
+        const canvas = document.createElement('canvas');
+        canvas.width = image.naturalWidth; canvas.height = image.naturalHeight;
+        const context = canvas.getContext('2d'); context.drawImage(image,0,0);
+        const data = context.getImageData(0,0,canvas.width,canvas.height).data;
+        return {transparent:data[3]===0,hasArtwork:data.some((value,index) => index%4===3 && value>0)};
+      });
+      assert.deepEqual(pixels, {transparent:true,hasArtwork:true}, 'illustrations should contain artwork on a transparent background');
+      assert.equal(await sprite.evaluate(image => getComputedStyle(image).imageRendering), 'pixelated');
+      await page.locator('#battleArena').screenshot({path:`tests/e2e-artifacts/character-stage-${stage}.png`});
+    }
     assert.deepEqual(errors, []);
   } finally {
     if (browser) await browser.close();
