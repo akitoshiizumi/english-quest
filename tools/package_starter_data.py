@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+from datetime import datetime, timezone
 import gzip
 import hashlib
 import json
@@ -10,8 +11,10 @@ import sqlite3
 import tempfile
 from contextlib import closing
 from pathlib import Path
+import sys
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
 
 
 def main() -> None:
@@ -26,6 +29,27 @@ def main() -> None:
         snapshot = Path(temporary) / "vocab.db"
         with closing(sqlite3.connect(args.database.resolve().as_uri() + "?mode=ro", uri=True)) as source, closing(sqlite3.connect(snapshot)) as target:
             source.backup(target)
+            from english_overlap.database import EMBEDDING_DIMENSIONS, compact_embedding_json, normalized_embedding_json
+            cursor = target.execute("SELECT vocab_id,sense_id,model,input_version,vector_json FROM embeddings")
+            while rows := cursor.fetchmany(64):
+                target.executemany("UPDATE embeddings SET vector_json=? WHERE vocab_id=? AND sense_id=? AND model=? AND input_version=?",
+                                   [(compact_embedding_json(row[4]), *row[:4]) for row in rows])
+            cursor = target.execute("SELECT candidate_id,embedding_json FROM candidates WHERE embedding_json IS NOT NULL")
+            while rows := cursor.fetchmany(64):
+                target.executemany("UPDATE candidates SET embedding_json=? WHERE candidate_id=?",
+                                   [(compact_embedding_json(row[1]), row[0]) for row in rows])
+            cursor = target.execute("SELECT vocab_id,sense_id,model,input_version,vector_json FROM embeddings WHERE model LIKE 'text-embedding-3-%' AND dimensions> ?", (EMBEDDING_DIMENSIONS,))
+            while rows := cursor.fetchmany(64):
+                target.executemany("UPDATE embeddings SET dimensions=?,vector_json=? WHERE vocab_id=? AND sense_id=? AND model=? AND input_version=?",
+                                   [(EMBEDDING_DIMENSIONS, normalized_embedding_json(row[4], EMBEDDING_DIMENSIONS), *row[:4]) for row in rows])
+            cursor = target.execute("SELECT candidate_id,embedding_json FROM candidates WHERE embedding_model LIKE 'text-embedding-3-%' AND embedding_dimensions> ? AND embedding_json IS NOT NULL", (EMBEDDING_DIMENSIONS,))
+            while rows := cursor.fetchmany(64):
+                target.executemany("UPDATE candidates SET embedding_dimensions=?,embedding_json=? WHERE candidate_id=?",
+                                   [(EMBEDDING_DIMENSIONS, normalized_embedding_json(row[1], EMBEDDING_DIMENSIONS), row[0]) for row in rows])
+            target.execute("INSERT OR IGNORE INTO schema_migrations(version,applied_at_utc) VALUES (7,?)",
+                           (datetime.now(timezone.utc).isoformat(timespec="seconds"),))
+            target.commit()
+            target.execute("VACUUM")
             if target.execute("PRAGMA quick_check").fetchone()[0] != "ok":
                 raise ValueError("Source database failed integrity check")
             counts = {table: target.execute(f"SELECT count(*) FROM {table}").fetchone()[0]

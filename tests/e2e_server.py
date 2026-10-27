@@ -103,7 +103,7 @@ with wave.open(two_sentence_audio, 'wb') as audio:
     'words':[], 'audio_seconds':4.0,'audio_file':'english_overlap_zz_two_sentence_fixture.wav','summary':'Untimed fixture'
 },ensure_ascii=False),encoding='utf-8')
 http.schedule_automatic_difficulty()  # Startup queues a bounded job; the empty key keeps it waiting.
-server = ThreadingHTTPServer(('127.0.0.1', 18765), Handler)
+server = ThreadingHTTPServer(('127.0.0.1', int(os.environ.get('ENGLISH_OVERLAP_E2E_PORT', '18765'))), Handler)
 try:
     server.serve_forever()
 finally:

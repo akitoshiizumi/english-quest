@@ -98,9 +98,16 @@ class EmbeddingTests(unittest.TestCase):
         item=result['items'][0]
         self.assertFalse(item['excluded'],'all nearest words are below the exclusion threshold')
         self.assertEqual([match['english'] for match in item['similar_matches']],['near-a','near-b','near-c'])
-        self.assertAlmostEqual(item['similar_matches'][0]['similarity'],.9)
-        self.assertAlmostEqual(item['similar_matches'][1]['similarity'],.8)
-        self.assertAlmostEqual(item['similar_matches'][2]['similarity'],.8)
+        # The stored vectors are normalized and rounded to four decimals.
+        # Check exact search against those actual vectors, not pre-save inputs.
+        expected={}
+        with database.connect(self.path) as conn:
+            for row in conn.execute("SELECT vocab_id,vector_json FROM embeddings WHERE vocab_id LIKE 'near-%'"):
+                vector=json.loads(row['vector_json'])
+                similarity=vector[0]/math.sqrt(sum(value*value for value in vector))
+                expected[row['vocab_id']]=max(expected.get(row['vocab_id'],-1),similarity)
+        for match in item['similar_matches']:
+            self.assertAlmostEqual(match['similarity'],expected[match['english']])
 
     def test_safe_prefix_bound_skips_full_cosine_for_unrelated_vectors(self):
         rng=random.Random(78);vectors=[]

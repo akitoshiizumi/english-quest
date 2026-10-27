@@ -18,6 +18,10 @@ from .vocabulary import normalize_headword
 INPUT_VERSION='english-meaning-v1'
 
 
+def _request_dimensions(model: str) -> int | None:
+    return database.EMBEDDING_DIMENSIONS if model.startswith('text-embedding-3-') else None
+
+
 def make_embedding_text(english: str, meaning: str) -> str:
     return f"English: {english.strip()}\nJapanese meaning: {meaning.strip()}"
 
@@ -28,7 +32,10 @@ def embedding_hash(text: str) -> str:
 
 def fetch_embedding(text: str, *, api_key: str, model: str | None = None, provider=request_json) -> tuple[list[float], str, dict]:
     model=model or os.environ.get('OPENAI_EMBEDDING_MODEL','text-embedding-3-small')
-    result=provider('embeddings',{'model':model,'input':text},api_key=api_key)
+    request={'model':model,'input':text}
+    dimensions=_request_dimensions(model)
+    if dimensions is not None:request['dimensions']=dimensions
+    result=provider('embeddings',request,api_key=api_key)
     return [float(x) for x in result['data'][0]['embedding']], result.get('model',model), result.get('usage',{})
 
 
@@ -40,7 +47,7 @@ def save_embedding(vocab_id: str, sense_id: int, text: str, vector: list[float],
         conn.execute("""INSERT INTO embeddings(vocab_id,sense_id,model,dimensions,input_version,input_hash,vector_json,created_at_utc)
             VALUES (?,?,?,?,?,?,?,?) ON CONFLICT(vocab_id,sense_id,model,input_version) DO UPDATE SET
             dimensions=excluded.dimensions,input_hash=excluded.input_hash,vector_json=excluded.vector_json,created_at_utc=excluded.created_at_utc""",
-            (vocab_id,sense_id,model,len(vector),INPUT_VERSION,embedding_hash(text),json.dumps(vector,separators=(',',':')),datetime.now(timezone.utc).isoformat(timespec='seconds')))
+            (vocab_id,sense_id,model,len(vector),INPUT_VERSION,embedding_hash(text),database.normalized_embedding_json(vector),datetime.now(timezone.utc).isoformat(timespec='seconds')))
 
 
 def index_missing(*, api_key: str, limit: int = 100, path=None, provider=request_json) -> dict:
@@ -52,7 +59,10 @@ def index_missing(*, api_key: str, limit: int = 100, path=None, provider=request
     if not rows:return {'indexed':0,'remaining':0,'model':os.environ.get('OPENAI_EMBEDDING_MODEL','text-embedding-3-small')}
     model=os.environ.get('OPENAI_EMBEDDING_MODEL','text-embedding-3-small')
     texts=[make_embedding_text(row['english'],row['meaning']) for row in rows]
-    result=provider('embeddings',{'model':model,'input':texts},api_key=api_key)
+    request={'model':model,'input':texts}
+    dimensions=_request_dimensions(model)
+    if dimensions is not None:request['dimensions']=dimensions
+    result=provider('embeddings',request,api_key=api_key)
     for row,item,text in zip(rows,result['data'],texts):
         save_embedding(row['vocab_id'],row['sense_id'],text,item['embedding'],result.get('model',model),path=path)
     with database.connect(path) as conn:
@@ -127,7 +137,10 @@ def compare_candidates(candidates: list[dict], *, api_key: str, threshold: float
             texts.append(make_embedding_text(candidate.get('english',''),candidate.get('meaning','')))
     usage={}
     if pending:
-        result=provider('embeddings',{'model':model,'input':texts},api_key=api_key)
+        request={'model':model,'input':texts}
+        dimensions=_request_dimensions(model)
+        if dimensions is not None:request['dimensions']=dimensions
+        result=provider('embeddings',request,api_key=api_key)
         model=result.get('model',model);usage=result.get('usage',{})
         data=result.get('data') or []
         if len(data)!=len(pending):raise ValueError('Embedding response count does not match candidate count')

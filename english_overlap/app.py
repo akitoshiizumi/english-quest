@@ -50,7 +50,8 @@ STYLE_ORDER=['natural','clear','expressive','joy','sadness','anger','reduced','r
 
 def parse_practice_text(text):
     """Split English input into sentence blocks for translation generation."""
-    sentences=[part.strip() for part in re.split(r'(?<=[.!?])\s+|\n+',text.strip()) if part.strip()]
+    from .sentences import split_english_sentences
+    sentences=split_english_sentences(text.strip())
     if not sentences:
         sentences=[text.strip()]
     return [{'english':sentence,'japanese':'','vocabulary':[]} for sentence in sentences],text.strip()

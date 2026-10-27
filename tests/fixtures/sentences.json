@@ -1,0 +1,8 @@
+[
+  {"text":"The U.S. government met Dr. Smith. They discussed U.K. policy.","sentences":["The U.S. government met Dr. Smith.","They discussed U.K. policy."]},
+  {"text":"They live in the U.S. The next visit is tomorrow.","sentences":["They live in the U.S.","The next visit is tomorrow."]},
+  {"text":"Mr. Smith and J. R. Tolkien met at 3.14 p.m. yesterday. Next came dinner.","sentences":["Mr. Smith and J. R. Tolkien met at 3.14 p.m. yesterday.","Next came dinner."]},
+  {"text":"Examples, e.g. apples, help. Is this clear? Yes!","sentences":["Examples, e.g. apples, help.","Is this clear?","Yes!"]},
+  {"text":"The U.S.　economy grows.\nAnother line.","sentences":["The U.S.　economy grows.","Another line."]},
+  {"text":"He said, \"Hello.\" She waved.\n\nA final line without punctuation","sentences":["He said, \"Hello.\"","She waved.","A final line without punctuation"]}
+]

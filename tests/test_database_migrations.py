@@ -49,7 +49,7 @@ class DatabaseMigrationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             db_path = self.make_legacy_db(Path(temp))
             version, backup_path = database.migrate_database(db_path)
-            self.assertEqual(version, 5)
+            self.assertEqual(version, 7)
             self.assertTrue(backup_path.is_file())
             with database.connect(db_path) as conn:
                 self.assertEqual(conn.execute("SELECT count(*) FROM vocab").fetchone()[0], 2)
@@ -58,7 +58,7 @@ class DatabaseMigrationTests(unittest.TestCase):
                 self.assertEqual(conn.execute("SELECT meaning FROM senses WHERE vocab_id='fixture-1'").fetchone()[0], '参加する')
                 self.assertEqual(conn.execute("SELECT count(*) FROM vocabulary_categories").fetchone()[0], 2)
                 self.assertEqual(conn.execute("PRAGMA foreign_key_check").fetchall(), [])
-                self.assertEqual(conn.execute("SELECT max(version) FROM schema_migrations").fetchone()[0], 5)
+                self.assertEqual(conn.execute("SELECT max(version) FROM schema_migrations").fetchone()[0], 7)
             self.assertEqual(self.scalar(backup_path, "SELECT count(*) FROM vocab"), 2)
 
     def test_migration_is_idempotent_and_does_not_make_new_backup_without_changes(self):
@@ -66,7 +66,7 @@ class DatabaseMigrationTests(unittest.TestCase):
             db_path = self.make_legacy_db(Path(temp))
             database.migrate_database(db_path)
             version, backup_path = database.migrate_database(db_path)
-            self.assertEqual(version, 5)
+            self.assertEqual(version, 7)
             self.assertIsNone(backup_path)
             with database.connect(db_path) as conn:
                 self.assertEqual(conn.execute("SELECT count(*) FROM senses").fetchone()[0], 2)
@@ -107,7 +107,7 @@ class DatabaseMigrationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             folder=Path(temp); db_path=self.make_legacy_db(folder); database.migrate_database(db_path)
             self.assertEqual(database.database_status(db_path)['integrity'],'ok')
-            self.assertEqual(database.database_status(db_path)['schema_version'],5)
+            self.assertEqual(database.database_status(db_path)['schema_version'],7)
             backup=database.backup_database(db_path)
             self.assertIn(backup.name,[item['name'] for item in database.list_database_backups(db_path)])
             other=folder/'another.backup-example.sqlite3';other.touch()

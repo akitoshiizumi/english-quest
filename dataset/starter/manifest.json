@@ -1,6 +1,6 @@
 {
   "format_version": 1,
-  "database_size": 563412992,
+  "database_size": 139022336,
   "counts": {
     "vocab": 17163,
     "materials": 14
@@ -8,52 +8,16 @@
   "parts": [
     {
       "name": "vocab.db.part-000.gz",
-      "sha256": "c34fc5dfffcc4c378b7369325c7fc92b0ea800efe1c9c8c23deb968ca2287937"
+      "sha256": "0922fc4074b17440d211ba37d5175d42e63f77279a20f601b904bdd0430e008b"
     },
     {
       "name": "vocab.db.part-001.gz",
-      "sha256": "2d4f7af659301b1bd20046bbddbc293096c56f2a7c2a9409b71a37fba7ffdf6c"
+      "sha256": "7068fcbdc8baeabce06999543e98420f05e7d498e7af2daab5faba95440c38c2"
     },
     {
       "name": "vocab.db.part-002.gz",
-      "sha256": "6f2d32b5f39dfe14f96d9711f65706b4c4374fb88580520773bc1c4b97cddf81"
-    },
-    {
-      "name": "vocab.db.part-003.gz",
-      "sha256": "f0afe9b56aa185b191eb9c062424e6125569a10ec815f4fd701cd1d4a5d3787a"
-    },
-    {
-      "name": "vocab.db.part-004.gz",
-      "sha256": "885517b59b98f13e7e1cec7de8262990cc59971acd9a15b41a3dc5aed83d80e0"
-    },
-    {
-      "name": "vocab.db.part-005.gz",
-      "sha256": "5ee5d1f86999665685fa529b294887a0a085b2d7b1d461e23081cc11c97e3233"
-    },
-    {
-      "name": "vocab.db.part-006.gz",
-      "sha256": "f386796ec09b117d9f4304922a582c6e67a02b6e59e11bb33bcb7686537b6cfb"
-    },
-    {
-      "name": "vocab.db.part-007.gz",
-      "sha256": "11ef539097eff363d589377831ac798f7218056f2412b009c74f313cd413ffcb"
-    },
-    {
-      "name": "vocab.db.part-008.gz",
-      "sha256": "da190d11d97c8f96e28049b7f24ca64aef0c7ae7ad6b34b10c8146830881ecbd"
-    },
-    {
-      "name": "vocab.db.part-009.gz",
-      "sha256": "cdd419134f35f1d5930444426716fced376416bdab9e31b3eb8bd29812f7baba"
-    },
-    {
-      "name": "vocab.db.part-010.gz",
-      "sha256": "d6dd1e4971e9f7b192f0ba8579de642528ab8145f79be382a90794635a1db12f"
-    },
-    {
-      "name": "vocab.db.part-011.gz",
-      "sha256": "52d9e9e89b2218356fdd9c36dabcb102bc193a6630c075c5eea67b25fa501fde"
+      "sha256": "49ad85de0503a61cdb0df414a88160c116713c670cb9116ee81c5f79bb80a3fa"
     }
   ],
-  "database_sha256": "e4a759458cb892eeaf2ff3c66a8fbc108ece72ddac7e504a5cdcc74f4d019a6a"
+  "database_sha256": "9f119f7fba4a4f82125d197bcccfa40383b9410af8ad89bfd47b15b206bcef9d"
 }

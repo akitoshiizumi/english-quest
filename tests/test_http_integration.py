@@ -18,6 +18,31 @@ def generation_stream(response):
 
 
 class HttpIntegrationTests(unittest.TestCase):
+    def test_practice_score_api_supports_seed_and_validates_random_range(self):
+        url='/api/next-question?direction=en_to_ja&random_range=20&random_seed=stable'
+        _,_,first=self.get(url);_,_,second=self.get(url)
+        self.assertEqual(json.loads(first),json.loads(second))
+        item=json.loads(first)['item']
+        self.assertEqual((item['correct_count'],item['answer_count']),(0,0))
+        self.assertEqual(item['score'],item['random_adjustment'])
+        self.assertLessEqual(abs(item['random_adjustment']),20)
+        for value in ['-1','101','nan','inf']:
+            with self.subTest(value=value):
+                with self.assertRaises(HTTPError) as caught:self.get('/api/next-question?random_range='+value)
+                self.assertEqual(caught.exception.code,400)
+
+    def test_sentence_damage_api_is_idempotent_and_rejects_fractional_counts(self):
+        _,_,session=self.post_json('/api/overlap/session',{})
+        payload={'session_id':session['session_id'],'material_id':'fixture-material','duration_seconds':3,
+                 'completed_sentences':1,'idempotency_key':'sentence-damage'}
+        self.post_json('/api/overlap/activity',payload)
+        self.post_json('/api/overlap/activity',payload)
+        _,_,progress=self.get('/api/adventure')
+        self.assertEqual(json.loads(progress)['total_damage'],1)
+        with self.assertRaises(HTTPError) as caught:
+            self.post_json('/api/overlap/activity',{**payload,'completed_sentences':1.5,'idempotency_key':'bad-count'})
+        self.assertEqual(caught.exception.code,400)
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.folder = Path(self.temp.name)
@@ -240,7 +265,7 @@ class HttpIntegrationTests(unittest.TestCase):
         from urllib.request import Request
         status,_,body=self.get('/api/database/status')
         info=json.loads(body)
-        self.assertEqual((status,info['schema_version'],info['integrity']),(200,5,'ok'))
+        self.assertEqual((status,info['schema_version'],info['integrity']),(200,7,'ok'))
         req=Request(self.base+'/api/database/backup',data=b'{}',headers={'Content-Type':'application/json'},method='POST')
         with urlopen(req) as response: backup=json.loads(response.read())
         self.assertTrue(backup['created'].startswith('test.backup-'))

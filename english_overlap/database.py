@@ -6,6 +6,7 @@ import json
 import math
 import os
 import re
+import random
 import sqlite3
 import tempfile
 import uuid
@@ -339,7 +340,69 @@ def _migration_5(conn: sqlite3.Connection) -> None:
                          (json.dumps(metadata,ensure_ascii=False),json.dumps(content,ensure_ascii=False),row['material_id']))
 
 
-MIGRATIONS = ((1, _migration_1), (2, _migration_2), (3, _migration_3), (4, _migration_4), (5, _migration_5))
+EMBEDDING_DECIMAL_PLACES = 4
+EMBEDDING_DIMENSIONS = 768
+
+
+def compact_embedding_json(value: str | list[float] | None) -> str | None:
+    """Round embeddings enough to cut storage while retaining all model dimensions."""
+    if value is None:
+        return None
+    vector = json.loads(value) if isinstance(value, str) else value
+    if not isinstance(vector, list) or not vector:
+        raise ValueError('Embedding vector must be a non-empty list')
+    compacted = [round(float(item), EMBEDDING_DECIMAL_PLACES) for item in vector]
+    if not all(math.isfinite(item) for item in compacted):
+        raise ValueError('Embedding vector must contain finite numbers')
+    return json.dumps(compacted, separators=(',', ':'))
+
+
+def normalized_embedding_json(value: str | list[float], dimensions: int | None = None) -> str:
+    """Shorten and normalize a third-generation embedding for cosine similarity."""
+    vector = json.loads(value) if isinstance(value, str) else value
+    if not isinstance(vector, list) or not vector:
+        raise ValueError('Embedding vector must be a non-empty list')
+    vector = [float(item) for item in vector[:dimensions]] if dimensions else [float(item) for item in vector]
+    if dimensions is not None and len(vector) != dimensions:
+        raise ValueError(f'Embedding vector must contain exactly {dimensions} dimensions')
+    if not all(math.isfinite(item) for item in vector):
+        raise ValueError('Embedding vector must contain finite numbers')
+    sumprod = getattr(math, 'sumprod', None)
+    magnitude = math.sqrt(sumprod(vector, vector) if sumprod else sum(item * item for item in vector))
+    if magnitude == 0:
+        raise ValueError('Embedding vector must have a non-zero norm')
+    return json.dumps([round(item / magnitude, EMBEDDING_DECIMAL_PLACES) for item in vector], separators=(',', ':'))
+
+
+def _migration_6(conn: sqlite3.Connection) -> None:
+    """Compact cached OpenAI vectors without an API call or dimension change."""
+    cursor = conn.execute('SELECT vocab_id,sense_id,model,input_version,vector_json FROM embeddings')
+    while rows := cursor.fetchmany(64):
+        conn.executemany('''UPDATE embeddings SET vector_json=?
+            WHERE vocab_id=? AND sense_id=? AND model=? AND input_version=?''',
+            [(compact_embedding_json(row['vector_json']), row['vocab_id'], row['sense_id'],
+              row['model'], row['input_version']) for row in rows])
+    cursor = conn.execute('SELECT candidate_id,embedding_json FROM candidates WHERE embedding_json IS NOT NULL')
+    while rows := cursor.fetchmany(64):
+        conn.executemany('UPDATE candidates SET embedding_json=? WHERE candidate_id=?',
+                          [(compact_embedding_json(row['embedding_json']), row['candidate_id']) for row in rows])
+
+
+def _migration_7(conn: sqlite3.Connection) -> None:
+    """Shorten text-embedding-3 vectors to 768 dimensions and normalize them."""
+    cursor = conn.execute("SELECT vocab_id,sense_id,model,input_version,vector_json FROM embeddings WHERE model LIKE 'text-embedding-3-%' AND dimensions> ?", (EMBEDDING_DIMENSIONS,))
+    while rows := cursor.fetchmany(64):
+        conn.executemany('''UPDATE embeddings SET dimensions=?,vector_json=?
+            WHERE vocab_id=? AND sense_id=? AND model=? AND input_version=?''',
+            [(EMBEDDING_DIMENSIONS, normalized_embedding_json(row['vector_json'], EMBEDDING_DIMENSIONS),
+              row['vocab_id'], row['sense_id'], row['model'], row['input_version']) for row in rows])
+    cursor = conn.execute("SELECT candidate_id,embedding_json FROM candidates WHERE embedding_model LIKE 'text-embedding-3-%' AND embedding_dimensions> ? AND embedding_json IS NOT NULL", (EMBEDDING_DIMENSIONS,))
+    while rows := cursor.fetchmany(64):
+        conn.executemany('UPDATE candidates SET embedding_dimensions=?,embedding_json=? WHERE candidate_id=?',
+                          [(EMBEDDING_DIMENSIONS, normalized_embedding_json(row['embedding_json'], EMBEDDING_DIMENSIONS), row['candidate_id']) for row in rows])
+
+
+MIGRATIONS = ((1, _migration_1), (2, _migration_2), (3, _migration_3), (4, _migration_4), (5, _migration_5), (6, _migration_6), (7, _migration_7))
 
 
 def migrate_database(path: str | Path | None = None) -> tuple[int, Path | None]:
@@ -361,6 +424,7 @@ def migrate_database(path: str | Path | None = None) -> tuple[int, Path | None]:
             needs_migration = current < MIGRATIONS[-1][0]
     backup_path = backup_database(db_path) if existed and needs_migration else None
     conn = connect(db_path)
+    compacted_embeddings = False
     try:
         _create_legacy_vocab_if_missing(conn)
         conn.execute("""CREATE TABLE IF NOT EXISTS schema_migrations (
@@ -374,6 +438,8 @@ def migrate_database(path: str | Path | None = None) -> tuple[int, Path | None]:
             try:
                 conn.execute("BEGIN IMMEDIATE")
                 apply(conn)
+                if version in (6, 7):
+                    compacted_embeddings = True
                 conn.execute(
                     "INSERT INTO schema_migrations(version, applied_at_utc) VALUES (?, ?)",
                     (version, datetime.now(timezone.utc).isoformat(timespec="seconds")),
@@ -382,9 +448,16 @@ def migrate_database(path: str | Path | None = None) -> tuple[int, Path | None]:
             except Exception:
                 conn.rollback()
                 raise
-        return conn.execute("SELECT max(version) FROM schema_migrations").fetchone()[0], backup_path
     finally:
         conn.close()
+    if compacted_embeddings:
+        with closing(sqlite3.connect(db_path, timeout=30)) as compacted:
+            compacted.execute('PRAGMA busy_timeout=30000')
+            compacted.execute('VACUUM')
+            if compacted.execute('PRAGMA quick_check').fetchone()[0] != 'ok':
+                raise sqlite3.DatabaseError('Database integrity check failed after embedding compaction')
+    with closing(sqlite3.connect(db_path)) as verified:
+        return verified.execute('SELECT max(version) FROM schema_migrations').fetchone()[0], backup_path
 
 
 def create_study_session(session_type: str = "vocabulary", *, path: str | Path | None = None) -> str:
@@ -633,6 +706,88 @@ def learning_goals_status(*, path: str | Path | None = None) -> dict:
     return {'goals': goals, 'overlap_seconds': overlap_seconds, 'learned_vocabulary_count': vocabulary_count}
 
 
+def adventure_progress(*, path: str | Path | None = None, now: datetime | None = None) -> dict:
+    """Derive levels, daily quests, and streaks from study events in Tokyo time."""
+    from .adventure import battle_progress, character_progress
+
+    tokyo = timezone(timedelta(hours=9), 'Asia/Tokyo')
+    today = (now or datetime.now(timezone.utc)).astimezone(tokyo).date()
+    activity: dict[str, dict[str, float | int]] = {}
+    with connect(path) as conn:
+        rows = conn.execute("""SELECT event_type,occurred_at_utc,duration_seconds,rating,metadata_json
+            FROM study_events WHERE event_type IN ('vocabulary_answer','overlap_activity')
+            ORDER BY occurred_at_utc,rowid""").fetchall()
+    for row in rows:
+        day = datetime.fromisoformat(row['occurred_at_utc']).astimezone(tokyo).date().isoformat()
+        daily = activity.setdefault(day, {'answers': 0, 'correct': 0, 'sentences': 0, 'overlap_seconds': 0.0})
+        if row['event_type'] == 'vocabulary_answer':
+            daily['answers'] += 1
+            if row['rating'] == 'known':
+                daily['correct'] += 1
+        else:
+            daily['overlap_seconds'] += float(row['duration_seconds'] or 0)
+            metadata=json.loads(row['metadata_json'] or '{}')
+            daily['sentences'] += int(metadata.get('completed_sentences',0))
+
+    def daily_xp(daily: dict[str, float | int]) -> int:
+        answers = int(daily['answers'])
+        minutes = int(float(daily['overlap_seconds']) // 60)
+        return min(answers, 50) * 2 + min(minutes, 30) + (20 if answers >= 10 else 0) + (10 if minutes >= 10 else 0)
+
+    eligible_days = set()
+    total_xp = 0
+    for day, daily in activity.items():
+        total_xp += daily_xp(daily)
+        if int(daily['answers']) >= 10 or int(float(daily['overlap_seconds']) // 60) >= 10:
+            eligible_days.add(datetime.fromisoformat(day).date())
+
+    streak = 0
+    cursor = today if today in eligible_days else today - timedelta(days=1)
+    while cursor in eligible_days:
+        streak += 1
+        cursor -= timedelta(days=1)
+    longest = run = 0
+    for day in sorted(eligible_days):
+        run = run + 1 if day - timedelta(days=1) in eligible_days else 1
+        longest = max(longest, run)
+
+    today_data = activity.get(today.isoformat(), {'answers': 0, 'correct': 0, 'sentences': 0, 'overlap_seconds': 0.0})
+    training_xp = total_xp
+    total_damage = sum(int(daily['correct'])*2 + int(daily['sentences']) for daily in activity.values())
+    today_damage = int(today_data['correct'])*2 + int(today_data['sentences'])
+    battle = battle_progress(total_damage)
+    today_training_xp = daily_xp(today_data)
+    previous_rewards = battle_progress(total_damage - today_damage)['reward_xp']
+    total_xp += battle['reward_xp']
+    today_xp = today_training_xp + battle['reward_xp'] - previous_rewards
+
+    level = 1
+    xp_at_level = 0
+    xp_for_next_level = 100
+    while total_xp >= xp_for_next_level:
+        xp_at_level = xp_for_next_level
+        level += 1
+        xp_for_next_level += level * 100
+
+    answers = int(today_data['answers'])
+    minutes = int(float(today_data['overlap_seconds']) // 60)
+    today_quests = [
+        {'id': 'vocabulary', 'title': '語彙に10回答える', 'current': answers, 'target': 10,
+         'reward_xp': 20, 'completed': answers >= 10},
+        {'id': 'overlap', 'title': '10分オーバーラッピング', 'current': minutes, 'target': 10,
+         'reward_xp': 10, 'completed': minutes >= 10},
+    ]
+    return {
+        'today': today.isoformat(), 'total_xp': total_xp, 'today_xp': today_xp,
+        'training_xp': training_xp, 'battle': battle, 'character': character_progress(level),
+        'total_damage': total_damage, 'today_damage': today_damage, 'completed_sentences': int(today_data['sentences']),
+        'level': level, 'xp_in_level': total_xp - xp_at_level,
+        'xp_to_next_level': xp_for_next_level - xp_at_level,
+        'streak_days': streak, 'best_streak_days': longest,
+        'quests': today_quests,
+    }
+
+
 def fetch_vocabulary_question(direction: str, *, category: str | None = None, exclude: set[str] | None = None,
                               include_unstudied: bool = True, mastery_status: str = 'all', difficulty: str | None = None,
                               recent_attempts: int | None = None, max_recent_accuracy: float | None = None,
@@ -652,11 +807,16 @@ def list_practice_questions(direction: str, *, category: str | None = None, excl
                             recent_attempts: int | None = None, max_recent_accuracy: float | None = None,
                             include_insufficient_history: bool = False, all_attempts_incorrect: bool = False,
                             last_attempt_incorrect: bool = False, due_only: bool = False, as_of: datetime | None = None,
-                            limit: int = 50, path: str | Path | None = None) -> list[dict]:
+                            limit: int = 50, random_range: float = 0, random_seed: str | None = None,
+                            path: str | Path | None = None) -> list[dict]:
     if not 1 <= limit <= 1000:
         raise ValueError('limit must be 1..1000')
     if direction not in ('en_to_ja', 'ja_to_en'):
         raise ValueError('Unsupported learning direction')
+    if not math.isfinite(random_range) or not 0 <= random_range <= 100:
+        raise ValueError('random_range must be 0..100')
+    if random_seed is not None and len(str(random_seed)) > 128:
+        raise ValueError('random_seed must be at most 128 characters')
     excluded = sorted(exclude or ())
     exclusion_sql = ''
     params: list[object] = []
@@ -712,24 +872,33 @@ def list_practice_questions(direction: str, *, category: str | None = None, excl
         rows = conn.execute(f"""SELECT v.vocab_id,v.english,v.pos,s.sense_id,s.meaning,s.part_of_speech
             FROM vocab v JOIN senses s ON s.vocab_id=v.vocab_id
             WHERE v.archived_at_utc IS NULL AND trim(s.meaning)<>'' {exclusion_sql} {category_sql}
-            ORDER BY CASE
-              WHEN NOT EXISTS(SELECT 1 FROM study_events e WHERE e.vocab_id=v.vocab_id AND e.direction=?) THEN 1
-              WHEN (SELECT e.rating FROM study_events e WHERE e.vocab_id=v.vocab_id AND e.direction=? ORDER BY e.occurred_at_utc DESC,e.rowid DESC LIMIT 1)='again' THEN 0
-              ELSE 2 END,
-              v.vocab_id,s.sense_index""", (*params, direction, direction)).fetchall()
+            ORDER BY v.vocab_id,s.sense_index""", params).fetchall()
         if due_only:
             due_by_vocab={vocab_id:item for (vocab_id,_),item in due_schedule.items()}
             rows=[row for row in rows if row['vocab_id'] in due_by_vocab]
             rows.sort(key=lambda row:(due_by_vocab[row['vocab_id']]['due_date'],row['vocab_id']))
-        selected=[]
+        performance = {row['vocab_id']: dict(row) for row in conn.execute("""SELECT vocab_id,
+            count(*) AS answer_count, sum(CASE WHEN rating='known' THEN 1 ELSE 0 END) AS correct_count
+            FROM study_events WHERE event_type='vocabulary_answer' AND direction=? GROUP BY vocab_id""", (direction,))}
+        rng = random.Random(random_seed if random_seed not in (None, '') else None)
+        candidates=[]
         seen=set()
         for row in rows:
             if row['vocab_id'] in seen:
                 continue
             seen.add(row['vocab_id'])
-            selected.append(dict(row))
-            if len(selected)>=limit:
-                break
+            item=dict(row)
+            counts=performance.get(item['vocab_id'], {'answer_count':0,'correct_count':0})
+            base_score=round(100*counts['correct_count']/counts['answer_count'],3) if counts['answer_count'] else 0.0
+            adjustment=round(rng.uniform(-random_range,random_range),3) if random_range else 0.0
+            item.update(answer_count=counts['answer_count'], correct_count=counts['correct_count'],
+                        base_score=base_score, random_adjustment=adjustment, score=round(base_score+adjustment,3))
+            candidates.append(item)
+        if due_only:
+            candidates.sort(key=lambda item:(due_by_vocab[item['vocab_id']]['due_date'],item['score'],item['vocab_id']))
+        else:
+            candidates.sort(key=lambda item:(item['score'],item['vocab_id']))
+        selected=candidates[:limit]
         if selected:
             ids=[item['vocab_id'] for item in selected]
             history={vocab_id:[] for vocab_id in ids}
@@ -751,16 +920,19 @@ def vocabulary_categories(*, path: str | Path | None = None) -> list[dict]:
 
 
 def record_overlap_activity(*, session_id: str, material_id: str, duration_seconds: float,
-                            idempotency_key: str, path: str | Path | None = None) -> bool:
-    if duration_seconds < 0:
+                            idempotency_key: str, completed_sentences: int = 0,
+                            path: str | Path | None = None) -> bool:
+    if not math.isfinite(duration_seconds) or duration_seconds < 0:
         raise ValueError('Duration cannot be negative')
+    if type(completed_sentences) is not int or not 0 <= completed_sentences <= 10000:
+        raise ValueError('completed_sentences must be an integer in 0..10000')
     event_id = uuid.uuid4().hex
     now = datetime.now(timezone.utc).isoformat(timespec='seconds')
     with connect(path) as conn:
         cur = conn.execute("""INSERT OR IGNORE INTO study_events
             (event_id,session_id,event_type,duration_seconds,occurred_at_utc,idempotency_key,metadata_json)
             VALUES (?,?,'overlap_activity',?,?,?,?)""",
-            (event_id, session_id, duration_seconds, now, idempotency_key, json.dumps({'material_id': material_id})))
+            (event_id, session_id, duration_seconds, now, idempotency_key, json.dumps({'material_id': material_id, 'completed_sentences': completed_sentences})))
         return cur.rowcount == 1
 
 
@@ -959,7 +1131,7 @@ def update_candidate_assessment(candidate_id: str, assessment: dict, *, path: st
             embedding_dimensions=?,input_hash=?,embedding_json=? WHERE candidate_id=?""",
             (assessment.get('reason'),assessment.get('matched_vocab_id'),assessment.get('similarity'),assessment.get('model'),
              len(assessment.get('candidate_embedding') or []) or None,assessment.get('input_hash'),
-             json.dumps(assessment['candidate_embedding']) if assessment.get('candidate_embedding') else None,candidate_id))
+             normalized_embedding_json(assessment['candidate_embedding']) if assessment.get('candidate_embedding') else None,candidate_id))
 
 
 def complete_candidate_similarity_job(job_id: str, assessments: list[dict], *, model: str,
@@ -973,7 +1145,7 @@ def complete_candidate_similarity_job(job_id: str, assessments: list[dict], *, m
             embedding_dimensions=?,input_hash=?,embedding_json=? WHERE candidate_id=?""",
             [(item.get('reason'),item.get('matched_vocab_id'),item.get('similarity'),item.get('model'),
               len(item.get('candidate_embedding') or []) or None,item.get('input_hash'),
-              json.dumps(item['candidate_embedding']) if item.get('candidate_embedding') else None,item['candidate_id'])
+              normalized_embedding_json(item['candidate_embedding']) if item.get('candidate_embedding') else None,item['candidate_id'])
              for item in assessments])
         if record_usage:
             conn.execute("INSERT INTO api_usage VALUES (?,?,?,?,?,?,?,?,?,?)",
@@ -1013,7 +1185,7 @@ def select_candidates(batch_id: str, candidate_ids: list[str], *, path: str | Pa
             if candidate['embedding_json'] and candidate['embedding_model'] and candidate['embedding_dimensions']:
                 sense_id=conn.execute('SELECT sense_id FROM senses WHERE vocab_id=?',(vocab_id,)).fetchone()['sense_id']
                 conn.execute("INSERT INTO embeddings(vocab_id,sense_id,model,dimensions,input_version,input_hash,vector_json,created_at_utc) VALUES (?,?,?,?,?,?,?,?)",
-                             (vocab_id,sense_id,candidate['embedding_model'],candidate['embedding_dimensions'],'english-meaning-v1',candidate['input_hash'],candidate['embedding_json'],datetime.now(timezone.utc).isoformat(timespec='seconds')))
+                             (vocab_id,sense_id,candidate['embedding_model'],candidate['embedding_dimensions'],'english-meaning-v1',candidate['input_hash'],normalized_embedding_json(candidate['embedding_json']),datetime.now(timezone.utc).isoformat(timespec='seconds')))
             existing[key]=vocab_id
             created.append(vocab_id)
         conn.execute("UPDATE import_batches SET status='completed' WHERE batch_id=?",(batch_id,))

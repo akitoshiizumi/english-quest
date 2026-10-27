@@ -1,6 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import type { KeyboardEvent, ReactNode } from 'react';
 import { setupOverlapControls } from './overlap';
+import apprenticeSprite from './assets/characters/apprentice-pixel-128.png';
+import adventurerSprite from './assets/characters/adventurer-pixel-128.png';
+import knightSprite from './assets/characters/knight-pixel-128.png';
+import heroSprite from './assets/characters/hero-pixel-128.png';
 
 type TabId = 'overlap' | 'practice' | 'manage' | 'add' | 'database';
 type PageId = TabId | 'dashboard';
@@ -76,7 +80,7 @@ function OverlapPage() {
       <summary><h2>音声に合わせて発話</h2></summary>
       <div className="overlap-workspace">
         <div className="overlap-transcript"><p id="sentenceProgress" className="muted" aria-live="polite" hidden /><div id="reader" className="reader" aria-live="off">先に音声を生成するか、保存済み教材を選んでください。</div>
-          <p id="sentenceTimingNotice" className="muted" role="status" hidden>この教材には一部の文の時刻情報がありません。時刻がない文は繰り返せません。</p>
+          <p id="sentenceTimingNotice" className="muted" role="status" hidden>この教材には一部の文の時刻情報がありません。時刻がない文は繰り返し・再生完了の判定ができず、ダメージの対象外です。</p>
         </div>
         <aside className="overlap-sidebar" aria-label="音声コントロールと設定">
           <p className="muted">Space: 再生・停止。文の R キーで繰り返し、A で現在文、W で前の文を再生。</p>
@@ -107,6 +111,8 @@ function PracticePage() {
       <details className="practice-controls collapsible-section" open><summary>出題条件</summary><div><div className="row"><label>方向 <label>&#x51fa;&#x984c;&#x65b9;&#x6cd5; <select id="reviewMode"><option value="standard">&#x901a;&#x5e38;&#x306e;&#x7df4;&#x7fd2;</option><option value="due">&#x671f;&#x9650;&#x5230;&#x6765;&#x8a9e;&#x3092;&#x81ea;&#x52d5;&#x9078;&#x5b9a;</option></select></label><span id="dueReviewHint" className="muted" hidden>&#x6700;&#x65b0;&#x306e;&#x5b66;&#x7fd2;&#x5c65;&#x6b74;&#x304b;&#x3089;&#x3001;&#x671f;&#x9650;&#x304c;&#x6765;&#x305f;&#x8a9e;&#x5f59;&#x306e;&#x307f;&#x3092;&#x9078;&#x3073;&#x307e;&#x3059;&#x3002;</span><select id="learningDirection"><option value="en_to_ja">英語 → 日本語</option><option value="ja_to_en">日本語 → 英語</option></select></label>
         <label>カテゴリ <select id="learningCategory"><option value="">すべて</option></select></label>
         <label>件数 <input id="setCount" type="number" min="1" max="1000" defaultValue="50" /></label>
+        <label>調整乱数の幅（±）<input id="practiceRandomRange" type="number" min="0" max="100" step="1" defaultValue="10" /></label>
+        <label>乱数シード（任意）<input id="practiceRandomSeed" maxLength={128} placeholder="空欄なら毎回ランダム" /></label>
         <label>習熟状況 <select id="masteryStatus"><option value="all">すべて</option><option value="unlearned">未学習</option><option value="review">要復習</option><option value="known">覚えた</option></select></label>
         <label className="standard-only"><input id="includeUnstudied" type="checkbox" defaultChecked />未学習語も含める</label>
         <label>直近N回 <input id="recentAttempts" type="number" min="1" max="100" placeholder="指定なし" /></label>
@@ -115,9 +121,10 @@ function PracticePage() {
         <label>全回間違い <select id="allAttemptsIncorrect"><option value="false">指定なし</option><option value="true">全回間違えた語のみ</option></select></label>
         <label className="standard-only"><input id="lastAttemptIncorrect" type="checkbox" />{'\u524d\u56de\u9593\u9055\u3048\u305f\u8a9e\u306e\u307f'}</label>
         <label>CEFR <select id="setDifficulty"><option value="">指定なし</option>{['A1','A2','B1','B2','C1','C2'].map(level=><option key={level}>{level}</option>)}</select></label>
+        <p className="muted full-width">スコア＝方向別の累計正解率（%）＋調整乱数。小さい順に出題します。未学習は正解率0、幅0なら乱数なし。同じシードと履歴なら同じ順番。期限到来語は期限順、同日内をスコア順に並べます。</p>
         <button className="primary" id="startLearning">練習を始める</button></div></div></details>
       <section id="vocabularyStage" className="vocabulary-stage" aria-label="出題語"><button id="exitFocusMode" className="focus-exit" type="button">&#x96c6;&#x4e2d;&#x30e2;&#x30fc;&#x30c9;&#x3092;&#x7d42;&#x4e86;</button>
-        <div className="stage-topline"><p className="stage-label">今回の出題</p><p id="learningProgress" className="progress-label" aria-live="polite">練習開始前</p></div>
+        <div className="stage-topline"><p className="stage-label">今回の出題</p><div className="practice-score-panel"><p id="learningProgress" className="progress-label" aria-live="polite">練習開始前</p><dl className="practice-score" aria-label="出題時点のスコアと方向別実績"><div><dt>スコア</dt><dd id="practiceScore">—</dd></div><div><dt>正解数</dt><dd id="practiceCorrectCount">—</dd></div><div><dt>出題数</dt><dd id="practiceAnswerCount">—</dd></div><div><dt>調整乱数</dt><dd id="practiceAdjustment">—</dd></div></dl></div></div>
         <div id="vocabularyHistory" className="vocabulary-history" aria-label={'\u904e\u53bb\u306e\u56de\u7b54\u5c65\u6b74'} />
         <div id="vocabularyQuestion" className="vocabulary-prompt" aria-live="polite">カテゴリと方向を選んで開始してください。</div>
         <div id="vocabularyAnswer" className="vocabulary-answer" hidden />
@@ -132,9 +139,46 @@ function PracticePage() {
   </>;
 }
 
+function QuestCharacter() {
+  const stages = [
+    {src: apprenticeSprite, name: '見習い冒険者'},
+    {src: adventurerSprite, name: '冒険者'},
+    {src: knightSprite, name: 'クエストナイト'},
+    {src: heroSprite, name: 'ことばの勇者'},
+  ];
+  return <div className="quest-character">{stages.map((stage, index) =>
+    <img key={stage.name} className={`character-sprite character-stage-${index}`} src={stage.src}
+      alt={`${stage.name}のドット絵`} width={128} height={128} loading="lazy" decoding="async" />
+  )}</div>;
+}
+
+function QuestEnemy() {
+  return <svg viewBox="0 0 160 180" className="quest-enemy" aria-hidden="true">
+    <ellipse cx="80" cy="163" rx="52" ry="8" fill="#0b182b" opacity=".3" />
+    <g className="enemy-slime"><path d="M22 142 Q18 111 44 94 Q57 75 80 57 Q81 79 99 84 Q139 96 139 138 Q141 163 81 163 Q28 163 22 142Z" fill="currentColor" /><path d="M41 112 Q49 97 62 94" fill="none" stroke="#ffffff75" strokeWidth="8" strokeLinecap="round" /><circle cx="61" cy="130" r="5" fill="#23314e" /><circle cx="103" cy="130" r="5" fill="#23314e" /><path d="M73 141 Q82 148 91 141" fill="none" stroke="#23314e" strokeWidth="3" strokeLinecap="round" /></g>
+    <g className="enemy-dragon"><path d="M48 96 L7 58 15 115 45 132 M109 96 L153 58 146 115 114 132" fill="#bd7cce" /><path d="M52 67 L43 34 70 51 M91 50 L119 30 109 75" fill="#ffcf7b" /><path d="M39 151 Q29 121 46 79 Q56 49 88 55 Q123 58 125 96 L137 108 122 120 126 150 Q95 172 39 151Z" fill="#9570c8" /><path d="M71 160 Q57 130 79 114 Q102 106 110 157" fill="#e7baec" /><path d="M55 91 L70 95 M94 94 L109 88" stroke="#26304d" strokeWidth="6" strokeLinecap="round" /><path d="M83 109 L95 109" stroke="#26304d" strokeWidth="3" /><path d="M35 146 L23 157 49 156 M108 150 L116 159 133 157" fill="#ffcf7b" /></g>
+  </svg>;
+}
+
 function DashboardPage() {
   return <section className="card dashboard" id="dashboardPage">
-    <p className="eyebrow">LEARNING DASHBOARD</p><h2>学習ダッシュボード</h2>
+    <p className="eyebrow">ENGLISH QUEST</p><h2>学習ダッシュボード</h2>
+    <section className="adventure-card" aria-label="English Questの成長状況">
+      <div className="adventure-heading"><div><p className="eyebrow">YOUR ADVENTURE</p><h3>学んで戦う、ことばの冒険</h3><p className="adventure-tagline">一問、一分が、冒険の力になる。</p></div><div className="adventure-level"><span>LEVEL</span><strong id="adventureLevel">Lv.1</strong></div></div>
+      <div className="battle-arena" id="battleArena">
+        <div className="battle-fighter" id="battleCharacter" data-stage="0"><QuestCharacter /><strong id="characterTitle">見習い冒険者</strong><span id="characterEvolution">Lv.3で冒険者に成長</span></div>
+        <div className="battle-center"><span className="battle-versus">VS</span><span id="battleChapter">第1章 · 1体目</span></div>
+        <div className="battle-fighter battle-opponent" id="battleEnemy" data-style="0" data-boss="false"><QuestEnemy /><strong id="battleEnemyName">ミントスライム</strong><span id="battleEnemyReward">撃破で +20 XP</span></div>
+      </div>
+      <div className="battle-hp-heading"><strong>敵のHP</strong><span id="battleHpText">40 / 40</span></div>
+      <progress id="battleHp" className="battle-hp" max={40} value={40} aria-label="敵の残りHP" />
+      <div className="adventure-meta"><span id="battleDefeated">撃破 0体</span><span id="battleRewardTotal">撃破ボーナス 0 XP</span></div>
+      <div className="adventure-progress-row"><span><strong id="adventureTotalXp">0 XP</strong> 累計</span><span id="adventureNextLevel">あと100 XPでレベルアップ</span></div>
+      <progress id="adventureLevelProgress" max={100} value={0} aria-label="次のレベルまでの進捗" />
+      <div className="adventure-meta"><span id="adventureStreak">🔥 連続 0日</span><span id="adventureBestStreak">最長 0日</span><span id="adventureTodayXp">今日 +0 XP</span></div>
+      <h4 className="daily-quest-heading">今日のクエスト</h4><div id="adventureQuests" className="adventure-quests" aria-live="polite"><p>冒険の進捗を読み込み中…</p></div>
+      <details className="adventure-rules"><summary>戦い方・成長のしくみ</summary><p>語彙は1正解で2ダメージ。不正解ではダメージを与えません。オーバーラッピングは1文を最後まで再生するたびに1ダメージ。同じ文の繰り返しも対象ですが、途中を飛ばした再生は数えません。文数はこの機能の追加後から記録します。</p><p>経験値は語彙1回答で2 XP、オーバーラッピング1分で1 XP。挑戦した分は正誤に関係なく経験値になります。クエスト達成ボーナスは経験値だけに加算します。</p><p>通常の敵はHP40・撃破で20 XP。5体ごとのボスはHP80・撃破で60 XP。余ったダメージは次の敵に引き継ぎます。Lv.3で盾、Lv.5でマント、Lv.10で王冠を獲得。語彙の基本XPは1日50回答、音読は1日30分まで。毎日のクエストは日本時間の0時に更新。どちらかのクエスト達成で連続学習日数が伸びます。</p></details>
+    </section>
     <label>学習期間 <select id="statisticsRange" defaultValue="30"><option value="7">7日間</option><option value="30">30日間</option><option value="90">90日間</option><option value="all">全期間</option></select></label>
     <details id="learningGoalsSection" className="dashboard-disclosure collapsible-section" open><summary>累計学習目標</summary>
       <p className="muted">目標の進捗は表示期間に関係なく累計で表示します。語彙数は1回以上回答した異なる語彙数です。</p>
@@ -292,6 +336,13 @@ export function App() {
   return <>
     <header><h1>English Quest</h1><p>単語を覚える。英語を使う。次のレベルへ。</p></header>
     <main>
+      <aside className="quest-dock" aria-label="冒険の進捗">
+        <div className="quest-dock-visuals" aria-hidden="true">
+          <div id="questDockCharacter" data-stage="0"><QuestCharacter /></div><span className="quest-dock-versus">VS</span>
+          <div id="questDockEnemy" className="battle-opponent" data-style="0" data-boss="false"><QuestEnemy /></div>
+        </div>
+        <div className="quest-dock-content"><a href="#dashboard" id="questDockSummary">⚔ 冒険を読み込み中…</a><progress id="questDockHp" max={40} value={40} aria-label="練習中の敵の残りHP" /><p id="battleFeedback" role="status">学習で攻撃！ 敵を倒してキャラクターを育てよう。</p></div>
+      </aside>
       <div className="page-actions"><button id="openDashboard" aria-current={selected === 'dashboard' ? 'page' : undefined} onClick={() => { setSelected('dashboard'); window.location.hash = 'dashboard'; }}>学習ダッシュボード</button></div>
       <nav className="tabs" role="tablist" aria-label="機能">
         {tabs.map((tab, index) => <button key={tab.id} ref={element => { tabRefs.current[index] = element; }} id={`tab-${tab.id}`} role="tab" aria-selected={selected === tab.id} aria-controls={`panel-${tab.id}`} tabIndex={selected === tab.id ? 0 : -1}

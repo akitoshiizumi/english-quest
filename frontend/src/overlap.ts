@@ -1,4 +1,6 @@
 import {sentenceClip} from './audio-clip';
+import {abbreviationContinues,splitEnglishSentences} from './sentences';
+import {SentenceCompletionTracker} from './sentence-completion';
 
 type WordTime = { word: string; start: number; end: number };
 type SentenceBlock = { english: string; japanese?: string; vocabulary?: Array<{word: string; meaning: string}> };
@@ -65,6 +67,9 @@ export function setupOverlapControls(): void {
   let decodedAudio: AudioBuffer | null = null;
   let fullDuration: number | null = null;
   let overlapActive = window.location.hash.slice(1) === 'overlap' || !window.location.hash;
+  const completion = new SentenceCompletionTracker(index=>window.dispatchEvent(new CustomEvent('english-overlap-sentence-completed',{
+    detail:{materialId:document.body.dataset.materialId||element<HTMLSelectElement>('savedList').value||'legacy-overlap',sentenceIndex:index}
+  })));
   window.addEventListener('english-overlap-tab-change', event => { overlapActive = (event as CustomEvent).detail?.tabId === 'overlap'; });
 
   const status = (message: string, error = false) => {
@@ -133,6 +138,7 @@ export function setupOverlapControls(): void {
         Math.min(duration ?? Infinity, anchor.lastEnd);
       return anchor.start !== null && end !== null && end > anchor.start + 0.08 ? {start: anchor.start, end} : null;
     });
+    completion.ranges=sentenceRanges;
     if (sentenceLoopIndex !== null && !sentenceRanges[sentenceLoopIndex]) sentenceLoopIndex = null;
     sentenceButtons.forEach((button, index) => {
       const active = sentenceLoopIndex === index;
@@ -282,8 +288,19 @@ export function setupOverlapControls(): void {
     fullDuration = null;
     cancelRepeatGap();
     reader.replaceChildren(); nodes = []; times = []; lastSentenceIndex = -1;
+    completion.reset();
     sentenceSections = []; sentenceButtons = []; sentenceAnchors = []; sentenceRanges = []; sentenceProgressLabels = []; sentenceLoopIndex = null;
-    const sentences: SentenceBlock[] = blocks.length ? blocks : text.split(/(?<=[.!?])\s+|\n+/).filter(Boolean).map(english => ({english}));
+    const sentences: SentenceBlock[] = [];
+    const inputBlocks: SentenceBlock[]=blocks.length?blocks:splitEnglishSentences(text).map(english=>({english}));
+    for(const block of inputBlocks){
+      const previous=sentences.at(-1);
+      // Repair saved material split by the earlier period-only parser too.
+      if(previous&&abbreviationContinues(previous.english,block.english)){
+        previous.english=previous.english.trimEnd()+' '+block.english.trimStart();
+        previous.japanese=[previous.japanese,block.japanese].filter(Boolean).join(' ');
+        previous.vocabulary=[...(previous.vocabulary||[]),...(block.vocabulary||[])];
+      }else sentences.push({...block});
+    }
     let wordIndex = 0;
     for (const [sentenceIndex, sentence] of sentences.entries()) {
       const section=document.createElement('section');section.className='reader-sentence';
@@ -448,6 +465,7 @@ export function setupOverlapControls(): void {
     (document.getElementById('style') as HTMLSelectElement).value = data.style ?? 'natural';
     if (fullAudioUrl) URL.revokeObjectURL(fullAudioUrl);
     fullAudioBlob = await audioResponse.blob(); fullAudioUrl = URL.createObjectURL(fullAudioBlob);
+    player.pause();document.body.dataset.materialId=item.material_id;
     player.src = fullAudioUrl; player.load(); render(data.text ?? '', data.words ?? [],data.blocks??[]);
     for (const id of ['play','back','restart']) element<HTMLButtonElement>(id).disabled = false;
     showMeta({ ...data, ai_summary: item.ai_summary }); status('Loaded saved material.');
@@ -521,13 +539,22 @@ export function setupOverlapControls(): void {
     const speed = Number((event.currentTarget as HTMLInputElement).value); player.playbackRate = speed;
     element<HTMLSpanElement>('speedLabel').textContent = `${speed.toFixed(2)}×`;
   });
-  player.addEventListener('play', () => { cancelAnimationFrame(frame); tick(); });
-  player.addEventListener('timeupdate',applySentenceGap);
+  player.addEventListener('play', () => { completion.resume(materialTime());cancelAnimationFrame(frame); tick(); });
+  player.addEventListener('seeking',()=>completion.reset());
+  player.addEventListener('seeked',()=>{if(!player.paused)completion.resume(materialTime());});
+  player.addEventListener('pause',()=>{if(!player.ended)completion.pause();});
+  player.addEventListener('timeupdate',()=>{
+    if(!player.seeking&&(!player.paused||player.ended)&&overlapActive&&!document.hidden)completion.advance(materialTime());
+    else completion.pause();
+    applySentenceGap();
+  });
   player.addEventListener('loadedmetadata', () => {
     if (!clipUrl && Number.isFinite(player.duration)) fullDuration = player.duration;
     updateSentenceLoopControls();
   });
   player.addEventListener('ended', () => {
+    if(!player.seeking&&overlapActive&&!document.hidden)completion.advance(materialTime());
+    completion.pause();
     const range = sentenceLoopIndex === null ? null : sentenceRanges[sentenceLoopIndex];
     if(range)startRepeatGap();
     else if (element<HTMLInputElement>('loop').checked) { player.currentTime = 0; void player.play(); }
