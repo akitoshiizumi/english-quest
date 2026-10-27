@@ -134,6 +134,45 @@ kbd { min-width: 25px; padding: 3px 6px; border: 1px solid #d6deeb; border-radiu
 .quest-reward { color: #c7dcff; font-size: .78rem; font-weight: 750; white-space: nowrap; }
 .quest-complete .quest-reward { color: #91e7b2; }
 .adventure-note { margin: 13px 0 0; color: #b4c2da; font-size: .78rem; }
+.quest-dock { display: grid; grid-template-columns: minmax(0,1fr) 130px; gap: 6px 16px; align-items: center; padding: 13px 17px; margin-bottom: 14px; border: 1px solid #c9d6ee; border-radius: 13px; background: #eef3fc; }
+.quest-dock a { color: #294a7c; font-size: .85rem; font-weight: 750; text-decoration: none; }
+.quest-dock a:hover { text-decoration: underline; }
+.quest-dock progress { width: 100%; height: 8px; accent-color: #e39367; }
+.quest-dock p { grid-column: 1/-1; margin: 0; color: #536782; font-size: .8rem; }
+.battle-arena { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); align-items: center; gap: 12px; margin-top: 20px; padding: 10px 12px 19px; border-radius: 14px; background: radial-gradient(ellipse at 50% 100%,#82b1d52a,transparent 70%),#0a19352b; }
+.battle-fighter { display: grid; justify-items: center; text-align: center; gap: 5px; min-width: 0; }
+.battle-fighter svg { width: min(100%,160px); height: 170px; }
+.battle-fighter strong { color: #fff; font-size: .94rem; }
+.battle-fighter>span { color: #bbcee9; font-size: .75rem; }
+.battle-center { display: grid; justify-items: center; gap: 8px; color: #b4c7e9; font-size: .74rem; }
+.battle-versus { font-size: 1.45rem; font-weight: 900; font-style: italic; color: #f8d58b; }
+.hero-tunic,.hero-hat { fill: #76a88b; }
+.hero-cape { fill: #db746d; visibility: hidden; }
+.hero-shield,.hero-crown { visibility: hidden; }
+[data-stage="1"] .hero-tunic,[data-stage="1"] .hero-hat { fill: #73a9d6; }
+[data-stage="2"] .hero-tunic,[data-stage="2"] .hero-hat { fill: #ada3de; }
+[data-stage="3"] .hero-tunic,[data-stage="3"] .hero-hat { fill: #e2bd6a; }
+[data-stage="1"] .hero-shield,[data-stage="2"] .hero-shield,[data-stage="3"] .hero-shield,[data-stage="2"] .hero-cape,[data-stage="3"] .hero-cape,[data-stage="3"] .hero-crown { visibility: visible; }
+.battle-opponent { color: #79d5ab; }
+.battle-opponent[data-style="1"] { color: #75c3ef; }
+.battle-opponent[data-style="2"] { color: #bd96e9; }
+.battle-opponent[data-style="3"] { color: #f6a17d; }
+.enemy-dragon,[data-boss="true"] .enemy-slime { display: none; }
+[data-boss="true"] .enemy-dragon { display: initial; }
+.battle-hp-heading { display: flex; justify-content: space-between; margin-top: 15px; color: #d8e5f7; font-size: .82rem; }
+.adventure-card>progress.battle-hp { height: 10px; accent-color: #eda478; }
+.daily-quest-heading { margin: 22px 0 -8px; color: #e3edff; }
+.adventure-rules { margin-top: 16px; font-size: .79rem; color: #bdcde5; line-height: 1.7; }
+.adventure-rules summary { cursor: pointer; color: #d9e7fc; }
+.adventure-rules p { margin: 9px 0; }
+@media (max-width: 520px) {
+  .quest-dock { grid-template-columns: 1fr; }
+  .quest-dock progress { max-width: 170px; }
+  .battle-arena { gap: 5px; padding-inline: 4px; }
+  .battle-fighter svg { height: 130px; }
+  .battle-fighter strong { font-size: .8rem; }
+  .battle-center { max-width: 58px; text-align: center; }
+}
 .stat-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(125px,1fr)); gap: 10px; margin: 14px 0; }
 .stat-card { display: flex; flex-direction: column; gap: 7px; padding: 14px; border: 1px solid var(--line); border-radius: 12px; background: #f8faff; }
 .stat-card span { color: var(--muted); font-size: .82rem; }

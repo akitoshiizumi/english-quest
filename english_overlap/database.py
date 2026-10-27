@@ -707,6 +707,8 @@ def learning_goals_status(*, path: str | Path | None = None) -> dict:
 
 def adventure_progress(*, path: str | Path | None = None, now: datetime | None = None) -> dict:
     """Derive levels, daily quests, and streaks from study events in Tokyo time."""
+    from .adventure import battle_progress, character_progress
+
     tokyo = timezone(timedelta(hours=9), 'Asia/Tokyo')
     today = (now or datetime.now(timezone.utc)).astimezone(tokyo).date()
     activity: dict[str, dict[str, float | int]] = {}
@@ -744,6 +746,14 @@ def adventure_progress(*, path: str | Path | None = None, now: datetime | None =
         run = run + 1 if day - timedelta(days=1) in eligible_days else 1
         longest = max(longest, run)
 
+    today_data = activity.get(today.isoformat(), {'answers': 0, 'overlap_seconds': 0.0})
+    training_xp = total_xp
+    battle = battle_progress(training_xp)
+    today_training_xp = daily_xp(today_data)
+    previous_rewards = battle_progress(training_xp - today_training_xp)['reward_xp']
+    total_xp += battle['reward_xp']
+    today_xp = today_training_xp + battle['reward_xp'] - previous_rewards
+
     level = 1
     xp_at_level = 0
     xp_for_next_level = 100
@@ -752,7 +762,6 @@ def adventure_progress(*, path: str | Path | None = None, now: datetime | None =
         level += 1
         xp_for_next_level += level * 100
 
-    today_data = activity.get(today.isoformat(), {'answers': 0, 'overlap_seconds': 0.0})
     answers = int(today_data['answers'])
     minutes = int(float(today_data['overlap_seconds']) // 60)
     today_quests = [
@@ -762,7 +771,8 @@ def adventure_progress(*, path: str | Path | None = None, now: datetime | None =
          'reward_xp': 10, 'completed': minutes >= 10},
     ]
     return {
-        'today': today.isoformat(), 'total_xp': total_xp, 'today_xp': daily_xp(today_data),
+        'today': today.isoformat(), 'total_xp': total_xp, 'today_xp': today_xp,
+        'training_xp': training_xp, 'battle': battle, 'character': character_progress(level),
         'level': level, 'xp_in_level': total_xp - xp_at_level,
         'xp_to_next_level': xp_for_next_level - xp_at_level,
         'streak_days': streak, 'best_streak_days': longest,

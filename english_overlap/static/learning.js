@@ -467,10 +467,14 @@
     catch(error){if(status)status.textContent=`目標を保存できませんでした: ${error.message}`;}
     finally{if(button)button.disabled=false;}
   });
+  let adventureSnapshot=null,adventureRequest=0;
+  $('questDockSummary')?.addEventListener('click',()=>{if(document.body.classList.contains('vocabulary-focus-mode'))setFocusMode(false);});
   async function loadAdventure(){
     const root=$('adventureQuests');if(!root)return;
+    const requestId=++adventureRequest;
     try{
       const data=await request('/api/adventure');
+      if(requestId!==adventureRequest)return;
       $('adventureLevel').textContent=`Lv.${data.level}`;
       $('adventureTotalXp').textContent=`${Number(data.total_xp).toLocaleString()} XP`;
       $('adventureTodayXp').textContent=`今日 +${Number(data.today_xp)} XP`;
@@ -479,6 +483,35 @@
       const remaining=Math.max(0,Number(data.xp_to_next_level)-Number(data.xp_in_level));
       $('adventureNextLevel').textContent=`あと${remaining} XPでレベルアップ`;
       const levelProgress=$('adventureLevelProgress');levelProgress.max=Math.max(1,Number(data.xp_to_next_level));levelProgress.value=Math.min(levelProgress.max,Number(data.xp_in_level));
+      const battle=data.battle,character=data.character;
+      $('battleCharacter').dataset.stage=String(character.stage);
+      $('characterTitle').textContent=character.title;
+      $('characterEvolution').textContent=character.next_evolution_level?`Lv.${character.next_evolution_level}で${character.next_evolution_title}に成長`:'最終形態 · さらにレベルを高めよう';
+      $('battleEnemy').dataset.style=String(battle.enemy_style);
+      $('battleEnemy').dataset.boss=String(battle.is_boss);
+      $('battleEnemyName').textContent=(battle.is_boss?'BOSS · ':'')+battle.enemy_name;
+      $('battleEnemyReward').textContent=`撃破で +${battle.next_reward_xp} XP`;
+      $('battleChapter').textContent=`第${battle.chapter}章 · ${battle.encounter}体目`;
+      $('battleHpText').textContent=`${battle.hp} / ${battle.max_hp}`;
+      for(const id of ['battleHp','questDockHp']){const bar=$(id);bar.max=battle.max_hp;bar.value=battle.hp;}
+      $('battleDefeated').textContent=`撃破 ${battle.defeated}体（ボス ${battle.bosses_defeated}体）`;
+      $('battleRewardTotal').textContent=`撃破ボーナス ${battle.reward_xp.toLocaleString()} XP`;
+      $('questDockSummary').textContent=`⚔ Lv.${data.level} ${character.title} / ${battle.is_boss?'BOSS ':''}${battle.enemy_name} HP ${battle.hp}/${battle.max_hp}`;
+      if(adventureSnapshot&&data.training_xp>adventureSnapshot.training_xp){
+        const damage=data.training_xp-adventureSnapshot.training_xp;
+        const defeated=battle.defeated-adventureSnapshot.battle.defeated;
+        const reward=battle.reward_xp-adventureSnapshot.battle.reward_xp;
+        let message=defeated>0?`${defeated}体撃破！ ボーナス +${reward} XP。`:`${battle.enemy_name}に${damage}ダメージ！`;
+        message+=` 経験値 +${data.total_xp-adventureSnapshot.total_xp} XP。`;
+        if(data.level>adventureSnapshot.level)message+=` Lv.${data.level}にレベルアップ！`;
+        if(character.stage>adventureSnapshot.character.stage)message+=` ${character.title}に成長！`;
+        $('battleFeedback').textContent=message;
+        if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+          $('battleEnemy').animate([{transform:'translateX(0)'},{transform:'translateX(8px)'},{transform:'translateX(-5px)'},{transform:'translateX(0)'}],{duration:350});
+          $('battleFeedback').animate([{opacity:.3},{opacity:1}],{duration:350});
+        }
+      }
+      adventureSnapshot=data;
       root.replaceChildren();
       for(const quest of data.quests||[]){
         const card=document.createElement('section');card.className='quest-card'+(quest.completed?' quest-complete':'');
@@ -490,9 +523,9 @@
         const reward=document.createElement('span');reward.className='quest-reward';reward.textContent=quest.completed?'達成':`+${quest.reward_xp} XP`;
         card.append(main,bar,reward);root.append(card);
       }
-    }catch(error){root.textContent=`冒険の進捗を読み込めませんでした: ${error.message}`;}
+    }catch(error){if(requestId!==adventureRequest)return;root.textContent=`冒険の進捗を読み込めませんでした: ${error.message}`;$('questDockSummary').textContent='冒険の進捗を取得できませんでした';}
   }
-  window.addEventListener('english-overlap-activity-saved',()=>void loadAdventure());
+  window.addEventListener('english-overlap-tab-change',event=>{if(event.detail?.tabId==='dashboard')void loadAdventure();});
   void loadLearningGoals(true);window.addEventListener('english-overlap-activity-saved',()=>void loadLearningGoals());
   async function loadStatistics(){
     const root=$('statisticsPanel');if(!root)return;

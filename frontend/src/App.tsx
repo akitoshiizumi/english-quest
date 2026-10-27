@@ -132,16 +132,51 @@ function PracticePage() {
   </>;
 }
 
+function QuestCharacter() {
+  return <svg viewBox="0 0 160 180" className="quest-character" aria-hidden="true">
+    <ellipse cx="80" cy="166" rx="49" ry="8" fill="#0b182b" opacity=".3" />
+    <path className="hero-cape" d="M53 82 Q27 113 30 154 L80 140 130 154 Q130 113 107 82Z" />
+    <path d="M59 132 L57 159 74 159 80 137 86 159 103 159 101 132" fill="#24334e" />
+    <path className="hero-tunic" d="M53 84 Q80 74 107 84 L111 132 Q80 147 49 132Z" />
+    <path d="M51 121 L109 121 108 132 51 132Z" fill="#79513e" /><rect x="73" y="120" width="14" height="14" rx="3" fill="#f6ce75" />
+    <circle cx="80" cy="57" r="30" fill="#ffd4ac" />
+    <path d="M49 59 Q39 19 78 20 Q115 14 113 58 L100 42 91 47 79 37 66 47 55 43Z" fill="#533b43" />
+    <path d="M49 37 Q77 1 111 36 L115 46 Q80 29 45 46Z" className="hero-hat" />
+    <g className="hero-crown"><path d="M56 25 L53 7 70 16 80 2 91 16 108 7 104 25Z" fill="#ffd66d" /><circle cx="80" cy="18" r="4" fill="#68d8d1" /></g>
+    <circle cx="69" cy="59" r="3" fill="#3e3545" /><circle cx="92" cy="59" r="3" fill="#3e3545" />
+    <path d="M73 72 Q81 78 89 71" fill="none" stroke="#b37164" strokeWidth="3" strokeLinecap="round" />
+    <path d="M53 91 L36 112 M107 92 L123 108" fill="none" stroke="#ffd4ac" strokeWidth="15" strokeLinecap="round" />
+    <g transform="rotate(16 125 90)"><path d="M121 96 L121 45 128 31 135 45 135 96Z" fill="#d6ecff" /><path d="M128 42 L128 94" stroke="#8ab7dc" strokeWidth="3" /><path d="M115 98 L141 98 M128 100 L128 117" stroke="#e7b45d" strokeWidth="7" strokeLinecap="round" /></g>
+    <g className="hero-shield"><path d="M18 102 L39 96 59 103 55 130 39 141 22 130Z" fill="#6cc6c7" stroke="#f7d184" strokeWidth="4" /><path d="M39 105 L39 131 M29 117 L49 117" stroke="#e9ffff" strokeWidth="4" /></g>
+  </svg>;
+}
+
+function QuestEnemy() {
+  return <svg viewBox="0 0 160 180" className="quest-enemy" aria-hidden="true">
+    <ellipse cx="80" cy="163" rx="52" ry="8" fill="#0b182b" opacity=".3" />
+    <g className="enemy-slime"><path d="M22 142 Q18 111 44 94 Q57 75 80 57 Q81 79 99 84 Q139 96 139 138 Q141 163 81 163 Q28 163 22 142Z" fill="currentColor" /><path d="M41 112 Q49 97 62 94" fill="none" stroke="#ffffff75" strokeWidth="8" strokeLinecap="round" /><circle cx="61" cy="130" r="5" fill="#23314e" /><circle cx="103" cy="130" r="5" fill="#23314e" /><path d="M73 141 Q82 148 91 141" fill="none" stroke="#23314e" strokeWidth="3" strokeLinecap="round" /></g>
+    <g className="enemy-dragon"><path d="M48 96 L7 58 15 115 45 132 M109 96 L153 58 146 115 114 132" fill="#bd7cce" /><path d="M52 67 L43 34 70 51 M91 50 L119 30 109 75" fill="#ffcf7b" /><path d="M39 151 Q29 121 46 79 Q56 49 88 55 Q123 58 125 96 L137 108 122 120 126 150 Q95 172 39 151Z" fill="#9570c8" /><path d="M71 160 Q57 130 79 114 Q102 106 110 157" fill="#e7baec" /><path d="M55 91 L70 95 M94 94 L109 88" stroke="#26304d" strokeWidth="6" strokeLinecap="round" /><path d="M83 109 L95 109" stroke="#26304d" strokeWidth="3" /><path d="M35 146 L23 157 49 156 M108 150 L116 159 133 157" fill="#ffcf7b" /></g>
+  </svg>;
+}
+
 function DashboardPage() {
   return <section className="card dashboard" id="dashboardPage">
     <p className="eyebrow">ENGLISH QUEST</p><h2>学習ダッシュボード</h2>
     <section className="adventure-card" aria-label="English Questの成長状況">
-      <div className="adventure-heading"><div><p className="eyebrow">YOUR ADVENTURE</p><h3>今日のクエスト</h3><p className="adventure-tagline">挑戦を重ねて、次のレベルへ。</p></div><div className="adventure-level"><span>LEVEL</span><strong id="adventureLevel">Lv.1</strong></div></div>
+      <div className="adventure-heading"><div><p className="eyebrow">YOUR ADVENTURE</p><h3>学んで戦う、ことばの冒険</h3><p className="adventure-tagline">一問、一分が、冒険の力になる。</p></div><div className="adventure-level"><span>LEVEL</span><strong id="adventureLevel">Lv.1</strong></div></div>
+      <div className="battle-arena" id="battleArena">
+        <div className="battle-fighter" id="battleCharacter" data-stage="0"><QuestCharacter /><strong id="characterTitle">見習い冒険者</strong><span id="characterEvolution">Lv.3で冒険者に成長</span></div>
+        <div className="battle-center"><span className="battle-versus">VS</span><span id="battleChapter">第1章 · 1体目</span></div>
+        <div className="battle-fighter battle-opponent" id="battleEnemy" data-style="0" data-boss="false"><QuestEnemy /><strong id="battleEnemyName">ミントスライム</strong><span id="battleEnemyReward">撃破で +20 XP</span></div>
+      </div>
+      <div className="battle-hp-heading"><strong>敵のHP</strong><span id="battleHpText">40 / 40</span></div>
+      <progress id="battleHp" className="battle-hp" max={40} value={40} aria-label="敵の残りHP" />
+      <div className="adventure-meta"><span id="battleDefeated">撃破 0体</span><span id="battleRewardTotal">撃破ボーナス 0 XP</span></div>
       <div className="adventure-progress-row"><span><strong id="adventureTotalXp">0 XP</strong> 累計</span><span id="adventureNextLevel">あと100 XPでレベルアップ</span></div>
       <progress id="adventureLevelProgress" max={100} value={0} aria-label="次のレベルまでの進捗" />
       <div className="adventure-meta"><span id="adventureStreak">🔥 連続 0日</span><span id="adventureBestStreak">最長 0日</span><span id="adventureTodayXp">今日 +0 XP</span></div>
-      <div id="adventureQuests" className="adventure-quests" aria-live="polite"><p>冒険の進捗を読み込み中…</p></div>
-      <p className="adventure-note">語彙に答える・声に出して練習することでXPを獲得。正解かどうかは問いません。</p>
+      <h4 className="daily-quest-heading">今日のクエスト</h4><div id="adventureQuests" className="adventure-quests" aria-live="polite"><p>冒険の進捗を読み込み中…</p></div>
+      <details className="adventure-rules"><summary>戦い方・成長のしくみ</summary><p>語彙1回答で2 XP、オーバーラッピング1分で1 XP。獲得した学習XPと同じ量のダメージを与えます。正誤は問いません。クエスト達成のXPも攻撃になります。</p><p>通常の敵はHP40・撃破で20 XP。5体ごとのボスはHP80・撃破で60 XP。余ったダメージは次の敵に引き継ぎます。撃破ボーナスは成長用の経験値になります。</p><p>Lv.3で盾、Lv.5でマント、Lv.10で王冠を獲得。語彙の基本XPは1日50回答、音読は1日30分まで。毎日のクエストは日本時間の0時に更新。どちらかのクエスト達成で連続学習日数が伸びます。</p></details>
     </section>
     <label>学習期間 <select id="statisticsRange" defaultValue="30"><option value="7">7日間</option><option value="30">30日間</option><option value="90">90日間</option><option value="all">全期間</option></select></label>
     <details id="learningGoalsSection" className="dashboard-disclosure collapsible-section" open><summary>累計学習目標</summary>
@@ -300,6 +335,7 @@ export function App() {
   return <>
     <header><h1>English Quest</h1><p>単語を覚える。英語を使う。次のレベルへ。</p></header>
     <main>
+      <aside className="quest-dock" aria-label="冒険の進捗"><a href="#dashboard" id="questDockSummary">⚔ 冒険を読み込み中…</a><progress id="questDockHp" max={40} value={40} aria-label="練習中の敵の残りHP" /><p id="battleFeedback" role="status">学習で攻撃！ 敵を倒してキャラクターを育てよう。</p></aside>
       <div className="page-actions"><button id="openDashboard" aria-current={selected === 'dashboard' ? 'page' : undefined} onClick={() => { setSelected('dashboard'); window.location.hash = 'dashboard'; }}>学習ダッシュボード</button></div>
       <nav className="tabs" role="tablist" aria-label="機能">
         {tabs.map((tab, index) => <button key={tab.id} ref={element => { tabRefs.current[index] = element; }} id={`tab-${tab.id}`} role="tab" aria-selected={selected === tab.id} aria-controls={`panel-${tab.id}`} tabIndex={selected === tab.id ? 0 : -1}
