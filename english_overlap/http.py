@@ -261,6 +261,8 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send(400,{'error':'days must be 1..3650 or all'})
         if route == '/api/learning-goals':
             return self.send(200, database.learning_goals_status())
+        if route == '/api/adventure':
+            return self.send(200, database.adventure_progress())
         if route == '/api/database/status':
             return self.send(200, database.database_status())
         if route == '/api/database/backups':

@@ -110,6 +110,30 @@ kbd { min-width: 25px; padding: 3px 6px; border: 1px solid #d6deeb; border-radiu
 .page-actions { display: flex; justify-content: flex-end; margin: 0 0 10px; }
 .page-actions button[aria-current=page] { border-color: var(--blue); color: var(--blue); }
 .dashboard > section { margin-top: 28px; }
+.adventure-card { margin: 10px 0 24px; padding: clamp(18px,3vw,28px); border: 1px solid #d9e3fb; border-radius: 18px; color: #edf4ff; background: radial-gradient(ellipse at 94% 0%, #3b5e9b99 0,transparent 38%), linear-gradient(125deg,#152442,#263d68 62%,#344e7d); box-shadow: 0 12px 30px #182e5424; }
+.adventure-heading,.adventure-progress-row,.adventure-meta { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.adventure-heading h3 { margin: 0; color: white; font-size: 1.35rem; }
+.adventure-heading .eyebrow { color: #9eb7ed; }
+.adventure-tagline { margin: 5px 0 0; color: #c3d0e8; }
+.adventure-level { width: 68px; height: 68px; display: grid; align-content: center; justify-items: center; border: 1px solid #a9c0f177; border-radius: 50%; background: #ffffff12; box-shadow: 0 0 0 5px #ffffff08; }
+.adventure-level span { color: #b7c7e1; font-size: .62rem; letter-spacing: .12em; }
+.adventure-level strong { color: #fff; font-size: 1.15rem; }
+.adventure-progress-row { margin-top: 22px; color: #c9d6ec; font-size: .84rem; font-variant-numeric: tabular-nums; }
+.adventure-progress-row strong { color: #fff; font-size: 1.08rem; }
+.adventure-card>progress { width: 100%; height: 12px; margin-top: 8px; accent-color: #8eb5ff; }
+.adventure-meta { justify-content: flex-start; margin-top: 12px; color: #dce7fa; font-size: .84rem; }
+.adventure-meta span { padding: 5px 10px; border: 1px solid #ffffff20; border-radius: 999px; background: #ffffff0c; }
+.adventure-quests { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,245px),1fr)); gap: 10px; margin-top: 20px; }
+.quest-card { position: relative; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 10px; padding: 13px; border: 1px solid #ffffff22; border-radius: 12px; background: #ffffff0d; }
+.quest-card.quest-complete { border-color: #8de0b080; background: #48a97620; }
+.quest-main { display: grid; gap: 4px; }
+.quest-main strong { color: #fff; font-size: .91rem; }
+.quest-main span { color: #bccbe3; font-size: .78rem; }
+.quest-card progress { width: 100%; height: 8px; grid-column: 1/-1; accent-color: #8eb5ff; }
+.quest-complete progress { accent-color: #70d29b; }
+.quest-reward { color: #c7dcff; font-size: .78rem; font-weight: 750; white-space: nowrap; }
+.quest-complete .quest-reward { color: #91e7b2; }
+.adventure-note { margin: 13px 0 0; color: #b4c2da; font-size: .78rem; }
 .stat-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(125px,1fr)); gap: 10px; margin: 14px 0; }
 .stat-card { display: flex; flex-direction: column; gap: 7px; padding: 14px; border: 1px solid var(--line); border-radius: 12px; background: #f8faff; }
 .stat-card span { color: var(--muted); font-size: .82rem; }

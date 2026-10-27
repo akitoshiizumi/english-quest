@@ -705,6 +705,71 @@ def learning_goals_status(*, path: str | Path | None = None) -> dict:
     return {'goals': goals, 'overlap_seconds': overlap_seconds, 'learned_vocabulary_count': vocabulary_count}
 
 
+def adventure_progress(*, path: str | Path | None = None, now: datetime | None = None) -> dict:
+    """Derive levels, daily quests, and streaks from study events in Tokyo time."""
+    tokyo = timezone(timedelta(hours=9), 'Asia/Tokyo')
+    today = (now or datetime.now(timezone.utc)).astimezone(tokyo).date()
+    activity: dict[str, dict[str, float | int]] = {}
+    with connect(path) as conn:
+        rows = conn.execute("""SELECT event_type,occurred_at_utc,duration_seconds
+            FROM study_events WHERE event_type IN ('vocabulary_answer','overlap_activity')
+            ORDER BY occurred_at_utc,rowid""").fetchall()
+    for row in rows:
+        day = datetime.fromisoformat(row['occurred_at_utc']).astimezone(tokyo).date().isoformat()
+        daily = activity.setdefault(day, {'answers': 0, 'overlap_seconds': 0.0})
+        if row['event_type'] == 'vocabulary_answer':
+            daily['answers'] += 1
+        else:
+            daily['overlap_seconds'] += float(row['duration_seconds'] or 0)
+
+    def daily_xp(daily: dict[str, float | int]) -> int:
+        answers = int(daily['answers'])
+        minutes = int(float(daily['overlap_seconds']) // 60)
+        return min(answers, 50) * 2 + min(minutes, 30) + (20 if answers >= 10 else 0) + (10 if minutes >= 10 else 0)
+
+    eligible_days = set()
+    total_xp = 0
+    for day, daily in activity.items():
+        total_xp += daily_xp(daily)
+        if int(daily['answers']) >= 10 or int(float(daily['overlap_seconds']) // 60) >= 10:
+            eligible_days.add(datetime.fromisoformat(day).date())
+
+    streak = 0
+    cursor = today if today in eligible_days else today - timedelta(days=1)
+    while cursor in eligible_days:
+        streak += 1
+        cursor -= timedelta(days=1)
+    longest = run = 0
+    for day in sorted(eligible_days):
+        run = run + 1 if day - timedelta(days=1) in eligible_days else 1
+        longest = max(longest, run)
+
+    level = 1
+    xp_at_level = 0
+    xp_for_next_level = 100
+    while total_xp >= xp_for_next_level:
+        xp_at_level = xp_for_next_level
+        level += 1
+        xp_for_next_level += level * 100
+
+    today_data = activity.get(today.isoformat(), {'answers': 0, 'overlap_seconds': 0.0})
+    answers = int(today_data['answers'])
+    minutes = int(float(today_data['overlap_seconds']) // 60)
+    today_quests = [
+        {'id': 'vocabulary', 'title': '語彙に10回答える', 'current': answers, 'target': 10,
+         'reward_xp': 20, 'completed': answers >= 10},
+        {'id': 'overlap', 'title': '10分オーバーラッピング', 'current': minutes, 'target': 10,
+         'reward_xp': 10, 'completed': minutes >= 10},
+    ]
+    return {
+        'today': today.isoformat(), 'total_xp': total_xp, 'today_xp': daily_xp(today_data),
+        'level': level, 'xp_in_level': total_xp - xp_at_level,
+        'xp_to_next_level': xp_for_next_level - xp_at_level,
+        'streak_days': streak, 'best_streak_days': longest,
+        'quests': today_quests,
+    }
+
+
 def fetch_vocabulary_question(direction: str, *, category: str | None = None, exclude: set[str] | None = None,
                               include_unstudied: bool = True, mastery_status: str = 'all', difficulty: str | None = None,
                               recent_attempts: int | None = None, max_recent_accuracy: float | None = None,

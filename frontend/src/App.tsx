@@ -134,7 +134,15 @@ function PracticePage() {
 
 function DashboardPage() {
   return <section className="card dashboard" id="dashboardPage">
-    <p className="eyebrow">LEARNING DASHBOARD</p><h2>学習ダッシュボード</h2>
+    <p className="eyebrow">ENGLISH QUEST</p><h2>学習ダッシュボード</h2>
+    <section className="adventure-card" aria-label="English Questの成長状況">
+      <div className="adventure-heading"><div><p className="eyebrow">YOUR ADVENTURE</p><h3>今日のクエスト</h3><p className="adventure-tagline">挑戦を重ねて、次のレベルへ。</p></div><div className="adventure-level"><span>LEVEL</span><strong id="adventureLevel">Lv.1</strong></div></div>
+      <div className="adventure-progress-row"><span><strong id="adventureTotalXp">0 XP</strong> 累計</span><span id="adventureNextLevel">あと100 XPでレベルアップ</span></div>
+      <progress id="adventureLevelProgress" max={100} value={0} aria-label="次のレベルまでの進捗" />
+      <div className="adventure-meta"><span id="adventureStreak">🔥 連続 0日</span><span id="adventureBestStreak">最長 0日</span><span id="adventureTodayXp">今日 +0 XP</span></div>
+      <div id="adventureQuests" className="adventure-quests" aria-live="polite"><p>冒険の進捗を読み込み中…</p></div>
+      <p className="adventure-note">語彙に答える・声に出して練習することでXPを獲得。正解かどうかは問いません。</p>
+    </section>
     <label>学習期間 <select id="statisticsRange" defaultValue="30"><option value="7">7日間</option><option value="30">30日間</option><option value="90">90日間</option><option value="all">全期間</option></select></label>
     <details id="learningGoalsSection" className="dashboard-disclosure collapsible-section" open><summary>累計学習目標</summary>
       <p className="muted">目標の進捗は表示期間に関係なく累計で表示します。語彙数は1回以上回答した異なる語彙数です。</p>

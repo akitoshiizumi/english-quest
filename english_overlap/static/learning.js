@@ -467,10 +467,37 @@
     catch(error){if(status)status.textContent=`目標を保存できませんでした: ${error.message}`;}
     finally{if(button)button.disabled=false;}
   });
+  async function loadAdventure(){
+    const root=$('adventureQuests');if(!root)return;
+    try{
+      const data=await request('/api/adventure');
+      $('adventureLevel').textContent=`Lv.${data.level}`;
+      $('adventureTotalXp').textContent=`${Number(data.total_xp).toLocaleString()} XP`;
+      $('adventureTodayXp').textContent=`今日 +${Number(data.today_xp)} XP`;
+      $('adventureStreak').textContent=`🔥 連続 ${Number(data.streak_days)}日`;
+      $('adventureBestStreak').textContent=`最長 ${Number(data.best_streak_days)}日`;
+      const remaining=Math.max(0,Number(data.xp_to_next_level)-Number(data.xp_in_level));
+      $('adventureNextLevel').textContent=`あと${remaining} XPでレベルアップ`;
+      const levelProgress=$('adventureLevelProgress');levelProgress.max=Math.max(1,Number(data.xp_to_next_level));levelProgress.value=Math.min(levelProgress.max,Number(data.xp_in_level));
+      root.replaceChildren();
+      for(const quest of data.quests||[]){
+        const card=document.createElement('section');card.className='quest-card'+(quest.completed?' quest-complete':'');
+        const main=document.createElement('div');main.className='quest-main';
+        const title=document.createElement('strong');title.textContent=quest.title;
+        const progressText=document.createElement('span');progressText.textContent=`${Math.min(Number(quest.current),Number(quest.target))} / ${quest.target}${quest.id==='overlap'?'分':'問'}`;
+        main.append(title,progressText);
+        const bar=document.createElement('progress');bar.max=Number(quest.target);bar.value=Math.min(Number(quest.current),Number(quest.target));bar.setAttribute('aria-label',`${quest.title}の進捗`);
+        const reward=document.createElement('span');reward.className='quest-reward';reward.textContent=quest.completed?'達成':`+${quest.reward_xp} XP`;
+        card.append(main,bar,reward);root.append(card);
+      }
+    }catch(error){root.textContent=`冒険の進捗を読み込めませんでした: ${error.message}`;}
+  }
+  window.addEventListener('english-overlap-activity-saved',()=>void loadAdventure());
   void loadLearningGoals(true);window.addEventListener('english-overlap-activity-saved',()=>void loadLearningGoals());
   async function loadStatistics(){
     const root=$('statisticsPanel');if(!root)return;
     try{
+      void loadAdventure();
       const range=$('statisticsRange')?.value||'30';const x=await request('/api/statistics?days='+encodeURIComponent(range));void loadLearningGoals();const inventory=$('databaseStatistics');
       if(inventory){inventory.replaceChildren();const stats=x.database_stats;if(stats&&typeof stats==='object'){const same=stats.vocabulary_count===stats.active_vocabulary_count&&stats.vocabulary_count===stats.sense_count;const inventoryCards=same?[['語彙',stats.vocabulary_count]]:[['登録語彙',stats.vocabulary_count],['学習対象',stats.active_vocabulary_count],['語義',stats.sense_count]];const cards=[...inventoryCards,['登場数',stats.attempt_count],['正解数',stats.known_count],['不正解数',stats.again_count],['累積正解率',stats.accuracy==null?'?':Math.round(stats.accuracy*100)+'%'],['未登場語',stats.unseen_vocabulary_count]];for(const [label,value] of cards){const card=document.createElement('div');card.className='stat-card';const caption=document.createElement('span');caption.textContent=label;const strong=document.createElement('strong');strong.textContent=String(value??'?');card.append(caption,strong);inventory.append(card);}}else inventory.textContent='データベース全体の統計を取得できません。';}
       const performanceRoot=$('vocabularyPerformance');if(performanceRoot){performanceRoot.replaceChildren();const allRows=Array.isArray(x.vocabulary_performance)?x.vocabulary_performance:null;const search=($('performanceSearch')?.value||'').trim().toLocaleLowerCase();const sort=$('performanceSort')?.value||'again';const rows=(allRows||[]).filter(item=>item&&typeof item==='object'&&(!search||`${item.english||''} ${item.japanese||''}`.toLocaleLowerCase().includes(search)));currentVocabularyRows=rows;renderVocabularyDistribution(rows);rows.sort((a,b)=>{if(sort==='attempts')return (b.attempts||0)-(a.attempts||0)||(a.english||'').localeCompare(b.english||'');if(sort==='known')return (b.known||0)-(a.known||0)||(a.english||'').localeCompare(b.english||'');if(sort==='english')return (a.english||'').localeCompare(b.english||'');return (a.known_rate??2)-(b.known_rate??2)||(b.attempts||0)-(a.attempts||0)||(a.english||'').localeCompare(b.english||'');});const count=$('performanceCount');if(count)count.textContent=allRows?`${rows.length} 語 / ${allRows.length} 語`:'語彙別の学習実績を取得できません。';
