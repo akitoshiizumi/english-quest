@@ -1,0 +1,6220 @@
+{
+  "version": 2,
+  "created_at": "2026-10-24T22:49:18+00:00",
+  "text": "Internet security has become one of the most critical challenges facing modern organizations. As businesses increasingly depend on cloud computing, remote access, artificial intelligence, and interconnected digital services, the traditional boundaries of corporate networks are disappearing. Security professionals must now protect complex environments in which users, applications, and data are distributed across multiple platforms. The central question is no longer whether an organization can prevent every cyberattack, but whether it can maintain operational resilience when its defenses are eventually compromised.\n\nOne of the most important debates in cybersecurity concerns the effectiveness of traditional perimeter based security. Historically, organizations relied heavily on firewalls, virtual private networks, and intrusion detection systems to protect internal resources from external threats. This approach assumed that users and devices operating inside the corporate network could generally be trusted. However, the widespread adoption of cloud services and remote working arrangements has made this assumption increasingly unrealistic. Attackers who obtain legitimate credentials may gain access to internal systems without triggering conventional network security controls.\n\nThis problem has accelerated the adoption of Zero Trust architecture. The fundamental principle of Zero Trust is that no user, device, or application should be trusted automatically, regardless of its network location. Every access request should be evaluated according to identity, device security, contextual information, and applicable authorization policies. Nevertheless, implementing Zero Trust is considerably more complicated than adopting a particular security product. Organizations must redesign identity management, network segmentation, authentication mechanisms, and access governance. Some experts argue that Zero Trust is primarily an architectural philosophy rather than a technology that can be purchased.\n\nIdentity security has consequently emerged as a central component of modern cybersecurity strategies. Attackers increasingly target authentication systems because compromising a legitimate identity can provide direct access to valuable resources. Phishing attacks, credential theft, session hijacking, and token manipulation are common techniques used to bypass security controls. Multifactor authentication significantly reduces certain risks, but it is not a universal solution. Attackers may exploit weaknesses in authentication workflows or deceive users into approving fraudulent requests. Phishing resistant authentication methods, including hardware based security keys, offer stronger protection against many credential theft scenarios.\n\nAnother important discussion concerns the relationship between security and usability. Extremely restrictive security controls can interfere with legitimate business activities, encouraging employees to develop unauthorized workarounds. For example, complicated authentication procedures may motivate users to store credentials insecurely or share accounts with colleagues. Security policies that ignore operational requirements may ultimately increase organizational risk. Effective cybersecurity therefore requires a careful balance between technical protection, employee productivity, and practical enforcement. The most successful controls are often those that provide strong protection while minimizing unnecessary friction.\n\nCloud computing introduces additional security challenges, particularly regarding the shared responsibility model. Cloud providers generally secure the underlying infrastructure, while customers remain responsible for various aspects of configuration, access control, applications, and data protection. The precise division of responsibilities depends on the service model. Misconfigured storage services, excessive permissions, exposed management interfaces, and poorly protected application secrets can create significant vulnerabilities. Organizations sometimes assume that migrating workloads to major cloud platforms automatically improves security. In reality, cloud security depends heavily on architectural decisions and operational discipline.\n\nSoftware supply chain security has also become a major concern. Modern applications frequently depend on hundreds of external libraries, container images, development tools, and automated build processes. A vulnerability or malicious modification within a single dependency can potentially affect numerous downstream applications. Attackers may compromise package repositories, development environments, or continuous integration pipelines to distribute malicious code. Consequently, organizations must examine not only the security of their own source code but also the integrity and provenance of external components.\n\nSoftware bills of materials have attracted attention as a mechanism for improving transparency. By maintaining structured inventories of software components, organizations can identify affected applications when vulnerabilities are disclosed. However, producing an inventory does not automatically eliminate security risks. Teams must also establish processes for vulnerability assessment, dependency updates, patch prioritization, and incident response. The practical question is whether organizations can transform component visibility into timely and effective risk reduction.\n\nVulnerability management itself presents difficult strategic choices. Security teams routinely face thousands of reported vulnerabilities, many of which receive critical severity ratings. Attempting to remediate every issue immediately is often operationally impossible. A more effective approach considers exploit availability, exposure to untrusted networks, business criticality, existing compensating controls, and evidence of active exploitation. A severe vulnerability affecting an isolated development environment may represent less immediate risk than a moderately rated flaw in a publicly accessible authentication service.\n\nThe emergence of artificial intelligence is changing both offensive and defensive cybersecurity capabilities. Attackers can use generative AI to develop convincing social engineering messages, analyze publicly available technical information, and accelerate certain stages of reconnaissance. Defenders can apply similar technologies to security monitoring, threat intelligence analysis, incident investigation, and automated remediation. However, AI generated security recommendations may contain incorrect assumptions or fabricated explanations. Security professionals must therefore maintain human oversight, particularly when automated decisions could disrupt production systems.\n\nIncident response and operational resilience deserve equal attention. Even organizations with mature preventive controls may experience successful intrusions through previously unknown vulnerabilities, compromised suppliers, or human error. Effective preparation requires centralized logging, reliable detection capabilities, tested recovery procedures, and clearly defined responsibilities. Network isolation, credential revocation, and restoration from verified backups can reduce the impact of serious incidents. Regular exercises help organizations discover weaknesses before an actual emergency occurs.\n\nUltimately, cybersecurity is not simply a technical discipline. It is a continuous process of managing uncertainty, allocating limited resources, and making informed decisions about acceptable risk. Executives must understand that security investments cannot guarantee complete protection, while technical specialists must communicate risks in terms of business consequences rather than vulnerability counts alone. The central objective should be to reduce the probability and impact of damaging incidents while preserving the organization's ability to operate effectively.\n\nAs digital infrastructure becomes more interconnected, no organization can achieve meaningful security entirely on its own. Collaboration among businesses, cloud providers, software developers, researchers, and governments is increasingly essential. Threat intelligence sharing, coordinated vulnerability disclosure, common security standards, and transparent incident reporting can strengthen the broader digital ecosystem. The challenge for the coming decade is to develop security architectures that remain effective despite continuous technological change, increasingly capable adversaries, and the inevitable limitations of human judgment.",
+  "spoken_text": "Internet security has become one of the most critical challenges facing modern organizations. As businesses increasingly depend on cloud computing, remote access, artificial intelligence, and interconnected digital services, the traditional boundaries of corporate networks are disappearing. Security professionals must now protect complex environments in which users, applications, and data are distributed across multiple platforms. The central question is no longer whether an organization can prevent every cyberattack, but whether it can maintain operational resilience when its defenses are eventually compromised.\n\nOne of the most important debates in cybersecurity concerns the effectiveness of traditional perimeter based security. Historically, organizations relied heavily on firewalls, virtual private networks, and intrusion detection systems to protect internal resources from external threats. This approach assumed that users and devices operating inside the corporate network could generally be trusted. However, the widespread adoption of cloud services and remote working arrangements has made this assumption increasingly unrealistic. Attackers who obtain legitimate credentials may gain access to internal systems without triggering conventional network security controls.\n\nThis problem has accelerated the adoption of Zero Trust architecture. The fundamental principle of Zero Trust is that no user, device, or application should be trusted automatically, regardless of its network location. Every access request should be evaluated according to identity, device security, contextual information, and applicable authorization policies. Nevertheless, implementing Zero Trust is considerably more complicated than adopting a particular security product. Organizations must redesign identity management, network segmentation, authentication mechanisms, and access governance. Some experts argue that Zero Trust is primarily an architectural philosophy rather than a technology that can be purchased.\n\nIdentity security has consequently emerged as a central component of modern cybersecurity strategies. Attackers increasingly target authentication systems because compromising a legitimate identity can provide direct access to valuable resources. Phishing attacks, credential theft, session hijacking, and token manipulation are common techniques used to bypass security controls. Multifactor authentication significantly reduces certain risks, but it is not a universal solution. Attackers may exploit weaknesses in authentication workflows or deceive users into approving fraudulent requests. Phishing resistant authentication methods, including hardware based security keys, offer stronger protection against many credential theft scenarios.\n\nAnother important discussion concerns the relationship between security and usability. Extremely restrictive security controls can interfere with legitimate business activities, encouraging employees to develop unauthorized workarounds. For example, complicated authentication procedures may motivate users to store credentials insecurely or share accounts with colleagues. Security policies that ignore operational requirements may ultimately increase organizational risk. Effective cybersecurity therefore requires a careful balance between technical protection, employee productivity, and practical enforcement. The most successful controls are often those that provide strong protection while minimizing unnecessary friction.\n\nCloud computing introduces additional security challenges, particularly regarding the shared responsibility model. Cloud providers generally secure the underlying infrastructure, while customers remain responsible for various aspects of configuration, access control, applications, and data protection. The precise division of responsibilities depends on the service model. Misconfigured storage services, excessive permissions, exposed management interfaces, and poorly protected application secrets can create significant vulnerabilities. Organizations sometimes assume that migrating workloads to major cloud platforms automatically improves security. In reality, cloud security depends heavily on architectural decisions and operational discipline.\n\nSoftware supply chain security has also become a major concern. Modern applications frequently depend on hundreds of external libraries, container images, development tools, and automated build processes. A vulnerability or malicious modification within a single dependency can potentially affect numerous downstream applications. Attackers may compromise package repositories, development environments, or continuous integration pipelines to distribute malicious code. Consequently, organizations must examine not only the security of their own source code but also the integrity and provenance of external components.\n\nSoftware bills of materials have attracted attention as a mechanism for improving transparency. By maintaining structured inventories of software components, organizations can identify affected applications when vulnerabilities are disclosed. However, producing an inventory does not automatically eliminate security risks. Teams must also establish processes for vulnerability assessment, dependency updates, patch prioritization, and incident response. The practical question is whether organizations can transform component visibility into timely and effective risk reduction.\n\nVulnerability management itself presents difficult strategic choices. Security teams routinely face thousands of reported vulnerabilities, many of which receive critical severity ratings. Attempting to remediate every issue immediately is often operationally impossible. A more effective approach considers exploit availability, exposure to untrusted networks, business criticality, existing compensating controls, and evidence of active exploitation. A severe vulnerability affecting an isolated development environment may represent less immediate risk than a moderately rated flaw in a publicly accessible authentication service.\n\nThe emergence of artificial intelligence is changing both offensive and defensive cybersecurity capabilities. Attackers can use generative AI to develop convincing social engineering messages, analyze publicly available technical information, and accelerate certain stages of reconnaissance. Defenders can apply similar technologies to security monitoring, threat intelligence analysis, incident investigation, and automated remediation. However, AI generated security recommendations may contain incorrect assumptions or fabricated explanations. Security professionals must therefore maintain human oversight, particularly when automated decisions could disrupt production systems.\n\nIncident response and operational resilience deserve equal attention. Even organizations with mature preventive controls may experience successful intrusions through previously unknown vulnerabilities, compromised suppliers, or human error. Effective preparation requires centralized logging, reliable detection capabilities, tested recovery procedures, and clearly defined responsibilities. Network isolation, credential revocation, and restoration from verified backups can reduce the impact of serious incidents. Regular exercises help organizations discover weaknesses before an actual emergency occurs.\n\nUltimately, cybersecurity is not simply a technical discipline. It is a continuous process of managing uncertainty, allocating limited resources, and making informed decisions about acceptable risk. Executives must understand that security investments cannot guarantee complete protection, while technical specialists must communicate risks in terms of business consequences rather than vulnerability counts alone. The central objective should be to reduce the probability and impact of damaging incidents while preserving the organization's ability to operate effectively.\n\nAs digital infrastructure becomes more interconnected, no organization can achieve meaningful security entirely on its own. Collaboration among businesses, cloud providers, software developers, researchers, and governments is increasingly essential. Threat intelligence sharing, coordinated vulnerability disclosure, common security standards, and transparent incident reporting can strengthen the broader digital ecosystem. The challenge for the coming decade is to develop security architectures that remain effective despite continuous technological change, increasingly capable adversaries, and the inevitable limitations of human judgment.",
+  "blocks": [
+    {
+      "english": "Internet security has become one of the most critical challenges facing modern organizations.",
+      "japanese": "インターネットセキュリティは、現代の組織が直面する最も重大な課題の一つとなっている。",
+      "vocabulary": [
+        {
+          "word": "critical challenges",
+          "meaning": "重大な課題"
+        },
+        {
+          "word": "organizations",
+          "meaning": "組織"
+        }
+      ]
+    },
+    {
+      "english": "As businesses increasingly depend on cloud computing, remote access, artificial intelligence, and interconnected digital services, the traditional boundaries of corporate networks are disappearing.",
+      "japanese": "企業がクラウドコンピューティング、リモートアクセス、人工知能、相互接続されたデジタルサービスへの依存を強めるにつれ、企業ネットワークの従来の境界は失われつつある。",
+      "vocabulary": [
+        {
+          "word": "increasingly depend on",
+          "meaning": "ますます依存する"
+        },
+        {
+          "word": "traditional boundaries",
+          "meaning": "従来の境界"
+        }
+      ]
+    },
+    {
+      "english": "Security professionals must now protect complex environments in which users, applications, and data are distributed across multiple platforms.",
+      "japanese": "セキュリティ専門家は、利用者、アプリケーション、データが複数のプラットフォームに分散する複雑な環境を、今や保護しなければならない。",
+      "vocabulary": [
+        {
+          "word": "distributed",
+          "meaning": "分散した"
+        },
+        {
+          "word": "multiple platforms",
+          "meaning": "複数の基盤"
+        }
+      ]
+    },
+    {
+      "english": "The central question is no longer whether an organization can prevent every cyberattack, but whether it can maintain operational resilience when its defenses are eventually compromised.",
+      "japanese": "中心的な問いは、組織があらゆるサイバー攻撃を防げるかどうかではなく、防御がいずれ突破されたときに、業務の回復力を維持できるかどうかである。",
+      "vocabulary": [
+        {
+          "word": "operational resilience",
+          "meaning": "業務の回復力"
+        },
+        {
+          "word": "compromised",
+          "meaning": "侵害された"
+        }
+      ]
+    },
+    {
+      "english": "One of the most important debates in cybersecurity concerns the effectiveness of traditional perimeter based security.",
+      "japanese": "サイバーセキュリティにおける最も重要な議論の一つは、従来型の境界防御の有効性に関するものだ。",
+      "vocabulary": [
+        {
+          "word": "debates",
+          "meaning": "議論"
+        },
+        {
+          "word": "effectiveness",
+          "meaning": "有効性"
+        }
+      ]
+    },
+    {
+      "english": "Historically, organizations relied heavily on firewalls, virtual private networks, and intrusion detection systems to protect internal resources from external threats.",
+      "japanese": "歴史的に、組織は外部の脅威から内部資源を守るために、ファイアウォール、仮想専用網、侵入検知システムに大きく依存してきた。",
+      "vocabulary": [
+        {
+          "word": "relied heavily on",
+          "meaning": "大きく依存してきた"
+        },
+        {
+          "word": "external threats",
+          "meaning": "外部の脅威"
+        }
+      ]
+    },
+    {
+      "english": "This approach assumed that users and devices operating inside the corporate network could generally be trusted.",
+      "japanese": "この手法では、企業ネットワーク内で活動する利用者や機器は、概して信頼できると想定していた。",
+      "vocabulary": [
+        {
+          "word": "assumed",
+          "meaning": "想定した"
+        },
+        {
+          "word": "generally be trusted",
+          "meaning": "概して信頼できる"
+        }
+      ]
+    },
+    {
+      "english": "However, the widespread adoption of cloud services and remote working arrangements has made this assumption increasingly unrealistic.",
+      "japanese": "しかし、クラウドサービスとリモート勤務形態が広く普及したことで、この想定はますます現実離れしたものになっている。",
+      "vocabulary": [
+        {
+          "word": "widespread adoption",
+          "meaning": "広範な普及"
+        },
+        {
+          "word": "unrealistic",
+          "meaning": "現実離れした"
+        }
+      ]
+    },
+    {
+      "english": "Attackers who obtain legitimate credentials may gain access to internal systems without triggering conventional network security controls.",
+      "japanese": "正規の認証情報を入手した攻撃者は、従来のネットワークセキュリティ制御に検知されずに、内部システムへアクセスできる可能性がある。",
+      "vocabulary": [
+        {
+          "word": "legitimate credentials",
+          "meaning": "正規の認証情報"
+        },
+        {
+          "word": "conventional",
+          "meaning": "従来型の"
+        }
+      ]
+    },
+    {
+      "english": "This problem has accelerated the adoption of Zero Trust architecture.",
+      "japanese": "この問題を受け、ゼロトラストアーキテクチャの導入が加速している。",
+      "vocabulary": [
+        {
+          "word": "accelerated",
+          "meaning": "加速させた"
+        },
+        {
+          "word": "Zero Trust architecture",
+          "meaning": "ゼロトラストの構成"
+        }
+      ]
+    },
+    {
+      "english": "The fundamental principle of Zero Trust is that no user, device, or application should be trusted automatically, regardless of its network location.",
+      "japanese": "ゼロトラストの基本原則は、ネットワーク上の位置にかかわらず、利用者、機器、アプリケーションを自動的に信頼してはならないというものだ。",
+      "vocabulary": [
+        {
+          "word": "fundamental principle",
+          "meaning": "基本原則"
+        },
+        {
+          "word": "regardless of",
+          "meaning": "〜にかかわらず"
+        }
+      ]
+    },
+    {
+      "english": "Every access request should be evaluated according to identity, device security, contextual information, and applicable authorization policies.",
+      "japanese": "すべてのアクセス要求について、身元、機器の安全性、状況に関する情報、適用される認可方針に基づいて評価すべきである。",
+      "vocabulary": [
+        {
+          "word": "access request",
+          "meaning": "アクセス要求"
+        },
+        {
+          "word": "authorization policies",
+          "meaning": "認可方針"
+        }
+      ]
+    },
+    {
+      "english": "Nevertheless, implementing Zero Trust is considerably more complicated than adopting a particular security product.",
+      "japanese": "それでも、ゼロトラストの実装は、特定のセキュリティ製品を導入するよりもはるかに複雑だ。",
+      "vocabulary": [
+        {
+          "word": "implementing",
+          "meaning": "実装すること"
+        },
+        {
+          "word": "considerably",
+          "meaning": "はるかに"
+        }
+      ]
+    },
+    {
+      "english": "Organizations must redesign identity management, network segmentation, authentication mechanisms, and access governance.",
+      "japanese": "組織は、身元管理、ネットワーク分割、認証方式、アクセス管理の仕組みを再設計しなければならない。",
+      "vocabulary": [
+        {
+          "word": "network segmentation",
+          "meaning": "ネットワーク分割"
+        },
+        {
+          "word": "governance",
+          "meaning": "管理体制"
+        }
+      ]
+    },
+    {
+      "english": "Some experts argue that Zero Trust is primarily an architectural philosophy rather than a technology that can be purchased.",
+      "japanese": "ゼロトラストは、購入できる技術というより、主として設計思想であると主張する専門家もいる。",
+      "vocabulary": [
+        {
+          "word": "architectural philosophy",
+          "meaning": "設計思想"
+        },
+        {
+          "word": "primarily",
+          "meaning": "主として"
+        }
+      ]
+    },
+    {
+      "english": "Identity security has consequently emerged as a central component of modern cybersecurity strategies.",
+      "japanese": "その結果、身元情報の保護は現代のサイバーセキュリティ戦略の中心的な要素となっている。",
+      "vocabulary": [
+        {
+          "word": "consequently",
+          "meaning": "その結果"
+        },
+        {
+          "word": "central component",
+          "meaning": "中心的な要素"
+        }
+      ]
+    },
+    {
+      "english": "Attackers increasingly target authentication systems because compromising a legitimate identity can provide direct access to valuable resources.",
+      "japanese": "正規の身元情報を侵害すれば貴重な資源へ直接アクセスできるため、攻撃者は認証システムをますます標的にしている。",
+      "vocabulary": [
+        {
+          "word": "target",
+          "meaning": "標的にする"
+        },
+        {
+          "word": "compromising",
+          "meaning": "侵害すること"
+        }
+      ]
+    },
+    {
+      "english": "Phishing attacks, credential theft, session hijacking, and token manipulation are common techniques used to bypass security controls.",
+      "japanese": "フィッシング攻撃、認証情報の窃取、セッションの乗っ取り、認証用情報の改ざんは、セキュリティ制御を回避するためによく使われる手法だ。",
+      "vocabulary": [
+        {
+          "word": "credential theft",
+          "meaning": "認証情報の窃取"
+        },
+        {
+          "word": "bypass",
+          "meaning": "回避する"
+        }
+      ]
+    },
+    {
+      "english": "Multifactor authentication significantly reduces certain risks, but it is not a universal solution.",
+      "japanese": "多要素認証は特定のリスクを大幅に低減するが、万能の解決策ではない。",
+      "vocabulary": [
+        {
+          "word": "significantly reduces",
+          "meaning": "大幅に低減する"
+        },
+        {
+          "word": "universal solution",
+          "meaning": "万能の解決策"
+        }
+      ]
+    },
+    {
+      "english": "Attackers may exploit weaknesses in authentication workflows or deceive users into approving fraudulent requests.",
+      "japanese": "攻撃者は認証手順の弱点を悪用したり、利用者をだまして不正な要求を承認させたりすることがある。",
+      "vocabulary": [
+        {
+          "word": "exploit weaknesses",
+          "meaning": "弱点を悪用する"
+        },
+        {
+          "word": "fraudulent requests",
+          "meaning": "不正な要求"
+        }
+      ]
+    },
+    {
+      "english": "Phishing resistant authentication methods, including hardware based security keys, offer stronger protection against many credential theft scenarios.",
+      "japanese": "ハードウェア型のセキュリティキーなど、フィッシングに強い認証方式は、多くの認証情報窃取の状況に対してより強固な保護を提供する。",
+      "vocabulary": [
+        {
+          "word": "Phishing resistant",
+          "meaning": "フィッシングに強い"
+        },
+        {
+          "word": "scenarios",
+          "meaning": "状況"
+        }
+      ]
+    },
+    {
+      "english": "Another important discussion concerns the relationship between security and usability.",
+      "japanese": "もう一つの重要な議論は、セキュリティと使いやすさの関係に関するものだ。",
+      "vocabulary": [
+        {
+          "word": "relationship",
+          "meaning": "関係"
+        },
+        {
+          "word": "usability",
+          "meaning": "使いやすさ"
+        }
+      ]
+    },
+    {
+      "english": "Extremely restrictive security controls can interfere with legitimate business activities, encouraging employees to develop unauthorized workarounds.",
+      "japanese": "制限が極端に厳しいセキュリティ制御は正当な業務を妨げ、従業員が許可されていない回避策を編み出す原因となることがある。",
+      "vocabulary": [
+        {
+          "word": "restrictive",
+          "meaning": "制限の厳しい"
+        },
+        {
+          "word": "workarounds",
+          "meaning": "回避策"
+        }
+      ]
+    },
+    {
+      "english": "For example, complicated authentication procedures may motivate users to store credentials insecurely or share accounts with colleagues.",
+      "japanese": "例えば、複雑な認証手順のせいで、利用者が認証情報を安全でない方法で保存したり、同僚とアカウントを共有したりすることがある。",
+      "vocabulary": [
+        {
+          "word": "authentication procedures",
+          "meaning": "認証手順"
+        },
+        {
+          "word": "insecurely",
+          "meaning": "安全でない方法で"
+        }
+      ]
+    },
+    {
+      "english": "Security policies that ignore operational requirements may ultimately increase organizational risk.",
+      "japanese": "業務上の要件を無視するセキュリティ方針は、最終的に組織のリスクを高めかねない。",
+      "vocabulary": [
+        {
+          "word": "operational requirements",
+          "meaning": "業務上の要件"
+        },
+        {
+          "word": "ultimately",
+          "meaning": "最終的に"
+        }
+      ]
+    },
+    {
+      "english": "Effective cybersecurity therefore requires a careful balance between technical protection, employee productivity, and practical enforcement.",
+      "japanese": "したがって、効果的なサイバーセキュリティには、技術的な保護、従業員の生産性、実行可能な運用の間で慎重な均衡を取ることが必要だ。",
+      "vocabulary": [
+        {
+          "word": "careful balance",
+          "meaning": "慎重な均衡"
+        },
+        {
+          "word": "enforcement",
+          "meaning": "実施"
+        }
+      ]
+    },
+    {
+      "english": "The most successful controls are often those that provide strong protection while minimizing unnecessary friction.",
+      "japanese": "最も効果的な制御策は、多くの場合、不要な負担を最小限に抑えながら強固な保護を提供するものだ。",
+      "vocabulary": [
+        {
+          "word": "minimizing",
+          "meaning": "最小限に抑えること"
+        },
+        {
+          "word": "friction",
+          "meaning": "負担"
+        }
+      ]
+    },
+    {
+      "english": "Cloud computing introduces additional security challenges, particularly regarding the shared responsibility model.",
+      "japanese": "クラウドコンピューティングは、特に責任共有モデルに関して、さらなるセキュリティ上の課題をもたらす。",
+      "vocabulary": [
+        {
+          "word": "additional",
+          "meaning": "さらなる"
+        },
+        {
+          "word": "shared responsibility model",
+          "meaning": "責任共有モデル"
+        }
+      ]
+    },
+    {
+      "english": "Cloud providers generally secure the underlying infrastructure, while customers remain responsible for various aspects of configuration, access control, applications, and data protection.",
+      "japanese": "一般にクラウド事業者は基盤となるインフラを保護する一方、顧客は設定、アクセス制御、アプリケーション、データ保護のさまざまな側面に引き続き責任を負う。",
+      "vocabulary": [
+        {
+          "word": "underlying infrastructure",
+          "meaning": "基盤となる設備"
+        },
+        {
+          "word": "remain responsible for",
+          "meaning": "引き続き責任を負う"
+        }
+      ]
+    },
+    {
+      "english": "The precise division of responsibilities depends on the service model.",
+      "japanese": "責任の正確な分担は、サービスの形態によって異なる。",
+      "vocabulary": [
+        {
+          "word": "precise division",
+          "meaning": "正確な分担"
+        },
+        {
+          "word": "service model",
+          "meaning": "サービス形態"
+        }
+      ]
+    },
+    {
+      "english": "Misconfigured storage services, excessive permissions, exposed management interfaces, and poorly protected application secrets can create significant vulnerabilities.",
+      "japanese": "設定ミスのある保存サービス、過剰な権限、公開された管理画面、十分に保護されていないアプリケーションの機密情報は、重大な脆弱性を生み出す可能性がある。",
+      "vocabulary": [
+        {
+          "word": "excessive permissions",
+          "meaning": "過剰な権限"
+        },
+        {
+          "word": "vulnerabilities",
+          "meaning": "脆弱性"
+        }
+      ]
+    },
+    {
+      "english": "Organizations sometimes assume that migrating workloads to major cloud platforms automatically improves security.",
+      "japanese": "大手クラウド基盤に業務システムを移行すれば、セキュリティが自動的に向上すると考える組織もある。",
+      "vocabulary": [
+        {
+          "word": "migrating workloads",
+          "meaning": "業務システムを移行すること"
+        },
+        {
+          "word": "automatically",
+          "meaning": "自動的に"
+        }
+      ]
+    },
+    {
+      "english": "In reality, cloud security depends heavily on architectural decisions and operational discipline.",
+      "japanese": "実際には、クラウドセキュリティは設計上の判断と運用の規律に大きく左右される。",
+      "vocabulary": [
+        {
+          "word": "depends heavily on",
+          "meaning": "大きく左右される"
+        },
+        {
+          "word": "operational discipline",
+          "meaning": "運用の規律"
+        }
+      ]
+    },
+    {
+      "english": "Software supply chain security has also become a major concern.",
+      "japanese": "ソフトウェアの供給網のセキュリティも、大きな懸念事項となっている。",
+      "vocabulary": [
+        {
+          "word": "supply chain security",
+          "meaning": "供給網の安全性"
+        },
+        {
+          "word": "concern",
+          "meaning": "懸念事項"
+        }
+      ]
+    },
+    {
+      "english": "Modern applications frequently depend on hundreds of external libraries, container images, development tools, and automated build processes.",
+      "japanese": "現代のアプリケーションは、数百もの外部ライブラリー、コンテナーのひな型、開発ツール、自動化された構築工程に依存していることが多い。",
+      "vocabulary": [
+        {
+          "word": "frequently depend on",
+          "meaning": "頻繁に依存する"
+        },
+        {
+          "word": "automated",
+          "meaning": "自動化された"
+        }
+      ]
+    },
+    {
+      "english": "A vulnerability or malicious modification within a single dependency can potentially affect numerous downstream applications.",
+      "japanese": "一つの依存部品に脆弱性や悪意ある改変があれば、多数の下流アプリケーションに影響が及ぶ可能性がある。",
+      "vocabulary": [
+        {
+          "word": "malicious modification",
+          "meaning": "悪意ある改変"
+        },
+        {
+          "word": "downstream",
+          "meaning": "下流の"
+        }
+      ]
+    },
+    {
+      "english": "Attackers may compromise package repositories, development environments, or continuous integration pipelines to distribute malicious code.",
+      "japanese": "攻撃者は、悪意あるコードを配布するために、パッケージ保管庫、開発環境、継続的インテグレーションの工程を侵害することがある。",
+      "vocabulary": [
+        {
+          "word": "compromise",
+          "meaning": "侵害する"
+        },
+        {
+          "word": "distribute",
+          "meaning": "配布する"
+        }
+      ]
+    },
+    {
+      "english": "Consequently, organizations must examine not only the security of their own source code but also the integrity and provenance of external components.",
+      "japanese": "そのため組織は、自らのソースコードの安全性だけでなく、外部部品の完全性と来歴も調べなければならない。",
+      "vocabulary": [
+        {
+          "word": "integrity",
+          "meaning": "完全性"
+        },
+        {
+          "word": "provenance",
+          "meaning": "来歴"
+        }
+      ]
+    },
+    {
+      "english": "Software bills of materials have attracted attention as a mechanism for improving transparency.",
+      "japanese": "ソフトウェア部品表は、透明性を高める仕組みとして注目を集めている。",
+      "vocabulary": [
+        {
+          "word": "software bills of materials",
+          "meaning": "ソフトウェア部品表"
+        },
+        {
+          "word": "transparency",
+          "meaning": "透明性"
+        }
+      ]
+    },
+    {
+      "english": "By maintaining structured inventories of software components, organizations can identify affected applications when vulnerabilities are disclosed.",
+      "japanese": "ソフトウェア部品の一覧を体系的に管理すれば、脆弱性が公表された際に、影響を受けるアプリケーションを特定できる。",
+      "vocabulary": [
+        {
+          "word": "structured inventories",
+          "meaning": "体系的な一覧"
+        },
+        {
+          "word": "disclosed",
+          "meaning": "公表された"
+        }
+      ]
+    },
+    {
+      "english": "However, producing an inventory does not automatically eliminate security risks.",
+      "japanese": "しかし、一覧を作成しただけで、セキュリティリスクが自動的になくなるわけではない。",
+      "vocabulary": [
+        {
+          "word": "inventory",
+          "meaning": "一覧"
+        },
+        {
+          "word": "eliminate",
+          "meaning": "なくす"
+        }
+      ]
+    },
+    {
+      "english": "Teams must also establish processes for vulnerability assessment, dependency updates, patch prioritization, and incident response.",
+      "japanese": "チームは、脆弱性の評価、依存部品の更新、修正の優先順位付け、インシデント対応の手順も整備しなければならない。",
+      "vocabulary": [
+        {
+          "word": "assessment",
+          "meaning": "評価"
+        },
+        {
+          "word": "prioritization",
+          "meaning": "優先順位付け"
+        }
+      ]
+    },
+    {
+      "english": "The practical question is whether organizations can transform component visibility into timely and effective risk reduction.",
+      "japanese": "実務上の問題は、組織が部品の可視化を、迅速で効果的なリスク低減につなげられるかどうかだ。",
+      "vocabulary": [
+        {
+          "word": "component visibility",
+          "meaning": "部品の可視化"
+        },
+        {
+          "word": "risk reduction",
+          "meaning": "リスク低減"
+        }
+      ]
+    },
+    {
+      "english": "Vulnerability management itself presents difficult strategic choices.",
+      "japanese": "脆弱性管理そのものにも、難しい戦略的判断が伴う。",
+      "vocabulary": [
+        {
+          "word": "vulnerability management",
+          "meaning": "脆弱性管理"
+        },
+        {
+          "word": "strategic choices",
+          "meaning": "戦略的判断"
+        }
+      ]
+    },
+    {
+      "english": "Security teams routinely face thousands of reported vulnerabilities, many of which receive critical severity ratings.",
+      "japanese": "セキュリティチームは、重大度が最高と評価されるものも多い、報告済みの脆弱性に日常的に何千件も直面している。",
+      "vocabulary": [
+        {
+          "word": "routinely face",
+          "meaning": "日常的に直面する"
+        },
+        {
+          "word": "severity ratings",
+          "meaning": "重大度評価"
+        }
+      ]
+    },
+    {
+      "english": "Attempting to remediate every issue immediately is often operationally impossible.",
+      "japanese": "あらゆる問題を直ちに修正しようとするのは、運用上不可能なことが多い。",
+      "vocabulary": [
+        {
+          "word": "remediate",
+          "meaning": "修正する"
+        },
+        {
+          "word": "operationally impossible",
+          "meaning": "運用上不可能な"
+        }
+      ]
+    },
+    {
+      "english": "A more effective approach considers exploit availability, exposure to untrusted networks, business criticality, existing compensating controls, and evidence of active exploitation.",
+      "japanese": "より効果的な方法では、攻撃手段の入手状況、信頼できないネットワークへの露出度、業務上の重要性、既存の代替的な防御策、実際に悪用されている証拠を考慮する。",
+      "vocabulary": [
+        {
+          "word": "exploit availability",
+          "meaning": "攻撃手段の入手状況"
+        },
+        {
+          "word": "compensating controls",
+          "meaning": "代替的な防御策"
+        }
+      ]
+    },
+    {
+      "english": "A severe vulnerability affecting an isolated development environment may represent less immediate risk than a moderately rated flaw in a publicly accessible authentication service.",
+      "japanese": "隔離された開発環境に影響する深刻な脆弱性よりも、一般公開された認証サービスにある中程度と評価された欠陥のほうが、差し迫ったリスクが高い場合がある。",
+      "vocabulary": [
+        {
+          "word": "isolated",
+          "meaning": "隔離された"
+        },
+        {
+          "word": "publicly accessible",
+          "meaning": "一般公開された"
+        }
+      ]
+    },
+    {
+      "english": "The emergence of artificial intelligence is changing both offensive and defensive cybersecurity capabilities.",
+      "japanese": "人工知能の登場は、攻撃側と防御側の双方のサイバーセキュリティ能力を変えつつある。",
+      "vocabulary": [
+        {
+          "word": "emergence",
+          "meaning": "登場"
+        },
+        {
+          "word": "capabilities",
+          "meaning": "能力"
+        }
+      ]
+    },
+    {
+      "english": "Attackers can use generative AI to develop convincing social engineering messages, analyze publicly available technical information, and accelerate certain stages of reconnaissance.",
+      "japanese": "攻撃者は生成型人工知能を使って、説得力のあるソーシャルエンジニアリングの文面を作成し、公開されている技術情報を分析し、偵察の一部の段階を迅速化できる。",
+      "vocabulary": [
+        {
+          "word": "convincing",
+          "meaning": "説得力のある"
+        },
+        {
+          "word": "reconnaissance",
+          "meaning": "偵察"
+        }
+      ]
+    },
+    {
+      "english": "Defenders can apply similar technologies to security monitoring, threat intelligence analysis, incident investigation, and automated remediation.",
+      "japanese": "防御側も同様の技術を、セキュリティ監視、脅威情報の分析、インシデント調査、自動修復に活用できる。",
+      "vocabulary": [
+        {
+          "word": "threat intelligence",
+          "meaning": "脅威情報"
+        },
+        {
+          "word": "remediation",
+          "meaning": "修復"
+        }
+      ]
+    },
+    {
+      "english": "However, AI generated security recommendations may contain incorrect assumptions or fabricated explanations.",
+      "japanese": "しかし、人工知能が生成したセキュリティ上の提案には、誤った前提や作り上げられた説明が含まれることがある。",
+      "vocabulary": [
+        {
+          "word": "recommendations",
+          "meaning": "提案"
+        },
+        {
+          "word": "fabricated",
+          "meaning": "作り上げられた"
+        }
+      ]
+    },
+    {
+      "english": "Security professionals must therefore maintain human oversight, particularly when automated decisions could disrupt production systems.",
+      "japanese": "したがって、特に自動化された判断が本番システムを停止させるおそれがある場合、セキュリティ専門家は人間による監督を維持しなければならない。",
+      "vocabulary": [
+        {
+          "word": "human oversight",
+          "meaning": "人間による監督"
+        },
+        {
+          "word": "disrupt",
+          "meaning": "停止させる"
+        }
+      ]
+    },
+    {
+      "english": "Incident response and operational resilience deserve equal attention.",
+      "japanese": "インシデント対応と業務の回復力にも、同等の注意を払うべきである。",
+      "vocabulary": [
+        {
+          "word": "incident response",
+          "meaning": "事案への対応"
+        },
+        {
+          "word": "deserve",
+          "meaning": "値する"
+        }
+      ]
+    },
+    {
+      "english": "Even organizations with mature preventive controls may experience successful intrusions through previously unknown vulnerabilities, compromised suppliers, or human error.",
+      "japanese": "予防策が成熟している組織であっても、未知の脆弱性、侵害された取引先、人為的ミスを通じて侵入に成功されることがある。",
+      "vocabulary": [
+        {
+          "word": "mature",
+          "meaning": "成熟した"
+        },
+        {
+          "word": "human error",
+          "meaning": "人為的ミス"
+        }
+      ]
+    },
+    {
+      "english": "Effective preparation requires centralized logging, reliable detection capabilities, tested recovery procedures, and clearly defined responsibilities.",
+      "japanese": "効果的な備えには、一元化された記録、信頼できる検知能力、検証済みの復旧手順、明確に定められた責任が必要だ。",
+      "vocabulary": [
+        {
+          "word": "centralized logging",
+          "meaning": "一元化された記録"
+        },
+        {
+          "word": "recovery procedures",
+          "meaning": "復旧手順"
+        }
+      ]
+    },
+    {
+      "english": "Network isolation, credential revocation, and restoration from verified backups can reduce the impact of serious incidents.",
+      "japanese": "ネットワークの隔離、認証情報の無効化、検証済みのバックアップからの復元は、深刻なインシデントの影響を軽減できる。",
+      "vocabulary": [
+        {
+          "word": "credential revocation",
+          "meaning": "認証情報の無効化"
+        },
+        {
+          "word": "verified backups",
+          "meaning": "検証済みのバックアップ"
+        }
+      ]
+    },
+    {
+      "english": "Regular exercises help organizations discover weaknesses before an actual emergency occurs.",
+      "japanese": "定期的な演習を行えば、実際の緊急事態が起こる前に、組織の弱点を発見できる。",
+      "vocabulary": [
+        {
+          "word": "exercises",
+          "meaning": "演習"
+        },
+        {
+          "word": "emergency",
+          "meaning": "緊急事態"
+        }
+      ]
+    },
+    {
+      "english": "Ultimately, cybersecurity is not simply a technical discipline.",
+      "japanese": "結局のところ、サイバーセキュリティは単なる技術分野ではない。",
+      "vocabulary": [
+        {
+          "word": "Ultimately",
+          "meaning": "結局のところ"
+        },
+        {
+          "word": "discipline",
+          "meaning": "分野"
+        }
+      ]
+    },
+    {
+      "english": "It is a continuous process of managing uncertainty, allocating limited resources, and making informed decisions about acceptable risk.",
+      "japanese": "それは、不確実性を管理し、限られた資源を配分し、許容できるリスクについて情報に基づいた判断を下す継続的な取り組みである。",
+      "vocabulary": [
+        {
+          "word": "allocating",
+          "meaning": "配分すること"
+        },
+        {
+          "word": "acceptable risk",
+          "meaning": "許容できるリスク"
+        }
+      ]
+    },
+    {
+      "english": "Executives must understand that security investments cannot guarantee complete protection, while technical specialists must communicate risks in terms of business consequences rather than vulnerability counts alone.",
+      "japanese": "経営幹部はセキュリティ投資によって完全な保護を保証できないと理解しなければならず、技術専門家は脆弱性の件数だけでなく、事業への影響という観点からリスクを伝えなければならない。",
+      "vocabulary": [
+        {
+          "word": "guarantee",
+          "meaning": "保証する"
+        },
+        {
+          "word": "business consequences",
+          "meaning": "事業への影響"
+        }
+      ]
+    },
+    {
+      "english": "The central objective should be to reduce the probability and impact of damaging incidents while preserving the organization's ability to operate effectively.",
+      "japanese": "中心的な目標は、組織が効果的に運営を続ける力を保ちながら、深刻なインシデントが起こる可能性とその影響を減らすことだ。",
+      "vocabulary": [
+        {
+          "word": "probability",
+          "meaning": "可能性"
+        },
+        {
+          "word": "preserving",
+          "meaning": "保つこと"
+        }
+      ]
+    },
+    {
+      "english": "As digital infrastructure becomes more interconnected, no organization can achieve meaningful security entirely on its own.",
+      "japanese": "デジタル基盤の相互接続が進むにつれ、どの組織も単独で十分なセキュリティを実現することはできない。",
+      "vocabulary": [
+        {
+          "word": "interconnected",
+          "meaning": "相互接続された"
+        },
+        {
+          "word": "entirely on its own",
+          "meaning": "完全に単独で"
+        }
+      ]
+    },
+    {
+      "english": "Collaboration among businesses, cloud providers, software developers, researchers, and governments is increasingly essential.",
+      "japanese": "企業、クラウド事業者、ソフトウェア開発者、研究者、政府の間の連携が、ますます欠かせなくなっている。",
+      "vocabulary": [
+        {
+          "word": "Collaboration",
+          "meaning": "連携"
+        },
+        {
+          "word": "increasingly essential",
+          "meaning": "ますます不可欠な"
+        }
+      ]
+    },
+    {
+      "english": "Threat intelligence sharing, coordinated vulnerability disclosure, common security standards, and transparent incident reporting can strengthen the broader digital ecosystem.",
+      "japanese": "脅威情報の共有、連携した脆弱性の公表、共通のセキュリティ基準、透明性のあるインシデント報告は、より広範なデジタル環境を強化できる。",
+      "vocabulary": [
+        {
+          "word": "coordinated vulnerability disclosure",
+          "meaning": "連携した脆弱性の公表"
+        },
+        {
+          "word": "broader",
+          "meaning": "より広範な"
+        }
+      ]
+    },
+    {
+      "english": "The challenge for the coming decade is to develop security architectures that remain effective despite continuous technological change, increasingly capable adversaries, and the inevitable limitations of human judgment.",
+      "japanese": "今後十年間の課題は、絶え間ない技術変化、ますます能力を高める敵対者、そして人間の判断に避けられない限界にもかかわらず、有効性を保つセキュリティ設計を構築することだ。",
+      "vocabulary": [
+        {
+          "word": "adversaries",
+          "meaning": "敵対者"
+        },
+        {
+          "word": "inevitable limitations",
+          "meaning": "避けられない限界"
+        }
+      ]
+    }
+  ],
+  "transcript": "Internet security has become one of the most critical challenges facing modern organizations. As businesses increasingly depend on cloud computing, remote access, artificial intelligence, and interconnected digital services, the traditional boundaries of corporate networks are disappearing. Security professionals must now protect complex environments in which users, applications, and data are distributed across multiple platforms. The central question is no longer whether an organization can prevent every cyberattack, but whether it can maintain operational resilience when its defenses are eventually compromised.\n\nOne of the most important debates in cybersecurity concerns the effectiveness of traditional perimeter based security. Historically, organizations relied heavily on firewalls, virtual private networks, and intrusion detection systems to protect internal resources from external threats. This approach assumed that users and devices operating inside the corporate network could generally be trusted. However, the widespread adoption of cloud services and remote working arrangements has made this assumption increasingly unrealistic. Attackers who obtain legitimate credentials may gain access to internal systems without triggering conventional network security controls.\n\nThis problem has accelerated the adoption of Zero Trust architecture. The fundamental principle of Zero Trust is that no user, device, or application should be trusted automatically, regardless of its network location. Every access request should be evaluated according to identity, device security, contextual information, and applicable authorization policies. Nevertheless, implementing Zero Trust is considerably more complicated than adopting a particular security product. Organizations must redesign identity management, network segmentation, authentication mechanisms, and access governance. Some experts argue that Zero Trust is primarily an architectural philosophy rather than a technology that can be purchased.\n\nIdentity security has consequently emerged as a central component of modern cybersecurity strategies. Attackers increasingly target authentication systems because compromising a legitimate identity can provide direct access to valuable resources. Phishing attacks, credential theft, session hijacking, and token manipulation are common techniques used to bypass security controls. Multifactor authentication significantly reduces certain risks, but it is not a universal solution. Attackers may exploit weaknesses in authentication workflows or deceive users into approving fraudulent requests. Phishing resistant authentication methods, including hardware based security keys, offer stronger protection against many credential theft scenarios.\n\nAnother important discussion concerns the relationship between security and usability. Extremely restrictive security controls can interfere with legitimate business activities, encouraging employees to develop unauthorized workarounds. For example, complicated authentication procedures may motivate users to store credentials insecurely or share accounts with colleagues. Security policies that ignore operational requirements may ultimately increase organizational risk. Effective cybersecurity therefore requires a careful balance between technical protection, employee productivity, and practical enforcement. The most successful controls are often those that provide strong protection while minimizing unnecessary friction.\n\nCloud computing introduces additional security challenges, particularly regarding the shared responsibility model. Cloud providers generally secure the underlying infrastructure, while customers remain responsible for various aspects of configuration, access control, applications, and data protection. The precise division of responsibilities depends on the service model. Misconfigured storage services, excessive permissions, exposed management interfaces, and poorly protected application secrets can create significant vulnerabilities. Organizations sometimes assume that migrating workloads to major cloud platforms automatically improves security. In reality, cloud security depends heavily on architectural decisions and operational discipline.\n\nSoftware supply chain security has also become a major concern. Modern applications frequently depend on hundreds of external libraries, container images, development tools, and automated build processes. A vulnerability or malicious modification within a single dependency can potentially affect numerous downstream applications. Attackers may compromise package repositories, development environments, or continuous integration pipelines to distribute malicious code. Consequently, organizations must examine not only the security of their own source code but also the integrity and provenance of external components.\n\nSoftware bills of materials have attracted attention as a mechanism for improving transparency. By maintaining structured inventories of software components, organizations can identify affected applications when vulnerabilities are disclosed. However, producing an inventory does not automatically eliminate security risks. Teams must also establish processes for vulnerability assessment, dependency updates, patch prioritization, and incident response. The practical question is whether organizations can transform component visibility into timely and effective risk reduction.\n\nVulnerability management itself presents difficult strategic choices. Security teams routinely face thousands of reported vulnerabilities, many of which receive critical severity ratings. Attempting to remediate every issue immediately is often operationally impossible. A more effective approach considers exploit availability, exposure to untrusted networks, business criticality, existing compensating controls, and evidence of active exploitation. A severe vulnerability affecting an isolated development environment may represent less immediate risk than a moderately rated flaw in a publicly accessible authentication service.\n\nThe emergence of artificial intelligence is changing both offensive and defensive cybersecurity capabilities. Attackers can use generative AI to develop convincing social engineering messages, analyze publicly available technical information, and accelerate certain stages of reconnaissance. Defenders can apply similar technologies to security monitoring, threat intelligence analysis, incident investigation, and automated remediation. However, AI generated security recommendations may contain incorrect assumptions or fabricated explanations. Security professionals must therefore maintain human oversight, particularly when automated decisions could disrupt production systems.\n\nIncident response and operational resilience deserve equal attention. Even organizations with mature preventive controls may experience successful intrusions through previously unknown vulnerabilities, compromised suppliers, or human error. Effective preparation requires centralized logging, reliable detection capabilities, tested recovery procedures, and clearly defined responsibilities. Network isolation, credential revocation, and restoration from verified backups can reduce the impact of serious incidents. Regular exercises help organizations discover weaknesses before an actual emergency occurs.\n\nUltimately, cybersecurity is not simply a technical discipline. It is a continuous process of managing uncertainty, allocating limited resources, and making informed decisions about acceptable risk. Executives must understand that security investments cannot guarantee complete protection, while technical specialists must communicate risks in terms of business consequences rather than vulnerability counts alone. The central objective should be to reduce the probability and impact of damaging incidents while preserving the organization's ability to operate effectively.\n\nAs digital infrastructure becomes more interconnected, no organization can achieve meaningful security entirely on its own. Collaboration among businesses, cloud providers, software developers, researchers, and governments is increasingly essential. Threat intelligence sharing, coordinated vulnerability disclosure, common security standards, and transparent incident reporting can strengthen the broader digital ecosystem. The challenge for the coming decade is to develop security architectures that remain effective despite continuous technological change, increasingly capable adversaries, and the inevitable limitations of human judgment.",
+  "words": [
+    {
+      "word": "Internet",
+      "start": 0,
+      "end": 0.38
+    },
+    {
+      "word": "security",
+      "start": 0.38,
+      "end": 0.76
+    },
+    {
+      "word": "has",
+      "start": 0.76,
+      "end": 1.0
+    },
+    {
+      "word": "become",
+      "start": 1.0,
+      "end": 1.3
+    },
+    {
+      "word": "one",
+      "start": 1.3,
+      "end": 1.52
+    },
+    {
+      "word": "of",
+      "start": 1.52,
+      "end": 1.7
+    },
+    {
+      "word": "the",
+      "start": 1.7,
+      "end": 1.74
+    },
+    {
+      "word": "most",
+      "start": 1.74,
+      "end": 2.08
+    },
+    {
+      "word": "critical",
+      "start": 2.08,
+      "end": 2.4
+    },
+    {
+      "word": "challenges",
+      "start": 2.4,
+      "end": 2.92
+    },
+    {
+      "word": "facing",
+      "start": 2.92,
+      "end": 3.32
+    },
+    {
+      "word": "modern",
+      "start": 3.32,
+      "end": 3.68
+    },
+    {
+      "word": "organizations",
+      "start": 3.68,
+      "end": 4.34
+    },
+    {
+      "word": "As",
+      "start": 5.12,
+      "end": 5.22
+    },
+    {
+      "word": "businesses",
+      "start": 5.22,
+      "end": 5.72
+    },
+    {
+      "word": "increasingly",
+      "start": 5.72,
+      "end": 6.36
+    },
+    {
+      "word": "depend",
+      "start": 6.36,
+      "end": 6.68
+    },
+    {
+      "word": "on",
+      "start": 6.68,
+      "end": 6.94
+    },
+    {
+      "word": "cloud",
+      "start": 6.94,
+      "end": 7.22
+    },
+    {
+      "word": "computing",
+      "start": 7.22,
+      "end": 7.58
+    },
+    {
+      "word": "remote",
+      "start": 8.16,
+      "end": 8.22
+    },
+    {
+      "word": "access",
+      "start": 8.22,
+      "end": 8.7
+    },
+    {
+      "word": "artificial",
+      "start": 9.38,
+      "end": 9.38
+    },
+    {
+      "word": "intelligence",
+      "start": 9.38,
+      "end": 10.04
+    },
+    {
+      "word": "and",
+      "start": 10.16,
+      "end": 10.62
+    },
+    {
+      "word": "interconnected",
+      "start": 10.62,
+      "end": 11.14
+    },
+    {
+      "word": "digital",
+      "start": 11.14,
+      "end": 11.58
+    },
+    {
+      "word": "services",
+      "start": 11.58,
+      "end": 11.94
+    },
+    {
+      "word": "the",
+      "start": 12.56,
+      "end": 12.74
+    },
+    {
+      "word": "traditional",
+      "start": 12.74,
+      "end": 13.1
+    },
+    {
+      "word": "boundaries",
+      "start": 13.1,
+      "end": 13.46
+    },
+    {
+      "word": "of",
+      "start": 13.46,
+      "end": 13.78
+    },
+    {
+      "word": "corporate",
+      "start": 13.78,
+      "end": 13.98
+    },
+    {
+      "word": "networks",
+      "start": 13.98,
+      "end": 14.34
+    },
+    {
+      "word": "are",
+      "start": 14.34,
+      "end": 14.64
+    },
+    {
+      "word": "disappearing",
+      "start": 14.64,
+      "end": 15.04
+    },
+    {
+      "word": "Security",
+      "start": 16.08,
+      "end": 16.16
+    },
+    {
+      "word": "professionals",
+      "start": 16.16,
+      "end": 16.62
+    },
+    {
+      "word": "must",
+      "start": 16.62,
+      "end": 16.94
+    },
+    {
+      "word": "now",
+      "start": 16.94,
+      "end": 17.6
+    },
+    {
+      "word": "protect",
+      "start": 17.6,
+      "end": 17.62
+    },
+    {
+      "word": "complex",
+      "start": 17.62,
+      "end": 18.18
+    },
+    {
+      "word": "environments",
+      "start": 18.18,
+      "end": 18.6
+    },
+    {
+      "word": "in",
+      "start": 18.9,
+      "end": 19.26
+    },
+    {
+      "word": "which",
+      "start": 19.26,
+      "end": 19.44
+    },
+    {
+      "word": "users",
+      "start": 19.44,
+      "end": 19.82
+    },
+    {
+      "word": "applications",
+      "start": 20.6,
+      "end": 20.6
+    },
+    {
+      "word": "and",
+      "start": 20.7,
+      "end": 20.98
+    },
+    {
+      "word": "data",
+      "start": 20.98,
+      "end": 21.14
+    },
+    {
+      "word": "are",
+      "start": 21.14,
+      "end": 21.72
+    },
+    {
+      "word": "distributed",
+      "start": 21.72,
+      "end": 22.12
+    },
+    {
+      "word": "across",
+      "start": 22.12,
+      "end": 22.62
+    },
+    {
+      "word": "multiple",
+      "start": 22.62,
+      "end": 22.98
+    },
+    {
+      "word": "platforms",
+      "start": 22.98,
+      "end": 23.48
+    },
+    {
+      "word": "The",
+      "start": 23.96,
+      "end": 24.28
+    },
+    {
+      "word": "central",
+      "start": 24.28,
+      "end": 24.56
+    },
+    {
+      "word": "question",
+      "start": 24.56,
+      "end": 24.92
+    },
+    {
+      "word": "is",
+      "start": 24.92,
+      "end": 25.2
+    },
+    {
+      "word": "no",
+      "start": 25.2,
+      "end": 25.44
+    },
+    {
+      "word": "longer",
+      "start": 25.44,
+      "end": 25.66
+    },
+    {
+      "word": "whether",
+      "start": 25.66,
+      "end": 25.94
+    },
+    {
+      "word": "an",
+      "start": 25.94,
+      "end": 26.3
+    },
+    {
+      "word": "organization",
+      "start": 26.3,
+      "end": 26.7
+    },
+    {
+      "word": "can",
+      "start": 26.7,
+      "end": 27.04
+    },
+    {
+      "word": "prevent",
+      "start": 27.04,
+      "end": 27.32
+    },
+    {
+      "word": "every",
+      "start": 27.32,
+      "end": 27.76
+    },
+    {
+      "word": "cyberattack",
+      "start": 27.85,
+      "end": 28.38
+    },
+    {
+      "word": "but",
+      "start": 28.38,
+      "end": 28.98
+    },
+    {
+      "word": "whether",
+      "start": 28.98,
+      "end": 29.22
+    },
+    {
+      "word": "it",
+      "start": 29.22,
+      "end": 29.36
+    },
+    {
+      "word": "can",
+      "start": 29.36,
+      "end": 29.5
+    },
+    {
+      "word": "maintain",
+      "start": 29.5,
+      "end": 29.86
+    },
+    {
+      "word": "operational",
+      "start": 30.0,
+      "end": 30.5
+    },
+    {
+      "word": "resilience",
+      "start": 30.5,
+      "end": 31.06
+    },
+    {
+      "word": "when",
+      "start": 31.06,
+      "end": 31.44
+    },
+    {
+      "word": "its",
+      "start": 31.44,
+      "end": 31.66
+    },
+    {
+      "word": "defenses",
+      "start": 31.66,
+      "end": 32.02
+    },
+    {
+      "word": "are",
+      "start": 32.02,
+      "end": 32.28
+    },
+    {
+      "word": "eventually",
+      "start": 32.28,
+      "end": 32.82
+    },
+    {
+      "word": "compromised",
+      "start": 32.82,
+      "end": 33.24
+    },
+    {
+      "word": "One",
+      "start": 34.04,
+      "end": 34.1
+    },
+    {
+      "word": "of",
+      "start": 34.1,
+      "end": 34.28
+    },
+    {
+      "word": "the",
+      "start": 34.28,
+      "end": 34.32
+    },
+    {
+      "word": "most",
+      "start": 34.32,
+      "end": 34.62
+    },
+    {
+      "word": "important",
+      "start": 34.62,
+      "end": 34.92
+    },
+    {
+      "word": "debates",
+      "start": 34.92,
+      "end": 35.2
+    },
+    {
+      "word": "in",
+      "start": 35.2,
+      "end": 35.52
+    },
+    {
+      "word": "cybersecurity",
+      "start": 35.52,
+      "end": 36.08
+    },
+    {
+      "word": "concerns",
+      "start": 36.08,
+      "end": 36.66
+    },
+    {
+      "word": "the",
+      "start": 36.66,
+      "end": 36.9
+    },
+    {
+      "word": "effectiveness",
+      "start": 36.9,
+      "end": 37.32
+    },
+    {
+      "word": "of",
+      "start": 37.32,
+      "end": 37.72
+    },
+    {
+      "word": "traditional",
+      "start": 37.72,
+      "end": 38.1
+    },
+    {
+      "word": "perimeter",
+      "start": 38.1,
+      "end": 38.52
+    },
+    {
+      "word": "based",
+      "start": 38.52,
+      "end": 38.86
+    },
+    {
+      "word": "security",
+      "start": 38.86,
+      "end": 39.24
+    },
+    {
+      "word": "Historically",
+      "start": 40.06,
+      "end": 40.44
+    },
+    {
+      "word": "organizations",
+      "start": 40.78,
+      "end": 41.26
+    },
+    {
+      "word": "relied",
+      "start": 41.26,
+      "end": 41.66
+    },
+    {
+      "word": "heavily",
+      "start": 41.66,
+      "end": 41.98
+    },
+    {
+      "word": "on",
+      "start": 41.98,
+      "end": 42.34
+    },
+    {
+      "word": "firewalls",
+      "start": 42.34,
+      "end": 42.98
+    },
+    {
+      "word": "virtual",
+      "start": 43.46,
+      "end": 43.54
+    },
+    {
+      "word": "private",
+      "start": 43.54,
+      "end": 43.9
+    },
+    {
+      "word": "networks",
+      "start": 43.9,
+      "end": 44.26
+    },
+    {
+      "word": "and",
+      "start": 44.5,
+      "end": 44.92
+    },
+    {
+      "word": "intrusion",
+      "start": 44.92,
+      "end": 45.2
+    },
+    {
+      "word": "detection",
+      "start": 45.2,
+      "end": 45.66
+    },
+    {
+      "word": "systems",
+      "start": 45.66,
+      "end": 46.04
+    },
+    {
+      "word": "to",
+      "start": 46.04,
+      "end": 46.36
+    },
+    {
+      "word": "protect",
+      "start": 46.36,
+      "end": 46.6
+    },
+    {
+      "word": "internal",
+      "start": 46.6,
+      "end": 47.0
+    },
+    {
+      "word": "resources",
+      "start": 47.0,
+      "end": 47.48
+    },
+    {
+      "word": "from",
+      "start": 47.48,
+      "end": 47.82
+    },
+    {
+      "word": "external",
+      "start": 47.82,
+      "end": 48.2
+    },
+    {
+      "word": "threats",
+      "start": 48.2,
+      "end": 48.58
+    },
+    {
+      "word": "This",
+      "start": 49.14,
+      "end": 49.42
+    },
+    {
+      "word": "approach",
+      "start": 49.42,
+      "end": 49.7
+    },
+    {
+      "word": "assumed",
+      "start": 49.7,
+      "end": 50.04
+    },
+    {
+      "word": "that",
+      "start": 50.04,
+      "end": 50.66
+    },
+    {
+      "word": "users",
+      "start": 50.66,
+      "end": 50.66
+    },
+    {
+      "word": "and",
+      "start": 50.66,
+      "end": 50.9
+    },
+    {
+      "word": "devices",
+      "start": 50.9,
+      "end": 51.26
+    },
+    {
+      "word": "operating",
+      "start": 51.26,
+      "end": 51.8
+    },
+    {
+      "word": "inside",
+      "start": 51.8,
+      "end": 52.14
+    },
+    {
+      "word": "the",
+      "start": 52.14,
+      "end": 52.34
+    },
+    {
+      "word": "corporate",
+      "start": 52.34,
+      "end": 52.56
+    },
+    {
+      "word": "network",
+      "start": 52.56,
+      "end": 52.96
+    },
+    {
+      "word": "could",
+      "start": 52.96,
+      "end": 53.28
+    },
+    {
+      "word": "generally",
+      "start": 53.28,
+      "end": 53.68
+    },
+    {
+      "word": "be",
+      "start": 53.68,
+      "end": 53.92
+    },
+    {
+      "word": "trusted",
+      "start": 53.92,
+      "end": 54.18
+    },
+    {
+      "word": "However",
+      "start": 54.86,
+      "end": 55.14
+    },
+    {
+      "word": "the",
+      "start": 55.42,
+      "end": 55.7
+    },
+    {
+      "word": "widespread",
+      "start": 55.7,
+      "end": 55.96
+    },
+    {
+      "word": "adoption",
+      "start": 55.96,
+      "end": 56.36
+    },
+    {
+      "word": "of",
+      "start": 56.36,
+      "end": 56.68
+    },
+    {
+      "word": "cloud",
+      "start": 56.68,
+      "end": 56.88
+    },
+    {
+      "word": "services",
+      "start": 56.88,
+      "end": 57.3
+    },
+    {
+      "word": "and",
+      "start": 57.3,
+      "end": 57.58
+    },
+    {
+      "word": "remote",
+      "start": 57.58,
+      "end": 57.88
+    },
+    {
+      "word": "working",
+      "start": 57.88,
+      "end": 58.18
+    },
+    {
+      "word": "arrangements",
+      "start": 58.18,
+      "end": 58.66
+    },
+    {
+      "word": "has",
+      "start": 58.66,
+      "end": 59.18
+    },
+    {
+      "word": "made",
+      "start": 59.18,
+      "end": 59.32
+    },
+    {
+      "word": "this",
+      "start": 59.32,
+      "end": 59.54
+    },
+    {
+      "word": "assumption",
+      "start": 59.54,
+      "end": 59.84
+    },
+    {
+      "word": "increasingly",
+      "start": 60.0,
+      "end": 60.58
+    },
+    {
+      "word": "unrealistic",
+      "start": 60.58,
+      "end": 61.38
+    },
+    {
+      "word": "Attackers",
+      "start": 62.4,
+      "end": 62.6
+    },
+    {
+      "word": "who",
+      "start": 62.6,
+      "end": 62.72
+    },
+    {
+      "word": "obtain",
+      "start": 62.72,
+      "end": 63.1
+    },
+    {
+      "word": "legitimate",
+      "start": 63.1,
+      "end": 63.58
+    },
+    {
+      "word": "credentials",
+      "start": 63.58,
+      "end": 64.08
+    },
+    {
+      "word": "may",
+      "start": 64.08,
+      "end": 64.38
+    },
+    {
+      "word": "gain",
+      "start": 64.38,
+      "end": 64.58
+    },
+    {
+      "word": "access",
+      "start": 64.58,
+      "end": 64.94
+    },
+    {
+      "word": "to",
+      "start": 64.94,
+      "end": 65.2
+    },
+    {
+      "word": "internal",
+      "start": 65.2,
+      "end": 65.54
+    },
+    {
+      "word": "systems",
+      "start": 65.54,
+      "end": 66.0
+    },
+    {
+      "word": "without",
+      "start": 66.0,
+      "end": 66.42
+    },
+    {
+      "word": "triggering",
+      "start": 66.42,
+      "end": 66.84
+    },
+    {
+      "word": "conventional",
+      "start": 66.84,
+      "end": 67.42
+    },
+    {
+      "word": "network",
+      "start": 67.42,
+      "end": 67.82
+    },
+    {
+      "word": "security",
+      "start": 67.82,
+      "end": 68.22
+    },
+    {
+      "word": "controls",
+      "start": 68.22,
+      "end": 68.66
+    },
+    {
+      "word": "This",
+      "start": 69.54,
+      "end": 69.66
+    },
+    {
+      "word": "problem",
+      "start": 69.66,
+      "end": 70.08
+    },
+    {
+      "word": "has",
+      "start": 70.08,
+      "end": 70.38
+    },
+    {
+      "word": "accelerated",
+      "start": 70.38,
+      "end": 70.78
+    },
+    {
+      "word": "the",
+      "start": 70.78,
+      "end": 71.08
+    },
+    {
+      "word": "adoption",
+      "start": 71.08,
+      "end": 71.42
+    },
+    {
+      "word": "of",
+      "start": 71.42,
+      "end": 71.86
+    },
+    {
+      "word": "Zero",
+      "start": 71.86,
+      "end": 72.16
+    },
+    {
+      "word": "Trust",
+      "start": 72.16,
+      "end": 72.3
+    },
+    {
+      "word": "architecture",
+      "start": 72.3,
+      "end": 72.84
+    },
+    {
+      "word": "The",
+      "start": 73.52,
+      "end": 73.6
+    },
+    {
+      "word": "fundamental",
+      "start": 73.6,
+      "end": 74.06
+    },
+    {
+      "word": "principle",
+      "start": 74.06,
+      "end": 74.46
+    },
+    {
+      "word": "of",
+      "start": 74.46,
+      "end": 74.74
+    },
+    {
+      "word": "Zero",
+      "start": 74.74,
+      "end": 74.96
+    },
+    {
+      "word": "Trust",
+      "start": 74.96,
+      "end": 75.2
+    },
+    {
+      "word": "is",
+      "start": 75.2,
+      "end": 75.44
+    },
+    {
+      "word": "that",
+      "start": 75.44,
+      "end": 75.72
+    },
+    {
+      "word": "no",
+      "start": 75.72,
+      "end": 75.88
+    },
+    {
+      "word": "user",
+      "start": 75.88,
+      "end": 76.28
+    },
+    {
+      "word": "device",
+      "start": 76.84,
+      "end": 76.84
+    },
+    {
+      "word": "or",
+      "start": 76.9,
+      "end": 77.1
+    },
+    {
+      "word": "application",
+      "start": 77.1,
+      "end": 77.54
+    },
+    {
+      "word": "should",
+      "start": 77.54,
+      "end": 77.86
+    },
+    {
+      "word": "be",
+      "start": 77.86,
+      "end": 78.4
+    },
+    {
+      "word": "trusted",
+      "start": 78.4,
+      "end": 78.4
+    },
+    {
+      "word": "automatically",
+      "start": 78.4,
+      "end": 79.02
+    },
+    {
+      "word": "regardless",
+      "start": 79.52,
+      "end": 79.86
+    },
+    {
+      "word": "of",
+      "start": 79.86,
+      "end": 80.1
+    },
+    {
+      "word": "its",
+      "start": 80.1,
+      "end": 80.26
+    },
+    {
+      "word": "network",
+      "start": 80.26,
+      "end": 80.5
+    },
+    {
+      "word": "location",
+      "start": 80.5,
+      "end": 81.0
+    },
+    {
+      "word": "Every",
+      "start": 81.72,
+      "end": 82.0
+    },
+    {
+      "word": "access",
+      "start": 82.0,
+      "end": 82.38
+    },
+    {
+      "word": "request",
+      "start": 82.38,
+      "end": 82.76
+    },
+    {
+      "word": "should",
+      "start": 82.76,
+      "end": 82.96
+    },
+    {
+      "word": "be",
+      "start": 82.96,
+      "end": 83.16
+    },
+    {
+      "word": "evaluated",
+      "start": 83.16,
+      "end": 83.56
+    },
+    {
+      "word": "according",
+      "start": 83.56,
+      "end": 83.92
+    },
+    {
+      "word": "to",
+      "start": 83.92,
+      "end": 84.6
+    },
+    {
+      "word": "identity",
+      "start": 84.6,
+      "end": 84.6
+    },
+    {
+      "word": "device",
+      "start": 85.18,
+      "end": 85.26
+    },
+    {
+      "word": "security",
+      "start": 85.26,
+      "end": 85.68
+    },
+    {
+      "word": "contextual",
+      "start": 86.14,
+      "end": 86.42
+    },
+    {
+      "word": "information",
+      "start": 86.42,
+      "end": 86.96
+    },
+    {
+      "word": "and",
+      "start": 87.36,
+      "end": 87.6
+    },
+    {
+      "word": "applicable",
+      "start": 87.6,
+      "end": 87.96
+    },
+    {
+      "word": "authorization",
+      "start": 87.96,
+      "end": 88.58
+    },
+    {
+      "word": "policies",
+      "start": 88.58,
+      "end": 89.12
+    },
+    {
+      "word": "Nevertheless",
+      "start": 90.0,
+      "end": 90.34
+    },
+    {
+      "word": "implementing",
+      "start": 90.94,
+      "end": 90.94
+    },
+    {
+      "word": "Zero",
+      "start": 90.94,
+      "end": 91.3
+    },
+    {
+      "word": "Trust",
+      "start": 91.3,
+      "end": 91.52
+    },
+    {
+      "word": "is",
+      "start": 91.52,
+      "end": 91.8
+    },
+    {
+      "word": "considerably",
+      "start": 91.8,
+      "end": 92.32
+    },
+    {
+      "word": "more",
+      "start": 92.32,
+      "end": 92.68
+    },
+    {
+      "word": "complicated",
+      "start": 92.68,
+      "end": 93.08
+    },
+    {
+      "word": "than",
+      "start": 93.08,
+      "end": 93.38
+    },
+    {
+      "word": "adopting",
+      "start": 93.38,
+      "end": 93.76
+    },
+    {
+      "word": "a",
+      "start": 93.76,
+      "end": 94.02
+    },
+    {
+      "word": "particular",
+      "start": 94.02,
+      "end": 94.54
+    },
+    {
+      "word": "security",
+      "start": 94.54,
+      "end": 94.86
+    },
+    {
+      "word": "product",
+      "start": 94.86,
+      "end": 95.28
+    },
+    {
+      "word": "Organizations",
+      "start": 95.96,
+      "end": 96.36
+    },
+    {
+      "word": "must",
+      "start": 96.36,
+      "end": 96.74
+    },
+    {
+      "word": "redesign",
+      "start": 96.74,
+      "end": 97.3
+    },
+    {
+      "word": "identity",
+      "start": 97.3,
+      "end": 97.76
+    },
+    {
+      "word": "management",
+      "start": 97.76,
+      "end": 98.22
+    },
+    {
+      "word": "network",
+      "start": 98.62,
+      "end": 98.8
+    },
+    {
+      "word": "segmentation",
+      "start": 98.8,
+      "end": 99.5
+    },
+    {
+      "word": "authentication",
+      "start": 100.4,
+      "end": 100.4
+    },
+    {
+      "word": "mechanisms",
+      "start": 100.4,
+      "end": 100.98
+    },
+    {
+      "word": "and",
+      "start": 101.22,
+      "end": 101.4
+    },
+    {
+      "word": "access",
+      "start": 101.4,
+      "end": 101.72
+    },
+    {
+      "word": "governance",
+      "start": 101.72,
+      "end": 102.14
+    },
+    {
+      "word": "Some",
+      "start": 102.82,
+      "end": 102.98
+    },
+    {
+      "word": "experts",
+      "start": 102.98,
+      "end": 103.38
+    },
+    {
+      "word": "argue",
+      "start": 103.38,
+      "end": 103.7
+    },
+    {
+      "word": "that",
+      "start": 103.7,
+      "end": 104.02
+    },
+    {
+      "word": "Zero",
+      "start": 104.02,
+      "end": 104.26
+    },
+    {
+      "word": "Trust",
+      "start": 104.26,
+      "end": 104.5
+    },
+    {
+      "word": "is",
+      "start": 104.5,
+      "end": 104.78
+    },
+    {
+      "word": "primarily",
+      "start": 104.78,
+      "end": 105.18
+    },
+    {
+      "word": "an",
+      "start": 105.18,
+      "end": 105.56
+    },
+    {
+      "word": "architectural",
+      "start": 105.56,
+      "end": 105.96
+    },
+    {
+      "word": "philosophy",
+      "start": 105.96,
+      "end": 106.54
+    },
+    {
+      "word": "rather",
+      "start": 107.06,
+      "end": 107.16
+    },
+    {
+      "word": "than",
+      "start": 107.16,
+      "end": 107.38
+    },
+    {
+      "word": "a",
+      "start": 107.38,
+      "end": 107.52
+    },
+    {
+      "word": "technology",
+      "start": 107.52,
+      "end": 107.9
+    },
+    {
+      "word": "that",
+      "start": 107.9,
+      "end": 108.12
+    },
+    {
+      "word": "can",
+      "start": 108.12,
+      "end": 108.24
+    },
+    {
+      "word": "be",
+      "start": 108.24,
+      "end": 108.46
+    },
+    {
+      "word": "purchased",
+      "start": 108.46,
+      "end": 108.8
+    },
+    {
+      "word": "Identity",
+      "start": 109.58,
+      "end": 109.98
+    },
+    {
+      "word": "security",
+      "start": 109.98,
+      "end": 110.3
+    },
+    {
+      "word": "has",
+      "start": 110.3,
+      "end": 110.58
+    },
+    {
+      "word": "consequently",
+      "start": 110.58,
+      "end": 111.18
+    },
+    {
+      "word": "emerged",
+      "start": 111.18,
+      "end": 111.54
+    },
+    {
+      "word": "as",
+      "start": 111.54,
+      "end": 111.82
+    },
+    {
+      "word": "a",
+      "start": 111.82,
+      "end": 112.02
+    },
+    {
+      "word": "central",
+      "start": 112.02,
+      "end": 112.24
+    },
+    {
+      "word": "component",
+      "start": 112.24,
+      "end": 112.6
+    },
+    {
+      "word": "of",
+      "start": 112.6,
+      "end": 113.0
+    },
+    {
+      "word": "modern",
+      "start": 113.0,
+      "end": 113.3
+    },
+    {
+      "word": "cybersecurity",
+      "start": 113.3,
+      "end": 113.92
+    },
+    {
+      "word": "strategies",
+      "start": 113.92,
+      "end": 114.56
+    },
+    {
+      "word": "Attackers",
+      "start": 115.46,
+      "end": 115.68
+    },
+    {
+      "word": "increasingly",
+      "start": 115.68,
+      "end": 116.3
+    },
+    {
+      "word": "target",
+      "start": 116.3,
+      "end": 116.68
+    },
+    {
+      "word": "authentication",
+      "start": 116.68,
+      "end": 117.26
+    },
+    {
+      "word": "systems",
+      "start": 117.26,
+      "end": 117.76
+    },
+    {
+      "word": "because",
+      "start": 117.76,
+      "end": 118.22
+    },
+    {
+      "word": "compromising",
+      "start": 118.22,
+      "end": 118.74
+    },
+    {
+      "word": "a",
+      "start": 118.74,
+      "end": 119.42
+    },
+    {
+      "word": "legitimate",
+      "start": 119.42,
+      "end": 119.42
+    },
+    {
+      "word": "identity",
+      "start": 119.613,
+      "end": 119.807
+    },
+    {
+      "word": "can",
+      "start": 119.807,
+      "end": 120.0
+    },
+    {
+      "word": "provide",
+      "start": 120.0,
+      "end": 120.38
+    },
+    {
+      "word": "direct",
+      "start": 120.38,
+      "end": 120.82
+    },
+    {
+      "word": "access",
+      "start": 120.82,
+      "end": 121.2
+    },
+    {
+      "word": "to",
+      "start": 121.2,
+      "end": 121.38
+    },
+    {
+      "word": "valuable",
+      "start": 121.38,
+      "end": 121.74
+    },
+    {
+      "word": "resources",
+      "start": 121.74,
+      "end": 122.3
+    },
+    {
+      "word": "Phishing",
+      "start": 123.14,
+      "end": 123.16
+    },
+    {
+      "word": "attacks",
+      "start": 123.16,
+      "end": 123.58
+    },
+    {
+      "word": "credential",
+      "start": 124.2,
+      "end": 124.2
+    },
+    {
+      "word": "theft",
+      "start": 124.2,
+      "end": 124.52
+    },
+    {
+      "word": "session",
+      "start": 124.92,
+      "end": 125.2
+    },
+    {
+      "word": "hijacking",
+      "start": 125.2,
+      "end": 125.7
+    },
+    {
+      "word": "and",
+      "start": 126.12,
+      "end": 126.32
+    },
+    {
+      "word": "token",
+      "start": 126.32,
+      "end": 126.48
+    },
+    {
+      "word": "manipulation",
+      "start": 126.48,
+      "end": 127.02
+    },
+    {
+      "word": "are",
+      "start": 127.02,
+      "end": 127.38
+    },
+    {
+      "word": "common",
+      "start": 127.38,
+      "end": 127.78
+    },
+    {
+      "word": "techniques",
+      "start": 127.78,
+      "end": 128.18
+    },
+    {
+      "word": "used",
+      "start": 128.18,
+      "end": 128.48
+    },
+    {
+      "word": "to",
+      "start": 128.48,
+      "end": 129.04
+    },
+    {
+      "word": "bypass",
+      "start": 129.04,
+      "end": 129.04
+    },
+    {
+      "word": "security",
+      "start": 129.04,
+      "end": 129.48
+    },
+    {
+      "word": "controls",
+      "start": 129.48,
+      "end": 129.94
+    },
+    {
+      "word": "Multifactor",
+      "start": 130.29,
+      "end": 131.1
+    },
+    {
+      "word": "authentication",
+      "start": 131.1,
+      "end": 131.68
+    },
+    {
+      "word": "significantly",
+      "start": 131.68,
+      "end": 132.44
+    },
+    {
+      "word": "reduces",
+      "start": 132.44,
+      "end": 132.82
+    },
+    {
+      "word": "certain",
+      "start": 132.82,
+      "end": 133.24
+    },
+    {
+      "word": "risks",
+      "start": 133.24,
+      "end": 133.54
+    },
+    {
+      "word": "but",
+      "start": 133.98,
+      "end": 134.04
+    },
+    {
+      "word": "it",
+      "start": 134.04,
+      "end": 134.14
+    },
+    {
+      "word": "is",
+      "start": 134.14,
+      "end": 134.32
+    },
+    {
+      "word": "not",
+      "start": 134.32,
+      "end": 134.48
+    },
+    {
+      "word": "a",
+      "start": 134.48,
+      "end": 134.72
+    },
+    {
+      "word": "universal",
+      "start": 134.72,
+      "end": 135.06
+    },
+    {
+      "word": "solution",
+      "start": 135.06,
+      "end": 135.54
+    },
+    {
+      "word": "Attackers",
+      "start": 136.32,
+      "end": 136.5
+    },
+    {
+      "word": "may",
+      "start": 136.5,
+      "end": 136.68
+    },
+    {
+      "word": "exploit",
+      "start": 136.68,
+      "end": 137.1
+    },
+    {
+      "word": "weaknesses",
+      "start": 137.1,
+      "end": 137.48
+    },
+    {
+      "word": "in",
+      "start": 137.48,
+      "end": 137.94
+    },
+    {
+      "word": "authentication",
+      "start": 137.94,
+      "end": 138.36
+    },
+    {
+      "word": "workflows",
+      "start": 138.36,
+      "end": 138.88
+    },
+    {
+      "word": "or",
+      "start": 138.88,
+      "end": 139.4
+    },
+    {
+      "word": "deceive",
+      "start": 139.4,
+      "end": 139.72
+    },
+    {
+      "word": "users",
+      "start": 139.72,
+      "end": 140.06
+    },
+    {
+      "word": "into",
+      "start": 140.06,
+      "end": 140.34
+    },
+    {
+      "word": "approving",
+      "start": 140.34,
+      "end": 140.76
+    },
+    {
+      "word": "fraudulent",
+      "start": 140.76,
+      "end": 141.22
+    },
+    {
+      "word": "requests",
+      "start": 141.22,
+      "end": 141.74
+    },
+    {
+      "word": "Phishing",
+      "start": 142.3,
+      "end": 142.54
+    },
+    {
+      "word": "resistant",
+      "start": 142.54,
+      "end": 142.98
+    },
+    {
+      "word": "authentication",
+      "start": 142.98,
+      "end": 143.62
+    },
+    {
+      "word": "methods",
+      "start": 143.62,
+      "end": 144.06
+    },
+    {
+      "word": "including",
+      "start": 144.3,
+      "end": 144.56
+    },
+    {
+      "word": "hardware",
+      "start": 144.56,
+      "end": 145.0
+    },
+    {
+      "word": "based",
+      "start": 145.0,
+      "end": 145.26
+    },
+    {
+      "word": "security",
+      "start": 145.13,
+      "end": 145.26
+    },
+    {
+      "word": "keys",
+      "start": 145.26,
+      "end": 145.92
+    },
+    {
+      "word": "offer",
+      "start": 146.56,
+      "end": 146.56
+    },
+    {
+      "word": "stronger",
+      "start": 146.56,
+      "end": 146.96
+    },
+    {
+      "word": "protection",
+      "start": 146.96,
+      "end": 147.4
+    },
+    {
+      "word": "against",
+      "start": 147.4,
+      "end": 147.86
+    },
+    {
+      "word": "many",
+      "start": 147.86,
+      "end": 148.2
+    },
+    {
+      "word": "credential",
+      "start": 148.2,
+      "end": 148.52
+    },
+    {
+      "word": "theft",
+      "start": 148.52,
+      "end": 148.8
+    },
+    {
+      "word": "scenarios",
+      "start": 148.8,
+      "end": 149.3
+    },
+    {
+      "word": "Another",
+      "start": 150.0,
+      "end": 150.16
+    },
+    {
+      "word": "important",
+      "start": 150.16,
+      "end": 150.62
+    },
+    {
+      "word": "discussion",
+      "start": 150.62,
+      "end": 151.0
+    },
+    {
+      "word": "concerns",
+      "start": 151.0,
+      "end": 151.48
+    },
+    {
+      "word": "the",
+      "start": 151.48,
+      "end": 151.66
+    },
+    {
+      "word": "relationship",
+      "start": 151.66,
+      "end": 152.14
+    },
+    {
+      "word": "between",
+      "start": 152.14,
+      "end": 152.58
+    },
+    {
+      "word": "security",
+      "start": 152.58,
+      "end": 152.92
+    },
+    {
+      "word": "and",
+      "start": 152.92,
+      "end": 153.18
+    },
+    {
+      "word": "usability",
+      "start": 153.18,
+      "end": 153.66
+    },
+    {
+      "word": "Extremely",
+      "start": 154.38,
+      "end": 154.76
+    },
+    {
+      "word": "restrictive",
+      "start": 154.76,
+      "end": 155.18
+    },
+    {
+      "word": "security",
+      "start": 155.18,
+      "end": 155.68
+    },
+    {
+      "word": "controls",
+      "start": 155.68,
+      "end": 156.08
+    },
+    {
+      "word": "can",
+      "start": 156.08,
+      "end": 156.38
+    },
+    {
+      "word": "interfere",
+      "start": 156.38,
+      "end": 156.68
+    },
+    {
+      "word": "with",
+      "start": 156.68,
+      "end": 157.0
+    },
+    {
+      "word": "legitimate",
+      "start": 157.0,
+      "end": 157.32
+    },
+    {
+      "word": "business",
+      "start": 157.32,
+      "end": 157.7
+    },
+    {
+      "word": "activities",
+      "start": 157.7,
+      "end": 158.24
+    },
+    {
+      "word": "encouraging",
+      "start": 159.12,
+      "end": 159.16
+    },
+    {
+      "word": "employees",
+      "start": 159.16,
+      "end": 159.6
+    },
+    {
+      "word": "to",
+      "start": 159.6,
+      "end": 159.9
+    },
+    {
+      "word": "develop",
+      "start": 159.9,
+      "end": 160.18
+    },
+    {
+      "word": "unauthorized",
+      "start": 160.18,
+      "end": 160.82
+    },
+    {
+      "word": "workarounds",
+      "start": 160.82,
+      "end": 161.4
+    },
+    {
+      "word": "For",
+      "start": 161.96,
+      "end": 162.1
+    },
+    {
+      "word": "example",
+      "start": 162.1,
+      "end": 162.48
+    },
+    {
+      "word": "complicated",
+      "start": 162.98,
+      "end": 163.26
+    },
+    {
+      "word": "authentication",
+      "start": 163.26,
+      "end": 163.86
+    },
+    {
+      "word": "procedures",
+      "start": 163.86,
+      "end": 164.44
+    },
+    {
+      "word": "may",
+      "start": 164.44,
+      "end": 164.76
+    },
+    {
+      "word": "motivate",
+      "start": 164.76,
+      "end": 165.06
+    },
+    {
+      "word": "users",
+      "start": 165.06,
+      "end": 165.32
+    },
+    {
+      "word": "to",
+      "start": 165.32,
+      "end": 165.76
+    },
+    {
+      "word": "store",
+      "start": 165.76,
+      "end": 165.86
+    },
+    {
+      "word": "credentials",
+      "start": 165.86,
+      "end": 166.32
+    },
+    {
+      "word": "insecurely",
+      "start": 166.32,
+      "end": 167.26
+    },
+    {
+      "word": "or",
+      "start": 167.26,
+      "end": 167.52
+    },
+    {
+      "word": "share",
+      "start": 167.52,
+      "end": 167.72
+    },
+    {
+      "word": "accounts",
+      "start": 167.72,
+      "end": 168.02
+    },
+    {
+      "word": "with",
+      "start": 168.02,
+      "end": 168.34
+    },
+    {
+      "word": "colleagues",
+      "start": 168.34,
+      "end": 168.64
+    },
+    {
+      "word": "Security",
+      "start": 169.42,
+      "end": 169.64
+    },
+    {
+      "word": "policies",
+      "start": 169.64,
+      "end": 170.06
+    },
+    {
+      "word": "that",
+      "start": 170.06,
+      "end": 170.44
+    },
+    {
+      "word": "ignore",
+      "start": 170.44,
+      "end": 170.7
+    },
+    {
+      "word": "operational",
+      "start": 170.7,
+      "end": 171.26
+    },
+    {
+      "word": "requirements",
+      "start": 171.26,
+      "end": 171.84
+    },
+    {
+      "word": "may",
+      "start": 171.84,
+      "end": 172.24
+    },
+    {
+      "word": "ultimately",
+      "start": 172.24,
+      "end": 172.76
+    },
+    {
+      "word": "increase",
+      "start": 172.76,
+      "end": 173.14
+    },
+    {
+      "word": "organizational",
+      "start": 173.14,
+      "end": 173.74
+    },
+    {
+      "word": "risk",
+      "start": 173.74,
+      "end": 174.16
+    },
+    {
+      "word": "Effective",
+      "start": 174.8,
+      "end": 175.18
+    },
+    {
+      "word": "cybersecurity",
+      "start": 175.18,
+      "end": 175.72
+    },
+    {
+      "word": "therefore",
+      "start": 175.72,
+      "end": 176.26
+    },
+    {
+      "word": "requires",
+      "start": 176.26,
+      "end": 176.66
+    },
+    {
+      "word": "a",
+      "start": 176.66,
+      "end": 176.88
+    },
+    {
+      "word": "careful",
+      "start": 176.88,
+      "end": 177.16
+    },
+    {
+      "word": "balance",
+      "start": 177.16,
+      "end": 177.54
+    },
+    {
+      "word": "between",
+      "start": 177.54,
+      "end": 177.92
+    },
+    {
+      "word": "technical",
+      "start": 177.92,
+      "end": 178.34
+    },
+    {
+      "word": "protection",
+      "start": 178.34,
+      "end": 178.8
+    },
+    {
+      "word": "employee",
+      "start": 178.8,
+      "end": 179.54
+    },
+    {
+      "word": "productivity",
+      "start": 179.54,
+      "end": 179.92
+    },
+    {
+      "word": "and",
+      "start": 179.98,
+      "end": 179.98
+    },
+    {
+      "word": "practical",
+      "start": 180.66,
+      "end": 181.12
+    },
+    {
+      "word": "enforcement",
+      "start": 181.12,
+      "end": 181.64
+    },
+    {
+      "word": "The",
+      "start": 182.34,
+      "end": 182.36
+    },
+    {
+      "word": "most",
+      "start": 182.36,
+      "end": 182.54
+    },
+    {
+      "word": "successful",
+      "start": 182.54,
+      "end": 182.96
+    },
+    {
+      "word": "controls",
+      "start": 182.96,
+      "end": 183.44
+    },
+    {
+      "word": "are",
+      "start": 183.44,
+      "end": 183.64
+    },
+    {
+      "word": "often",
+      "start": 183.64,
+      "end": 183.92
+    },
+    {
+      "word": "those",
+      "start": 183.92,
+      "end": 184.22
+    },
+    {
+      "word": "that",
+      "start": 184.22,
+      "end": 184.38
+    },
+    {
+      "word": "provide",
+      "start": 184.38,
+      "end": 184.7
+    },
+    {
+      "word": "strong",
+      "start": 184.7,
+      "end": 185.08
+    },
+    {
+      "word": "protection",
+      "start": 185.08,
+      "end": 185.52
+    },
+    {
+      "word": "while",
+      "start": 185.52,
+      "end": 186.12
+    },
+    {
+      "word": "minimizing",
+      "start": 186.12,
+      "end": 186.52
+    },
+    {
+      "word": "unnecessary",
+      "start": 186.52,
+      "end": 187.24
+    },
+    {
+      "word": "friction",
+      "start": 187.24,
+      "end": 187.64
+    },
+    {
+      "word": "Cloud",
+      "start": 188.48,
+      "end": 188.54
+    },
+    {
+      "word": "computing",
+      "start": 188.54,
+      "end": 188.9
+    },
+    {
+      "word": "introduces",
+      "start": 188.9,
+      "end": 189.5
+    },
+    {
+      "word": "additional",
+      "start": 189.5,
+      "end": 190.08
+    },
+    {
+      "word": "security",
+      "start": 190.08,
+      "end": 190.52
+    },
+    {
+      "word": "challenges",
+      "start": 190.52,
+      "end": 191.0
+    },
+    {
+      "word": "particularly",
+      "start": 191.66,
+      "end": 191.9
+    },
+    {
+      "word": "regarding",
+      "start": 191.9,
+      "end": 192.34
+    },
+    {
+      "word": "the",
+      "start": 192.34,
+      "end": 192.64
+    },
+    {
+      "word": "shared",
+      "start": 192.64,
+      "end": 192.78
+    },
+    {
+      "word": "responsibility",
+      "start": 192.78,
+      "end": 193.38
+    },
+    {
+      "word": "model",
+      "start": 193.38,
+      "end": 193.76
+    },
+    {
+      "word": "Cloud",
+      "start": 194.5,
+      "end": 194.54
+    },
+    {
+      "word": "providers",
+      "start": 194.54,
+      "end": 194.96
+    },
+    {
+      "word": "generally",
+      "start": 194.96,
+      "end": 195.44
+    },
+    {
+      "word": "secure",
+      "start": 195.44,
+      "end": 195.8
+    },
+    {
+      "word": "the",
+      "start": 195.8,
+      "end": 196.1
+    },
+    {
+      "word": "underlying",
+      "start": 196.1,
+      "end": 196.38
+    },
+    {
+      "word": "infrastructure",
+      "start": 196.38,
+      "end": 196.94
+    },
+    {
+      "word": "while",
+      "start": 197.34,
+      "end": 197.68
+    },
+    {
+      "word": "customers",
+      "start": 197.68,
+      "end": 197.96
+    },
+    {
+      "word": "remain",
+      "start": 197.96,
+      "end": 198.3
+    },
+    {
+      "word": "responsible",
+      "start": 198.3,
+      "end": 198.72
+    },
+    {
+      "word": "for",
+      "start": 198.72,
+      "end": 199.08
+    },
+    {
+      "word": "various",
+      "start": 199.08,
+      "end": 199.38
+    },
+    {
+      "word": "aspects",
+      "start": 199.38,
+      "end": 199.76
+    },
+    {
+      "word": "of",
+      "start": 199.76,
+      "end": 200.02
+    },
+    {
+      "word": "configuration",
+      "start": 200.02,
+      "end": 200.54
+    },
+    {
+      "word": "access",
+      "start": 201.3,
+      "end": 201.38
+    },
+    {
+      "word": "control",
+      "start": 201.38,
+      "end": 201.8
+    },
+    {
+      "word": "applications",
+      "start": 202.0,
+      "end": 202.54
+    },
+    {
+      "word": "and",
+      "start": 202.54,
+      "end": 202.84
+    },
+    {
+      "word": "data",
+      "start": 202.84,
+      "end": 203.02
+    },
+    {
+      "word": "protection",
+      "start": 203.02,
+      "end": 203.4
+    },
+    {
+      "word": "The",
+      "start": 203.68,
+      "end": 204.18
+    },
+    {
+      "word": "precise",
+      "start": 204.18,
+      "end": 204.44
+    },
+    {
+      "word": "division",
+      "start": 204.44,
+      "end": 204.78
+    },
+    {
+      "word": "of",
+      "start": 204.78,
+      "end": 205.68
+    },
+    {
+      "word": "responsibilities",
+      "start": 205.68,
+      "end": 205.68
+    },
+    {
+      "word": "depends",
+      "start": 205.68,
+      "end": 206.06
+    },
+    {
+      "word": "on",
+      "start": 206.06,
+      "end": 206.24
+    },
+    {
+      "word": "the",
+      "start": 206.24,
+      "end": 206.34
+    },
+    {
+      "word": "service",
+      "start": 206.34,
+      "end": 206.62
+    },
+    {
+      "word": "model",
+      "start": 206.62,
+      "end": 206.88
+    },
+    {
+      "word": "Misconfigured",
+      "start": 207.62,
+      "end": 208.06
+    },
+    {
+      "word": "storage",
+      "start": 208.06,
+      "end": 208.44
+    },
+    {
+      "word": "services",
+      "start": 208.44,
+      "end": 208.82
+    },
+    {
+      "word": "excessive",
+      "start": 208.96,
+      "end": 209.48
+    },
+    {
+      "word": "permissions",
+      "start": 209.48,
+      "end": 210.0
+    },
+    {
+      "word": "exposed",
+      "start": 210.0,
+      "end": 210.54
+    },
+    {
+      "word": "management",
+      "start": 210.54,
+      "end": 211.18
+    },
+    {
+      "word": "interfaces",
+      "start": 211.18,
+      "end": 211.72
+    },
+    {
+      "word": "and",
+      "start": 212.34,
+      "end": 212.34
+    },
+    {
+      "word": "poorly",
+      "start": 212.34,
+      "end": 212.62
+    },
+    {
+      "word": "protected",
+      "start": 212.62,
+      "end": 213.02
+    },
+    {
+      "word": "application",
+      "start": 213.02,
+      "end": 213.6
+    },
+    {
+      "word": "secrets",
+      "start": 213.6,
+      "end": 214.02
+    },
+    {
+      "word": "can",
+      "start": 214.02,
+      "end": 214.5
+    },
+    {
+      "word": "create",
+      "start": 214.5,
+      "end": 214.8
+    },
+    {
+      "word": "significant",
+      "start": 214.8,
+      "end": 215.36
+    },
+    {
+      "word": "vulnerabilities",
+      "start": 215.36,
+      "end": 215.98
+    },
+    {
+      "word": "Organizations",
+      "start": 216.84,
+      "end": 217.12
+    },
+    {
+      "word": "sometimes",
+      "start": 217.12,
+      "end": 217.66
+    },
+    {
+      "word": "assume",
+      "start": 217.66,
+      "end": 217.98
+    },
+    {
+      "word": "that",
+      "start": 217.98,
+      "end": 218.38
+    },
+    {
+      "word": "migrating",
+      "start": 218.58,
+      "end": 218.58
+    },
+    {
+      "word": "workloads",
+      "start": 218.58,
+      "end": 219.0
+    },
+    {
+      "word": "to",
+      "start": 219.0,
+      "end": 219.28
+    },
+    {
+      "word": "major",
+      "start": 219.28,
+      "end": 219.54
+    },
+    {
+      "word": "cloud",
+      "start": 219.54,
+      "end": 219.84
+    },
+    {
+      "word": "platforms",
+      "start": 219.84,
+      "end": 220.28
+    },
+    {
+      "word": "automatically",
+      "start": 220.28,
+      "end": 221.0
+    },
+    {
+      "word": "improves",
+      "start": 221.0,
+      "end": 221.42
+    },
+    {
+      "word": "security",
+      "start": 221.42,
+      "end": 221.78
+    },
+    {
+      "word": "In",
+      "start": 222.5,
+      "end": 222.58
+    },
+    {
+      "word": "reality",
+      "start": 222.58,
+      "end": 223.02
+    },
+    {
+      "word": "cloud",
+      "start": 223.58,
+      "end": 223.72
+    },
+    {
+      "word": "security",
+      "start": 223.72,
+      "end": 224.04
+    },
+    {
+      "word": "depends",
+      "start": 224.04,
+      "end": 224.42
+    },
+    {
+      "word": "heavily",
+      "start": 224.42,
+      "end": 224.74
+    },
+    {
+      "word": "on",
+      "start": 224.74,
+      "end": 225.18
+    },
+    {
+      "word": "architectural",
+      "start": 225.18,
+      "end": 225.6
+    },
+    {
+      "word": "decisions",
+      "start": 225.6,
+      "end": 226.1
+    },
+    {
+      "word": "and",
+      "start": 226.1,
+      "end": 226.38
+    },
+    {
+      "word": "operational",
+      "start": 226.38,
+      "end": 226.86
+    },
+    {
+      "word": "discipline",
+      "start": 226.86,
+      "end": 227.3
+    },
+    {
+      "word": "Software",
+      "start": 228.18,
+      "end": 228.46
+    },
+    {
+      "word": "supply",
+      "start": 228.46,
+      "end": 228.86
+    },
+    {
+      "word": "chain",
+      "start": 228.86,
+      "end": 229.02
+    },
+    {
+      "word": "security",
+      "start": 229.02,
+      "end": 229.4
+    },
+    {
+      "word": "has",
+      "start": 229.4,
+      "end": 229.68
+    },
+    {
+      "word": "also",
+      "start": 229.68,
+      "end": 230.1
+    },
+    {
+      "word": "become",
+      "start": 230.1,
+      "end": 230.3
+    },
+    {
+      "word": "a",
+      "start": 230.3,
+      "end": 230.44
+    },
+    {
+      "word": "major",
+      "start": 230.44,
+      "end": 230.74
+    },
+    {
+      "word": "concern",
+      "start": 230.74,
+      "end": 231.08
+    },
+    {
+      "word": "Modern",
+      "start": 231.96,
+      "end": 232.0
+    },
+    {
+      "word": "applications",
+      "start": 232.0,
+      "end": 232.62
+    },
+    {
+      "word": "frequently",
+      "start": 232.62,
+      "end": 233.18
+    },
+    {
+      "word": "depend",
+      "start": 233.18,
+      "end": 233.48
+    },
+    {
+      "word": "on",
+      "start": 233.48,
+      "end": 233.82
+    },
+    {
+      "word": "hundreds",
+      "start": 233.82,
+      "end": 234.0
+    },
+    {
+      "word": "of",
+      "start": 234.0,
+      "end": 234.38
+    },
+    {
+      "word": "external",
+      "start": 234.38,
+      "end": 234.62
+    },
+    {
+      "word": "libraries",
+      "start": 234.62,
+      "end": 235.16
+    },
+    {
+      "word": "container",
+      "start": 235.88,
+      "end": 235.9
+    },
+    {
+      "word": "images",
+      "start": 235.9,
+      "end": 236.3
+    },
+    {
+      "word": "development",
+      "start": 236.92,
+      "end": 236.92
+    },
+    {
+      "word": "tools",
+      "start": 236.92,
+      "end": 237.24
+    },
+    {
+      "word": "and",
+      "start": 237.32,
+      "end": 237.64
+    },
+    {
+      "word": "automated",
+      "start": 237.64,
+      "end": 237.9
+    },
+    {
+      "word": "build",
+      "start": 237.9,
+      "end": 238.16
+    },
+    {
+      "word": "processes",
+      "start": 238.16,
+      "end": 238.8
+    },
+    {
+      "word": "A",
+      "start": 239.0,
+      "end": 239.46
+    },
+    {
+      "word": "vulnerability",
+      "start": 239.46,
+      "end": 239.86
+    },
+    {
+      "word": "or",
+      "start": 240.0,
+      "end": 240.3
+    },
+    {
+      "word": "malicious",
+      "start": 240.3,
+      "end": 240.62
+    },
+    {
+      "word": "modification",
+      "start": 240.62,
+      "end": 241.3
+    },
+    {
+      "word": "within",
+      "start": 241.3,
+      "end": 241.58
+    },
+    {
+      "word": "a",
+      "start": 241.58,
+      "end": 241.78
+    },
+    {
+      "word": "single",
+      "start": 241.78,
+      "end": 242.02
+    },
+    {
+      "word": "dependency",
+      "start": 242.02,
+      "end": 242.48
+    },
+    {
+      "word": "can",
+      "start": 242.48,
+      "end": 242.76
+    },
+    {
+      "word": "potentially",
+      "start": 242.76,
+      "end": 243.3
+    },
+    {
+      "word": "affect",
+      "start": 243.3,
+      "end": 243.62
+    },
+    {
+      "word": "numerous",
+      "start": 243.62,
+      "end": 244.12
+    },
+    {
+      "word": "downstream",
+      "start": 244.12,
+      "end": 244.56
+    },
+    {
+      "word": "applications",
+      "start": 244.56,
+      "end": 245.22
+    },
+    {
+      "word": "Attackers",
+      "start": 246.12,
+      "end": 246.28
+    },
+    {
+      "word": "may",
+      "start": 246.28,
+      "end": 246.52
+    },
+    {
+      "word": "compromise",
+      "start": 246.52,
+      "end": 246.96
+    },
+    {
+      "word": "package",
+      "start": 246.96,
+      "end": 247.34
+    },
+    {
+      "word": "repositories",
+      "start": 247.34,
+      "end": 248.02
+    },
+    {
+      "word": "development",
+      "start": 248.82,
+      "end": 248.86
+    },
+    {
+      "word": "environments",
+      "start": 248.86,
+      "end": 249.44
+    },
+    {
+      "word": "or",
+      "start": 249.6,
+      "end": 250.02
+    },
+    {
+      "word": "continuous",
+      "start": 250.02,
+      "end": 250.46
+    },
+    {
+      "word": "integration",
+      "start": 250.46,
+      "end": 250.98
+    },
+    {
+      "word": "pipelines",
+      "start": 250.98,
+      "end": 251.44
+    },
+    {
+      "word": "to",
+      "start": 251.44,
+      "end": 251.82
+    },
+    {
+      "word": "distribute",
+      "start": 251.82,
+      "end": 252.12
+    },
+    {
+      "word": "malicious",
+      "start": 252.12,
+      "end": 252.46
+    },
+    {
+      "word": "code",
+      "start": 252.46,
+      "end": 252.78
+    },
+    {
+      "word": "Consequently",
+      "start": 253.58,
+      "end": 253.84
+    },
+    {
+      "word": "organizations",
+      "start": 254.64,
+      "end": 254.64
+    },
+    {
+      "word": "must",
+      "start": 254.64,
+      "end": 254.96
+    },
+    {
+      "word": "examine",
+      "start": 254.96,
+      "end": 255.34
+    },
+    {
+      "word": "not",
+      "start": 255.34,
+      "end": 255.62
+    },
+    {
+      "word": "only",
+      "start": 255.62,
+      "end": 255.82
+    },
+    {
+      "word": "the",
+      "start": 255.82,
+      "end": 256.06
+    },
+    {
+      "word": "security",
+      "start": 256.06,
+      "end": 256.3
+    },
+    {
+      "word": "of",
+      "start": 256.3,
+      "end": 256.5
+    },
+    {
+      "word": "their",
+      "start": 256.5,
+      "end": 256.62
+    },
+    {
+      "word": "own",
+      "start": 256.62,
+      "end": 256.92
+    },
+    {
+      "word": "source",
+      "start": 256.92,
+      "end": 257.16
+    },
+    {
+      "word": "code",
+      "start": 257.16,
+      "end": 257.32
+    },
+    {
+      "word": "but",
+      "start": 257.7,
+      "end": 257.8
+    },
+    {
+      "word": "also",
+      "start": 257.8,
+      "end": 258.1
+    },
+    {
+      "word": "the",
+      "start": 258.1,
+      "end": 258.3
+    },
+    {
+      "word": "integrity",
+      "start": 258.3,
+      "end": 258.68
+    },
+    {
+      "word": "and",
+      "start": 258.68,
+      "end": 258.96
+    },
+    {
+      "word": "provenance",
+      "start": 258.96,
+      "end": 259.38
+    },
+    {
+      "word": "of",
+      "start": 259.38,
+      "end": 259.66
+    },
+    {
+      "word": "external",
+      "start": 259.66,
+      "end": 259.92
+    },
+    {
+      "word": "components",
+      "start": 259.92,
+      "end": 260.4
+    },
+    {
+      "word": "Software",
+      "start": 261.1,
+      "end": 261.36
+    },
+    {
+      "word": "bills",
+      "start": 261.36,
+      "end": 261.66
+    },
+    {
+      "word": "of",
+      "start": 261.66,
+      "end": 261.84
+    },
+    {
+      "word": "materials",
+      "start": 261.84,
+      "end": 262.24
+    },
+    {
+      "word": "have",
+      "start": 262.24,
+      "end": 262.48
+    },
+    {
+      "word": "attracted",
+      "start": 262.48,
+      "end": 262.8
+    },
+    {
+      "word": "attention",
+      "start": 262.8,
+      "end": 263.28
+    },
+    {
+      "word": "as",
+      "start": 263.28,
+      "end": 263.52
+    },
+    {
+      "word": "a",
+      "start": 263.52,
+      "end": 263.68
+    },
+    {
+      "word": "mechanism",
+      "start": 263.68,
+      "end": 263.98
+    },
+    {
+      "word": "for",
+      "start": 263.98,
+      "end": 264.32
+    },
+    {
+      "word": "improving",
+      "start": 264.32,
+      "end": 264.62
+    },
+    {
+      "word": "transparency",
+      "start": 264.62,
+      "end": 265.28
+    },
+    {
+      "word": "By",
+      "start": 265.54,
+      "end": 266.02
+    },
+    {
+      "word": "maintaining",
+      "start": 266.02,
+      "end": 266.5
+    },
+    {
+      "word": "structured",
+      "start": 266.5,
+      "end": 267.02
+    },
+    {
+      "word": "inventories",
+      "start": 267.02,
+      "end": 267.6
+    },
+    {
+      "word": "of",
+      "start": 267.6,
+      "end": 267.8
+    },
+    {
+      "word": "software",
+      "start": 267.8,
+      "end": 268.1
+    },
+    {
+      "word": "components",
+      "start": 268.1,
+      "end": 268.64
+    },
+    {
+      "word": "organizations",
+      "start": 269.14,
+      "end": 269.6
+    },
+    {
+      "word": "can",
+      "start": 269.6,
+      "end": 269.88
+    },
+    {
+      "word": "identify",
+      "start": 269.88,
+      "end": 269.98
+    },
+    {
+      "word": "affected",
+      "start": 270.36,
+      "end": 270.82
+    },
+    {
+      "word": "applications",
+      "start": 270.82,
+      "end": 271.38
+    },
+    {
+      "word": "when",
+      "start": 271.38,
+      "end": 271.7
+    },
+    {
+      "word": "vulnerabilities",
+      "start": 271.7,
+      "end": 272.18
+    },
+    {
+      "word": "are",
+      "start": 272.18,
+      "end": 272.58
+    },
+    {
+      "word": "disclosed",
+      "start": 272.58,
+      "end": 272.92
+    },
+    {
+      "word": "However",
+      "start": 273.8,
+      "end": 273.9
+    },
+    {
+      "word": "producing",
+      "start": 274.52,
+      "end": 274.52
+    },
+    {
+      "word": "an",
+      "start": 274.52,
+      "end": 275.12
+    },
+    {
+      "word": "inventory",
+      "start": 275.12,
+      "end": 275.12
+    },
+    {
+      "word": "does",
+      "start": 275.12,
+      "end": 275.44
+    },
+    {
+      "word": "not",
+      "start": 275.44,
+      "end": 275.68
+    },
+    {
+      "word": "automatically",
+      "start": 275.68,
+      "end": 276.26
+    },
+    {
+      "word": "eliminate",
+      "start": 276.26,
+      "end": 276.64
+    },
+    {
+      "word": "security",
+      "start": 276.64,
+      "end": 277.06
+    },
+    {
+      "word": "risks",
+      "start": 277.06,
+      "end": 277.42
+    },
+    {
+      "word": "Teams",
+      "start": 278.3,
+      "end": 278.3
+    },
+    {
+      "word": "must",
+      "start": 278.3,
+      "end": 278.52
+    },
+    {
+      "word": "also",
+      "start": 278.52,
+      "end": 279.04
+    },
+    {
+      "word": "establish",
+      "start": 279.04,
+      "end": 279.32
+    },
+    {
+      "word": "processes",
+      "start": 279.32,
+      "end": 279.84
+    },
+    {
+      "word": "for",
+      "start": 279.84,
+      "end": 280.22
+    },
+    {
+      "word": "vulnerability",
+      "start": 280.22,
+      "end": 280.66
+    },
+    {
+      "word": "assessment",
+      "start": 280.66,
+      "end": 281.22
+    },
+    {
+      "word": "dependency",
+      "start": 282.06,
+      "end": 282.06
+    },
+    {
+      "word": "updates",
+      "start": 282.06,
+      "end": 282.54
+    },
+    {
+      "word": "patch",
+      "start": 283.1,
+      "end": 283.14
+    },
+    {
+      "word": "prioritization",
+      "start": 283.14,
+      "end": 283.88
+    },
+    {
+      "word": "and",
+      "start": 284.04,
+      "end": 284.32
+    },
+    {
+      "word": "incident",
+      "start": 284.32,
+      "end": 284.48
+    },
+    {
+      "word": "response",
+      "start": 284.48,
+      "end": 284.96
+    },
+    {
+      "word": "The",
+      "start": 285.52,
+      "end": 285.56
+    },
+    {
+      "word": "practical",
+      "start": 285.56,
+      "end": 285.94
+    },
+    {
+      "word": "question",
+      "start": 285.94,
+      "end": 286.36
+    },
+    {
+      "word": "is",
+      "start": 286.36,
+      "end": 286.62
+    },
+    {
+      "word": "whether",
+      "start": 286.62,
+      "end": 286.8
+    },
+    {
+      "word": "organizations",
+      "start": 286.8,
+      "end": 287.4
+    },
+    {
+      "word": "can",
+      "start": 287.4,
+      "end": 287.8
+    },
+    {
+      "word": "transform",
+      "start": 287.8,
+      "end": 288.26
+    },
+    {
+      "word": "component",
+      "start": 288.26,
+      "end": 288.7
+    },
+    {
+      "word": "visibility",
+      "start": 288.7,
+      "end": 289.3
+    },
+    {
+      "word": "into",
+      "start": 289.3,
+      "end": 289.88
+    },
+    {
+      "word": "timely",
+      "start": 289.88,
+      "end": 290.24
+    },
+    {
+      "word": "and",
+      "start": 290.24,
+      "end": 290.56
+    },
+    {
+      "word": "effective",
+      "start": 290.56,
+      "end": 290.8
+    },
+    {
+      "word": "risk",
+      "start": 290.8,
+      "end": 291.08
+    },
+    {
+      "word": "reduction",
+      "start": 291.08,
+      "end": 291.54
+    },
+    {
+      "word": "Vulnerability",
+      "start": 292.34,
+      "end": 292.74
+    },
+    {
+      "word": "management",
+      "start": 292.74,
+      "end": 293.16
+    },
+    {
+      "word": "itself",
+      "start": 293.16,
+      "end": 293.78
+    },
+    {
+      "word": "presents",
+      "start": 293.78,
+      "end": 294.02
+    },
+    {
+      "word": "difficult",
+      "start": 294.02,
+      "end": 294.52
+    },
+    {
+      "word": "strategic",
+      "start": 294.52,
+      "end": 294.96
+    },
+    {
+      "word": "choices",
+      "start": 294.96,
+      "end": 295.42
+    },
+    {
+      "word": "Security",
+      "start": 296.36,
+      "end": 296.36
+    },
+    {
+      "word": "teams",
+      "start": 296.36,
+      "end": 296.68
+    },
+    {
+      "word": "routinely",
+      "start": 296.68,
+      "end": 297.14
+    },
+    {
+      "word": "face",
+      "start": 297.14,
+      "end": 297.52
+    },
+    {
+      "word": "thousands",
+      "start": 297.52,
+      "end": 297.88
+    },
+    {
+      "word": "of",
+      "start": 297.88,
+      "end": 298.14
+    },
+    {
+      "word": "reported",
+      "start": 298.14,
+      "end": 298.46
+    },
+    {
+      "word": "vulnerabilities",
+      "start": 298.46,
+      "end": 298.96
+    },
+    {
+      "word": "many",
+      "start": 299.36,
+      "end": 299.72
+    },
+    {
+      "word": "of",
+      "start": 299.72,
+      "end": 299.8
+    },
+    {
+      "word": "which",
+      "start": 299.8,
+      "end": 299.98
+    },
+    {
+      "word": "receive",
+      "start": 300.0,
+      "end": 300.3
+    },
+    {
+      "word": "critical",
+      "start": 300.3,
+      "end": 300.72
+    },
+    {
+      "word": "severity",
+      "start": 300.72,
+      "end": 301.1
+    },
+    {
+      "word": "ratings",
+      "start": 301.1,
+      "end": 301.52
+    },
+    {
+      "word": "Attempting",
+      "start": 302.28,
+      "end": 302.46
+    },
+    {
+      "word": "to",
+      "start": 302.46,
+      "end": 302.62
+    },
+    {
+      "word": "remediate",
+      "start": 302.62,
+      "end": 303.06
+    },
+    {
+      "word": "every",
+      "start": 303.06,
+      "end": 303.42
+    },
+    {
+      "word": "issue",
+      "start": 303.42,
+      "end": 303.6
+    },
+    {
+      "word": "immediately",
+      "start": 303.6,
+      "end": 304.06
+    },
+    {
+      "word": "is",
+      "start": 304.06,
+      "end": 304.38
+    },
+    {
+      "word": "often",
+      "start": 304.38,
+      "end": 304.68
+    },
+    {
+      "word": "operationally",
+      "start": 304.68,
+      "end": 305.36
+    },
+    {
+      "word": "impossible",
+      "start": 305.36,
+      "end": 305.76
+    },
+    {
+      "word": "A",
+      "start": 306.46,
+      "end": 306.46
+    },
+    {
+      "word": "more",
+      "start": 306.46,
+      "end": 306.66
+    },
+    {
+      "word": "effective",
+      "start": 306.66,
+      "end": 307.0
+    },
+    {
+      "word": "approach",
+      "start": 307.0,
+      "end": 307.38
+    },
+    {
+      "word": "considers",
+      "start": 307.38,
+      "end": 307.82
+    },
+    {
+      "word": "exploit",
+      "start": 307.82,
+      "end": 308.34
+    },
+    {
+      "word": "availability",
+      "start": 308.34,
+      "end": 308.82
+    },
+    {
+      "word": "exposure",
+      "start": 309.68,
+      "end": 309.7
+    },
+    {
+      "word": "to",
+      "start": 309.7,
+      "end": 310.04
+    },
+    {
+      "word": "untrusted",
+      "start": 310.04,
+      "end": 310.36
+    },
+    {
+      "word": "networks",
+      "start": 310.36,
+      "end": 310.82
+    },
+    {
+      "word": "business",
+      "start": 311.44,
+      "end": 311.56
+    },
+    {
+      "word": "criticality",
+      "start": 311.56,
+      "end": 312.2
+    },
+    {
+      "word": "existing",
+      "start": 312.54,
+      "end": 312.82
+    },
+    {
+      "word": "compensating",
+      "start": 312.82,
+      "end": 313.36
+    },
+    {
+      "word": "controls",
+      "start": 313.36,
+      "end": 313.8
+    },
+    {
+      "word": "and",
+      "start": 313.98,
+      "end": 314.2
+    },
+    {
+      "word": "evidence",
+      "start": 314.2,
+      "end": 314.4
+    },
+    {
+      "word": "of",
+      "start": 314.4,
+      "end": 314.58
+    },
+    {
+      "word": "active",
+      "start": 314.58,
+      "end": 314.86
+    },
+    {
+      "word": "exploitation",
+      "start": 314.86,
+      "end": 315.42
+    },
+    {
+      "word": "A",
+      "start": 316.04,
+      "end": 316.24
+    },
+    {
+      "word": "severe",
+      "start": 316.24,
+      "end": 316.48
+    },
+    {
+      "word": "vulnerability",
+      "start": 316.48,
+      "end": 317.02
+    },
+    {
+      "word": "affecting",
+      "start": 317.02,
+      "end": 317.48
+    },
+    {
+      "word": "an",
+      "start": 317.48,
+      "end": 318.18
+    },
+    {
+      "word": "isolated",
+      "start": 318.18,
+      "end": 318.18
+    },
+    {
+      "word": "development",
+      "start": 318.18,
+      "end": 318.66
+    },
+    {
+      "word": "environment",
+      "start": 318.66,
+      "end": 319.18
+    },
+    {
+      "word": "may",
+      "start": 319.18,
+      "end": 319.72
+    },
+    {
+      "word": "represent",
+      "start": 319.72,
+      "end": 320.08
+    },
+    {
+      "word": "less",
+      "start": 320.08,
+      "end": 320.46
+    },
+    {
+      "word": "immediate",
+      "start": 320.46,
+      "end": 320.82
+    },
+    {
+      "word": "risk",
+      "start": 320.82,
+      "end": 321.14
+    },
+    {
+      "word": "than",
+      "start": 321.14,
+      "end": 321.6
+    },
+    {
+      "word": "a",
+      "start": 321.6,
+      "end": 321.86
+    },
+    {
+      "word": "moderately",
+      "start": 321.86,
+      "end": 322.1
+    },
+    {
+      "word": "rated",
+      "start": 322.1,
+      "end": 322.44
+    },
+    {
+      "word": "flaw",
+      "start": 322.44,
+      "end": 322.74
+    },
+    {
+      "word": "in",
+      "start": 322.74,
+      "end": 323.0
+    },
+    {
+      "word": "a",
+      "start": 323.0,
+      "end": 323.16
+    },
+    {
+      "word": "publicly",
+      "start": 323.16,
+      "end": 323.44
+    },
+    {
+      "word": "accessible",
+      "start": 323.44,
+      "end": 323.96
+    },
+    {
+      "word": "authentication",
+      "start": 323.96,
+      "end": 324.58
+    },
+    {
+      "word": "service",
+      "start": 324.58,
+      "end": 325.08
+    },
+    {
+      "word": "The",
+      "start": 325.54,
+      "end": 325.86
+    },
+    {
+      "word": "emergence",
+      "start": 325.86,
+      "end": 326.18
+    },
+    {
+      "word": "of",
+      "start": 326.18,
+      "end": 326.52
+    },
+    {
+      "word": "artificial",
+      "start": 326.52,
+      "end": 326.82
+    },
+    {
+      "word": "intelligence",
+      "start": 326.82,
+      "end": 327.38
+    },
+    {
+      "word": "is",
+      "start": 327.38,
+      "end": 327.64
+    },
+    {
+      "word": "changing",
+      "start": 327.64,
+      "end": 328.08
+    },
+    {
+      "word": "both",
+      "start": 328.08,
+      "end": 328.32
+    },
+    {
+      "word": "offensive",
+      "start": 328.32,
+      "end": 328.8
+    },
+    {
+      "word": "and",
+      "start": 328.8,
+      "end": 329.04
+    },
+    {
+      "word": "defensive",
+      "start": 329.04,
+      "end": 329.42
+    },
+    {
+      "word": "cybersecurity",
+      "start": 329.52,
+      "end": 330.0
+    },
+    {
+      "word": "capabilities",
+      "start": 330.0,
+      "end": 330.62
+    },
+    {
+      "word": "Attackers",
+      "start": 331.72,
+      "end": 331.94
+    },
+    {
+      "word": "can",
+      "start": 331.94,
+      "end": 332.14
+    },
+    {
+      "word": "use",
+      "start": 332.14,
+      "end": 332.3
+    },
+    {
+      "word": "generative",
+      "start": 332.3,
+      "end": 332.78
+    },
+    {
+      "word": "AI",
+      "start": 332.78,
+      "end": 333.16
+    },
+    {
+      "word": "to",
+      "start": 333.16,
+      "end": 333.34
+    },
+    {
+      "word": "develop",
+      "start": 333.34,
+      "end": 333.7
+    },
+    {
+      "word": "convincing",
+      "start": 333.7,
+      "end": 334.22
+    },
+    {
+      "word": "social",
+      "start": 334.22,
+      "end": 334.72
+    },
+    {
+      "word": "engineering",
+      "start": 334.72,
+      "end": 335.04
+    },
+    {
+      "word": "messages",
+      "start": 335.04,
+      "end": 335.5
+    },
+    {
+      "word": "analyze",
+      "start": 336.38,
+      "end": 336.38
+    },
+    {
+      "word": "publicly",
+      "start": 336.38,
+      "end": 336.84
+    },
+    {
+      "word": "available",
+      "start": 336.84,
+      "end": 337.24
+    },
+    {
+      "word": "technical",
+      "start": 337.24,
+      "end": 337.7
+    },
+    {
+      "word": "information",
+      "start": 337.7,
+      "end": 338.16
+    },
+    {
+      "word": "and",
+      "start": 338.68,
+      "end": 338.84
+    },
+    {
+      "word": "accelerate",
+      "start": 338.84,
+      "end": 339.24
+    },
+    {
+      "word": "certain",
+      "start": 339.24,
+      "end": 339.64
+    },
+    {
+      "word": "stages",
+      "start": 339.64,
+      "end": 339.92
+    },
+    {
+      "word": "of",
+      "start": 339.92,
+      "end": 340.12
+    },
+    {
+      "word": "reconnaissance",
+      "start": 340.12,
+      "end": 340.64
+    },
+    {
+      "word": "Defenders",
+      "start": 341.2,
+      "end": 341.56
+    },
+    {
+      "word": "can",
+      "start": 341.56,
+      "end": 341.9
+    },
+    {
+      "word": "apply",
+      "start": 341.9,
+      "end": 342.14
+    },
+    {
+      "word": "similar",
+      "start": 342.14,
+      "end": 342.56
+    },
+    {
+      "word": "technologies",
+      "start": 342.56,
+      "end": 343.12
+    },
+    {
+      "word": "to",
+      "start": 343.12,
+      "end": 343.44
+    },
+    {
+      "word": "security",
+      "start": 343.44,
+      "end": 343.74
+    },
+    {
+      "word": "monitoring",
+      "start": 343.74,
+      "end": 344.2
+    },
+    {
+      "word": "threat",
+      "start": 344.82,
+      "end": 344.86
+    },
+    {
+      "word": "intelligence",
+      "start": 344.86,
+      "end": 345.36
+    },
+    {
+      "word": "analysis",
+      "start": 345.36,
+      "end": 345.88
+    },
+    {
+      "word": "incident",
+      "start": 346.38,
+      "end": 346.48
+    },
+    {
+      "word": "investigation",
+      "start": 346.48,
+      "end": 347.1
+    },
+    {
+      "word": "and",
+      "start": 347.58,
+      "end": 347.86
+    },
+    {
+      "word": "automated",
+      "start": 347.86,
+      "end": 348.1
+    },
+    {
+      "word": "remediation",
+      "start": 348.1,
+      "end": 348.76
+    },
+    {
+      "word": "However",
+      "start": 349.3,
+      "end": 349.72
+    },
+    {
+      "word": "AI",
+      "start": 349.82,
+      "end": 350.1
+    },
+    {
+      "word": "generated",
+      "start": 350.1,
+      "end": 350.5
+    },
+    {
+      "word": "security",
+      "start": 350.5,
+      "end": 351.02
+    },
+    {
+      "word": "recommendations",
+      "start": 351.02,
+      "end": 351.54
+    },
+    {
+      "word": "may",
+      "start": 351.54,
+      "end": 351.96
+    },
+    {
+      "word": "contain",
+      "start": 351.96,
+      "end": 352.3
+    },
+    {
+      "word": "incorrect",
+      "start": 352.3,
+      "end": 352.8
+    },
+    {
+      "word": "assumptions",
+      "start": 352.8,
+      "end": 353.26
+    },
+    {
+      "word": "or",
+      "start": 353.26,
+      "end": 353.62
+    },
+    {
+      "word": "fabricated",
+      "start": 353.62,
+      "end": 354.14
+    },
+    {
+      "word": "explanations",
+      "start": 354.14,
+      "end": 354.72
+    },
+    {
+      "word": "Security",
+      "start": 355.68,
+      "end": 355.78
+    },
+    {
+      "word": "professionals",
+      "start": 355.78,
+      "end": 356.26
+    },
+    {
+      "word": "must",
+      "start": 356.26,
+      "end": 356.6
+    },
+    {
+      "word": "therefore",
+      "start": 356.6,
+      "end": 357.04
+    },
+    {
+      "word": "maintain",
+      "start": 357.04,
+      "end": 357.4
+    },
+    {
+      "word": "human",
+      "start": 357.4,
+      "end": 357.78
+    },
+    {
+      "word": "oversight",
+      "start": 357.78,
+      "end": 358.2
+    },
+    {
+      "word": "particularly",
+      "start": 358.335,
+      "end": 358.89
+    },
+    {
+      "word": "when",
+      "start": 358.89,
+      "end": 359.445
+    },
+    {
+      "word": "automated",
+      "start": 359.445,
+      "end": 360.0
+    },
+    {
+      "word": "decisions",
+      "start": 360.0,
+      "end": 360.36
+    },
+    {
+      "word": "could",
+      "start": 360.36,
+      "end": 360.64
+    },
+    {
+      "word": "disrupt",
+      "start": 360.64,
+      "end": 361.0
+    },
+    {
+      "word": "production",
+      "start": 361.0,
+      "end": 361.44
+    },
+    {
+      "word": "systems",
+      "start": 361.44,
+      "end": 361.94
+    },
+    {
+      "word": "Incident",
+      "start": 362.9,
+      "end": 362.9
+    },
+    {
+      "word": "response",
+      "start": 362.9,
+      "end": 363.34
+    },
+    {
+      "word": "and",
+      "start": 363.34,
+      "end": 363.54
+    },
+    {
+      "word": "operational",
+      "start": 363.54,
+      "end": 364.04
+    },
+    {
+      "word": "resilience",
+      "start": 364.04,
+      "end": 364.54
+    },
+    {
+      "word": "deserve",
+      "start": 364.54,
+      "end": 364.92
+    },
+    {
+      "word": "equal",
+      "start": 364.92,
+      "end": 365.34
+    },
+    {
+      "word": "attention",
+      "start": 365.34,
+      "end": 365.74
+    },
+    {
+      "word": "Even",
+      "start": 366.48,
+      "end": 366.48
+    },
+    {
+      "word": "organizations",
+      "start": 366.48,
+      "end": 367.08
+    },
+    {
+      "word": "with",
+      "start": 367.08,
+      "end": 367.52
+    },
+    {
+      "word": "mature",
+      "start": 367.52,
+      "end": 367.76
+    },
+    {
+      "word": "preventive",
+      "start": 367.76,
+      "end": 368.22
+    },
+    {
+      "word": "controls",
+      "start": 368.22,
+      "end": 368.62
+    },
+    {
+      "word": "may",
+      "start": 368.62,
+      "end": 368.92
+    },
+    {
+      "word": "experience",
+      "start": 368.92,
+      "end": 369.38
+    },
+    {
+      "word": "successful",
+      "start": 369.38,
+      "end": 369.9
+    },
+    {
+      "word": "intrusions",
+      "start": 369.9,
+      "end": 370.4
+    },
+    {
+      "word": "through",
+      "start": 370.4,
+      "end": 370.74
+    },
+    {
+      "word": "previously",
+      "start": 370.74,
+      "end": 371.26
+    },
+    {
+      "word": "unknown",
+      "start": 371.26,
+      "end": 371.58
+    },
+    {
+      "word": "vulnerabilities",
+      "start": 371.58,
+      "end": 372.2
+    },
+    {
+      "word": "compromised",
+      "start": 373.12,
+      "end": 373.12
+    },
+    {
+      "word": "suppliers",
+      "start": 373.12,
+      "end": 373.62
+    },
+    {
+      "word": "or",
+      "start": 373.74,
+      "end": 373.94
+    },
+    {
+      "word": "human",
+      "start": 373.94,
+      "end": 374.06
+    },
+    {
+      "word": "error",
+      "start": 374.06,
+      "end": 374.4
+    },
+    {
+      "word": "Effective",
+      "start": 375.04,
+      "end": 375.36
+    },
+    {
+      "word": "preparation",
+      "start": 375.36,
+      "end": 375.8
+    },
+    {
+      "word": "requires",
+      "start": 375.8,
+      "end": 376.28
+    },
+    {
+      "word": "centralized",
+      "start": 376.28,
+      "end": 376.76
+    },
+    {
+      "word": "logging",
+      "start": 376.76,
+      "end": 377.16
+    },
+    {
+      "word": "reliable",
+      "start": 377.88,
+      "end": 377.94
+    },
+    {
+      "word": "detection",
+      "start": 377.94,
+      "end": 378.32
+    },
+    {
+      "word": "capabilities",
+      "start": 378.32,
+      "end": 378.98
+    },
+    {
+      "word": "tested",
+      "start": 379.64,
+      "end": 379.72
+    },
+    {
+      "word": "recovery",
+      "start": 379.72,
+      "end": 380.18
+    },
+    {
+      "word": "procedures",
+      "start": 380.18,
+      "end": 380.66
+    },
+    {
+      "word": "and",
+      "start": 380.88,
+      "end": 381.08
+    },
+    {
+      "word": "clearly",
+      "start": 381.08,
+      "end": 381.34
+    },
+    {
+      "word": "defined",
+      "start": 381.34,
+      "end": 381.68
+    },
+    {
+      "word": "responsibilities",
+      "start": 381.68,
+      "end": 382.46
+    },
+    {
+      "word": "Network",
+      "start": 383.16,
+      "end": 383.36
+    },
+    {
+      "word": "isolation",
+      "start": 383.36,
+      "end": 383.84
+    },
+    {
+      "word": "credential",
+      "start": 384.48,
+      "end": 384.48
+    },
+    {
+      "word": "revocation",
+      "start": 384.48,
+      "end": 385.0
+    },
+    {
+      "word": "and",
+      "start": 385.18,
+      "end": 385.58
+    },
+    {
+      "word": "restoration",
+      "start": 385.58,
+      "end": 385.82
+    },
+    {
+      "word": "from",
+      "start": 385.82,
+      "end": 386.18
+    },
+    {
+      "word": "verified",
+      "start": 386.18,
+      "end": 386.6
+    },
+    {
+      "word": "backups",
+      "start": 386.6,
+      "end": 387.04
+    },
+    {
+      "word": "can",
+      "start": 387.04,
+      "end": 387.34
+    },
+    {
+      "word": "reduce",
+      "start": 387.34,
+      "end": 387.64
+    },
+    {
+      "word": "the",
+      "start": 387.64,
+      "end": 387.94
+    },
+    {
+      "word": "impact",
+      "start": 387.94,
+      "end": 388.18
+    },
+    {
+      "word": "of",
+      "start": 388.18,
+      "end": 388.4
+    },
+    {
+      "word": "serious",
+      "start": 388.4,
+      "end": 388.7
+    },
+    {
+      "word": "incidents",
+      "start": 388.7,
+      "end": 389.12
+    },
+    {
+      "word": "Regular",
+      "start": 389.44,
+      "end": 390.18
+    },
+    {
+      "word": "exercises",
+      "start": 390.18,
+      "end": 390.68
+    },
+    {
+      "word": "help",
+      "start": 390.68,
+      "end": 390.98
+    },
+    {
+      "word": "organizations",
+      "start": 390.98,
+      "end": 391.68
+    },
+    {
+      "word": "discover",
+      "start": 391.68,
+      "end": 392.1
+    },
+    {
+      "word": "weaknesses",
+      "start": 392.1,
+      "end": 392.6
+    },
+    {
+      "word": "before",
+      "start": 392.6,
+      "end": 393.0
+    },
+    {
+      "word": "an",
+      "start": 393.0,
+      "end": 393.18
+    },
+    {
+      "word": "actual",
+      "start": 393.18,
+      "end": 393.66
+    },
+    {
+      "word": "emergency",
+      "start": 393.66,
+      "end": 393.98
+    },
+    {
+      "word": "occurs",
+      "start": 393.98,
+      "end": 394.44
+    },
+    {
+      "word": "Ultimately",
+      "start": 395.18,
+      "end": 395.48
+    },
+    {
+      "word": "cybersecurity",
+      "start": 395.94,
+      "end": 396.28
+    },
+    {
+      "word": "is",
+      "start": 396.28,
+      "end": 396.62
+    },
+    {
+      "word": "not",
+      "start": 396.62,
+      "end": 396.88
+    },
+    {
+      "word": "simply",
+      "start": 396.88,
+      "end": 397.2
+    },
+    {
+      "word": "a",
+      "start": 397.2,
+      "end": 397.4
+    },
+    {
+      "word": "technical",
+      "start": 397.4,
+      "end": 397.7
+    },
+    {
+      "word": "discipline",
+      "start": 397.7,
+      "end": 398.08
+    },
+    {
+      "word": "It",
+      "start": 398.74,
+      "end": 398.74
+    },
+    {
+      "word": "is",
+      "start": 398.74,
+      "end": 398.86
+    },
+    {
+      "word": "a",
+      "start": 398.86,
+      "end": 399.02
+    },
+    {
+      "word": "continuous",
+      "start": 399.02,
+      "end": 399.46
+    },
+    {
+      "word": "process",
+      "start": 399.46,
+      "end": 399.9
+    },
+    {
+      "word": "of",
+      "start": 399.9,
+      "end": 400.14
+    },
+    {
+      "word": "managing",
+      "start": 400.14,
+      "end": 400.4
+    },
+    {
+      "word": "uncertainty",
+      "start": 400.4,
+      "end": 401.0
+    },
+    {
+      "word": "allocating",
+      "start": 401.82,
+      "end": 401.9
+    },
+    {
+      "word": "limited",
+      "start": 401.9,
+      "end": 402.24
+    },
+    {
+      "word": "resources",
+      "start": 402.24,
+      "end": 402.72
+    },
+    {
+      "word": "and",
+      "start": 403.24,
+      "end": 403.36
+    },
+    {
+      "word": "making",
+      "start": 403.36,
+      "end": 403.58
+    },
+    {
+      "word": "informed",
+      "start": 403.58,
+      "end": 403.98
+    },
+    {
+      "word": "decisions",
+      "start": 403.98,
+      "end": 404.4
+    },
+    {
+      "word": "about",
+      "start": 404.4,
+      "end": 404.74
+    },
+    {
+      "word": "acceptable",
+      "start": 404.74,
+      "end": 405.18
+    },
+    {
+      "word": "risk",
+      "start": 405.18,
+      "end": 405.6
+    },
+    {
+      "word": "Executives",
+      "start": 406.22,
+      "end": 406.64
+    },
+    {
+      "word": "must",
+      "start": 406.64,
+      "end": 406.92
+    },
+    {
+      "word": "understand",
+      "start": 406.92,
+      "end": 407.4
+    },
+    {
+      "word": "that",
+      "start": 407.4,
+      "end": 407.72
+    },
+    {
+      "word": "security",
+      "start": 407.72,
+      "end": 408.08
+    },
+    {
+      "word": "investments",
+      "start": 408.08,
+      "end": 408.52
+    },
+    {
+      "word": "cannot",
+      "start": 408.52,
+      "end": 408.9
+    },
+    {
+      "word": "guarantee",
+      "start": 408.9,
+      "end": 409.26
+    },
+    {
+      "word": "complete",
+      "start": 409.26,
+      "end": 409.68
+    },
+    {
+      "word": "protection",
+      "start": 409.68,
+      "end": 410.1
+    },
+    {
+      "word": "while",
+      "start": 410.56,
+      "end": 410.82
+    },
+    {
+      "word": "technical",
+      "start": 410.82,
+      "end": 411.18
+    },
+    {
+      "word": "specialists",
+      "start": 411.18,
+      "end": 411.7
+    },
+    {
+      "word": "must",
+      "start": 411.7,
+      "end": 412.04
+    },
+    {
+      "word": "communicate",
+      "start": 412.04,
+      "end": 412.52
+    },
+    {
+      "word": "risks",
+      "start": 412.52,
+      "end": 412.84
+    },
+    {
+      "word": "in",
+      "start": 412.84,
+      "end": 413.2
+    },
+    {
+      "word": "terms",
+      "start": 413.2,
+      "end": 413.28
+    },
+    {
+      "word": "of",
+      "start": 413.28,
+      "end": 413.5
+    },
+    {
+      "word": "business",
+      "start": 413.5,
+      "end": 413.76
+    },
+    {
+      "word": "consequences",
+      "start": 413.76,
+      "end": 414.26
+    },
+    {
+      "word": "rather",
+      "start": 414.82,
+      "end": 414.98
+    },
+    {
+      "word": "than",
+      "start": 414.98,
+      "end": 415.28
+    },
+    {
+      "word": "vulnerability",
+      "start": 415.28,
+      "end": 415.7
+    },
+    {
+      "word": "counts",
+      "start": 415.7,
+      "end": 416.04
+    },
+    {
+      "word": "alone",
+      "start": 416.04,
+      "end": 416.36
+    },
+    {
+      "word": "The",
+      "start": 416.36,
+      "end": 416.96
+    },
+    {
+      "word": "central",
+      "start": 416.96,
+      "end": 417.28
+    },
+    {
+      "word": "objective",
+      "start": 417.28,
+      "end": 417.64
+    },
+    {
+      "word": "should",
+      "start": 417.64,
+      "end": 417.88
+    },
+    {
+      "word": "be",
+      "start": 417.88,
+      "end": 418.0
+    },
+    {
+      "word": "to",
+      "start": 418.0,
+      "end": 418.2
+    },
+    {
+      "word": "reduce",
+      "start": 418.2,
+      "end": 418.42
+    },
+    {
+      "word": "the",
+      "start": 418.42,
+      "end": 418.6
+    },
+    {
+      "word": "probability",
+      "start": 418.6,
+      "end": 419.06
+    },
+    {
+      "word": "and",
+      "start": 419.06,
+      "end": 419.46
+    },
+    {
+      "word": "impact",
+      "start": 419.46,
+      "end": 419.76
+    },
+    {
+      "word": "of",
+      "start": 419.76,
+      "end": 419.92
+    },
+    {
+      "word": "damaging",
+      "start": 419.84,
+      "end": 419.92
+    },
+    {
+      "word": "incidents",
+      "start": 419.92,
+      "end": 420.0
+    },
+    {
+      "word": "while",
+      "start": 420.0,
+      "end": 420.82
+    },
+    {
+      "word": "preserving",
+      "start": 420.82,
+      "end": 421.56
+    },
+    {
+      "word": "the",
+      "start": 421.56,
+      "end": 421.74
+    },
+    {
+      "word": "organization's",
+      "start": 421.74,
+      "end": 422.44
+    },
+    {
+      "word": "ability",
+      "start": 422.44,
+      "end": 422.78
+    },
+    {
+      "word": "to",
+      "start": 422.78,
+      "end": 422.94
+    },
+    {
+      "word": "operate",
+      "start": 422.94,
+      "end": 423.26
+    },
+    {
+      "word": "effectively",
+      "start": 423.26,
+      "end": 423.78
+    },
+    {
+      "word": "As",
+      "start": 424.44,
+      "end": 424.52
+    },
+    {
+      "word": "digital",
+      "start": 424.52,
+      "end": 424.88
+    },
+    {
+      "word": "infrastructure",
+      "start": 424.88,
+      "end": 425.4
+    },
+    {
+      "word": "becomes",
+      "start": 425.4,
+      "end": 425.78
+    },
+    {
+      "word": "more",
+      "start": 425.78,
+      "end": 426.06
+    },
+    {
+      "word": "interconnected",
+      "start": 426.06,
+      "end": 426.58
+    },
+    {
+      "word": "no",
+      "start": 427.16,
+      "end": 427.2
+    },
+    {
+      "word": "organization",
+      "start": 427.2,
+      "end": 427.78
+    },
+    {
+      "word": "can",
+      "start": 427.78,
+      "end": 428.1
+    },
+    {
+      "word": "achieve",
+      "start": 428.1,
+      "end": 428.4
+    },
+    {
+      "word": "meaningful",
+      "start": 428.4,
+      "end": 428.86
+    },
+    {
+      "word": "security",
+      "start": 428.86,
+      "end": 429.32
+    },
+    {
+      "word": "entirely",
+      "start": 429.32,
+      "end": 429.84
+    },
+    {
+      "word": "on",
+      "start": 429.84,
+      "end": 430.1
+    },
+    {
+      "word": "its",
+      "start": 430.1,
+      "end": 430.18
+    },
+    {
+      "word": "own",
+      "start": 430.18,
+      "end": 430.42
+    },
+    {
+      "word": "Collaboration",
+      "start": 431.16,
+      "end": 431.46
+    },
+    {
+      "word": "among",
+      "start": 431.46,
+      "end": 431.7
+    },
+    {
+      "word": "businesses",
+      "start": 431.7,
+      "end": 432.24
+    },
+    {
+      "word": "cloud",
+      "start": 432.66,
+      "end": 432.84
+    },
+    {
+      "word": "providers",
+      "start": 432.84,
+      "end": 433.28
+    },
+    {
+      "word": "software",
+      "start": 433.98,
+      "end": 434.04
+    },
+    {
+      "word": "developers",
+      "start": 434.04,
+      "end": 434.54
+    },
+    {
+      "word": "researchers",
+      "start": 435.22,
+      "end": 435.22
+    },
+    {
+      "word": "and",
+      "start": 435.38,
+      "end": 435.88
+    },
+    {
+      "word": "governments",
+      "start": 435.88,
+      "end": 435.88
+    },
+    {
+      "word": "is",
+      "start": 435.88,
+      "end": 436.16
+    },
+    {
+      "word": "increasingly",
+      "start": 436.16,
+      "end": 436.64
+    },
+    {
+      "word": "essential",
+      "start": 436.64,
+      "end": 437.04
+    },
+    {
+      "word": "Threat",
+      "start": 437.84,
+      "end": 437.86
+    },
+    {
+      "word": "intelligence",
+      "start": 437.86,
+      "end": 438.32
+    },
+    {
+      "word": "sharing",
+      "start": 438.32,
+      "end": 438.68
+    },
+    {
+      "word": "coordinated",
+      "start": 439.14,
+      "end": 439.4
+    },
+    {
+      "word": "vulnerability",
+      "start": 439.4,
+      "end": 439.96
+    },
+    {
+      "word": "disclosure",
+      "start": 439.96,
+      "end": 440.48
+    },
+    {
+      "word": "common",
+      "start": 441.02,
+      "end": 441.24
+    },
+    {
+      "word": "security",
+      "start": 441.24,
+      "end": 441.62
+    },
+    {
+      "word": "standards",
+      "start": 441.62,
+      "end": 442.04
+    },
+    {
+      "word": "and",
+      "start": 442.22,
+      "end": 442.54
+    },
+    {
+      "word": "transparent",
+      "start": 442.54,
+      "end": 442.82
+    },
+    {
+      "word": "incident",
+      "start": 442.82,
+      "end": 443.18
+    },
+    {
+      "word": "reporting",
+      "start": 443.18,
+      "end": 443.56
+    },
+    {
+      "word": "can",
+      "start": 443.56,
+      "end": 444.18
+    },
+    {
+      "word": "strengthen",
+      "start": 444.18,
+      "end": 444.44
+    },
+    {
+      "word": "the",
+      "start": 444.44,
+      "end": 444.94
+    },
+    {
+      "word": "broader",
+      "start": 444.94,
+      "end": 444.94
+    },
+    {
+      "word": "digital",
+      "start": 444.94,
+      "end": 445.32
+    },
+    {
+      "word": "ecosystem",
+      "start": 445.32,
+      "end": 445.82
+    },
+    {
+      "word": "The",
+      "start": 446.36,
+      "end": 446.6
+    },
+    {
+      "word": "challenge",
+      "start": 446.6,
+      "end": 446.9
+    },
+    {
+      "word": "for",
+      "start": 446.9,
+      "end": 447.1
+    },
+    {
+      "word": "the",
+      "start": 447.1,
+      "end": 447.2
+    },
+    {
+      "word": "coming",
+      "start": 447.2,
+      "end": 447.48
+    },
+    {
+      "word": "decade",
+      "start": 447.48,
+      "end": 447.82
+    },
+    {
+      "word": "is",
+      "start": 447.82,
+      "end": 448.08
+    },
+    {
+      "word": "to",
+      "start": 448.08,
+      "end": 448.52
+    },
+    {
+      "word": "develop",
+      "start": 448.52,
+      "end": 448.52
+    },
+    {
+      "word": "security",
+      "start": 448.52,
+      "end": 448.98
+    },
+    {
+      "word": "architectures",
+      "start": 448.98,
+      "end": 449.36
+    },
+    {
+      "word": "that",
+      "start": 449.36,
+      "end": 449.8
+    },
+    {
+      "word": "remain",
+      "start": 449.8,
+      "end": 449.98
+    },
+    {
+      "word": "effective",
+      "start": 450.0,
+      "end": 450.58
+    },
+    {
+      "word": "despite",
+      "start": 450.58,
+      "end": 451.2
+    },
+    {
+      "word": "continuous",
+      "start": 451.2,
+      "end": 451.78
+    },
+    {
+      "word": "technological",
+      "start": 451.78,
+      "end": 452.4
+    },
+    {
+      "word": "change",
+      "start": 452.4,
+      "end": 452.92
+    },
+    {
+      "word": "increasingly",
+      "start": 453.58,
+      "end": 453.74
+    },
+    {
+      "word": "capable",
+      "start": 453.74,
+      "end": 454.22
+    },
+    {
+      "word": "adversaries",
+      "start": 454.22,
+      "end": 454.9
+    },
+    {
+      "word": "and",
+      "start": 455.38,
+      "end": 455.42
+    },
+    {
+      "word": "the",
+      "start": 455.42,
+      "end": 455.54
+    },
+    {
+      "word": "inevitable",
+      "start": 455.54,
+      "end": 455.96
+    },
+    {
+      "word": "limitations",
+      "start": 455.96,
+      "end": 456.44
+    },
+    {
+      "word": "of",
+      "start": 456.44,
+      "end": 456.84
+    },
+    {
+      "word": "human",
+      "start": 456.84,
+      "end": 457.02
+    },
+    {
+      "word": "judgment",
+      "start": 457.02,
+      "end": 457.28
+    }
+  ],
+  "voice": "marin",
+  "style": "expressive",
+  "model": "gpt-realtime-2.1-mini",
+  "audio_file": "english_overlap_20261024_224918_174eef.mp3",
+  "subtitle_file": "english_overlap_20261024_224918_174eef.json",
+  "summary": "クラウドやリモートワーク、AIの普及で複雑化する環境における、ゼロトラスト、認証、クラウド設定、ソフトウェア供給網などの主要なサイバーセキュリティ課題を論じている。攻撃を完全に防ぐことではなく、リスクに優先順位をつけ、備えと復旧を通じて組織の運用を維持することが重要だと述べる。",
+  "word_count": 1044,
+  "character_count": 8599,
+  "audio_seconds": 457.5,
+  "cost": {
+    "realtime_usd": 0.1878276,
+    "transcription_usd": 0.04575009,
+    "total_usd": 0.23663599,
+    "currency": "USD",
+    "rates_per_1m_tokens": {
+      "input_audio": 10.0,
+      "input_text": 0.6,
+      "cached_input": 0.3,
+      "output_audio": 20.0,
+      "output_text": 2.4
+    },
+    "transcription_model": "whisper-1",
+    "transcription_rate_usd_per_minute": 0.006,
+    "usage": {
+      "total_tokens": 12135,
+      "input_tokens": 1298,
+      "output_tokens": 10837,
+      "input_token_details": {
+        "text_tokens": 1298,
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "cached_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        }
+      },
+      "output_token_details": {
+        "text_tokens": 1687,
+        "audio_tokens": 9150,
+        "reasoning_tokens": 40
+      }
+    },
+    "text_generation": {
+      "model": "gpt-6-luna",
+      "input_tokens": 1528,
+      "output_tokens": 5811,
+      "usd": 0.0030583,
+      "rate_version": "2026-10-24-v1",
+      "rates_per_1m_tokens": {
+        "input": 0.1,
+        "output": 0.5
+      },
+      "usage": {
+        "input_tokens": 1528,
+        "output_tokens": 5811
+      }
+    },
+    "text_generation_usd": 0.0030583
+  },
+  "title": "Cybersecurity Resilience in an Interconnected Digital World",
+  "summary_model": "gpt-6-luna",
+  "summary_prompt_version": "material-summary-v2-json-source-title",
+  "summary_generated_at_utc": "2026-10-25T10:19:35+00:00"
+}

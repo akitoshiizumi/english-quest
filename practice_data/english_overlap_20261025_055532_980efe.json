@@ -1,0 +1,3811 @@
+{
+  "version": 2,
+  "created_at": "2026-10-25T05:55:32+00:00",
+  "text": "However, effective teamwork required more than clear communication. Maya believed that honesty is the best policy, but she also learned that honesty should be combined with respect. Publicly criticizing an employee might communicate a problem quickly, yet it could damage trust and discourage future participation. She discovered that you catch more flies with honey than with vinegar. Constructive feedback, sincere appreciation, and thoughtful questions often produced better results than harsh instructions. At the same time, she refused to avoid difficult conversations entirely. Sometimes leaders must face the music and address uncomfortable realities before small problems become serious.\n\nAs the team became more comfortable working together, Maya encouraged everyone to share knowledge. Previously, individual engineers had concentrated on their own responsibilities, assuming that other departments would handle the remaining work. This created gaps between development, testing, and deployment. Maya reminded them that a chain is only as strong as its weakest link. Even excellent software could fail if security, documentation, or operational support were neglected. By working together, employees discovered that many hands make light work. Tasks that once required several days could sometimes be completed much faster through collaboration.\n\nDisagreements still occurred, especially when people had conflicting priorities. Some engineers wanted to introduce innovative technologies, while others preferred proven solutions. Maya recognized that it takes two to tango. Resolving disagreements required both sides to participate rather than expecting one person to surrender completely. She encouraged colleagues to meet halfway whenever compromise was possible. On some issues, they simply had to agree to disagree while respecting the final decision. Leadership involved give and take, and maintaining productive relationships sometimes meant accepting solutions that were reasonable rather than personally ideal.\n\nOver time, the team began appreciating its diversity. Initially, several employees had preferred working with colleagues who shared similar backgrounds and opinions. Birds of a feather flock together, but Maya wanted to demonstrate that differences could also create opportunities. Engineers with different experiences frequently identified weaknesses that others had overlooked. They learned to put themselves in one another's shoes before criticizing unfamiliar approaches. Maya also reminded them that when in Rome, do as the Romans do, although adapting to local customs should never mean abandoning important personal values. Mutual respect required curiosity rather than unquestioning conformity.\n\nOne day, a serious system failure occurred shortly before a major customer demonstration. Instead of blaming one another, employees immediately coordinated their efforts. Several engineers worked through the night, while others communicated with the customer and prepared alternative arrangements. A friend in need is a friend indeed, and the crisis revealed how much trust the team had developed. Employees supported colleagues who were struggling, knowing that one good turn deserves another. Their willingness to cooperate was not based on contractual obligations alone but on relationships strengthened through months of shared experiences.\n\nThe team eventually resolved the problem and successfully completed the demonstration. Maya reflected on how much her understanding of leadership had changed. She had once believed that success depended mainly on hiring exceptionally talented individuals. Now she understood that no one is an island and that even brilliant professionals need cooperation, trust, and mutual understanding. What goes around comes around, and the respect she had shown her colleagues had gradually encouraged them to treat one another similarly. Her greatest achievement was not simply delivering a successful project, but creating an environment in which people could learn from one another and grow together. United we stand, divided we fall, and the experience convinced her that the strength of a team depends not only on individual ability but also on the quality of the relationships connecting its members.",
+  "spoken_text": "However, effective teamwork required more than clear communication. Maya believed that honesty is the best policy, but she also learned that honesty should be combined with respect. Publicly criticizing an employee might communicate a problem quickly, yet it could damage trust and discourage future participation. She discovered that you catch more flies with honey than with vinegar. Constructive feedback, sincere appreciation, and thoughtful questions often produced better results than harsh instructions. At the same time, she refused to avoid difficult conversations entirely. Sometimes leaders must face the music and address uncomfortable realities before small problems become serious.\n\nAs the team became more comfortable working together, Maya encouraged everyone to share knowledge. Previously, individual engineers had concentrated on their own responsibilities, assuming that other departments would handle the remaining work. This created gaps between development, testing, and deployment. Maya reminded them that a chain is only as strong as its weakest link. Even excellent software could fail if security, documentation, or operational support were neglected. By working together, employees discovered that many hands make light work. Tasks that once required several days could sometimes be completed much faster through collaboration.\n\nDisagreements still occurred, especially when people had conflicting priorities. Some engineers wanted to introduce innovative technologies, while others preferred proven solutions. Maya recognized that it takes two to tango. Resolving disagreements required both sides to participate rather than expecting one person to surrender completely. She encouraged colleagues to meet halfway whenever compromise was possible. On some issues, they simply had to agree to disagree while respecting the final decision. Leadership involved give and take, and maintaining productive relationships sometimes meant accepting solutions that were reasonable rather than personally ideal.\n\nOver time, the team began appreciating its diversity. Initially, several employees had preferred working with colleagues who shared similar backgrounds and opinions. Birds of a feather flock together, but Maya wanted to demonstrate that differences could also create opportunities. Engineers with different experiences frequently identified weaknesses that others had overlooked. They learned to put themselves in one another's shoes before criticizing unfamiliar approaches. Maya also reminded them that when in Rome, do as the Romans do, although adapting to local customs should never mean abandoning important personal values. Mutual respect required curiosity rather than unquestioning conformity.\n\nOne day, a serious system failure occurred shortly before a major customer demonstration. Instead of blaming one another, employees immediately coordinated their efforts. Several engineers worked through the night, while others communicated with the customer and prepared alternative arrangements. A friend in need is a friend indeed, and the crisis revealed how much trust the team had developed. Employees supported colleagues who were struggling, knowing that one good turn deserves another. Their willingness to cooperate was not based on contractual obligations alone but on relationships strengthened through months of shared experiences.\n\nThe team eventually resolved the problem and successfully completed the demonstration. Maya reflected on how much her understanding of leadership had changed. She had once believed that success depended mainly on hiring exceptionally talented individuals. Now she understood that no one is an island and that even brilliant professionals need cooperation, trust, and mutual understanding. What goes around comes around, and the respect she had shown her colleagues had gradually encouraged them to treat one another similarly. Her greatest achievement was not simply delivering a successful project, but creating an environment in which people could learn from one another and grow together. United we stand, divided we fall, and the experience convinced her that the strength of a team depends not only on individual ability but also on the quality of the relationships connecting its members.",
+  "blocks": [
+    {
+      "english": "However, effective teamwork required more than clear communication.",
+      "japanese": "しかし、効果的なチームワークには、明確な意思疎通以上のものが必要だった。",
+      "vocabulary": [
+        {
+          "word": "effective teamwork",
+          "meaning": "効果的なチームワーク"
+        },
+        {
+          "word": "clear communication",
+          "meaning": "明確な意思疎通"
+        }
+      ]
+    },
+    {
+      "english": "Maya believed that honesty is the best policy, but she also learned that honesty should be combined with respect.",
+      "japanese": "マヤは、誠実さが最善の方針だと信じていたが、誠実さには敬意も伴わなければならないと学んだ。",
+      "vocabulary": [
+        {
+          "word": "honesty",
+          "meaning": "誠実さ"
+        },
+        {
+          "word": "the best policy",
+          "meaning": "最善の方針"
+        },
+        {
+          "word": "respect",
+          "meaning": "敬意"
+        }
+      ]
+    },
+    {
+      "english": "Publicly criticizing an employee might communicate a problem quickly, yet it could damage trust and discourage future participation.",
+      "japanese": "従業員を公然と批判すれば、問題をすぐに伝えられるかもしれないが、信頼を損ない、今後の参加意欲をくじくおそれがあった。",
+      "vocabulary": [
+        {
+          "word": "Publicly criticizing",
+          "meaning": "公然と批判すること"
+        },
+        {
+          "word": "damage trust",
+          "meaning": "信頼を損なう"
+        },
+        {
+          "word": "discourage",
+          "meaning": "意欲をくじく"
+        }
+      ]
+    },
+    {
+      "english": "She discovered that you catch more flies with honey than with vinegar.",
+      "japanese": "彼女は、物事は厳しく言うより、優しく頼むほうがうまくいくと気づいた。",
+      "vocabulary": [
+        {
+          "word": "catch more flies with honey than with vinegar",
+          "meaning": "優しく頼むほうが厳しく言うよりうまくいく"
+        },
+        {
+          "word": "honey",
+          "meaning": "優しさ"
+        },
+        {
+          "word": "vinegar",
+          "meaning": "厳しさ"
+        }
+      ]
+    },
+    {
+      "english": "Constructive feedback, sincere appreciation, and thoughtful questions often produced better results than harsh instructions.",
+      "japanese": "建設的な意見、心からの感謝、思慮深い質問は、厳しい指示よりも良い結果をもたらすことが多かった。",
+      "vocabulary": [
+        {
+          "word": "Constructive feedback",
+          "meaning": "建設的な意見"
+        },
+        {
+          "word": "sincere appreciation",
+          "meaning": "心からの感謝"
+        },
+        {
+          "word": "harsh instructions",
+          "meaning": "厳しい指示"
+        }
+      ]
+    },
+    {
+      "english": "At the same time, she refused to avoid difficult conversations entirely.",
+      "japanese": "それと同時に、彼女は難しい話し合いをすべて避けることはしなかった。",
+      "vocabulary": [
+        {
+          "word": "At the same time",
+          "meaning": "それと同時に"
+        },
+        {
+          "word": "difficult conversations",
+          "meaning": "難しい話し合い"
+        },
+        {
+          "word": "entirely",
+          "meaning": "完全に"
+        }
+      ]
+    },
+    {
+      "english": "Sometimes leaders must face the music and address uncomfortable realities before small problems become serious.",
+      "japanese": "小さな問題が深刻になる前に、リーダーは時に現実を直視し、居心地の悪い事実に向き合わなければならない。",
+      "vocabulary": [
+        {
+          "word": "face the music",
+          "meaning": "現実を直視する"
+        },
+        {
+          "word": "address",
+          "meaning": "対処する"
+        },
+        {
+          "word": "uncomfortable realities",
+          "meaning": "居心地の悪い現実"
+        }
+      ]
+    },
+    {
+      "english": "As the team became more comfortable working together, Maya encouraged everyone to share knowledge.",
+      "japanese": "チームのメンバーが一緒に働くことに慣れてくると、マヤは皆に知識を共有するよう促した。",
+      "vocabulary": [
+        {
+          "word": "became more comfortable",
+          "meaning": "より慣れてきた"
+        },
+        {
+          "word": "encouraged",
+          "meaning": "促した"
+        },
+        {
+          "word": "share knowledge",
+          "meaning": "知識を共有する"
+        }
+      ]
+    },
+    {
+      "english": "Previously, individual engineers had concentrated on their own responsibilities, assuming that other departments would handle the remaining work.",
+      "japanese": "以前は、各技術者が自分の担当業務に集中し、残りの仕事は他部署が処理するものと思い込んでいた。",
+      "vocabulary": [
+        {
+          "word": "Previously",
+          "meaning": "以前は"
+        },
+        {
+          "word": "responsibilities",
+          "meaning": "担当業務"
+        },
+        {
+          "word": "assuming",
+          "meaning": "思い込んで"
+        }
+      ]
+    },
+    {
+      "english": "This created gaps between development, testing, and deployment.",
+      "japanese": "そのため、開発、テスト、導入の間に抜け落ちが生じていた。",
+      "vocabulary": [
+        {
+          "word": "gaps",
+          "meaning": "抜け落ち"
+        },
+        {
+          "word": "development",
+          "meaning": "開発"
+        },
+        {
+          "word": "deployment",
+          "meaning": "導入"
+        }
+      ]
+    },
+    {
+      "english": "Maya reminded them that a chain is only as strong as its weakest link.",
+      "japanese": "マヤは、鎖は最も弱い輪と同じ強さしかないのだと皆に念を押した。",
+      "vocabulary": [
+        {
+          "word": "a chain is only as strong as its weakest link",
+          "meaning": "鎖の強さは最も弱い輪で決まる"
+        },
+        {
+          "word": "weakest link",
+          "meaning": "最も弱い輪"
+        }
+      ]
+    },
+    {
+      "english": "Even excellent software could fail if security, documentation, or operational support were neglected.",
+      "japanese": "優れたソフトウェアでさえ、セキュリティ、文書作成、運用支援がおろそかになれば、失敗することがあった。",
+      "vocabulary": [
+        {
+          "word": "excellent software",
+          "meaning": "優れたソフトウェア"
+        },
+        {
+          "word": "security",
+          "meaning": "安全対策"
+        },
+        {
+          "word": "operational support",
+          "meaning": "運用支援"
+        },
+        {
+          "word": "neglected",
+          "meaning": "おろそかにされた"
+        }
+      ]
+    },
+    {
+      "english": "By working together, employees discovered that many hands make light work.",
+      "japanese": "協力して働くうちに、従業員たちは大勢で取り組めば仕事が楽になると気づいた。",
+      "vocabulary": [
+        {
+          "word": "By working together",
+          "meaning": "協力して働くことで"
+        },
+        {
+          "word": "many hands make light work",
+          "meaning": "大勢で取り組めば仕事が楽になる"
+        },
+        {
+          "word": "employees",
+          "meaning": "従業員"
+        }
+      ]
+    },
+    {
+      "english": "Tasks that once required several days could sometimes be completed much faster through collaboration.",
+      "japanese": "かつて数日かかっていた作業も、協力すればずっと早く終えられることがあった。",
+      "vocabulary": [
+        {
+          "word": "required",
+          "meaning": "必要とした"
+        },
+        {
+          "word": "completed",
+          "meaning": "終えられた"
+        },
+        {
+          "word": "collaboration",
+          "meaning": "協力"
+        }
+      ]
+    },
+    {
+      "english": "Disagreements still occurred, especially when people had conflicting priorities.",
+      "japanese": "特に人の優先事項が食い違うと、今でも意見の相違は起きた。",
+      "vocabulary": [
+        {
+          "word": "Disagreements",
+          "meaning": "意見の相違"
+        },
+        {
+          "word": "especially",
+          "meaning": "特に"
+        },
+        {
+          "word": "conflicting priorities",
+          "meaning": "食い違う優先事項"
+        }
+      ]
+    },
+    {
+      "english": "Some engineers wanted to introduce innovative technologies, while others preferred proven solutions.",
+      "japanese": "新しい技術を導入したい技術者もいれば、実績のある解決策を好む技術者もいた。",
+      "vocabulary": [
+        {
+          "word": "introduce",
+          "meaning": "導入する"
+        },
+        {
+          "word": "innovative technologies",
+          "meaning": "革新的な技術"
+        },
+        {
+          "word": "proven solutions",
+          "meaning": "実績のある解決策"
+        }
+      ]
+    },
+    {
+      "english": "Maya recognized that it takes two to tango.",
+      "japanese": "マヤは、物事を成し遂げるには双方の協力が必要だと理解していた。",
+      "vocabulary": [
+        {
+          "word": "it takes two to tango",
+          "meaning": "物事には双方の協力が必要だ"
+        },
+        {
+          "word": "recognized",
+          "meaning": "理解した"
+        }
+      ]
+    },
+    {
+      "english": "Resolving disagreements required both sides to participate rather than expecting one person to surrender completely.",
+      "japanese": "意見の相違を解決するには、どちらか一方が完全に譲ることを期待するのではなく、双方が参加する必要があった。",
+      "vocabulary": [
+        {
+          "word": "Resolving disagreements",
+          "meaning": "意見の相違を解決すること"
+        },
+        {
+          "word": "both sides",
+          "meaning": "双方"
+        },
+        {
+          "word": "surrender",
+          "meaning": "譲る"
+        }
+      ]
+    },
+    {
+      "english": "She encouraged colleagues to meet halfway whenever compromise was possible.",
+      "japanese": "妥協できる場合には、同僚たちが歩み寄るよう彼女は促した。",
+      "vocabulary": [
+        {
+          "word": "meet halfway",
+          "meaning": "歩み寄る"
+        },
+        {
+          "word": "compromise",
+          "meaning": "妥協"
+        },
+        {
+          "word": "colleagues",
+          "meaning": "同僚"
+        }
+      ]
+    },
+    {
+      "english": "On some issues, they simply had to agree to disagree while respecting the final decision.",
+      "japanese": "いくつかの問題については、最終決定を尊重しながら、意見が異なるままでも互いに認め合うしかなかった。",
+      "vocabulary": [
+        {
+          "word": "agree to disagree",
+          "meaning": "意見が異なることを認め合う"
+        },
+        {
+          "word": "respecting",
+          "meaning": "尊重しながら"
+        },
+        {
+          "word": "final decision",
+          "meaning": "最終決定"
+        }
+      ]
+    },
+    {
+      "english": "Leadership involved give and take, and maintaining productive relationships sometimes meant accepting solutions that were reasonable rather than personally ideal.",
+      "japanese": "リーダーシップには譲り合いが伴い、生産的な関係を保つには、自分にとって理想的な解決策ではなくても、妥当なものを受け入れる必要があることもあった。",
+      "vocabulary": [
+        {
+          "word": "give and take",
+          "meaning": "譲り合い"
+        },
+        {
+          "word": "productive relationships",
+          "meaning": "生産的な関係"
+        },
+        {
+          "word": "reasonable",
+          "meaning": "妥当な"
+        }
+      ]
+    },
+    {
+      "english": "Over time, the team began appreciating its diversity.",
+      "japanese": "時がたつにつれ、チームは多様性の価値を認めるようになった。",
+      "vocabulary": [
+        {
+          "word": "Over time",
+          "meaning": "時がたつにつれて"
+        },
+        {
+          "word": "appreciating",
+          "meaning": "価値を認めること"
+        },
+        {
+          "word": "diversity",
+          "meaning": "多様性"
+        }
+      ]
+    },
+    {
+      "english": "Initially, several employees had preferred working with colleagues who shared similar backgrounds and opinions.",
+      "japanese": "当初、何人かの従業員は、自分と似た経歴や意見を持つ同僚と働くことを好んでいた。",
+      "vocabulary": [
+        {
+          "word": "Initially",
+          "meaning": "当初"
+        },
+        {
+          "word": "backgrounds",
+          "meaning": "経歴"
+        },
+        {
+          "word": "similar",
+          "meaning": "似た"
+        }
+      ]
+    },
+    {
+      "english": "Birds of a feather flock together, but Maya wanted to demonstrate that differences could also create opportunities.",
+      "japanese": "似た者同士は集まりやすいものだが、マヤは違いも機会を生み出せることを示したいと思っていた。",
+      "vocabulary": [
+        {
+          "word": "Birds of a feather flock together",
+          "meaning": "似た者同士は集まりやすい"
+        },
+        {
+          "word": "differences",
+          "meaning": "違い"
+        },
+        {
+          "word": "opportunities",
+          "meaning": "機会"
+        }
+      ]
+    },
+    {
+      "english": "Engineers with different experiences frequently identified weaknesses that others had overlooked.",
+      "japanese": "異なる経験を持つ技術者たちは、ほかの人が見落としていた弱点を見つけることがよくあった。",
+      "vocabulary": [
+        {
+          "word": "experiences",
+          "meaning": "経験"
+        },
+        {
+          "word": "identified",
+          "meaning": "見つけた"
+        },
+        {
+          "word": "overlooked",
+          "meaning": "見落としていた"
+        }
+      ]
+    },
+    {
+      "english": "They learned to put themselves in one another's shoes before criticizing unfamiliar approaches.",
+      "japanese": "彼らは、なじみのないやり方を批判する前に、互いの立場に立って考えることを学んだ。",
+      "vocabulary": [
+        {
+          "word": "put themselves in one another's shoes",
+          "meaning": "互いの立場に立って考える"
+        },
+        {
+          "word": "criticizing",
+          "meaning": "批判すること"
+        },
+        {
+          "word": "unfamiliar approaches",
+          "meaning": "なじみのないやり方"
+        }
+      ]
+    },
+    {
+      "english": "Maya also reminded them that when in Rome, do as the Romans do, although adapting to local customs should never mean abandoning important personal values.",
+      "japanese": "マヤはまた、郷に入っては郷に従えとも皆に念を押したが、土地の習慣に合わせることは、決して大切な個人の価値観を捨てることを意味してはならなかった。",
+      "vocabulary": [
+        {
+          "word": "when in Rome, do as the Romans do",
+          "meaning": "郷に入っては郷に従え"
+        },
+        {
+          "word": "adapting",
+          "meaning": "合わせること"
+        },
+        {
+          "word": "personal values",
+          "meaning": "個人の価値観"
+        }
+      ]
+    },
+    {
+      "english": "Mutual respect required curiosity rather than unquestioning conformity.",
+      "japanese": "互いを尊重するには、何も考えずに周囲に合わせるのではなく、好奇心を持つことが必要だった。",
+      "vocabulary": [
+        {
+          "word": "Mutual respect",
+          "meaning": "相互の尊重"
+        },
+        {
+          "word": "curiosity",
+          "meaning": "好奇心"
+        },
+        {
+          "word": "unquestioning conformity",
+          "meaning": "無批判な同調"
+        }
+      ]
+    },
+    {
+      "english": "One day, a serious system failure occurred shortly before a major customer demonstration.",
+      "japanese": "ある日、大口顧客への重要な実演の直前に、深刻なシステム障害が発生した。",
+      "vocabulary": [
+        {
+          "word": "serious system failure",
+          "meaning": "深刻なシステム障害"
+        },
+        {
+          "word": "shortly before",
+          "meaning": "直前に"
+        },
+        {
+          "word": "demonstration",
+          "meaning": "実演"
+        }
+      ]
+    },
+    {
+      "english": "Instead of blaming one another, employees immediately coordinated their efforts.",
+      "japanese": "互いを責める代わりに、従業員たちはすぐに連携して動いた。",
+      "vocabulary": [
+        {
+          "word": "Instead of",
+          "meaning": "代わりに"
+        },
+        {
+          "word": "blaming",
+          "meaning": "責めること"
+        },
+        {
+          "word": "coordinated",
+          "meaning": "連携した"
+        }
+      ]
+    },
+    {
+      "english": "Several engineers worked through the night, while others communicated with the customer and prepared alternative arrangements.",
+      "japanese": "何人かの技術者は徹夜で作業し、その一方で、ほかの人は顧客に連絡し、代替案を準備した。",
+      "vocabulary": [
+        {
+          "word": "worked through the night",
+          "meaning": "徹夜で作業した"
+        },
+        {
+          "word": "communicated",
+          "meaning": "連絡した"
+        },
+        {
+          "word": "alternative arrangements",
+          "meaning": "代替案"
+        }
+      ]
+    },
+    {
+      "english": "A friend in need is a friend indeed, and the crisis revealed how much trust the team had developed.",
+      "japanese": "困ったときに助けてくれる人こそ真の友であり、この危機によって、チームがどれほど信頼を築いていたかが明らかになった。",
+      "vocabulary": [
+        {
+          "word": "A friend in need is a friend indeed",
+          "meaning": "困ったときに助けてくれる人こそ真の友"
+        },
+        {
+          "word": "crisis",
+          "meaning": "危機"
+        },
+        {
+          "word": "trust",
+          "meaning": "信頼"
+        }
+      ]
+    },
+    {
+      "english": "Employees supported colleagues who were struggling, knowing that one good turn deserves another.",
+      "japanese": "従業員たちは苦労している同僚を支え、受けた親切にはいつか報いるものだと理解していた。",
+      "vocabulary": [
+        {
+          "word": "struggling",
+          "meaning": "苦労している"
+        },
+        {
+          "word": "supported",
+          "meaning": "支えた"
+        },
+        {
+          "word": "one good turn deserves another",
+          "meaning": "受けた親切には報いるものだ"
+        }
+      ]
+    },
+    {
+      "english": "Their willingness to cooperate was not based on contractual obligations alone but on relationships strengthened through months of shared experiences.",
+      "japanese": "彼らが協力したのは契約上の義務だけが理由ではなく、何か月もの共通の経験を通じて深まった人間関係もあった。",
+      "vocabulary": [
+        {
+          "word": "willingness to cooperate",
+          "meaning": "協力する意欲"
+        },
+        {
+          "word": "contractual obligations",
+          "meaning": "契約上の義務"
+        },
+        {
+          "word": "shared experiences",
+          "meaning": "共通の経験"
+        }
+      ]
+    },
+    {
+      "english": "The team eventually resolved the problem and successfully completed the demonstration.",
+      "japanese": "チームはついに問題を解決し、実演を無事に終えた。",
+      "vocabulary": [
+        {
+          "word": "eventually",
+          "meaning": "ついに"
+        },
+        {
+          "word": "resolved",
+          "meaning": "解決した"
+        },
+        {
+          "word": "successfully",
+          "meaning": "無事に"
+        }
+      ]
+    },
+    {
+      "english": "Maya reflected on how much her understanding of leadership had changed.",
+      "japanese": "マヤは、リーダーシップに対する自分の理解がどれほど変わったかを振り返った。",
+      "vocabulary": [
+        {
+          "word": "reflected on",
+          "meaning": "振り返った"
+        },
+        {
+          "word": "understanding",
+          "meaning": "理解"
+        },
+        {
+          "word": "leadership",
+          "meaning": "リーダーシップ"
+        }
+      ]
+    },
+    {
+      "english": "She had once believed that success depended mainly on hiring exceptionally talented individuals.",
+      "japanese": "かつて彼女は、成功は主に並外れた才能を持つ人材を採用することにかかっていると信じていた。",
+      "vocabulary": [
+        {
+          "word": "depended mainly on",
+          "meaning": "主にかかっていた"
+        },
+        {
+          "word": "hiring",
+          "meaning": "採用すること"
+        },
+        {
+          "word": "exceptionally talented",
+          "meaning": "並外れた才能を持つ"
+        }
+      ]
+    },
+    {
+      "english": "Now she understood that no one is an island and that even brilliant professionals need cooperation, trust, and mutual understanding.",
+      "japanese": "今では、誰も一人では生きていけず、優れた専門家でさえ協力、信頼、相互理解を必要とするとわかっていた。",
+      "vocabulary": [
+        {
+          "word": "no one is an island",
+          "meaning": "誰も一人では生きていけない"
+        },
+        {
+          "word": "brilliant professionals",
+          "meaning": "優れた専門家"
+        },
+        {
+          "word": "mutual understanding",
+          "meaning": "相互理解"
+        }
+      ]
+    },
+    {
+      "english": "What goes around comes around, and the respect she had shown her colleagues had gradually encouraged them to treat one another similarly.",
+      "japanese": "自分のしたことは自分に返ってくるものであり、彼女が同僚たちに示した敬意は、次第に皆が互いに同じように接することにつながった。",
+      "vocabulary": [
+        {
+          "word": "What goes around comes around",
+          "meaning": "自分のしたことは自分に返ってくる"
+        },
+        {
+          "word": "gradually",
+          "meaning": "次第に"
+        },
+        {
+          "word": "treat one another",
+          "meaning": "互いに接する"
+        }
+      ]
+    },
+    {
+      "english": "Her greatest achievement was not simply delivering a successful project, but creating an environment in which people could learn from one another and grow together.",
+      "japanese": "彼女の最大の功績は、プロジェクトを成功させたことだけではなく、人が互いに学び合い、ともに成長できる環境を作ったことだった。",
+      "vocabulary": [
+        {
+          "word": "greatest achievement",
+          "meaning": "最大の功績"
+        },
+        {
+          "word": "environment",
+          "meaning": "環境"
+        },
+        {
+          "word": "grow together",
+          "meaning": "ともに成長する"
+        }
+      ]
+    },
+    {
+      "english": "United we stand, divided we fall, and the experience convinced her that the strength of a team depends not only on individual ability but also on the quality of the relationships connecting its members.",
+      "japanese": "団結すれば立ち、分裂すれば倒れる。その経験を通じて彼女は、チームの強さは個人の能力だけでなく、メンバーを結びつける関係の質にも左右されると確信した。",
+      "vocabulary": [
+        {
+          "word": "United we stand, divided we fall",
+          "meaning": "団結すれば立ち、分裂すれば倒れる"
+        },
+        {
+          "word": "individual ability",
+          "meaning": "個人の能力"
+        },
+        {
+          "word": "quality of the relationships",
+          "meaning": "関係の質"
+        }
+      ]
+    }
+  ],
+  "transcript": "However, effective teamwork required more than clear communication. Maya believed that honesty is the best policy, but she also learned that honesty should be combined with respect. Publicly criticizing an employee might communicate a problem quickly, yet it could damage trust and discourage future participation. She discovered that you catch more flies with honey than with vinegar. Constructive feedback, sincere appreciation, and thoughtful questions often produced better results than harsh instructions. At the same time, she refused to avoid difficult conversations entirely. Sometimes leaders must face the music and address uncomfortable realities before small problems become serious.\n\nAs the team became more comfortable working together, Maya encouraged everyone to share knowledge. Previously, individual engineers had concentrated on their own responsibilities, assuming that other departments would handle the remaining work. This created gaps between development, testing, and deployment. Maya reminded them that a chain is only as strong as its weakest link. Even excellent software could fail if security, documentation, or operational support were neglected. By working together, employees discovered that many hands make light work. Tasks that once required several days could sometimes be completed much faster through collaboration.\n\nDisagreements still occurred, especially when people had conflicting priorities. Some engineers wanted to introduce innovative technologies, while others preferred proven solutions. Maya recognized that it takes two to tango. Resolving disagreements required both sides to participate rather than expecting one person to surrender completely. She encouraged colleagues to meet halfway whenever compromise was possible. On some issues, they simply had to agree to disagree while respecting the final decision. Leadership involved give and take, and maintaining productive relationships sometimes meant accepting solutions that were reasonable rather than personally ideal.\n\nOver time, the team began appreciating its diversity. Initially, several employees had preferred working with colleagues who shared similar backgrounds and opinions. Birds of a feather flock together, but Maya wanted to demonstrate that differences could also create opportunities. Engineers with different experiences frequently identified weaknesses that others had overlooked. They learned to put themselves in one another's shoes before criticizing unfamiliar approaches. Maya also reminded them that when in Rome, do as the Romans do, although adapting to local customs should never mean abandoning important personal values. Mutual respect required curiosity rather than unquestioning conformity.\n\nOne day, a serious system failure occurred shortly before a major customer demonstration. Instead of blaming one another, employees immediately coordinated their efforts. Several engineers worked through the night, while others communicated with the customer and prepared alternative arrangements. A friend in need is a friend indeed, and the crisis revealed how much trust the team had developed. Employees supported colleagues who were struggling, knowing that one good turn deserves another. Their willingness to cooperate was not based on contractual obligations alone but on relationships strengthened through months of shared experiences.\n\nThe team eventually resolved the problem and successfully completed the demonstration. Maya reflected on how much her understanding of leadership had changed. She had once believed that success depended mainly on hiring exceptionally talented individuals. Now she understood that no one is an island and that even brilliant professionals need cooperation, trust, and mutual understanding. What goes around comes around, and the respect she had shown her colleagues had gradually encouraged them to treat one another similarly. Her greatest achievement was not simply delivering a successful project, but creating an environment in which people could learn from one another and grow together. United we stand, divided we fall, and the experience convinced her that the strength of a team depends not only on individual ability but also on the quality of the relationships connecting its members.",
+  "words": [
+    {
+      "word": "However",
+      "start": 0,
+      "end": 0.38
+    },
+    {
+      "word": "effective",
+      "start": 0.8,
+      "end": 1.24
+    },
+    {
+      "word": "teamwork",
+      "start": 1.24,
+      "end": 1.66
+    },
+    {
+      "word": "required",
+      "start": 1.66,
+      "end": 2.12
+    },
+    {
+      "word": "more",
+      "start": 2.12,
+      "end": 2.38
+    },
+    {
+      "word": "than",
+      "start": 2.38,
+      "end": 2.54
+    },
+    {
+      "word": "clear",
+      "start": 2.54,
+      "end": 2.78
+    },
+    {
+      "word": "communication",
+      "start": 2.78,
+      "end": 3.36
+    },
+    {
+      "word": "Maya",
+      "start": 4.22,
+      "end": 4.22
+    },
+    {
+      "word": "believed",
+      "start": 4.22,
+      "end": 4.64
+    },
+    {
+      "word": "that",
+      "start": 4.64,
+      "end": 5.16
+    },
+    {
+      "word": "honesty",
+      "start": 5.16,
+      "end": 5.16
+    },
+    {
+      "word": "is",
+      "start": 5.16,
+      "end": 5.42
+    },
+    {
+      "word": "the",
+      "start": 5.42,
+      "end": 5.54
+    },
+    {
+      "word": "best",
+      "start": 5.54,
+      "end": 5.78
+    },
+    {
+      "word": "policy",
+      "start": 5.78,
+      "end": 6.24
+    },
+    {
+      "word": "but",
+      "start": 6.74,
+      "end": 6.84
+    },
+    {
+      "word": "she",
+      "start": 6.84,
+      "end": 7.14
+    },
+    {
+      "word": "also",
+      "start": 7.14,
+      "end": 7.6
+    },
+    {
+      "word": "learned",
+      "start": 7.6,
+      "end": 7.86
+    },
+    {
+      "word": "that",
+      "start": 7.86,
+      "end": 8.2
+    },
+    {
+      "word": "honesty",
+      "start": 8.2,
+      "end": 8.5
+    },
+    {
+      "word": "should",
+      "start": 8.5,
+      "end": 8.84
+    },
+    {
+      "word": "be",
+      "start": 8.84,
+      "end": 9.06
+    },
+    {
+      "word": "combined",
+      "start": 9.06,
+      "end": 9.4
+    },
+    {
+      "word": "with",
+      "start": 9.4,
+      "end": 9.7
+    },
+    {
+      "word": "respect",
+      "start": 9.7,
+      "end": 10.22
+    },
+    {
+      "word": "Publicly",
+      "start": 11.18,
+      "end": 11.9
+    },
+    {
+      "word": "criticizing",
+      "start": 11.9,
+      "end": 11.9
+    },
+    {
+      "word": "an",
+      "start": 11.9,
+      "end": 12.6
+    },
+    {
+      "word": "employee",
+      "start": 12.6,
+      "end": 12.6
+    },
+    {
+      "word": "might",
+      "start": 12.6,
+      "end": 13.0
+    },
+    {
+      "word": "communicate",
+      "start": 13.0,
+      "end": 13.44
+    },
+    {
+      "word": "a",
+      "start": 13.44,
+      "end": 13.94
+    },
+    {
+      "word": "problem",
+      "start": 13.94,
+      "end": 13.94
+    },
+    {
+      "word": "quickly",
+      "start": 13.94,
+      "end": 14.38
+    },
+    {
+      "word": "yet",
+      "start": 14.82,
+      "end": 15.0
+    },
+    {
+      "word": "it",
+      "start": 15.0,
+      "end": 15.3
+    },
+    {
+      "word": "could",
+      "start": 15.3,
+      "end": 15.5
+    },
+    {
+      "word": "damage",
+      "start": 15.5,
+      "end": 15.76
+    },
+    {
+      "word": "trust",
+      "start": 15.76,
+      "end": 16.3
+    },
+    {
+      "word": "and",
+      "start": 16.3,
+      "end": 16.7
+    },
+    {
+      "word": "discourage",
+      "start": 16.7,
+      "end": 17.06
+    },
+    {
+      "word": "future",
+      "start": 17.06,
+      "end": 17.44
+    },
+    {
+      "word": "participation",
+      "start": 17.44,
+      "end": 17.98
+    },
+    {
+      "word": "She",
+      "start": 18.8,
+      "end": 18.92
+    },
+    {
+      "word": "discovered",
+      "start": 18.92,
+      "end": 19.34
+    },
+    {
+      "word": "that",
+      "start": 19.34,
+      "end": 20.0
+    },
+    {
+      "word": "you",
+      "start": 20.0,
+      "end": 20.12
+    },
+    {
+      "word": "catch",
+      "start": 20.12,
+      "end": 20.34
+    },
+    {
+      "word": "more",
+      "start": 20.34,
+      "end": 20.62
+    },
+    {
+      "word": "flies",
+      "start": 20.62,
+      "end": 20.86
+    },
+    {
+      "word": "with",
+      "start": 20.86,
+      "end": 21.16
+    },
+    {
+      "word": "honey",
+      "start": 21.16,
+      "end": 21.26
+    },
+    {
+      "word": "than",
+      "start": 21.26,
+      "end": 21.5
+    },
+    {
+      "word": "with",
+      "start": 21.5,
+      "end": 21.8
+    },
+    {
+      "word": "vinegar",
+      "start": 21.8,
+      "end": 21.96
+    },
+    {
+      "word": "Constructive",
+      "start": 22.76,
+      "end": 23.06
+    },
+    {
+      "word": "feedback",
+      "start": 23.06,
+      "end": 23.58
+    },
+    {
+      "word": "sincere",
+      "start": 24.14,
+      "end": 24.16
+    },
+    {
+      "word": "appreciation",
+      "start": 24.16,
+      "end": 24.76
+    },
+    {
+      "word": "and",
+      "start": 25.0,
+      "end": 25.56
+    },
+    {
+      "word": "thoughtful",
+      "start": 25.56,
+      "end": 25.72
+    },
+    {
+      "word": "questions",
+      "start": 25.72,
+      "end": 26.2
+    },
+    {
+      "word": "often",
+      "start": 26.2,
+      "end": 26.74
+    },
+    {
+      "word": "produced",
+      "start": 26.74,
+      "end": 27.1
+    },
+    {
+      "word": "better",
+      "start": 27.1,
+      "end": 27.44
+    },
+    {
+      "word": "results",
+      "start": 27.44,
+      "end": 27.74
+    },
+    {
+      "word": "than",
+      "start": 27.74,
+      "end": 27.98
+    },
+    {
+      "word": "harsh",
+      "start": 27.98,
+      "end": 28.14
+    },
+    {
+      "word": "instructions",
+      "start": 28.14,
+      "end": 28.58
+    },
+    {
+      "word": "At",
+      "start": 29.08,
+      "end": 29.46
+    },
+    {
+      "word": "the",
+      "start": 29.46,
+      "end": 29.6
+    },
+    {
+      "word": "same",
+      "start": 29.6,
+      "end": 29.8
+    },
+    {
+      "word": "time",
+      "start": 30.0,
+      "end": 30.12
+    },
+    {
+      "word": "she",
+      "start": 30.5,
+      "end": 30.68
+    },
+    {
+      "word": "refused",
+      "start": 30.68,
+      "end": 31.16
+    },
+    {
+      "word": "to",
+      "start": 31.16,
+      "end": 31.42
+    },
+    {
+      "word": "avoid",
+      "start": 31.42,
+      "end": 31.68
+    },
+    {
+      "word": "difficult",
+      "start": 31.68,
+      "end": 32.16
+    },
+    {
+      "word": "conversations",
+      "start": 32.16,
+      "end": 32.72
+    },
+    {
+      "word": "entirely",
+      "start": 32.72,
+      "end": 33.28
+    },
+    {
+      "word": "Sometimes",
+      "start": 34.1,
+      "end": 34.38
+    },
+    {
+      "word": "leaders",
+      "start": 34.38,
+      "end": 34.7
+    },
+    {
+      "word": "must",
+      "start": 34.7,
+      "end": 35.04
+    },
+    {
+      "word": "face",
+      "start": 35.04,
+      "end": 35.36
+    },
+    {
+      "word": "the",
+      "start": 35.36,
+      "end": 35.56
+    },
+    {
+      "word": "music",
+      "start": 35.56,
+      "end": 35.92
+    },
+    {
+      "word": "and",
+      "start": 35.92,
+      "end": 36.22
+    },
+    {
+      "word": "address",
+      "start": 36.22,
+      "end": 36.58
+    },
+    {
+      "word": "uncomfortable",
+      "start": 36.58,
+      "end": 37.34
+    },
+    {
+      "word": "realities",
+      "start": 37.34,
+      "end": 37.86
+    },
+    {
+      "word": "before",
+      "start": 37.86,
+      "end": 38.26
+    },
+    {
+      "word": "small",
+      "start": 38.26,
+      "end": 38.72
+    },
+    {
+      "word": "problems",
+      "start": 38.72,
+      "end": 39.08
+    },
+    {
+      "word": "become",
+      "start": 39.08,
+      "end": 39.46
+    },
+    {
+      "word": "serious",
+      "start": 39.46,
+      "end": 39.98
+    },
+    {
+      "word": "As",
+      "start": 40.84,
+      "end": 40.92
+    },
+    {
+      "word": "the",
+      "start": 40.92,
+      "end": 41.06
+    },
+    {
+      "word": "team",
+      "start": 41.06,
+      "end": 41.24
+    },
+    {
+      "word": "became",
+      "start": 41.24,
+      "end": 41.56
+    },
+    {
+      "word": "more",
+      "start": 41.56,
+      "end": 41.96
+    },
+    {
+      "word": "comfortable",
+      "start": 41.96,
+      "end": 42.16
+    },
+    {
+      "word": "working",
+      "start": 42.16,
+      "end": 42.52
+    },
+    {
+      "word": "together",
+      "start": 42.52,
+      "end": 43.0
+    },
+    {
+      "word": "Maya",
+      "start": 43.58,
+      "end": 43.58
+    },
+    {
+      "word": "encouraged",
+      "start": 43.58,
+      "end": 44.08
+    },
+    {
+      "word": "everyone",
+      "start": 44.08,
+      "end": 44.58
+    },
+    {
+      "word": "to",
+      "start": 44.58,
+      "end": 44.88
+    },
+    {
+      "word": "share",
+      "start": 44.88,
+      "end": 45.0
+    },
+    {
+      "word": "knowledge",
+      "start": 45.0,
+      "end": 45.42
+    },
+    {
+      "word": "Previously",
+      "start": 46.1,
+      "end": 46.56
+    },
+    {
+      "word": "individual",
+      "start": 46.96,
+      "end": 47.34
+    },
+    {
+      "word": "engineers",
+      "start": 47.34,
+      "end": 47.76
+    },
+    {
+      "word": "had",
+      "start": 47.76,
+      "end": 48.16
+    },
+    {
+      "word": "concentrated",
+      "start": 48.16,
+      "end": 48.52
+    },
+    {
+      "word": "on",
+      "start": 48.52,
+      "end": 48.8
+    },
+    {
+      "word": "their",
+      "start": 48.8,
+      "end": 48.94
+    },
+    {
+      "word": "own",
+      "start": 48.94,
+      "end": 49.38
+    },
+    {
+      "word": "responsibilities",
+      "start": 49.38,
+      "end": 49.9
+    },
+    {
+      "word": "assuming",
+      "start": 50.62,
+      "end": 50.8
+    },
+    {
+      "word": "that",
+      "start": 50.8,
+      "end": 51.12
+    },
+    {
+      "word": "other",
+      "start": 51.12,
+      "end": 51.32
+    },
+    {
+      "word": "departments",
+      "start": 51.32,
+      "end": 51.62
+    },
+    {
+      "word": "would",
+      "start": 51.62,
+      "end": 51.96
+    },
+    {
+      "word": "handle",
+      "start": 51.96,
+      "end": 52.16
+    },
+    {
+      "word": "the",
+      "start": 52.16,
+      "end": 52.64
+    },
+    {
+      "word": "remaining",
+      "start": 52.64,
+      "end": 52.64
+    },
+    {
+      "word": "work",
+      "start": 52.64,
+      "end": 53.0
+    },
+    {
+      "word": "This",
+      "start": 53.62,
+      "end": 53.96
+    },
+    {
+      "word": "created",
+      "start": 53.96,
+      "end": 54.3
+    },
+    {
+      "word": "gaps",
+      "start": 54.3,
+      "end": 54.62
+    },
+    {
+      "word": "between",
+      "start": 54.62,
+      "end": 55.04
+    },
+    {
+      "word": "development",
+      "start": 55.04,
+      "end": 55.46
+    },
+    {
+      "word": "testing",
+      "start": 56.2,
+      "end": 56.2
+    },
+    {
+      "word": "and",
+      "start": 56.3,
+      "end": 56.64
+    },
+    {
+      "word": "deployment",
+      "start": 56.64,
+      "end": 56.94
+    },
+    {
+      "word": "Maya",
+      "start": 57.42,
+      "end": 57.88
+    },
+    {
+      "word": "reminded",
+      "start": 57.88,
+      "end": 58.28
+    },
+    {
+      "word": "them",
+      "start": 58.28,
+      "end": 58.48
+    },
+    {
+      "word": "that",
+      "start": 58.48,
+      "end": 58.64
+    },
+    {
+      "word": "a",
+      "start": 58.64,
+      "end": 58.8
+    },
+    {
+      "word": "chain",
+      "start": 58.8,
+      "end": 58.96
+    },
+    {
+      "word": "is",
+      "start": 58.96,
+      "end": 59.16
+    },
+    {
+      "word": "only",
+      "start": 59.16,
+      "end": 59.42
+    },
+    {
+      "word": "as",
+      "start": 59.42,
+      "end": 59.72
+    },
+    {
+      "word": "strong",
+      "start": 59.72,
+      "end": 59.98
+    },
+    {
+      "word": "as",
+      "start": 60.0,
+      "end": 60.24
+    },
+    {
+      "word": "its",
+      "start": 60.24,
+      "end": 60.4
+    },
+    {
+      "word": "weakest",
+      "start": 60.4,
+      "end": 60.78
+    },
+    {
+      "word": "link",
+      "start": 60.78,
+      "end": 61.18
+    },
+    {
+      "word": "Even",
+      "start": 62.04,
+      "end": 62.04
+    },
+    {
+      "word": "excellent",
+      "start": 62.04,
+      "end": 62.54
+    },
+    {
+      "word": "software",
+      "start": 62.54,
+      "end": 62.96
+    },
+    {
+      "word": "could",
+      "start": 62.96,
+      "end": 63.28
+    },
+    {
+      "word": "fail",
+      "start": 63.28,
+      "end": 63.54
+    },
+    {
+      "word": "if",
+      "start": 63.54,
+      "end": 63.96
+    },
+    {
+      "word": "security",
+      "start": 63.96,
+      "end": 64.32
+    },
+    {
+      "word": "documentation",
+      "start": 65.22,
+      "end": 65.22
+    },
+    {
+      "word": "or",
+      "start": 65.3,
+      "end": 65.72
+    },
+    {
+      "word": "operational",
+      "start": 65.72,
+      "end": 66.14
+    },
+    {
+      "word": "support",
+      "start": 66.14,
+      "end": 66.52
+    },
+    {
+      "word": "were",
+      "start": 66.52,
+      "end": 66.72
+    },
+    {
+      "word": "neglected",
+      "start": 66.72,
+      "end": 67.08
+    },
+    {
+      "word": "By",
+      "start": 67.88,
+      "end": 68.04
+    },
+    {
+      "word": "working",
+      "start": 68.04,
+      "end": 68.3
+    },
+    {
+      "word": "together",
+      "start": 68.3,
+      "end": 68.7
+    },
+    {
+      "word": "employees",
+      "start": 68.96,
+      "end": 69.34
+    },
+    {
+      "word": "discovered",
+      "start": 69.34,
+      "end": 69.76
+    },
+    {
+      "word": "that",
+      "start": 69.76,
+      "end": 70.16
+    },
+    {
+      "word": "many",
+      "start": 70.16,
+      "end": 70.4
+    },
+    {
+      "word": "hands",
+      "start": 70.4,
+      "end": 70.72
+    },
+    {
+      "word": "make",
+      "start": 70.72,
+      "end": 70.96
+    },
+    {
+      "word": "light",
+      "start": 70.96,
+      "end": 71.24
+    },
+    {
+      "word": "work",
+      "start": 71.24,
+      "end": 71.54
+    },
+    {
+      "word": "Tasks",
+      "start": 72.5,
+      "end": 72.5
+    },
+    {
+      "word": "that",
+      "start": 72.5,
+      "end": 72.76
+    },
+    {
+      "word": "once",
+      "start": 72.76,
+      "end": 73.06
+    },
+    {
+      "word": "required",
+      "start": 73.06,
+      "end": 73.4
+    },
+    {
+      "word": "several",
+      "start": 73.4,
+      "end": 73.82
+    },
+    {
+      "word": "days",
+      "start": 73.82,
+      "end": 74.18
+    },
+    {
+      "word": "could",
+      "start": 74.18,
+      "end": 74.44
+    },
+    {
+      "word": "sometimes",
+      "start": 74.44,
+      "end": 74.9
+    },
+    {
+      "word": "be",
+      "start": 74.9,
+      "end": 75.18
+    },
+    {
+      "word": "completed",
+      "start": 75.18,
+      "end": 75.46
+    },
+    {
+      "word": "much",
+      "start": 75.46,
+      "end": 75.88
+    },
+    {
+      "word": "faster",
+      "start": 75.88,
+      "end": 76.22
+    },
+    {
+      "word": "through",
+      "start": 76.22,
+      "end": 76.5
+    },
+    {
+      "word": "collaboration",
+      "start": 76.36,
+      "end": 77.12
+    },
+    {
+      "word": "Disagreements",
+      "start": 78.1,
+      "end": 78.48
+    },
+    {
+      "word": "still",
+      "start": 78.48,
+      "end": 79.1
+    },
+    {
+      "word": "occurred",
+      "start": 79.1,
+      "end": 79.12
+    },
+    {
+      "word": "especially",
+      "start": 79.68,
+      "end": 80.0
+    },
+    {
+      "word": "when",
+      "start": 80.0,
+      "end": 80.22
+    },
+    {
+      "word": "people",
+      "start": 80.22,
+      "end": 80.5
+    },
+    {
+      "word": "had",
+      "start": 80.5,
+      "end": 80.76
+    },
+    {
+      "word": "conflicting",
+      "start": 80.76,
+      "end": 81.2
+    },
+    {
+      "word": "priorities",
+      "start": 81.2,
+      "end": 81.72
+    },
+    {
+      "word": "Some",
+      "start": 82.42,
+      "end": 82.66
+    },
+    {
+      "word": "engineers",
+      "start": 82.66,
+      "end": 83.06
+    },
+    {
+      "word": "wanted",
+      "start": 83.06,
+      "end": 83.36
+    },
+    {
+      "word": "to",
+      "start": 83.36,
+      "end": 83.96
+    },
+    {
+      "word": "introduce",
+      "start": 83.96,
+      "end": 83.96
+    },
+    {
+      "word": "innovative",
+      "start": 83.96,
+      "end": 84.4
+    },
+    {
+      "word": "technologies",
+      "start": 84.4,
+      "end": 85.06
+    },
+    {
+      "word": "while",
+      "start": 85.46,
+      "end": 85.88
+    },
+    {
+      "word": "others",
+      "start": 85.88,
+      "end": 86.08
+    },
+    {
+      "word": "preferred",
+      "start": 86.08,
+      "end": 86.48
+    },
+    {
+      "word": "proven",
+      "start": 86.48,
+      "end": 86.92
+    },
+    {
+      "word": "solutions",
+      "start": 86.92,
+      "end": 87.7
+    },
+    {
+      "word": "Maya",
+      "start": 88.32,
+      "end": 88.38
+    },
+    {
+      "word": "recognized",
+      "start": 88.38,
+      "end": 88.96
+    },
+    {
+      "word": "that",
+      "start": 88.96,
+      "end": 89.14
+    },
+    {
+      "word": "it",
+      "start": 89.14,
+      "end": 89.28
+    },
+    {
+      "word": "takes",
+      "start": 89.28,
+      "end": 89.5
+    },
+    {
+      "word": "two",
+      "start": 89.5,
+      "end": 89.74
+    },
+    {
+      "word": "to",
+      "start": 89.74,
+      "end": 89.92
+    },
+    {
+      "word": "tango",
+      "start": 89.87,
+      "end": 90.0
+    },
+    {
+      "word": "Resolving",
+      "start": 90.0,
+      "end": 91.22
+    },
+    {
+      "word": "disagreements",
+      "start": 91.22,
+      "end": 91.82
+    },
+    {
+      "word": "required",
+      "start": 91.82,
+      "end": 92.28
+    },
+    {
+      "word": "both",
+      "start": 92.28,
+      "end": 92.66
+    },
+    {
+      "word": "sides",
+      "start": 92.66,
+      "end": 92.94
+    },
+    {
+      "word": "to",
+      "start": 92.94,
+      "end": 93.18
+    },
+    {
+      "word": "participate",
+      "start": 93.18,
+      "end": 93.64
+    },
+    {
+      "word": "rather",
+      "start": 94.24,
+      "end": 94.26
+    },
+    {
+      "word": "than",
+      "start": 94.26,
+      "end": 94.56
+    },
+    {
+      "word": "expecting",
+      "start": 94.56,
+      "end": 94.9
+    },
+    {
+      "word": "one",
+      "start": 94.9,
+      "end": 95.26
+    },
+    {
+      "word": "person",
+      "start": 95.26,
+      "end": 95.56
+    },
+    {
+      "word": "to",
+      "start": 95.56,
+      "end": 96.02
+    },
+    {
+      "word": "surrender",
+      "start": 96.02,
+      "end": 96.02
+    },
+    {
+      "word": "completely",
+      "start": 96.02,
+      "end": 96.56
+    },
+    {
+      "word": "She",
+      "start": 97.36,
+      "end": 97.44
+    },
+    {
+      "word": "encouraged",
+      "start": 97.44,
+      "end": 97.86
+    },
+    {
+      "word": "colleagues",
+      "start": 97.86,
+      "end": 98.34
+    },
+    {
+      "word": "to",
+      "start": 98.34,
+      "end": 98.68
+    },
+    {
+      "word": "meet",
+      "start": 98.68,
+      "end": 98.92
+    },
+    {
+      "word": "halfway",
+      "start": 98.92,
+      "end": 99.32
+    },
+    {
+      "word": "whenever",
+      "start": 99.32,
+      "end": 99.66
+    },
+    {
+      "word": "compromise",
+      "start": 99.66,
+      "end": 100.14
+    },
+    {
+      "word": "was",
+      "start": 100.14,
+      "end": 100.38
+    },
+    {
+      "word": "possible",
+      "start": 100.38,
+      "end": 100.72
+    },
+    {
+      "word": "On",
+      "start": 101.54,
+      "end": 101.6
+    },
+    {
+      "word": "some",
+      "start": 101.6,
+      "end": 101.88
+    },
+    {
+      "word": "issues",
+      "start": 101.88,
+      "end": 102.18
+    },
+    {
+      "word": "they",
+      "start": 102.36,
+      "end": 102.46
+    },
+    {
+      "word": "simply",
+      "start": 102.46,
+      "end": 102.76
+    },
+    {
+      "word": "had",
+      "start": 102.76,
+      "end": 102.94
+    },
+    {
+      "word": "to",
+      "start": 102.94,
+      "end": 103.18
+    },
+    {
+      "word": "agree",
+      "start": 103.18,
+      "end": 103.3
+    },
+    {
+      "word": "to",
+      "start": 103.3,
+      "end": 103.6
+    },
+    {
+      "word": "disagree",
+      "start": 103.6,
+      "end": 103.8
+    },
+    {
+      "word": "while",
+      "start": 103.8,
+      "end": 104.18
+    },
+    {
+      "word": "respecting",
+      "start": 104.18,
+      "end": 104.56
+    },
+    {
+      "word": "the",
+      "start": 104.56,
+      "end": 104.8
+    },
+    {
+      "word": "final",
+      "start": 104.8,
+      "end": 105.08
+    },
+    {
+      "word": "decision",
+      "start": 105.08,
+      "end": 105.44
+    },
+    {
+      "word": "Leadership",
+      "start": 106.34,
+      "end": 106.62
+    },
+    {
+      "word": "involved",
+      "start": 106.62,
+      "end": 107.18
+    },
+    {
+      "word": "give",
+      "start": 107.18,
+      "end": 107.6
+    },
+    {
+      "word": "and",
+      "start": 107.6,
+      "end": 107.84
+    },
+    {
+      "word": "take",
+      "start": 107.84,
+      "end": 108.12
+    },
+    {
+      "word": "and",
+      "start": 108.5,
+      "end": 108.72
+    },
+    {
+      "word": "maintaining",
+      "start": 108.72,
+      "end": 109.04
+    },
+    {
+      "word": "productive",
+      "start": 109.04,
+      "end": 109.52
+    },
+    {
+      "word": "relationships",
+      "start": 109.52,
+      "end": 110.14
+    },
+    {
+      "word": "sometimes",
+      "start": 110.14,
+      "end": 110.82
+    },
+    {
+      "word": "meant",
+      "start": 110.82,
+      "end": 111.06
+    },
+    {
+      "word": "accepting",
+      "start": 111.06,
+      "end": 111.46
+    },
+    {
+      "word": "solutions",
+      "start": 111.46,
+      "end": 112.06
+    },
+    {
+      "word": "that",
+      "start": 112.06,
+      "end": 112.58
+    },
+    {
+      "word": "were",
+      "start": 112.58,
+      "end": 112.8
+    },
+    {
+      "word": "reasonable",
+      "start": 112.8,
+      "end": 113.18
+    },
+    {
+      "word": "rather",
+      "start": 113.18,
+      "end": 113.56
+    },
+    {
+      "word": "than",
+      "start": 113.56,
+      "end": 113.94
+    },
+    {
+      "word": "personally",
+      "start": 113.94,
+      "end": 114.24
+    },
+    {
+      "word": "ideal",
+      "start": 114.24,
+      "end": 114.66
+    },
+    {
+      "word": "Over",
+      "start": 115.4,
+      "end": 115.64
+    },
+    {
+      "word": "time",
+      "start": 115.64,
+      "end": 115.98
+    },
+    {
+      "word": "the",
+      "start": 116.2,
+      "end": 116.42
+    },
+    {
+      "word": "team",
+      "start": 116.42,
+      "end": 116.5
+    },
+    {
+      "word": "began",
+      "start": 116.5,
+      "end": 116.78
+    },
+    {
+      "word": "appreciating",
+      "start": 116.78,
+      "end": 117.3
+    },
+    {
+      "word": "its",
+      "start": 117.3,
+      "end": 117.58
+    },
+    {
+      "word": "diversity",
+      "start": 117.58,
+      "end": 117.92
+    },
+    {
+      "word": "Initially",
+      "start": 117.92,
+      "end": 118.98
+    },
+    {
+      "word": "several",
+      "start": 119.18,
+      "end": 119.6
+    },
+    {
+      "word": "employees",
+      "start": 119.6,
+      "end": 119.98
+    },
+    {
+      "word": "had",
+      "start": 120.0,
+      "end": 120.24
+    },
+    {
+      "word": "preferred",
+      "start": 120.24,
+      "end": 120.66
+    },
+    {
+      "word": "working",
+      "start": 120.66,
+      "end": 120.98
+    },
+    {
+      "word": "with",
+      "start": 120.98,
+      "end": 121.24
+    },
+    {
+      "word": "colleagues",
+      "start": 121.24,
+      "end": 121.6
+    },
+    {
+      "word": "who",
+      "start": 121.6,
+      "end": 121.84
+    },
+    {
+      "word": "shared",
+      "start": 121.84,
+      "end": 122.06
+    },
+    {
+      "word": "similar",
+      "start": 122.06,
+      "end": 122.52
+    },
+    {
+      "word": "backgrounds",
+      "start": 122.52,
+      "end": 123.02
+    },
+    {
+      "word": "and",
+      "start": 123.02,
+      "end": 123.62
+    },
+    {
+      "word": "opinions",
+      "start": 123.62,
+      "end": 124.06
+    },
+    {
+      "word": "Birds",
+      "start": 124.94,
+      "end": 124.94
+    },
+    {
+      "word": "of",
+      "start": 124.94,
+      "end": 125.08
+    },
+    {
+      "word": "a",
+      "start": 125.08,
+      "end": 125.42
+    },
+    {
+      "word": "feather",
+      "start": 125.42,
+      "end": 125.42
+    },
+    {
+      "word": "flock",
+      "start": 125.78,
+      "end": 126.14
+    },
+    {
+      "word": "together",
+      "start": 126.14,
+      "end": 126.14
+    },
+    {
+      "word": "but",
+      "start": 126.72,
+      "end": 126.96
+    },
+    {
+      "word": "Maya",
+      "start": 126.96,
+      "end": 126.98
+    },
+    {
+      "word": "wanted",
+      "start": 126.98,
+      "end": 127.3
+    },
+    {
+      "word": "to",
+      "start": 127.3,
+      "end": 127.56
+    },
+    {
+      "word": "demonstrate",
+      "start": 127.56,
+      "end": 127.86
+    },
+    {
+      "word": "that",
+      "start": 127.86,
+      "end": 128.62
+    },
+    {
+      "word": "differences",
+      "start": 128.62,
+      "end": 128.62
+    },
+    {
+      "word": "could",
+      "start": 128.62,
+      "end": 128.82
+    },
+    {
+      "word": "also",
+      "start": 128.82,
+      "end": 129.32
+    },
+    {
+      "word": "create",
+      "start": 129.32,
+      "end": 129.42
+    },
+    {
+      "word": "opportunities",
+      "start": 129.42,
+      "end": 130.04
+    },
+    {
+      "word": "Engineers",
+      "start": 130.92,
+      "end": 131.12
+    },
+    {
+      "word": "with",
+      "start": 131.12,
+      "end": 131.38
+    },
+    {
+      "word": "different",
+      "start": 131.38,
+      "end": 131.66
+    },
+    {
+      "word": "experiences",
+      "start": 131.66,
+      "end": 132.26
+    },
+    {
+      "word": "frequently",
+      "start": 132.26,
+      "end": 132.76
+    },
+    {
+      "word": "identified",
+      "start": 132.76,
+      "end": 133.3
+    },
+    {
+      "word": "weaknesses",
+      "start": 133.3,
+      "end": 133.72
+    },
+    {
+      "word": "that",
+      "start": 133.72,
+      "end": 134.26
+    },
+    {
+      "word": "others",
+      "start": 134.26,
+      "end": 134.4
+    },
+    {
+      "word": "had",
+      "start": 134.4,
+      "end": 134.68
+    },
+    {
+      "word": "overlooked",
+      "start": 134.68,
+      "end": 135.0
+    },
+    {
+      "word": "They",
+      "start": 135.82,
+      "end": 135.92
+    },
+    {
+      "word": "learned",
+      "start": 135.92,
+      "end": 136.16
+    },
+    {
+      "word": "to",
+      "start": 136.16,
+      "end": 136.44
+    },
+    {
+      "word": "put",
+      "start": 136.44,
+      "end": 136.44
+    },
+    {
+      "word": "themselves",
+      "start": 136.44,
+      "end": 136.86
+    },
+    {
+      "word": "in",
+      "start": 136.86,
+      "end": 137.16
+    },
+    {
+      "word": "one",
+      "start": 137.16,
+      "end": 137.3
+    },
+    {
+      "word": "another's",
+      "start": 137.3,
+      "end": 138.02
+    },
+    {
+      "word": "shoes",
+      "start": 138.02,
+      "end": 138.02
+    },
+    {
+      "word": "before",
+      "start": 138.02,
+      "end": 138.66
+    },
+    {
+      "word": "criticizing",
+      "start": 138.66,
+      "end": 139.18
+    },
+    {
+      "word": "unfamiliar",
+      "start": 139.18,
+      "end": 139.8
+    },
+    {
+      "word": "approaches",
+      "start": 139.8,
+      "end": 140.34
+    },
+    {
+      "word": "Maya",
+      "start": 141.24,
+      "end": 141.24
+    },
+    {
+      "word": "also",
+      "start": 141.24,
+      "end": 141.72
+    },
+    {
+      "word": "reminded",
+      "start": 141.72,
+      "end": 141.98
+    },
+    {
+      "word": "them",
+      "start": 141.98,
+      "end": 142.2
+    },
+    {
+      "word": "that",
+      "start": 142.2,
+      "end": 142.46
+    },
+    {
+      "word": "when",
+      "start": 142.46,
+      "end": 142.58
+    },
+    {
+      "word": "in",
+      "start": 142.58,
+      "end": 142.94
+    },
+    {
+      "word": "Rome",
+      "start": 142.94,
+      "end": 143.04
+    },
+    {
+      "word": "do",
+      "start": 143.3,
+      "end": 143.34
+    },
+    {
+      "word": "as",
+      "start": 143.34,
+      "end": 143.54
+    },
+    {
+      "word": "the",
+      "start": 143.54,
+      "end": 143.72
+    },
+    {
+      "word": "Romans",
+      "start": 143.72,
+      "end": 143.88
+    },
+    {
+      "word": "do",
+      "start": 143.88,
+      "end": 144.24
+    },
+    {
+      "word": "although",
+      "start": 144.7,
+      "end": 144.88
+    },
+    {
+      "word": "adapting",
+      "start": 144.88,
+      "end": 145.22
+    },
+    {
+      "word": "to",
+      "start": 145.22,
+      "end": 145.48
+    },
+    {
+      "word": "local",
+      "start": 145.48,
+      "end": 145.74
+    },
+    {
+      "word": "customs",
+      "start": 145.74,
+      "end": 146.12
+    },
+    {
+      "word": "should",
+      "start": 146.12,
+      "end": 146.44
+    },
+    {
+      "word": "never",
+      "start": 146.44,
+      "end": 146.68
+    },
+    {
+      "word": "mean",
+      "start": 146.68,
+      "end": 146.92
+    },
+    {
+      "word": "abandoning",
+      "start": 146.92,
+      "end": 147.46
+    },
+    {
+      "word": "important",
+      "start": 147.46,
+      "end": 147.84
+    },
+    {
+      "word": "personal",
+      "start": 147.84,
+      "end": 148.22
+    },
+    {
+      "word": "values",
+      "start": 148.22,
+      "end": 148.68
+    },
+    {
+      "word": "Mutual",
+      "start": 148.68,
+      "end": 149.76
+    },
+    {
+      "word": "respect",
+      "start": 149.76,
+      "end": 149.98
+    },
+    {
+      "word": "required",
+      "start": 150.0,
+      "end": 150.64
+    },
+    {
+      "word": "curiosity",
+      "start": 150.64,
+      "end": 151.5
+    },
+    {
+      "word": "rather",
+      "start": 151.5,
+      "end": 151.92
+    },
+    {
+      "word": "than",
+      "start": 151.92,
+      "end": 152.14
+    },
+    {
+      "word": "unquestioning",
+      "start": 152.14,
+      "end": 152.84
+    },
+    {
+      "word": "conformity",
+      "start": 152.84,
+      "end": 153.4
+    },
+    {
+      "word": "One",
+      "start": 154.18,
+      "end": 154.18
+    },
+    {
+      "word": "day",
+      "start": 154.18,
+      "end": 154.38
+    },
+    {
+      "word": "a",
+      "start": 154.62,
+      "end": 154.62
+    },
+    {
+      "word": "serious",
+      "start": 154.62,
+      "end": 154.98
+    },
+    {
+      "word": "system",
+      "start": 154.98,
+      "end": 155.36
+    },
+    {
+      "word": "failure",
+      "start": 155.36,
+      "end": 155.7
+    },
+    {
+      "word": "occurred",
+      "start": 155.7,
+      "end": 156.12
+    },
+    {
+      "word": "shortly",
+      "start": 156.12,
+      "end": 156.48
+    },
+    {
+      "word": "before",
+      "start": 156.48,
+      "end": 156.76
+    },
+    {
+      "word": "a",
+      "start": 156.76,
+      "end": 157.02
+    },
+    {
+      "word": "major",
+      "start": 157.02,
+      "end": 157.14
+    },
+    {
+      "word": "customer",
+      "start": 157.14,
+      "end": 157.5
+    },
+    {
+      "word": "demonstration",
+      "start": 157.5,
+      "end": 158.08
+    },
+    {
+      "word": "Instead",
+      "start": 159.04,
+      "end": 159.04
+    },
+    {
+      "word": "of",
+      "start": 159.04,
+      "end": 159.54
+    },
+    {
+      "word": "blaming",
+      "start": 159.54,
+      "end": 159.54
+    },
+    {
+      "word": "one",
+      "start": 159.54,
+      "end": 159.78
+    },
+    {
+      "word": "another",
+      "start": 159.78,
+      "end": 160.12
+    },
+    {
+      "word": "employees",
+      "start": 160.74,
+      "end": 160.74
+    },
+    {
+      "word": "immediately",
+      "start": 160.74,
+      "end": 161.36
+    },
+    {
+      "word": "coordinated",
+      "start": 161.36,
+      "end": 161.9
+    },
+    {
+      "word": "their",
+      "start": 161.9,
+      "end": 162.16
+    },
+    {
+      "word": "efforts",
+      "start": 162.16,
+      "end": 162.48
+    },
+    {
+      "word": "Several",
+      "start": 163.36,
+      "end": 163.4
+    },
+    {
+      "word": "engineers",
+      "start": 163.4,
+      "end": 163.86
+    },
+    {
+      "word": "worked",
+      "start": 163.86,
+      "end": 164.2
+    },
+    {
+      "word": "through",
+      "start": 164.2,
+      "end": 164.4
+    },
+    {
+      "word": "the",
+      "start": 164.4,
+      "end": 164.64
+    },
+    {
+      "word": "night",
+      "start": 164.64,
+      "end": 164.7
+    },
+    {
+      "word": "while",
+      "start": 164.7,
+      "end": 165.22
+    },
+    {
+      "word": "others",
+      "start": 165.22,
+      "end": 165.48
+    },
+    {
+      "word": "communicated",
+      "start": 165.48,
+      "end": 166.02
+    },
+    {
+      "word": "with",
+      "start": 166.02,
+      "end": 166.24
+    },
+    {
+      "word": "the",
+      "start": 166.24,
+      "end": 166.7
+    },
+    {
+      "word": "customer",
+      "start": 166.7,
+      "end": 166.7
+    },
+    {
+      "word": "and",
+      "start": 166.7,
+      "end": 167.08
+    },
+    {
+      "word": "prepared",
+      "start": 167.08,
+      "end": 167.32
+    },
+    {
+      "word": "alternative",
+      "start": 167.32,
+      "end": 167.86
+    },
+    {
+      "word": "arrangements",
+      "start": 167.86,
+      "end": 168.38
+    },
+    {
+      "word": "A",
+      "start": 169.08,
+      "end": 169.3
+    },
+    {
+      "word": "friend",
+      "start": 169.3,
+      "end": 169.46
+    },
+    {
+      "word": "in",
+      "start": 169.46,
+      "end": 169.82
+    },
+    {
+      "word": "need",
+      "start": 169.82,
+      "end": 169.9
+    },
+    {
+      "word": "is",
+      "start": 169.9,
+      "end": 170.1
+    },
+    {
+      "word": "a",
+      "start": 170.1,
+      "end": 170.38
+    },
+    {
+      "word": "friend",
+      "start": 170.38,
+      "end": 170.38
+    },
+    {
+      "word": "indeed",
+      "start": 170.79,
+      "end": 171.2
+    },
+    {
+      "word": "and",
+      "start": 171.2,
+      "end": 171.36
+    },
+    {
+      "word": "the",
+      "start": 171.36,
+      "end": 171.54
+    },
+    {
+      "word": "crisis",
+      "start": 171.54,
+      "end": 171.82
+    },
+    {
+      "word": "revealed",
+      "start": 171.82,
+      "end": 172.22
+    },
+    {
+      "word": "how",
+      "start": 172.22,
+      "end": 172.58
+    },
+    {
+      "word": "much",
+      "start": 172.58,
+      "end": 172.88
+    },
+    {
+      "word": "trust",
+      "start": 172.88,
+      "end": 173.1
+    },
+    {
+      "word": "the",
+      "start": 173.1,
+      "end": 173.28
+    },
+    {
+      "word": "team",
+      "start": 173.28,
+      "end": 173.42
+    },
+    {
+      "word": "had",
+      "start": 173.42,
+      "end": 173.98
+    },
+    {
+      "word": "developed",
+      "start": 173.98,
+      "end": 173.98
+    },
+    {
+      "word": "Employees",
+      "start": 174.92,
+      "end": 175.1
+    },
+    {
+      "word": "supported",
+      "start": 175.1,
+      "end": 175.44
+    },
+    {
+      "word": "colleagues",
+      "start": 175.44,
+      "end": 175.88
+    },
+    {
+      "word": "who",
+      "start": 175.88,
+      "end": 176.04
+    },
+    {
+      "word": "were",
+      "start": 176.04,
+      "end": 176.22
+    },
+    {
+      "word": "struggling",
+      "start": 176.22,
+      "end": 176.54
+    },
+    {
+      "word": "knowing",
+      "start": 177.06,
+      "end": 177.06
+    },
+    {
+      "word": "that",
+      "start": 177.06,
+      "end": 177.44
+    },
+    {
+      "word": "one",
+      "start": 177.44,
+      "end": 177.58
+    },
+    {
+      "word": "good",
+      "start": 177.58,
+      "end": 177.82
+    },
+    {
+      "word": "turn",
+      "start": 177.82,
+      "end": 178.02
+    },
+    {
+      "word": "deserves",
+      "start": 178.02,
+      "end": 178.36
+    },
+    {
+      "word": "another",
+      "start": 178.36,
+      "end": 178.64
+    },
+    {
+      "word": "Their",
+      "start": 178.77,
+      "end": 179.18
+    },
+    {
+      "word": "willingness",
+      "start": 179.18,
+      "end": 179.59
+    },
+    {
+      "word": "to",
+      "start": 179.59,
+      "end": 180.0
+    },
+    {
+      "word": "cooperate",
+      "start": 180.0,
+      "end": 180.48
+    },
+    {
+      "word": "was",
+      "start": 180.48,
+      "end": 180.82
+    },
+    {
+      "word": "not",
+      "start": 180.82,
+      "end": 181.12
+    },
+    {
+      "word": "based",
+      "start": 181.12,
+      "end": 181.34
+    },
+    {
+      "word": "on",
+      "start": 181.34,
+      "end": 181.6
+    },
+    {
+      "word": "contractual",
+      "start": 181.6,
+      "end": 182.16
+    },
+    {
+      "word": "obligations",
+      "start": 182.16,
+      "end": 182.58
+    },
+    {
+      "word": "alone",
+      "start": 182.58,
+      "end": 183.06
+    },
+    {
+      "word": "but",
+      "start": 183.24,
+      "end": 183.56
+    },
+    {
+      "word": "on",
+      "start": 183.56,
+      "end": 183.8
+    },
+    {
+      "word": "relationships",
+      "start": 183.8,
+      "end": 184.3
+    },
+    {
+      "word": "strengthened",
+      "start": 184.3,
+      "end": 184.72
+    },
+    {
+      "word": "through",
+      "start": 184.72,
+      "end": 185.1
+    },
+    {
+      "word": "months",
+      "start": 185.1,
+      "end": 185.34
+    },
+    {
+      "word": "of",
+      "start": 185.34,
+      "end": 185.6
+    },
+    {
+      "word": "shared",
+      "start": 185.6,
+      "end": 185.8
+    },
+    {
+      "word": "experiences",
+      "start": 185.8,
+      "end": 186.44
+    },
+    {
+      "word": "The",
+      "start": 186.84,
+      "end": 187.52
+    },
+    {
+      "word": "team",
+      "start": 187.52,
+      "end": 187.7
+    },
+    {
+      "word": "eventually",
+      "start": 187.7,
+      "end": 188.1
+    },
+    {
+      "word": "resolved",
+      "start": 188.1,
+      "end": 188.5
+    },
+    {
+      "word": "the",
+      "start": 188.5,
+      "end": 189.0
+    },
+    {
+      "word": "problem",
+      "start": 189.0,
+      "end": 189.0
+    },
+    {
+      "word": "and",
+      "start": 189.0,
+      "end": 189.32
+    },
+    {
+      "word": "successfully",
+      "start": 189.32,
+      "end": 189.96
+    },
+    {
+      "word": "completed",
+      "start": 189.96,
+      "end": 190.3
+    },
+    {
+      "word": "the",
+      "start": 190.3,
+      "end": 190.5
+    },
+    {
+      "word": "demonstration",
+      "start": 190.5,
+      "end": 190.94
+    },
+    {
+      "word": "Maya",
+      "start": 191.26,
+      "end": 192.02
+    },
+    {
+      "word": "reflected",
+      "start": 192.02,
+      "end": 192.4
+    },
+    {
+      "word": "on",
+      "start": 192.4,
+      "end": 192.8
+    },
+    {
+      "word": "how",
+      "start": 192.8,
+      "end": 193.0
+    },
+    {
+      "word": "much",
+      "start": 193.0,
+      "end": 193.26
+    },
+    {
+      "word": "her",
+      "start": 193.26,
+      "end": 193.46
+    },
+    {
+      "word": "understanding",
+      "start": 193.46,
+      "end": 193.88
+    },
+    {
+      "word": "of",
+      "start": 193.88,
+      "end": 194.42
+    },
+    {
+      "word": "leadership",
+      "start": 194.42,
+      "end": 194.42
+    },
+    {
+      "word": "had",
+      "start": 194.42,
+      "end": 194.74
+    },
+    {
+      "word": "changed",
+      "start": 194.74,
+      "end": 195.04
+    },
+    {
+      "word": "She",
+      "start": 195.68,
+      "end": 195.78
+    },
+    {
+      "word": "had",
+      "start": 195.78,
+      "end": 195.98
+    },
+    {
+      "word": "once",
+      "start": 195.98,
+      "end": 196.26
+    },
+    {
+      "word": "believed",
+      "start": 196.26,
+      "end": 196.46
+    },
+    {
+      "word": "that",
+      "start": 196.46,
+      "end": 197.18
+    },
+    {
+      "word": "success",
+      "start": 197.18,
+      "end": 197.18
+    },
+    {
+      "word": "depended",
+      "start": 197.18,
+      "end": 197.5
+    },
+    {
+      "word": "mainly",
+      "start": 197.5,
+      "end": 197.88
+    },
+    {
+      "word": "on",
+      "start": 197.88,
+      "end": 198.48
+    },
+    {
+      "word": "hiring",
+      "start": 198.48,
+      "end": 198.48
+    },
+    {
+      "word": "exceptionally",
+      "start": 198.48,
+      "end": 199.14
+    },
+    {
+      "word": "talented",
+      "start": 199.14,
+      "end": 199.6
+    },
+    {
+      "word": "individuals",
+      "start": 199.6,
+      "end": 200.12
+    },
+    {
+      "word": "Now",
+      "start": 200.92,
+      "end": 201.16
+    },
+    {
+      "word": "she",
+      "start": 201.16,
+      "end": 201.38
+    },
+    {
+      "word": "understood",
+      "start": 201.38,
+      "end": 201.82
+    },
+    {
+      "word": "that",
+      "start": 201.82,
+      "end": 202.38
+    },
+    {
+      "word": "no",
+      "start": 202.38,
+      "end": 202.58
+    },
+    {
+      "word": "one",
+      "start": 202.58,
+      "end": 202.7
+    },
+    {
+      "word": "is",
+      "start": 202.7,
+      "end": 202.82
+    },
+    {
+      "word": "an",
+      "start": 202.82,
+      "end": 203.3
+    },
+    {
+      "word": "island",
+      "start": 203.3,
+      "end": 203.3
+    },
+    {
+      "word": "and",
+      "start": 203.52,
+      "end": 203.68
+    },
+    {
+      "word": "that",
+      "start": 203.68,
+      "end": 203.92
+    },
+    {
+      "word": "even",
+      "start": 203.92,
+      "end": 204.22
+    },
+    {
+      "word": "brilliant",
+      "start": 204.22,
+      "end": 204.52
+    },
+    {
+      "word": "professionals",
+      "start": 204.52,
+      "end": 205.02
+    },
+    {
+      "word": "need",
+      "start": 205.02,
+      "end": 205.36
+    },
+    {
+      "word": "cooperation",
+      "start": 205.36,
+      "end": 205.92
+    },
+    {
+      "word": "trust",
+      "start": 205.92,
+      "end": 206.92
+    },
+    {
+      "word": "and",
+      "start": 206.92,
+      "end": 207.28
+    },
+    {
+      "word": "mutual",
+      "start": 207.28,
+      "end": 207.52
+    },
+    {
+      "word": "understanding",
+      "start": 207.52,
+      "end": 208.06
+    },
+    {
+      "word": "What",
+      "start": 208.86,
+      "end": 208.98
+    },
+    {
+      "word": "goes",
+      "start": 208.98,
+      "end": 209.24
+    },
+    {
+      "word": "around",
+      "start": 209.24,
+      "end": 209.58
+    },
+    {
+      "word": "comes",
+      "start": 209.58,
+      "end": 209.86
+    },
+    {
+      "word": "around",
+      "start": 209.86,
+      "end": 209.98
+    },
+    {
+      "word": "and",
+      "start": 210.0,
+      "end": 210.64
+    },
+    {
+      "word": "the",
+      "start": 210.64,
+      "end": 210.8
+    },
+    {
+      "word": "respect",
+      "start": 210.8,
+      "end": 211.1
+    },
+    {
+      "word": "she",
+      "start": 211.1,
+      "end": 211.26
+    },
+    {
+      "word": "had",
+      "start": 211.26,
+      "end": 211.5
+    },
+    {
+      "word": "shown",
+      "start": 211.5,
+      "end": 211.58
+    },
+    {
+      "word": "her",
+      "start": 211.58,
+      "end": 211.92
+    },
+    {
+      "word": "colleagues",
+      "start": 211.92,
+      "end": 212.18
+    },
+    {
+      "word": "had",
+      "start": 212.18,
+      "end": 212.48
+    },
+    {
+      "word": "gradually",
+      "start": 212.48,
+      "end": 212.88
+    },
+    {
+      "word": "encouraged",
+      "start": 212.88,
+      "end": 213.3
+    },
+    {
+      "word": "them",
+      "start": 213.3,
+      "end": 213.58
+    },
+    {
+      "word": "to",
+      "start": 213.58,
+      "end": 213.94
+    },
+    {
+      "word": "treat",
+      "start": 213.94,
+      "end": 213.94
+    },
+    {
+      "word": "one",
+      "start": 213.94,
+      "end": 214.12
+    },
+    {
+      "word": "another",
+      "start": 214.12,
+      "end": 214.42
+    },
+    {
+      "word": "similarly",
+      "start": 214.42,
+      "end": 214.88
+    },
+    {
+      "word": "Her",
+      "start": 215.78,
+      "end": 215.86
+    },
+    {
+      "word": "greatest",
+      "start": 215.86,
+      "end": 216.18
+    },
+    {
+      "word": "achievement",
+      "start": 216.18,
+      "end": 216.56
+    },
+    {
+      "word": "was",
+      "start": 216.56,
+      "end": 216.88
+    },
+    {
+      "word": "not",
+      "start": 216.88,
+      "end": 217.16
+    },
+    {
+      "word": "simply",
+      "start": 217.16,
+      "end": 217.48
+    },
+    {
+      "word": "delivering",
+      "start": 217.48,
+      "end": 217.82
+    },
+    {
+      "word": "a",
+      "start": 217.82,
+      "end": 218.12
+    },
+    {
+      "word": "successful",
+      "start": 218.12,
+      "end": 218.44
+    },
+    {
+      "word": "project",
+      "start": 218.44,
+      "end": 218.94
+    },
+    {
+      "word": "but",
+      "start": 219.48,
+      "end": 219.62
+    },
+    {
+      "word": "creating",
+      "start": 219.62,
+      "end": 219.98
+    },
+    {
+      "word": "an",
+      "start": 219.98,
+      "end": 220.3
+    },
+    {
+      "word": "environment",
+      "start": 220.3,
+      "end": 220.62
+    },
+    {
+      "word": "in",
+      "start": 220.62,
+      "end": 221.02
+    },
+    {
+      "word": "which",
+      "start": 221.02,
+      "end": 221.1
+    },
+    {
+      "word": "people",
+      "start": 221.1,
+      "end": 221.38
+    },
+    {
+      "word": "could",
+      "start": 221.38,
+      "end": 221.62
+    },
+    {
+      "word": "learn",
+      "start": 221.62,
+      "end": 221.84
+    },
+    {
+      "word": "from",
+      "start": 221.84,
+      "end": 222.06
+    },
+    {
+      "word": "one",
+      "start": 222.06,
+      "end": 222.26
+    },
+    {
+      "word": "another",
+      "start": 222.26,
+      "end": 222.42
+    },
+    {
+      "word": "and",
+      "start": 222.42,
+      "end": 222.8
+    },
+    {
+      "word": "grow",
+      "start": 222.8,
+      "end": 222.96
+    },
+    {
+      "word": "together",
+      "start": 222.96,
+      "end": 223.36
+    },
+    {
+      "word": "United",
+      "start": 224.14,
+      "end": 224.36
+    },
+    {
+      "word": "we",
+      "start": 224.36,
+      "end": 224.64
+    },
+    {
+      "word": "stand",
+      "start": 224.64,
+      "end": 225.02
+    },
+    {
+      "word": "divided",
+      "start": 225.52,
+      "end": 225.54
+    },
+    {
+      "word": "we",
+      "start": 225.54,
+      "end": 226.0
+    },
+    {
+      "word": "fall",
+      "start": 226.0,
+      "end": 226.06
+    },
+    {
+      "word": "and",
+      "start": 226.54,
+      "end": 226.98
+    },
+    {
+      "word": "the",
+      "start": 226.98,
+      "end": 227.22
+    },
+    {
+      "word": "experience",
+      "start": 227.22,
+      "end": 227.58
+    },
+    {
+      "word": "convinced",
+      "start": 227.58,
+      "end": 227.96
+    },
+    {
+      "word": "her",
+      "start": 227.96,
+      "end": 228.18
+    },
+    {
+      "word": "that",
+      "start": 228.18,
+      "end": 228.36
+    },
+    {
+      "word": "the",
+      "start": 228.36,
+      "end": 228.74
+    },
+    {
+      "word": "strength",
+      "start": 228.74,
+      "end": 228.78
+    },
+    {
+      "word": "of",
+      "start": 228.78,
+      "end": 228.92
+    },
+    {
+      "word": "a",
+      "start": 228.92,
+      "end": 229.32
+    },
+    {
+      "word": "team",
+      "start": 229.32,
+      "end": 229.32
+    },
+    {
+      "word": "depends",
+      "start": 229.32,
+      "end": 229.72
+    },
+    {
+      "word": "not",
+      "start": 229.72,
+      "end": 230.02
+    },
+    {
+      "word": "only",
+      "start": 230.02,
+      "end": 230.26
+    },
+    {
+      "word": "on",
+      "start": 230.26,
+      "end": 230.58
+    },
+    {
+      "word": "individual",
+      "start": 230.58,
+      "end": 230.9
+    },
+    {
+      "word": "ability",
+      "start": 230.9,
+      "end": 231.34
+    },
+    {
+      "word": "but",
+      "start": 231.82,
+      "end": 231.9
+    },
+    {
+      "word": "also",
+      "start": 231.9,
+      "end": 232.22
+    },
+    {
+      "word": "on",
+      "start": 232.22,
+      "end": 232.42
+    },
+    {
+      "word": "the",
+      "start": 232.42,
+      "end": 232.5
+    },
+    {
+      "word": "quality",
+      "start": 232.5,
+      "end": 232.84
+    },
+    {
+      "word": "of",
+      "start": 232.84,
+      "end": 233.04
+    },
+    {
+      "word": "the",
+      "start": 233.04,
+      "end": 233.22
+    },
+    {
+      "word": "relationships",
+      "start": 233.22,
+      "end": 233.76
+    },
+    {
+      "word": "connecting",
+      "start": 233.76,
+      "end": 234.18
+    },
+    {
+      "word": "its",
+      "start": 234.18,
+      "end": 234.48
+    },
+    {
+      "word": "members",
+      "start": 234.48,
+      "end": 234.76
+    }
+  ],
+  "voice": "marin",
+  "style": "natural",
+  "model": "gpt-realtime-2.1-mini",
+  "audio_file": "english_overlap_20261025_055532_980efe.mp3",
+  "subtitle_file": "english_overlap_20261025_055532_980efe.json",
+  "summary": "マヤは、率直さに敬意を添え、知識の共有や妥協、多様な視点の尊重を促すことで、チームの信頼と協力を育てた。重大なシステム障害を皆で乗り越えた経験から、成果には個人の能力だけでなく、互いの関係性が欠かせないと学んだ。",
+  "word_count": 601,
+  "character_count": 4274,
+  "audio_seconds": 234.9,
+  "cost": {
+    "realtime_usd": 0.0966696,
+    "transcription_usd": 0.02349009,
+    "total_usd": 0.12277419,
+    "currency": "USD",
+    "rates_per_1m_tokens": {
+      "input_audio": 10.0,
+      "input_text": 0.6,
+      "cached_input": 0.3,
+      "output_audio": 20.0,
+      "output_text": 2.4
+    },
+    "transcription_model": "whisper-1",
+    "transcription_rate_usd_per_minute": 0.006,
+    "usage": {
+      "total_tokens": 6385,
+      "input_tokens": 744,
+      "output_tokens": 5641,
+      "input_token_details": {
+        "text_tokens": 744,
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "cached_tokens": 0,
+        "cached_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        }
+      },
+      "output_token_details": {
+        "text_tokens": 943,
+        "audio_tokens": 4698,
+        "reasoning_tokens": 37
+      }
+    },
+    "text_generation": {
+      "model": "gpt-6-luna",
+      "input_tokens": 2060,
+      "output_tokens": 4817,
+      "usd": 0.0026145,
+      "rate_version": "2026-10-24-v1",
+      "rates_per_1m_tokens": {
+        "input": 0.1,
+        "output": 0.5
+      },
+      "usage": {
+        "input_tokens": 2060,
+        "output_tokens": 4817
+      }
+    },
+    "text_generation_usd": 0.0026145
+  },
+  "title": "Maya’s Lessons in Teamwork and Leadership",
+  "summary_model": "gpt-6-luna",
+  "summary_prompt_version": "material-summary-v2-json-source-title",
+  "summary_generated_at_utc": "2026-10-25T10:18:51+00:00"
+}

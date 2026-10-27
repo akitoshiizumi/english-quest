@@ -1,0 +1,16 @@
+.env
+__pycache__/
+practice_data/*
+!practice_data/english_overlap_*.mp3
+!practice_data/english_overlap_*.json
+!practice_data/README.md
+dataset/vocab.db
+dataset/vocab.db-*
+dataset/starter/*.tmp
+debug.log
+.publish/
+dataset/*.backup-*.sqlite3
+.codex-validation-deps/
+node_modules/
+.npm-cache/
+tests/e2e-artifacts/
