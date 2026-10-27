@@ -333,7 +333,13 @@ export function App() {
   return <>
     <header><h1>English Quest</h1><p>単語を覚える。英語を使う。次のレベルへ。</p></header>
     <main>
-      <aside className="quest-dock" aria-label="冒険の進捗"><a href="#dashboard" id="questDockSummary">⚔ 冒険を読み込み中…</a><progress id="questDockHp" max={40} value={40} aria-label="練習中の敵の残りHP" /><p id="battleFeedback" role="status">学習で攻撃！ 敵を倒してキャラクターを育てよう。</p></aside>
+      <aside className="quest-dock" aria-label="冒険の進捗">
+        <div className="quest-dock-visuals" aria-hidden="true">
+          <div id="questDockCharacter" data-stage="0"><QuestCharacter /></div><span className="quest-dock-versus">VS</span>
+          <div id="questDockEnemy" className="battle-opponent" data-style="0" data-boss="false"><QuestEnemy /></div>
+        </div>
+        <div className="quest-dock-content"><a href="#dashboard" id="questDockSummary">⚔ 冒険を読み込み中…</a><progress id="questDockHp" max={40} value={40} aria-label="練習中の敵の残りHP" /><p id="battleFeedback" role="status">学習で攻撃！ 敵を倒してキャラクターを育てよう。</p></div>
+      </aside>
       <div className="page-actions"><button id="openDashboard" aria-current={selected === 'dashboard' ? 'page' : undefined} onClick={() => { setSelected('dashboard'); window.location.hash = 'dashboard'; }}>学習ダッシュボード</button></div>
       <nav className="tabs" role="tablist" aria-label="機能">
         {tabs.map((tab, index) => <button key={tab.id} ref={element => { tabRefs.current[index] = element; }} id={`tab-${tab.id}`} role="tab" aria-selected={selected === tab.id} aria-controls={`panel-${tab.id}`} tabIndex={selected === tab.id ? 0 : -1}

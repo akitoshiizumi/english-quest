@@ -484,11 +484,13 @@
       $('adventureNextLevel').textContent=`あと${remaining} XPでレベルアップ`;
       const levelProgress=$('adventureLevelProgress');levelProgress.max=Math.max(1,Number(data.xp_to_next_level));levelProgress.value=Math.min(levelProgress.max,Number(data.xp_in_level));
       const battle=data.battle,character=data.character;
-      $('battleCharacter').dataset.stage=String(character.stage);
+      for(const id of ['battleCharacter','questDockCharacter'])$(id).dataset.stage=String(character.stage);
       $('characterTitle').textContent=character.title;
       $('characterEvolution').textContent=character.next_evolution_level?`Lv.${character.next_evolution_level}で${character.next_evolution_title}に成長`:'最終形態 · さらにレベルを高めよう';
-      $('battleEnemy').dataset.style=String(battle.enemy_style);
-      $('battleEnemy').dataset.boss=String(battle.is_boss);
+      for(const id of ['battleEnemy','questDockEnemy']){
+        $(id).dataset.style=String(battle.enemy_style);
+        $(id).dataset.boss=String(battle.is_boss);
+      }
       $('battleEnemyName').textContent=(battle.is_boss?'BOSS · ':'')+battle.enemy_name;
       $('battleEnemyReward').textContent=`撃破で +${battle.next_reward_xp} XP`;
       $('battleChapter').textContent=`第${battle.chapter}章\n${battle.encounter}体目`;

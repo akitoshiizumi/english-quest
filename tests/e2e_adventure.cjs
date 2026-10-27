@@ -25,6 +25,10 @@ test('ten vocabulary answers defeat an enemy, award XP, and survive a reload', a
     page.setDefaultTimeout(10000);
     await page.goto('http://127.0.0.1:18766/#practice');
     await page.waitForFunction(() => document.querySelector('#questDockSummary').textContent.includes('HP 40/40'));
+    const dockSprite = page.locator('#questDockCharacter .character-sprite:visible');
+    assert.equal(await dockSprite.count(), 1, 'the practice page should show the character without opening the dashboard');
+    await dockSprite.evaluate(async image => { await image.decode(); });
+    assert.equal(await page.locator('#questDockEnemy .enemy-slime').isVisible(), true);
     await page.waitForFunction(() => document.querySelector('#learningCategory').options.length > 1);
     await page.locator('#learningCategory').selectOption('Pagination');
     await page.locator('#setCount').fill('10');
@@ -75,6 +79,7 @@ test('ten vocabulary answers defeat an enemy, award XP, and survive a reload', a
       const sprite = page.locator('#battleCharacter .character-sprite:visible');
       assert.equal(await sprite.count(), 1, 'exactly the current evolution should appear');
       assert.match(await sprite.getAttribute('src'), new RegExp(`${character.file}-pixel-v1`));
+      assert.match(await page.locator('#questDockCharacter .character-sprite:visible').getAttribute('src'), new RegExp(`${character.file}-pixel-v1`));
       await sprite.evaluate(async image => { await image.decode(); });
       const pixels = await sprite.evaluate(image => {
         const canvas = document.createElement('canvas');
@@ -87,6 +92,23 @@ test('ten vocabulary answers defeat an enemy, award XP, and survive a reload', a
       assert.equal(await sprite.evaluate(image => getComputedStyle(image).imageRendering), 'pixelated');
       await page.locator('#battleArena').screenshot({path:`tests/e2e-artifacts/character-stage-${stage}.png`});
     }
+    // Reproduce the reported wide-screen boss encounter on the practice page.
+    illustrationData = {...data,level:2,character:{...data.character,stage:0},
+      battle:{...data.battle,is_boss:true,enemy_style:4,enemy_name:'ワードドラゴン',hp:74,max_hp:80}};
+    await page.getByRole('tab',{name:'語彙練習',exact:true}).click();
+    await page.evaluate(() => window.dispatchEvent(new CustomEvent('english-overlap-activity-saved')));
+    await page.waitForFunction(() => document.querySelector('#questDockSummary').textContent.includes('HP 74/80'));
+    assert.equal(await page.locator('#questDockCharacter .character-stage-0').isVisible(), true);
+    assert.equal(await page.locator('#questDockEnemy .enemy-dragon').isVisible(), true);
+    assert.equal(await page.locator('#questDockEnemy .enemy-slime').isVisible(), false);
+    await page.setViewportSize({width:1700,height:900});
+    const dockBounds = await page.locator('.quest-dock').boundingBox();
+    const hpBounds = await page.locator('#questDockHp').boundingBox();
+    assert.ok(dockBounds.width <= 860 && hpBounds.width <= 340, 'the character, text, and HP should stay grouped on a wide screen');
+    await page.locator('.quest-dock').screenshot({path:'tests/e2e-artifacts/adventure-dock-desktop.png'});
+    await page.setViewportSize({width:390,height:844});
+    assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    await page.locator('.quest-dock').screenshot({path:'tests/e2e-artifacts/adventure-dock-mobile.png'});
     assert.deepEqual(errors, []);
   } finally {
     if (browser) await browser.close();

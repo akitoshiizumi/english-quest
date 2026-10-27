@@ -134,11 +134,16 @@ kbd { min-width: 25px; padding: 3px 6px; border: 1px solid #d6deeb; border-radiu
 .quest-reward { color: #c7dcff; font-size: .78rem; font-weight: 750; white-space: nowrap; }
 .quest-complete .quest-reward { color: #91e7b2; }
 .adventure-note { margin: 13px 0 0; color: #b4c2da; font-size: .78rem; }
-.quest-dock { display: grid; grid-template-columns: minmax(0,1fr) 130px; gap: 6px 16px; align-items: center; padding: 13px 17px; margin-bottom: 14px; border: 1px solid #c9d6ee; border-radius: 13px; background: #eef3fc; }
+.quest-dock { display: grid; grid-template-columns: 152px minmax(0,1fr); max-width: 860px; gap: 16px; align-items: center; padding: 10px 17px; margin-bottom: 14px; border: 1px solid #c9d6ee; border-radius: 13px; background: #eef3fc; }
+.quest-dock-visuals { display: grid; grid-template-columns: 72px 20px 60px; align-items: center; }
+.quest-dock-visuals .quest-character { width: 72px; height: 84px; }
+.quest-dock-visuals .quest-enemy { display: block; width: 60px; height: 72px; }
+.quest-dock-versus { color: #8c6330; font-size: .7rem; font-weight: 800; text-align: center; }
+.quest-dock-content { display: grid; gap: 8px; min-width: 0; }
 .quest-dock a { color: #294a7c; font-size: .85rem; font-weight: 750; text-decoration: none; }
 .quest-dock a:hover { text-decoration: underline; }
-.quest-dock progress { width: 100%; height: 8px; accent-color: #e39367; }
-.quest-dock p { grid-column: 1/-1; margin: 0; color: #536782; font-size: .8rem; }
+.quest-dock progress { display: block; width: 100%; max-width: 340px; height: 8px; accent-color: #e39367; }
+.quest-dock p { margin: 0; color: #536782; font-size: .8rem; }
 .battle-arena { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); align-items: center; gap: 12px; margin-top: 20px; padding: 10px 12px 19px; border-radius: 14px; background: radial-gradient(ellipse at 50% 100%,#82b1d52a,transparent 70%),#0a19352b; }
 .battle-fighter { display: grid; justify-items: center; text-align: center; gap: 5px; min-width: 0; }
 .battle-fighter svg { width: min(100%,160px); height: 170px; }
@@ -163,8 +168,12 @@ kbd { min-width: 25px; padding: 3px 6px; border: 1px solid #d6deeb; border-radiu
 .adventure-rules summary { cursor: pointer; color: #d9e7fc; }
 .adventure-rules p { margin: 9px 0; }
 @media (max-width: 520px) {
-  .quest-dock { grid-template-columns: 1fr; }
-  .quest-dock progress { max-width: 170px; }
+  .quest-dock { grid-template-columns: 116px minmax(0,1fr); gap: 10px; padding: 10px; }
+  .quest-dock-visuals { grid-template-columns: 56px 16px 44px; }
+  .quest-dock-visuals .quest-character { width: 56px; height: 72px; }
+  .quest-dock-visuals .quest-enemy { width: 44px; height: 60px; }
+  .quest-dock a { font-size: .78rem; }
+  .quest-dock p { font-size: .72rem; }
   .battle-arena { gap: 5px; padding-inline: 4px; }
   .battle-fighter svg,.quest-character { height: 130px; }
   .battle-fighter strong { font-size: .8rem; }
