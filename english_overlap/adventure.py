@@ -1,13 +1,13 @@
-"""Deterministic battles and character growth from earned learning XP."""
+"""Deterministic battles from correct answers and completed sentences."""
 
 
-def battle_progress(training_xp: int) -> dict:
+def battle_progress(earned_damage: int) -> dict:
     """Carry damage between enemies; rewards never feed back into damage.
 
     Four 40-HP slimes and an 80-HP boss form a 240-damage chapter.
     Deriving progress from saved activity makes reloads and retries harmless.
     """
-    chapters, damage = divmod(max(0, training_xp), 240)
+    chapters, damage = divmod(max(0, earned_damage), 240)
     defeated = chapters * 5
     reward_xp = chapters * 140
     names = ['ミントスライム', 'アクアスライム', 'アメジストスライム', 'フレイムスライム', 'ワードドラゴン']

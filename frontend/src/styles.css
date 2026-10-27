@@ -53,7 +53,8 @@ button.primary:hover:not(:disabled) { border-color: var(--blue-dark); background
 .saved { width: 100%; min-height: 150px; }
 .meta { margin-top: 10px; padding: 13px; border: 1px solid var(--line); border-radius: 11px; background: #f7f9fc; white-space: pre-wrap; line-height: 1.65; }
 .reader { min-height: 110px; font: 25px/2 Georgia, serif; white-space: pre-wrap; }
-.word { border-radius: 4px; cursor: pointer; }
+.reader-english { white-space: normal; }
+.word { display: inline-block; white-space: nowrap; border-radius: 4px; cursor: pointer; }
 .word.active { background: #ffe586; box-shadow: 0 0 0 3px #ffe586; }
 .word.past { color: #8893a4; }
 .reader-sentence { margin: 0 0 14px; padding: 14px 18px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
@@ -97,6 +98,13 @@ kbd { min-width: 25px; padding: 3px 6px; border: 1px solid #d6deeb; border-radiu
 .stage-label { margin: 0 0 15px; color: #c6d4f5; font-size: .78rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
 .stage-topline { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .stage-topline .stage-label { margin: 0; }
+.stage-topline { align-items: flex-start; flex-wrap: wrap; }
+.practice-score-panel { margin-left: auto; text-align: right; }
+.practice-score { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 18px; margin: 8px 0 0; color: #e2eafd; font-variant-numeric: tabular-nums; }
+.practice-score div { display: grid; gap: 3px; }
+.practice-score dt { font-size: .68rem; color: #b8c8e8; }
+.practice-score dd { margin: 0; font-size: .9rem; font-weight: 700; }
+body.vocabulary-focus-mode .stage-topline { padding-top: 34px; }
 .progress-label { margin: 0; color: #d8e2fa; font-size: .82rem; font-weight: 650; font-variant-numeric: tabular-nums; }
 .vocabulary-prompt { max-width: 100%; color: #fff; font-size: clamp(2.45rem, 7vw, 4.65rem); font-weight: 760; letter-spacing: -.045em; line-height: 1.12; overflow-wrap: anywhere; text-wrap: balance; }
 .vocabulary-answer { margin-top: 18px; padding-top: 16px; border-top: 1px solid #ffffff40; color: #dce7ff; font-size: clamp(1.35rem, 3vw, 2rem); font-weight: 620; line-height: 1.45; }

@@ -6,6 +6,7 @@ import json
 import math
 import os
 import re
+import random
 import sqlite3
 import tempfile
 import uuid
@@ -713,16 +714,20 @@ def adventure_progress(*, path: str | Path | None = None, now: datetime | None =
     today = (now or datetime.now(timezone.utc)).astimezone(tokyo).date()
     activity: dict[str, dict[str, float | int]] = {}
     with connect(path) as conn:
-        rows = conn.execute("""SELECT event_type,occurred_at_utc,duration_seconds
+        rows = conn.execute("""SELECT event_type,occurred_at_utc,duration_seconds,rating,metadata_json
             FROM study_events WHERE event_type IN ('vocabulary_answer','overlap_activity')
             ORDER BY occurred_at_utc,rowid""").fetchall()
     for row in rows:
         day = datetime.fromisoformat(row['occurred_at_utc']).astimezone(tokyo).date().isoformat()
-        daily = activity.setdefault(day, {'answers': 0, 'overlap_seconds': 0.0})
+        daily = activity.setdefault(day, {'answers': 0, 'correct': 0, 'sentences': 0, 'overlap_seconds': 0.0})
         if row['event_type'] == 'vocabulary_answer':
             daily['answers'] += 1
+            if row['rating'] == 'known':
+                daily['correct'] += 1
         else:
             daily['overlap_seconds'] += float(row['duration_seconds'] or 0)
+            metadata=json.loads(row['metadata_json'] or '{}')
+            daily['sentences'] += int(metadata.get('completed_sentences',0))
 
     def daily_xp(daily: dict[str, float | int]) -> int:
         answers = int(daily['answers'])
@@ -746,11 +751,13 @@ def adventure_progress(*, path: str | Path | None = None, now: datetime | None =
         run = run + 1 if day - timedelta(days=1) in eligible_days else 1
         longest = max(longest, run)
 
-    today_data = activity.get(today.isoformat(), {'answers': 0, 'overlap_seconds': 0.0})
+    today_data = activity.get(today.isoformat(), {'answers': 0, 'correct': 0, 'sentences': 0, 'overlap_seconds': 0.0})
     training_xp = total_xp
-    battle = battle_progress(training_xp)
+    total_damage = sum(int(daily['correct'])*2 + int(daily['sentences']) for daily in activity.values())
+    today_damage = int(today_data['correct'])*2 + int(today_data['sentences'])
+    battle = battle_progress(total_damage)
     today_training_xp = daily_xp(today_data)
-    previous_rewards = battle_progress(training_xp - today_training_xp)['reward_xp']
+    previous_rewards = battle_progress(total_damage - today_damage)['reward_xp']
     total_xp += battle['reward_xp']
     today_xp = today_training_xp + battle['reward_xp'] - previous_rewards
 
@@ -773,6 +780,7 @@ def adventure_progress(*, path: str | Path | None = None, now: datetime | None =
     return {
         'today': today.isoformat(), 'total_xp': total_xp, 'today_xp': today_xp,
         'training_xp': training_xp, 'battle': battle, 'character': character_progress(level),
+        'total_damage': total_damage, 'today_damage': today_damage, 'completed_sentences': int(today_data['sentences']),
         'level': level, 'xp_in_level': total_xp - xp_at_level,
         'xp_to_next_level': xp_for_next_level - xp_at_level,
         'streak_days': streak, 'best_streak_days': longest,
@@ -799,11 +807,16 @@ def list_practice_questions(direction: str, *, category: str | None = None, excl
                             recent_attempts: int | None = None, max_recent_accuracy: float | None = None,
                             include_insufficient_history: bool = False, all_attempts_incorrect: bool = False,
                             last_attempt_incorrect: bool = False, due_only: bool = False, as_of: datetime | None = None,
-                            limit: int = 50, path: str | Path | None = None) -> list[dict]:
+                            limit: int = 50, random_range: float = 0, random_seed: str | None = None,
+                            path: str | Path | None = None) -> list[dict]:
     if not 1 <= limit <= 1000:
         raise ValueError('limit must be 1..1000')
     if direction not in ('en_to_ja', 'ja_to_en'):
         raise ValueError('Unsupported learning direction')
+    if not math.isfinite(random_range) or not 0 <= random_range <= 100:
+        raise ValueError('random_range must be 0..100')
+    if random_seed is not None and len(str(random_seed)) > 128:
+        raise ValueError('random_seed must be at most 128 characters')
     excluded = sorted(exclude or ())
     exclusion_sql = ''
     params: list[object] = []
@@ -859,24 +872,33 @@ def list_practice_questions(direction: str, *, category: str | None = None, excl
         rows = conn.execute(f"""SELECT v.vocab_id,v.english,v.pos,s.sense_id,s.meaning,s.part_of_speech
             FROM vocab v JOIN senses s ON s.vocab_id=v.vocab_id
             WHERE v.archived_at_utc IS NULL AND trim(s.meaning)<>'' {exclusion_sql} {category_sql}
-            ORDER BY CASE
-              WHEN NOT EXISTS(SELECT 1 FROM study_events e WHERE e.vocab_id=v.vocab_id AND e.direction=?) THEN 1
-              WHEN (SELECT e.rating FROM study_events e WHERE e.vocab_id=v.vocab_id AND e.direction=? ORDER BY e.occurred_at_utc DESC,e.rowid DESC LIMIT 1)='again' THEN 0
-              ELSE 2 END,
-              v.vocab_id,s.sense_index""", (*params, direction, direction)).fetchall()
+            ORDER BY v.vocab_id,s.sense_index""", params).fetchall()
         if due_only:
             due_by_vocab={vocab_id:item for (vocab_id,_),item in due_schedule.items()}
             rows=[row for row in rows if row['vocab_id'] in due_by_vocab]
             rows.sort(key=lambda row:(due_by_vocab[row['vocab_id']]['due_date'],row['vocab_id']))
-        selected=[]
+        performance = {row['vocab_id']: dict(row) for row in conn.execute("""SELECT vocab_id,
+            count(*) AS answer_count, sum(CASE WHEN rating='known' THEN 1 ELSE 0 END) AS correct_count
+            FROM study_events WHERE event_type='vocabulary_answer' AND direction=? GROUP BY vocab_id""", (direction,))}
+        rng = random.Random(random_seed if random_seed not in (None, '') else None)
+        candidates=[]
         seen=set()
         for row in rows:
             if row['vocab_id'] in seen:
                 continue
             seen.add(row['vocab_id'])
-            selected.append(dict(row))
-            if len(selected)>=limit:
-                break
+            item=dict(row)
+            counts=performance.get(item['vocab_id'], {'answer_count':0,'correct_count':0})
+            base_score=round(100*counts['correct_count']/counts['answer_count'],3) if counts['answer_count'] else 0.0
+            adjustment=round(rng.uniform(-random_range,random_range),3) if random_range else 0.0
+            item.update(answer_count=counts['answer_count'], correct_count=counts['correct_count'],
+                        base_score=base_score, random_adjustment=adjustment, score=round(base_score+adjustment,3))
+            candidates.append(item)
+        if due_only:
+            candidates.sort(key=lambda item:(due_by_vocab[item['vocab_id']]['due_date'],item['score'],item['vocab_id']))
+        else:
+            candidates.sort(key=lambda item:(item['score'],item['vocab_id']))
+        selected=candidates[:limit]
         if selected:
             ids=[item['vocab_id'] for item in selected]
             history={vocab_id:[] for vocab_id in ids}
@@ -898,16 +920,19 @@ def vocabulary_categories(*, path: str | Path | None = None) -> list[dict]:
 
 
 def record_overlap_activity(*, session_id: str, material_id: str, duration_seconds: float,
-                            idempotency_key: str, path: str | Path | None = None) -> bool:
-    if duration_seconds < 0:
+                            idempotency_key: str, completed_sentences: int = 0,
+                            path: str | Path | None = None) -> bool:
+    if not math.isfinite(duration_seconds) or duration_seconds < 0:
         raise ValueError('Duration cannot be negative')
+    if type(completed_sentences) is not int or not 0 <= completed_sentences <= 10000:
+        raise ValueError('completed_sentences must be an integer in 0..10000')
     event_id = uuid.uuid4().hex
     now = datetime.now(timezone.utc).isoformat(timespec='seconds')
     with connect(path) as conn:
         cur = conn.execute("""INSERT OR IGNORE INTO study_events
             (event_id,session_id,event_type,duration_seconds,occurred_at_utc,idempotency_key,metadata_json)
             VALUES (?,?,'overlap_activity',?,?,?,?)""",
-            (event_id, session_id, duration_seconds, now, idempotency_key, json.dumps({'material_id': material_id})))
+            (event_id, session_id, duration_seconds, now, idempotency_key, json.dumps({'material_id': material_id, 'completed_sentences': completed_sentences})))
         return cur.rowcount == 1
 
 

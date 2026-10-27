@@ -22,6 +22,19 @@
     return body;
   };
   const parseKeys = value => value.split(',').map(x => x.trim().toLowerCase()).filter(Boolean);
+  try{
+    const saved=JSON.parse(localStorage.getItem('englishQuestPracticeOrder')||'{}');
+    if(Number.isFinite(saved.range)&&saved.range>=0&&saved.range<=100)$('practiceRandomRange').value=String(saved.range);
+    if(typeof saved.seed==='string')$('practiceRandomSeed').value=saved.seed.slice(0,128);
+  }catch(_){}
+  function practiceOrderSettings(){
+    const range=Number($('practiceRandomRange').value),seed=$('practiceRandomSeed').value;
+    if(!Number.isFinite(range)||range<0||range>100)throw new Error('調整乱数の幅は0〜100で設定してください。');
+    return {range,seed};
+  }
+  for(const id of ['practiceRandomRange','practiceRandomSeed'])$(id).addEventListener('change',()=>{
+    try{localStorage.setItem('englishQuestPracticeOrder',JSON.stringify(practiceOrderSettings()));}catch(error){status(error.message);}
+  });
   function updateLearningProgress(state){const total=learningTotal;if(state==='active')$('learningProgress').textContent=`${Math.min(learningAnswered+1,total)} / ${total}\u554f\u76ee`;else if(state==='complete')$('learningProgress').textContent=`${learningAnswered}\u554f\u5b8c\u4e86`;else if(state==='empty')$('learningProgress').textContent='\u3053\u306e\u6761\u4ef6\u306b\u5408\u3046\u8a9e\u5f59\u306f\u3042\u308a\u307e\u305b\u3093';else $('learningProgress').textContent='\u7df4\u7fd2\u958b\u59cb\u524d';}
   function pauseLearningTimer(){if(learningActiveSince!==null){learningElapsedMs+=Date.now()-learningActiveSince;learningActiveSince=null;}}
   function resumeLearningTimer(){if(practiceTabActive&&!document.hidden&&question&&learningActiveSince===null&&!pendingAnswer)learningActiveSince=Date.now();}
@@ -29,6 +42,13 @@
   document.addEventListener('visibilitychange',()=>document.hidden?pauseLearningTimer():resumeLearningTimer());
   window.addEventListener('pagehide',pauseLearningTimer);
   const display = () => {
+    const history=question?.history||[];
+    const score=question?.score;
+    $('practiceScore').textContent=score==null?'—':Number(score).toFixed(3);
+    $('practiceCorrectCount').textContent=question?String(question.correct_count??history.filter(rating=>rating==='known').length):'—';
+    $('practiceAnswerCount').textContent=question?String(question.answer_count??history.length):'—';
+    const adjustment=question?.random_adjustment;
+    $('practiceAdjustment').textContent=adjustment==null?'—':`${adjustment>=0?'+':''}${Number(adjustment).toFixed(3)}`;
     const historyRoot=$('vocabularyHistory');
     if(historyRoot){historyRoot.replaceChildren();if(question){const history=Array.isArray(question.history)?question.history:[];historyRoot.title=history.length?`過去 ${history.length} 回の回答`:'回答履歴なし';history.slice(-12).forEach(rating=>{const mark=document.createElement('span');mark.className=rating==='known'?'history-known':'history-again';mark.textContent=rating==='known'?'O':'X';mark.setAttribute('aria-label',rating==='known'?'正解':'不正解');historyRoot.append(mark);});}}
     if (!question) {
@@ -70,10 +90,14 @@
     try {
       const countInput=$('setCount');countInput.value=String(Math.min(1000,Math.max(1,Number(countInput.value)||50)));
       const dueOnly=$('reviewMode').value==='due';
+      const order=practiceOrderSettings();
+      localStorage.setItem('englishQuestPracticeOrder',JSON.stringify(order));
       $('dueReviewHint').hidden=!dueOnly;
       const parameters=new URLSearchParams({direction:$('learningDirection').value,category:$('learningCategory').value,count:countInput.value,include_unstudied:String($('includeUnstudied').checked),mastery_status:$('masteryStatus').value,difficulty:$('setDifficulty').value,all_attempts_incorrect:$('allAttemptsIncorrect').value,last_attempt_incorrect:String($('lastAttemptIncorrect').checked),include_insufficient_history:String($('includeInsufficientHistory').checked),due_only:String(dueOnly)});
       if(!dueOnly&&$('recentAttempts').value)parameters.set('recent_attempts',$('recentAttempts').value);
       if(!dueOnly&&$('maxRecentAccuracy').value)parameters.set('max_recent_accuracy',$('maxRecentAccuracy').value);
+      parameters.set('random_range',String(order.range));
+      if(order.seed)parameters.set('random_seed',order.seed);
       const result = await request('/api/next-question?' + parameters.toString());
       learningItems=Array.isArray(result.items)?result.items:(result.item?[result.item]:[]);
       learningTotal=learningItems.length;
@@ -93,6 +117,7 @@
     try {
       await request('/api/answer', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({vocab_id:question.vocab_id,sense_id:question.sense_id,direction:$('learningDirection').value,rating,duration_seconds:pendingAnswer.duration_seconds,idempotency_key:pendingAnswer.idempotency_key})});
       pendingAnswer=null;void loadStatistics();
+      if(rating==='again')$('battleFeedback').textContent='不正解：ダメージなし。復習して、もう一度挑戦しよう。';
       learningAnswered++;
       if (learningAnswered >= learningTotal) {
         question = null; phase = 'idle'; $('vocabularyQuestion').textContent = `設定件数 ${learningAnswered} 件の学習が完了しました。`;
@@ -499,12 +524,13 @@
       $('battleDefeated').textContent=`撃破 ${battle.defeated}体（ボス ${battle.bosses_defeated}体）`;
       $('battleRewardTotal').textContent=`撃破ボーナス ${battle.reward_xp.toLocaleString()} XP`;
       $('questDockSummary').textContent=`⚔ Lv.${data.level} ${character.title} / ${battle.is_boss?'BOSS ':''}${battle.enemy_name} HP ${battle.hp}/${battle.max_hp}`;
-      if(adventureSnapshot&&data.training_xp>adventureSnapshot.training_xp){
-        const damage=data.training_xp-adventureSnapshot.training_xp;
+      if(adventureSnapshot&&data.total_damage>adventureSnapshot.total_damage){
+        const damage=data.total_damage-adventureSnapshot.total_damage;
         const defeated=battle.defeated-adventureSnapshot.battle.defeated;
         const reward=battle.reward_xp-adventureSnapshot.battle.reward_xp;
         let message=defeated>0?`${defeated}体撃破！ ボーナス +${reward} XP。`:`${battle.enemy_name}に${damage}ダメージ！`;
-        message+=` 経験値 +${data.total_xp-adventureSnapshot.total_xp} XP。`;
+        const earnedXp=data.total_xp-adventureSnapshot.total_xp;
+        if(earnedXp>0)message+=` 経験値 +${earnedXp} XP。`;
         if(data.level>adventureSnapshot.level)message+=` Lv.${data.level}にレベルアップ！`;
         if(character.stage>adventureSnapshot.character.stage)message+=` ${character.title}に成長！`;
         $('battleFeedback').textContent=message;

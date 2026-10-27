@@ -80,7 +80,7 @@ function OverlapPage() {
       <summary><h2>音声に合わせて発話</h2></summary>
       <div className="overlap-workspace">
         <div className="overlap-transcript"><p id="sentenceProgress" className="muted" aria-live="polite" hidden /><div id="reader" className="reader" aria-live="off">先に音声を生成するか、保存済み教材を選んでください。</div>
-          <p id="sentenceTimingNotice" className="muted" role="status" hidden>この教材には一部の文の時刻情報がありません。時刻がない文は繰り返せません。</p>
+          <p id="sentenceTimingNotice" className="muted" role="status" hidden>この教材には一部の文の時刻情報がありません。時刻がない文は繰り返し・再生完了の判定ができず、ダメージの対象外です。</p>
         </div>
         <aside className="overlap-sidebar" aria-label="音声コントロールと設定">
           <p className="muted">Space: 再生・停止。文の R キーで繰り返し、A で現在文、W で前の文を再生。</p>
@@ -111,6 +111,8 @@ function PracticePage() {
       <details className="practice-controls collapsible-section" open><summary>出題条件</summary><div><div className="row"><label>方向 <label>&#x51fa;&#x984c;&#x65b9;&#x6cd5; <select id="reviewMode"><option value="standard">&#x901a;&#x5e38;&#x306e;&#x7df4;&#x7fd2;</option><option value="due">&#x671f;&#x9650;&#x5230;&#x6765;&#x8a9e;&#x3092;&#x81ea;&#x52d5;&#x9078;&#x5b9a;</option></select></label><span id="dueReviewHint" className="muted" hidden>&#x6700;&#x65b0;&#x306e;&#x5b66;&#x7fd2;&#x5c65;&#x6b74;&#x304b;&#x3089;&#x3001;&#x671f;&#x9650;&#x304c;&#x6765;&#x305f;&#x8a9e;&#x5f59;&#x306e;&#x307f;&#x3092;&#x9078;&#x3073;&#x307e;&#x3059;&#x3002;</span><select id="learningDirection"><option value="en_to_ja">英語 → 日本語</option><option value="ja_to_en">日本語 → 英語</option></select></label>
         <label>カテゴリ <select id="learningCategory"><option value="">すべて</option></select></label>
         <label>件数 <input id="setCount" type="number" min="1" max="1000" defaultValue="50" /></label>
+        <label>調整乱数の幅（±）<input id="practiceRandomRange" type="number" min="0" max="100" step="1" defaultValue="10" /></label>
+        <label>乱数シード（任意）<input id="practiceRandomSeed" maxLength={128} placeholder="空欄なら毎回ランダム" /></label>
         <label>習熟状況 <select id="masteryStatus"><option value="all">すべて</option><option value="unlearned">未学習</option><option value="review">要復習</option><option value="known">覚えた</option></select></label>
         <label className="standard-only"><input id="includeUnstudied" type="checkbox" defaultChecked />未学習語も含める</label>
         <label>直近N回 <input id="recentAttempts" type="number" min="1" max="100" placeholder="指定なし" /></label>
@@ -119,9 +121,10 @@ function PracticePage() {
         <label>全回間違い <select id="allAttemptsIncorrect"><option value="false">指定なし</option><option value="true">全回間違えた語のみ</option></select></label>
         <label className="standard-only"><input id="lastAttemptIncorrect" type="checkbox" />{'\u524d\u56de\u9593\u9055\u3048\u305f\u8a9e\u306e\u307f'}</label>
         <label>CEFR <select id="setDifficulty"><option value="">指定なし</option>{['A1','A2','B1','B2','C1','C2'].map(level=><option key={level}>{level}</option>)}</select></label>
+        <p className="muted full-width">スコア＝方向別の累計正解率（%）＋調整乱数。小さい順に出題します。未学習は正解率0、幅0なら乱数なし。同じシードと履歴なら同じ順番。期限到来語は期限順、同日内をスコア順に並べます。</p>
         <button className="primary" id="startLearning">練習を始める</button></div></div></details>
       <section id="vocabularyStage" className="vocabulary-stage" aria-label="出題語"><button id="exitFocusMode" className="focus-exit" type="button">&#x96c6;&#x4e2d;&#x30e2;&#x30fc;&#x30c9;&#x3092;&#x7d42;&#x4e86;</button>
-        <div className="stage-topline"><p className="stage-label">今回の出題</p><p id="learningProgress" className="progress-label" aria-live="polite">練習開始前</p></div>
+        <div className="stage-topline"><p className="stage-label">今回の出題</p><div className="practice-score-panel"><p id="learningProgress" className="progress-label" aria-live="polite">練習開始前</p><dl className="practice-score" aria-label="出題時点のスコアと方向別実績"><div><dt>スコア</dt><dd id="practiceScore">—</dd></div><div><dt>正解数</dt><dd id="practiceCorrectCount">—</dd></div><div><dt>出題数</dt><dd id="practiceAnswerCount">—</dd></div><div><dt>調整乱数</dt><dd id="practiceAdjustment">—</dd></div></dl></div></div>
         <div id="vocabularyHistory" className="vocabulary-history" aria-label={'\u904e\u53bb\u306e\u56de\u7b54\u5c65\u6b74'} />
         <div id="vocabularyQuestion" className="vocabulary-prompt" aria-live="polite">カテゴリと方向を選んで開始してください。</div>
         <div id="vocabularyAnswer" className="vocabulary-answer" hidden />
@@ -174,7 +177,7 @@ function DashboardPage() {
       <progress id="adventureLevelProgress" max={100} value={0} aria-label="次のレベルまでの進捗" />
       <div className="adventure-meta"><span id="adventureStreak">🔥 連続 0日</span><span id="adventureBestStreak">最長 0日</span><span id="adventureTodayXp">今日 +0 XP</span></div>
       <h4 className="daily-quest-heading">今日のクエスト</h4><div id="adventureQuests" className="adventure-quests" aria-live="polite"><p>冒険の進捗を読み込み中…</p></div>
-      <details className="adventure-rules"><summary>戦い方・成長のしくみ</summary><p>語彙1回答で2 XP、オーバーラッピング1分で1 XP。獲得した学習XPと同じ量のダメージを与えます。正誤は問いません。クエスト達成のXPも攻撃になります。</p><p>通常の敵はHP40・撃破で20 XP。5体ごとのボスはHP80・撃破で60 XP。余ったダメージは次の敵に引き継ぎます。撃破ボーナスは成長用の経験値になります。</p><p>Lv.3で盾、Lv.5でマント、Lv.10で王冠を獲得。語彙の基本XPは1日50回答、音読は1日30分まで。毎日のクエストは日本時間の0時に更新。どちらかのクエスト達成で連続学習日数が伸びます。</p></details>
+      <details className="adventure-rules"><summary>戦い方・成長のしくみ</summary><p>語彙は1正解で2ダメージ。不正解ではダメージを与えません。オーバーラッピングは1文を最後まで再生するたびに1ダメージ。同じ文の繰り返しも対象ですが、途中を飛ばした再生は数えません。文数はこの機能の追加後から記録します。</p><p>経験値は語彙1回答で2 XP、オーバーラッピング1分で1 XP。挑戦した分は正誤に関係なく経験値になります。クエスト達成ボーナスは経験値だけに加算します。</p><p>通常の敵はHP40・撃破で20 XP。5体ごとのボスはHP80・撃破で60 XP。余ったダメージは次の敵に引き継ぎます。Lv.3で盾、Lv.5でマント、Lv.10で王冠を獲得。語彙の基本XPは1日50回答、音読は1日30分まで。毎日のクエストは日本時間の0時に更新。どちらかのクエスト達成で連続学習日数が伸びます。</p></details>
     </section>
     <label>学習期間 <select id="statisticsRange" defaultValue="30"><option value="7">7日間</option><option value="30">30日間</option><option value="90">90日間</option><option value="all">全期間</option></select></label>
     <details id="learningGoalsSection" className="dashboard-disclosure collapsible-section" open><summary>累計学習目標</summary>

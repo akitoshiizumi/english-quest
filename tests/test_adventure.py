@@ -38,26 +38,32 @@ class AdventurePersistenceTests(unittest.TestCase):
         with database.connect(self.path) as conn:
             conn.execute("INSERT INTO vocab(vocab_id,english,japanese) VALUES ('quest-word','quest','冒険')")
 
-    def answers(self, count, timestamp):
+    def answers(self, count, timestamp, rating='known'):
         with database.connect(self.path) as conn:
             for index in range(count):
                 key = f'{timestamp}-{index}'
                 conn.execute("""INSERT INTO study_events
                     (event_id,session_id,event_type,vocab_id,direction,rating,occurred_at_utc,idempotency_key)
-                    VALUES (?,?,'vocabulary_answer','quest-word','en_to_ja','again',?,?)""",
-                    (key, self.session, timestamp, key))
+                    VALUES (?,?,'vocabulary_answer','quest-word','en_to_ja',?,?,?)""",
+                    (key, self.session, rating, timestamp, key))
 
-    def test_answers_earn_damage_and_defeat_bonus_even_when_incorrect(self):
+    def test_only_correct_answers_deal_damage_and_quest_xp_is_not_an_attack(self):
         now = datetime(2026, 10, 27, 3, tzinfo=timezone.utc)
         self.answers(9, now.isoformat())
         before = database.adventure_progress(path=self.path, now=now)
         self.assertEqual((before['training_xp'], before['battle']['hp'], before['total_xp']), (18, 22, 18))
-        self.answers(1, '2026-10-27T03:01:00+00:00')
+        self.answers(11, '2026-10-27T03:01:00+00:00')
         after = database.adventure_progress(path=self.path, now=now)
-        self.assertEqual((after['training_xp'], after['battle']['defeated'], after['total_xp']), (40, 1, 60))
-        self.assertEqual(after['today_xp'], 60)
+        self.assertEqual((after['training_xp'], after['battle']['defeated'], after['total_xp']), (60, 1, 80))
+        self.assertEqual(after['today_xp'], 80)
         self.assertEqual(after['streak_days'], 1)
         self.assertEqual(after, database.adventure_progress(path=self.path, now=now))
+
+    def test_incorrect_answers_and_their_quest_bonus_never_hurt_the_enemy(self):
+        now=datetime(2026,10,27,3,tzinfo=timezone.utc)
+        self.answers(10,now.isoformat(),rating='again')
+        progress=database.adventure_progress(path=self.path,now=now)
+        self.assertEqual((progress['training_xp'],progress['total_damage'],progress['battle']['hp']),(40,0,40))
 
     def test_daily_cap_tokyo_midnight_and_level_growth(self):
         self.answers(60, '2026-10-26T14:59:00+00:00')
@@ -72,13 +78,27 @@ class AdventurePersistenceTests(unittest.TestCase):
         self.assertEqual(after, database.adventure_progress(path=self.path, now=datetime(2026, 10, 27, 1, tzinfo=timezone.utc)))
 
     def test_overlap_retries_never_award_duplicate_damage_or_xp(self):
-        payload = dict(session_id=self.session, material_id='quest-material', duration_seconds=1800,
+        payload = dict(session_id=self.session, material_id='quest-material', duration_seconds=1800, completed_sentences=40,
                        idempotency_key='quest-overlap', path=self.path)
         self.assertTrue(database.record_overlap_activity(**payload))
         first = database.adventure_progress(path=self.path)
         self.assertEqual((first['training_xp'], first['battle']['defeated'], first['total_xp']), (40, 1, 60))
         self.assertFalse(database.record_overlap_activity(**payload))
         self.assertEqual(first, database.adventure_progress(path=self.path))
+
+    def test_one_completed_sentence_means_one_damage_and_legacy_time_is_not_guessed(self):
+        database.record_overlap_activity(session_id=self.session,material_id='old-material',duration_seconds=600,
+                                         idempotency_key='old-overlap',path=self.path)
+        old=database.adventure_progress(path=self.path)
+        self.assertEqual(old['total_damage'],0)
+        database.record_overlap_activity(session_id=self.session,material_id='new-material',duration_seconds=3,
+                                         completed_sentences=1,idempotency_key='new-overlap',path=self.path)
+        new=database.adventure_progress(path=self.path)
+        self.assertEqual((new['total_damage'],new['battle']['hp'],new['completed_sentences']),(1,39,1))
+        for invalid in [-1,1.5,True,10001]:
+            with self.assertRaises(ValueError):
+                database.record_overlap_activity(session_id=self.session,material_id='new-material',duration_seconds=3,
+                    completed_sentences=invalid,idempotency_key='bad',path=self.path)
 
 
 if __name__ == '__main__':

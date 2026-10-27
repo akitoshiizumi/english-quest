@@ -4,7 +4,7 @@ const {spawn} = require('node:child_process');
 const {mkdirSync} = require('node:fs');
 const {chromium} = require('playwright');
 
-test('ten vocabulary answers defeat an enemy, award XP, and survive a reload', async () => {
+test('practice scores, correct-answer battles, sentence damage, and illustrations persist and render', async () => {
   // This server creates its own temporary DB and never uses the user's data/API key.
   const server = spawn('py', ['tests/e2e_server.py'], {stdio:'ignore', windowsHide:true,
     env:{...process.env, ENGLISH_OVERLAP_E2E_PORT:'18766'}});
@@ -31,12 +31,24 @@ test('ten vocabulary answers defeat an enemy, award XP, and survive a reload', a
     assert.equal(await page.locator('#questDockEnemy .enemy-slime').isVisible(), true);
     await page.waitForFunction(() => document.querySelector('#learningCategory').options.length > 1);
     await page.locator('#learningCategory').selectOption('Pagination');
-    await page.locator('#setCount').fill('10');
+    await page.locator('#setCount').fill('21');
+    await page.locator('#practiceRandomRange').fill('20');
+    await page.locator('#practiceRandomSeed').fill('quest-e2e');
     await page.locator('#startLearning').click();
-    for (let index = 0; index < 10; index++) {
+    await page.waitForFunction(()=>document.querySelector('#practiceScore').textContent!=='—');
+    assert.equal(await page.locator('#practiceCorrectCount').textContent(),'0');
+    assert.equal(await page.locator('#practiceAnswerCount').textContent(),'0');
+    assert.equal(Number(await page.locator('#practiceScore').textContent()),Number(await page.locator('#practiceAdjustment').textContent()));
+    mkdirSync('tests/e2e-artifacts', {recursive:true});
+    await page.locator('#vocabularyStage').screenshot({path:'tests/e2e-artifacts/practice-score.png'});
+    for (let index = 0; index < 21; index++) {
       await page.locator('#revealAnswer').click();
-      await page.locator('#rateAgain').click();
+      await page.locator(index===0?'#rateAgain':'#rateKnown').click();
       if (index === 0) {
+        const progress=await page.evaluate(async ()=>(await fetch('/api/adventure')).json());
+        assert.equal(progress.total_damage,0,'an incorrect answer must not attack');
+      }
+      if (index === 1) {
         await page.waitForFunction(() => document.querySelector('#questDockHp').value === 38);
         assert.match(await page.locator('#battleFeedback').textContent(), /2ダメージ/);
       }
@@ -45,22 +57,58 @@ test('ten vocabulary answers defeat an enemy, award XP, and survive a reload', a
     assert.match(await page.locator('#battleFeedback').textContent(), /撃破.*20 XP/);
     assert.equal(await page.locator('#questDockHp').evaluate(element => element.value), 40);
     const data = await page.evaluate(async () => (await fetch('/api/adventure')).json());
-    assert.equal(data.training_xp, 40);
-    assert.equal(data.total_xp, 60);
+    assert.equal(data.training_xp, 62);
+    assert.equal(data.total_xp, 82);
     assert.equal(data.battle.defeated, 1);
     await page.locator('#questDockSummary').click();
     await page.waitForFunction(() => !document.querySelector('#dashboard-panel').hidden);
-    assert.equal(await page.locator('#adventureTotalXp').textContent(), '60 XP');
+    assert.equal(await page.locator('#adventureTotalXp').textContent(), '82 XP');
     assert.equal(await page.locator('#battleEnemyName').textContent(), 'アクアスライム');
     assert.equal(await page.locator('#battleCharacter').getAttribute('data-stage'), '0');
     mkdirSync('tests/e2e-artifacts', {recursive:true});
     await page.screenshot({path:'tests/e2e-artifacts/adventure-desktop.png',fullPage:true});
     await page.reload();
-    await page.waitForFunction(() => document.querySelector('#adventureTotalXp').textContent === '60 XP');
+    await page.waitForFunction(() => document.querySelector('#adventureTotalXp').textContent === '82 XP');
+    assert.equal(await page.locator('#practiceRandomRange').inputValue(),'20');
+    assert.equal(await page.locator('#practiceRandomSeed').inputValue(),'quest-e2e');
     assert.match(await page.locator('#battleDefeated').textContent(), /撃破 1体/);
     await page.setViewportSize({width:390,height:844});
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'mobile page must not overflow horizontally');
     await page.screenshot({path:'tests/e2e-artifacts/adventure-mobile.png',fullPage:true});
+    // Real media playback: a seek to the ending earns nothing; a whole sentence
+    // and a whole clipped repeat each earn exactly one damage.
+    await page.getByRole('tab',{name:'オーバーラッピング',exact:true}).click();
+    await page.waitForFunction(()=>document.querySelector('#savedList').options.length>1);
+    const materialId=await page.evaluate(async()=>{
+      const items=(await (await fetch('/api/materials/overlap-list')).json()).items;
+      return items.find(item=>item.text_content==='A fixture sentence.').material_id;
+    });
+    await page.locator('#savedList').selectOption(materialId);
+    await page.waitForFunction(id=>document.body.dataset.materialId===id&&document.querySelector('#player').readyState>=2,materialId);
+    await page.locator('#loop').uncheck();
+    await page.evaluate(async()=>{const audio=document.querySelector('#player');audio.currentTime=.8;await audio.play();});
+    await page.waitForFunction(()=>document.querySelector('#player').ended);
+    assert.equal(await page.evaluate(async()=>(await (await fetch('/api/adventure')).json()).total_damage),40);
+    await page.locator('#restart').click();
+    await page.waitForFunction(async()=>(await (await fetch('/api/adventure')).json()).total_damage===41);
+    await page.evaluate(()=>document.querySelector('#player').pause());
+    await page.locator('.sentence-repeat').first().click();
+    await page.waitForFunction(async()=>(await (await fetch('/api/adventure')).json()).total_damage===42);
+    await page.locator('.sentence-repeat').first().click();
+    await page.evaluate(()=>document.querySelector('#player').pause());
+
+    // Existing saved blocks may already be split after U.S. or Dr.; the reader repairs them.
+    await page.route('**/saved-data?material_id=*',async route=>{
+      const response=await route.fetch();const body=await response.json();
+      body.text='The U.S. government met Dr. Smith. They left.';
+      body.blocks=[{english:'The U.S.',japanese:'米国の'},{english:'government met Dr.',japanese:'政府が博士に会った。'},
+        {english:'Smith.'},{english:'They left.'}];
+      await route.fulfill({json:body});
+    });
+    await page.locator('#savedList').selectOption(materialId);
+    await page.waitForFunction(()=>document.querySelectorAll('.reader-sentence').length===2);
+    assert.equal(await page.locator('.reader-english').first().textContent(),'The U.S. government met Dr. Smith.');
+    await page.locator('#openDashboard').click();
     // Verify all shipped illustrations through real static URLs and the UI's API update path.
     const stages = [
       {level:1,title:'見習い冒険者',file:'apprentice'},

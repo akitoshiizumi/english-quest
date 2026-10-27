@@ -248,7 +248,18 @@ class Handler(BaseHTTPRequestHandler):
                 if not raw_count.isdigit() or not 1 <= int(raw_count) <= 1000:return self.send(400,{'error':'count must be 1..1000'})
                 raw_n=query.get('recent_attempts',[''])[0]
                 raw_accuracy=query.get('max_recent_accuracy',[''])[0]
-                items = database.list_practice_questions(query.get('direction', ['en_to_ja'])[0], category=query.get('category', [None])[0], include_unstudied=query.get('include_unstudied',['true'])[0]=='true', mastery_status=query.get('mastery_status',['all'])[0], difficulty=query.get('difficulty',[None])[0], recent_attempts=int(raw_n) if raw_n else None, max_recent_accuracy=float(raw_accuracy) if raw_accuracy else None, include_insufficient_history=query.get('include_insufficient_history',['false'])[0]=='true', all_attempts_incorrect=query.get('all_attempts_incorrect',['false'])[0]=='true', last_attempt_incorrect=query.get('last_attempt_incorrect',['false'])[0]=='true', due_only=query.get('due_only',['false'])[0]=='true', limit=int(raw_count))
+                random_range=float(query.get('random_range',['0'])[0])
+                random_seed=query.get('random_seed',[None])[0]
+                items = database.list_practice_questions(
+                    query.get('direction', ['en_to_ja'])[0], category=query.get('category', [None])[0],
+                    include_unstudied=query.get('include_unstudied',['true'])[0]=='true',
+                    mastery_status=query.get('mastery_status',['all'])[0], difficulty=query.get('difficulty',[None])[0],
+                    recent_attempts=int(raw_n) if raw_n else None, max_recent_accuracy=float(raw_accuracy) if raw_accuracy else None,
+                    include_insufficient_history=query.get('include_insufficient_history',['false'])[0]=='true',
+                    all_attempts_incorrect=query.get('all_attempts_incorrect',['false'])[0]=='true',
+                    last_attempt_incorrect=query.get('last_attempt_incorrect',['false'])[0]=='true',
+                    due_only=query.get('due_only',['false'])[0]=='true', limit=int(raw_count),
+                    random_range=random_range, random_seed=random_seed)
                 return self.send(200, {'item': items[0] if items else None, 'items': items, 'total': len(items)})
             except (ValueError,TypeError) as ex:
                 return self.send(400, {'error': str(ex)})
@@ -412,7 +423,7 @@ class Handler(BaseHTTPRequestHandler):
                     database.set_vocabulary_archived(req['vocab_id'], bool(req.get('archived', True)))
                     return self.send(200, {'saved': True})
                 if route == '/api/overlap/activity':
-                    saved = database.record_overlap_activity(session_id=req['session_id'], material_id=req['material_id'], duration_seconds=float(req['duration_seconds']), idempotency_key=req['idempotency_key'])
+                    saved = database.record_overlap_activity(session_id=req['session_id'], material_id=req['material_id'], duration_seconds=float(req['duration_seconds']), idempotency_key=req['idempotency_key'], completed_sentences=req.get('completed_sentences',0))
                     return self.send(200, {'saved': saved})
                 if route == '/api/overlap/session':
                     return self.send(200, {'session_id':database.create_study_session('overlap')})
